@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Concepta Innovation Systems
+
+A modern, responsive Next.js website for **Concepta Innovation Systems**, a Microsoft Azure AI Partner specializing in cybersecurity and technology solutions for government and enterprise clients.
+
+## Features
+
+- 🔒 **Modern Design**: Clean, professional corporate website with deep blue (#0B4BBB) branding
+- 📱 **Responsive**: Mobile-first design that works perfectly on all devices
+- ⚡ **Fast**: Built with Next.js 15 and optimized for performance
+- 🎨 **Animations**: Smooth scroll animations using Framer Motion
+- 🔍 **Accessible**: Clean, semantic HTML structure with proper accessibility
+- 🎯 **SEO Ready**: Optimized for search engines
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Deployment**: Ready for Vercel/Azure
 
 ## Getting Started
 
-First, run the development server:
-
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── layout.tsx      # Root layout with metadata
+│   ├── page.tsx        # Main homepage with all sections
+│   └── globals.css     # Global styles
+└── components/         # Reusable components (future expansion)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Sections
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Header**: Logo, navigation, search, contact info, CTA button
+- **Hero**: Main headline and company description
+- **Solutions**: Core service offerings (Security, AI, Cloud)
+- **Professional Solutions**: Detailed service grid
+- **News & Events**: Latest articles and insights
+- **Footer**: Contact information, newsletter signup, legal links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+The website uses Tailwind CSS for styling with custom colors defined in `tailwind.config.ts`:
+- Primary: `#0B4BBB` (Concepta Blue)
+- Background: White
+- Accent: Light gray
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is ready to deploy on:
+- **Vercel** (recommended)
+- **Azure Static Web Apps**
+- **Netlify**
+- Any other hosting platform that supports Next.js
+
+## Contact
+
+For questions about this website, contact:
+- Email: support@conceptainnovation.com
+- Phone: (877)-594-1944
+
+---
+
+© 2022, Concepta Innovation Systems, LLC

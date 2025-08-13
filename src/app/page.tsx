@@ -46,23 +46,26 @@ export default function Home() {
 
             {/* Logo - Left side on all screen sizes */}
             <div className="flex items-center">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
-                width={40}
-                height={40}
-                className="w-10 h-10"
-              />
+              <a href="/" className="hover:opacity-80 transition-opacity">
+                <Image
+                  src="/assets/logo.png?v=2"
+                  alt="Concepta Innovation Systems"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10"
+                />
+              </a>
             </div>
 
             {/* Desktop Navigation - Center */}
             <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
               {[
+                { name: 'Home', isActive: true, href: '/' },
                 { name: 'Solutions', isActive: false, href: '/solutions' },
                 { name: 'Services', isActive: false, href: '/services' },
                 { name: 'Resources', isActive: false, href: '/resources' },
                 { name: 'About', isActive: false, href: '/about' },
-                { name: 'Contact', isActive: true, href: '/contact' }
+                { name: 'Contact', isActive: false, href: '/contact' }
               ].map((item) => (
                 <div key={item.name} className="relative">
                   <a 
@@ -146,11 +149,12 @@ export default function Home() {
           <div className="flex-1 py-6">
             <nav className="space-y-2 px-6">
               {[
+                { name: 'Home', isActive: true, href: '/' },
                 { name: 'Solutions', isActive: false, href: '/solutions' },
                 { name: 'Services', isActive: false, href: '/services' },
                 { name: 'Resources', isActive: false, href: '/resources' },
                 { name: 'About', isActive: false, href: '/about' },
-                { name: 'Contact', isActive: true, href: '/contact' }
+                { name: 'Contact', isActive: false, href: '/contact' }
               ].map((item) => (
                 <a
                   key={item.name}

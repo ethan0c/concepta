@@ -30,7 +30,13 @@ export default function Services() {
   }, [])
 
   return (
-    <div className={`min-h-screen bg-white transition-all duration-300 ${isMobileMenuOpen ? 'brightness-75' : ''}`}>
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className={`min-h-screen bg-white transition-all duration-300 ${isMobileMenuOpen ? 'brightness-75' : ''}`}
+    >
       {/* Header */}
       <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6">
@@ -45,18 +51,21 @@ export default function Services() {
 
             {/* Logo - Left side on all screen sizes */}
             <div className="flex items-center">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
-                width={40}
-                height={40}
-                className="w-10 h-10"
-              />
+              <a href="/" className="hover:opacity-80 transition-opacity">
+                <Image
+                  src="/assets/logo.png?v=2"
+                  alt="Concepta Innovation Systems"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10"
+                />
+              </a>
             </div>
 
             {/* Desktop Navigation - Center */}
             <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
               {[
+                { name: 'Home', isActive: false, href: '/' },
                 { name: 'Solutions', isActive: false, href: '/solutions' },
                 { name: 'Services', isActive: true, href: '/services' },
                 { name: 'Resources', isActive: false, href: '/resources' },
@@ -156,6 +165,7 @@ export default function Services() {
           <div className="flex-1 py-6">
             <nav className="space-y-2 px-6">
               {[
+                { name: 'Home', isActive: false, href: '/' },
                 { name: 'Solutions', isActive: false, href: '/solutions' },
                 { name: 'Services', isActive: true, href: '/services' },
                 { name: 'Resources', isActive: false, href: '/resources' },
@@ -407,6 +417,6 @@ export default function Services() {
           </div>
         </section>
       </main>
-    </div>
+    </motion.div>
   )
 }

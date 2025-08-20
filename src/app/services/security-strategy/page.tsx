@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Menu, X, Award, Users, Target, Globe } from "lucide-react";
+import { Menu, X, Shield, Lock, Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function About() {
+export default function SecurityStrategy() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -69,9 +69,9 @@ export default function About() {
               {[
                 { name: "Home", isActive: false, href: "/" },
                 { name: "Solutions", isActive: false, href: "/solutions" },
-                { name: "Services", isActive: false, href: "/services" },
+                { name: "Services", isActive: true, href: "/services" },
                 { name: "Resources", isActive: false, href: "/resources" },
-                { name: "About", isActive: true, href: "/about" },
+                { name: "About", isActive: false, href: "/about" },
                 { name: "Contact", isActive: false, href: "/contact" },
               ].map((item) => (
                 <div key={item.name} className="relative">
@@ -204,9 +204,9 @@ export default function About() {
               {[
                 { name: "Home", isActive: false, href: "/" },
                 { name: "Solutions", isActive: false, href: "/solutions" },
-                { name: "Services", isActive: false, href: "/services" },
+                { name: "Services", isActive: true, href: "/services" },
                 { name: "Resources", isActive: false, href: "/resources" },
-                { name: "About", isActive: true, href: "/about" },
+                { name: "About", isActive: false, href: "/about" },
                 { name: "Contact", isActive: false, href: "/contact" },
               ].map((item) => (
                 <a
@@ -264,7 +264,7 @@ export default function About() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl md:text-6xl text-gray-900 leading-tight mb-6"
               >
-                About Concepta
+                Security Strategy & Architecture
               </motion.h1>
 
               <motion.p
@@ -273,86 +273,214 @@ export default function About() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
               >
-                Pioneering cybersecurity and technology innovation for
-                enterprise organizations since 2009.
+                Comprehensive cybersecurity strategy and architecture solutions
+                to protect your business
               </motion.p>
             </div>
           </div>
         </section>
 
-        {/* Company Overview */}
+        {/* Security Resources Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="max-w-4xl mx-auto"
-              >
-                <h2 className="text-3xl text-gray-900 mb-6">About Us</h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Empowering Innovation Across Federal and Commercial Sectors
-                  with AI, Cybersecurity, and Professional IT Support Services.
-                </p>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  At Concepta Innovation Services, we deliver intelligent
-                  automation, secure infrastructure, and mission-aligned IT
-                  support for government agencies and commercial enterprises.
-                  Our professional services span AI-driven workflows, zero-trust
-                  cybersecurity frameworks, and responsive service desk
-                  operations—enhancing performance, ensuring compliance, and
-                  elevating user experience across industries.
-                </p>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
-                  <h3 className="text-2xl font-medium text-gray-900 mb-4">
-                    Our Tagline
-                  </h3>
-                  <p className="text-xl text-blue-600 font-medium mb-2">
-                    Smarter Solutions. Secure Infrastructure. Seamless Support.
-                  </p>
-                  <p className="text-lg text-gray-700">
-                    AI, Cybersecurity, and Professional IT Services for
-                    Government and Industry.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Differentiators */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl text-gray-900 mb-4">
-                What Sets Us Apart
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our unique combination of expertise, partnerships, and proven
-                methodologies delivers exceptional value.
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+            <div className="grid lg:grid-cols-3 gap-8">
+              {/* Microsoft Digital Defense Report */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+              >
+                <div className="text-sm text-blue-600 font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  MICROSOFT PARTNER
+                </div>
+                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                  Microsoft Digital Defense Report
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Do you know what your current cybersecurity landscape looks
+                  like? Can you gauge how at-risk your business is? Read the
+                  Microsoft Digital Defense Report 2022 to get answers to these
+                  questions—and more. You'll learn about the scope and scale of
+                  today's threats, how Microsoft is helping to dismantle
+                  cybercrime, and what we can do, as a Microsoft partner to help
+                  address your business' vulnerabilities.
+                </p>
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
+                >
+                  Read more
+                  <svg
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </motion.div>
+
+              {/* Zero Trust Defense */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+              >
+                <div className="text-sm text-blue-600 font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  ZERO TRUST
+                </div>
+                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                  How to Use Zero Trust to Defend Against Cyberattacks
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  A changing economy can lead to IT cutbacks and can put
+                  pressure on security programs. But did you know that you can
+                  use the right technologies to gain unexpected wins even in
+                  challenging times? Find out how your business can use Zero
+                  Trust to push security transformation while reducing business
+                  costs.
+                </p>
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
+                >
+                  Read more
+                  <svg
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </motion.div>
+
+              {/* US LBM Case Study */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
+              >
+                <div className="text-sm text-blue-600 font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
+                  CASE STUDY
+                </div>
+                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                  US LBM Remodels its Cybersecurity by Centralizing IT with
+                  Microsoft Security
+                </h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Building supplier US LMB had acquired many different
+                  businesses, all of which had independently managed IT
+                  organizations and disparate security solutions. Even worse,
+                  many of those security solutions didn't work together. The
+                  company adopted Microsoft Sentinel and Microsoft 365 Defender
+                  for a complete SIEM and extended detection and response
+                  solution and achieved a better than benchmark security score.
+                </p>
+                <div className="bg-gradient-to-r from-green-50 to-green-100 rounded-lg p-4 mb-6 border border-green-200">
+                  <p className="text-sm text-green-800">
+                    <strong>Result:</strong> Better than benchmark security
+                    score achieved through integrated XDR and SIEM solution.
+                  </p>
+                </div>
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
+                >
+                  Read more
+                  <svg
+                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </motion.div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center mt-12">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-8 text-white">
+                <h3 className="text-2xl font-medium mb-4">
+                  Ready to Transform Your Security Posture?
+                </h3>
+                <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                  Sign up for our mailing list for details—and reach out to
+                  learn more about how we can help your company benefit from an
+                  integrated XDR and SIEM solution.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="bg-white text-blue-600 px-8 py-3 rounded font-medium hover:bg-blue-50 transition-colors">
+                    Sign Up for Mailing List
+                  </button>
+                  <button className="border border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-blue-600 transition-all">
+                    Contact Us Today
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Additional Security Services */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl text-gray-900 mb-4">
+                Our Security Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive cybersecurity solutions tailored to your
+                organization's needs
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-3 gap-8">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 text-center"
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-blue-600" />
+                  <Shield className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">
-                  Certified Excellence
+                  Security Assessment
                 </h3>
-                <p className="text-gray-600">
-                  Microsoft Azure AI Partner with ISO 27001 and SOC 2 Type II
-                  certifications ensuring highest standards.
+                <p className="text-gray-600 mb-6">
+                  Comprehensive security audits and vulnerability assessments to
+                  identify and address security gaps in your infrastructure.
                 </p>
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Learn More →
+                </a>
               </motion.div>
 
               <motion.div
@@ -360,16 +488,24 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 text-center"
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-blue-600" />
+                  <Lock className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Expert Team</h3>
-                <p className="text-gray-600">
-                  Seasoned professionals with deep expertise in cybersecurity,
-                  AI, and enterprise technology solutions.
+                <h3 className="text-xl text-gray-900 mb-4">
+                  Zero Trust Implementation
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Design and implement zero-trust security architectures to
+                  protect your organization from modern cyber threats.
                 </p>
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium"
+                >
+                  Learn More →
+                </a>
               </motion.div>
 
               <motion.div
@@ -377,114 +513,43 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 text-center"
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-blue-600" />
+                  <Eye className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Proven Results</h3>
-                <p className="text-gray-600">
-                  Track record of successful implementations with measurable
-                  outcomes and customer satisfaction.
+                <h3 className="text-xl text-gray-900 mb-4">24/7 Monitoring</h3>
+                <p className="text-gray-600 mb-6">
+                  Continuous security monitoring and threat detection with rapid
+                  response capabilities to protect your business.
                 </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Globe className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">Global Reach</h3>
-                <p className="text-gray-600">
-                  Serving clients worldwide with 24/7 support and localized
-                  expertise across multiple industries.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Leadership Team */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl text-gray-900 mb-4">Leadership Team</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Experienced leaders driving innovation and excellence in
-                cybersecurity and technology.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "John Smith",
-                  role: "Chief Executive Officer",
-                  bio: "20+ years in cybersecurity leadership with expertise in enterprise security architecture and digital transformation.",
-                  education: "M.S. Computer Science, Stanford University",
-                },
-                {
-                  name: "Sarah Johnson",
-                  role: "Chief Technology Officer",
-                  bio: "Former Microsoft Principal Engineer with deep expertise in AI, cloud security, and enterprise software development.",
-                  education: "Ph.D. Computer Science, MIT",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "Chief Security Officer",
-                  bio: "Former NSA cybersecurity specialist with 15+ years in threat intelligence and incident response leadership.",
-                  education: "M.S. Cybersecurity, Carnegie Mellon",
-                },
-              ].map((leader, index) => (
-                <motion.div
-                  key={leader.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gray-50 rounded-lg p-6"
+                <a
+                  href="#"
+                  className="text-blue-600 hover:text-blue-700 font-medium"
                 >
-                  <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-10 h-10 text-blue-600" />
-                  </div>
-
-                  <h3 className="text-xl text-gray-900 text-center mb-2">
-                    {leader.name}
-                  </h3>
-                  <p className="text-blue-600 text-center mb-4">
-                    {leader.role}
-                  </p>
-                  <p className="text-gray-600 text-sm mb-3">{leader.bio}</p>
-                  <p className="text-gray-500 text-xs text-center">
-                    {leader.education}
-                  </p>
-                </motion.div>
-              ))}
+                  Learn More →
+                </a>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-white">
           <div className="max-w-4xl mx-auto px-8 text-center">
             <h2 className="text-3xl text-gray-900 mb-6">
-              Ready to Work Together?
+              Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let's discuss how our expertise can help secure and transform your
-              organization.
+              Let's discuss how our cybersecurity expertise can protect and
+              transform your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded transition-colors">
-                Contact Our Team
+                Schedule Security Assessment
               </button>
               <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded transition-all">
-                Learn More
+                Contact Our Team
               </button>
             </div>
           </div>

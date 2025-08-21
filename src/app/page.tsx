@@ -357,18 +357,115 @@ export default function Home() {
 
                   {/* Dashboard Grid */}
                   <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
-                    {[...Array(6)].map((_, i) => (
-                      <div
-                        key={i}
-                        className="h-16 bg-blue-700/40 rounded border border-blue-500/30"
-                      ></div>
-                    ))}
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                    >
+                      <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">99.9%</div>
+                      <div className="text-blue-200 text-xs font-cisco-medium">Uptime</div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.4 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-blue-400/50"
+                    >
+                      <div className="text-blue-300 cisco-body-small font-cisco-bold drop-shadow-lg">24/7</div>
+                      <div className="text-blue-200 text-xs font-cisco-medium">Monitoring</div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.5 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                    >
+                      <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">0</div>
+                      <div className="text-blue-200 text-xs font-cisco-medium">Threats</div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.6 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                    >
+                      <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">256</div>
+                      <div className="text-blue-200 text-xs font-cisco-medium">Secured</div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.7 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-blue-400/50"
+                    >
+                      <div className="text-blue-300 cisco-body-small font-cisco-bold drop-shadow-lg">15ms</div>
+                      <div className="text-blue-200 text-xs font-cisco-medium">Response</div>
+                    </motion.div>
+
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.8 }}
+                      whileHover={{ scale: 1.02 }}
+                      className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                    >
+                      <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">100%</div>
+                      <div className="text-blue-200 text-xs font-cisco-medium">Protected</div>
+                    </motion.div>
                   </div>
 
                   {/* Dashboard Main Area */}
-                  <div className="h-28 md:h-32 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                    <span className="text-white font-cisco-medium">Secure. Modern. Scalable.</span>
-                  </div>
+                  <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                    className="h-28 md:h-32 bg-gradient-to-br from-blue-700/40 via-blue-800/50 to-blue-900/60 rounded-lg border border-blue-500/30 p-4 flex flex-col justify-between backdrop-blur-sm"
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-blue-200 cisco-body-small font-cisco-medium">System Status</span>
+                      <div className="flex items-center space-x-2">
+                        <motion.div 
+                          animate={{ opacity: [0.7, 1, 0.7] }}
+                          transition={{ duration: 2, repeat: Infinity }}
+                          className="w-2 h-2 bg-green-400 rounded-full shadow-sm"
+                        />
+                        <span className="text-green-400 cisco-body-small font-cisco-bold">
+                          All Systems Operational
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="mt-3">
+                      <div className="flex justify-between cisco-body-small text-blue-200 mb-1">
+                        <span className="font-cisco-medium">Security Score</span>
+                        <span className="font-cisco-bold text-green-400">98/100</span>
+                      </div>
+                      <div className="w-full bg-blue-800/50 rounded-full h-2 overflow-hidden">
+                        <motion.div 
+                          initial={{ width: "0%" }}
+                          animate={{ width: "98%" }}
+                          transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
+                          className="h-2 rounded-full bg-gradient-to-r from-green-400 to-blue-400"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="text-center mt-2">
+                      <span className="text-white cisco-body-large font-cisco-bold">
+                        Secure. Modern. Scalable.
+                      </span>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>

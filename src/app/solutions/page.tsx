@@ -1,231 +1,48 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { Menu, X, Shield, Brain, Cloud, Lock, Zap, Users } from 'lucide-react'
+import { Shield, Brain, Cloud, Lock, Zap, Users } from 'lucide-react'
 import Image from 'next/image'
+import Header from '@/components/Header'
 
 export default function Solutions() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMobileMenuOpen(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('resize', handleResize)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
   return (
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className={`min-h-screen bg-white transition-all duration-300 ${isMobileMenuOpen ? 'brightness-75' : ''}`}
+      className="min-h-screen bg-white"
     >
-      {/* Header */}
-      <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
-            {/* Mobile Menu Button - Left Side */}
-            <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-
-            {/* Logo - Left side on all screen sizes */}
-            <div className="flex items-center">
-              <a href="/" className="hover:opacity-80 transition-opacity">
-                <Image
-                  src="/assets/logo.png?v=2"
-                  alt="Concepta Innovation Systems"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10"
-                />
-              </a>
-            </div>
-
-            {/* Desktop Navigation - Center */}
-            <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
-              {[
-                { name: 'Home', isActive: false, href: '/' },
-                { name: 'Solutions', isActive: true, href: '/solutions' },
-                { name: 'Services', isActive: false, href: '/services' },
-                { name: 'Resources', isActive: false, href: '/resources' },
-                { name: 'About', isActive: false, href: '/about' },
-                { name: 'Contact', isActive: false, href: '/contact' }
-              ].map((item) => (
-                <div key={item.name} className="relative">
-                  <a 
-                    href={item.href}
-                    className={`text-sm transition-colors py-2 ${
-                      item.isActive 
-                        ? 'text-blue-600' 
-                        : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                  {item.isActive && (
-                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right Side Icons */}
-            <div className="flex items-center space-x-4">
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
-              
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </button>
-              
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </button>
-
-              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition-colors">
-                Quote
-              </button>
-
-              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm transition-colors">
-                Get a Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Notification Bar */}
-      <div className="fixed top-16 w-full text-white z-40" style={{
-        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)'
-      }}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <p className="text-sm text-center text-gray-700">
-            🚀 New: Advanced AI-powered cybersecurity solutions now available for enterprise clients.
-          </p>
-        </div>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isMobileMenuOpen ? 0 : '-100%' }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="fixed left-0 top-32 h-[calc(100vh-8rem)] w-80 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
-      >
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200/60">
-            <div className="flex items-center">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-              <span className="ml-3 text-lg text-gray-900">Concepta</span>
-            </div>
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-500 hover:text-gray-700 p-2"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex-1 py-6">
-            <nav className="space-y-2 px-6">
-              {[
-                { name: 'Home', isActive: false, href: '/' },
-                { name: 'Solutions', isActive: true, href: '/solutions' },
-                { name: 'Services', isActive: false, href: '/services' },
-                { name: 'Resources', isActive: false, href: '/resources' },
-                { name: 'About', isActive: false, href: '/about' },
-                { name: 'Contact', isActive: false, href: '/contact' }
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg transition-all duration-200 ${
-                    item.isActive 
-                      ? 'text-blue-600 bg-white/80 shadow-sm backdrop-blur-sm' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-white/40'
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-
-            <div className="border-t border-gray-200/60 mx-6 my-6"></div>
-
-            <div className="space-y-2 px-6">
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Sign In
-              </button>
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Support
-              </button>
-            </div>
-          </div>
-
-          {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-200/60">
-            <div className="text-sm text-gray-500 mb-4">
-              <p>(123) 455-7880</p>
-              <p>info@conceptainnovation.com</p>
-            </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition-colors">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </motion.div>
+      <Header currentPage="Solutions" />
 
       {/* Main Content */}
-      <main 
-        className="transition-all duration-300"
-        onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
-      >
+      <main>
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="pt-32 pb-20 relative overflow-hidden" style={{
+          background: 'radial-gradient(circle at top left, #0B4BBB, #082E84 70%)'
+        }}>
+          {/* subtle overlay */}
+          <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="solutions-hero" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+                  <circle cx="50" cy="50" r="1" fill="white" opacity="0.3" />
+                  <line x1="50" y1="0" x2="50" y2="100" stroke="white" strokeWidth="0.2" opacity="0.1" />
+                  <line x1="0" y1="50" x2="100" y2="50" stroke="white" strokeWidth="0.2" opacity="0.1" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#solutions-hero)" />
+            </svg>
+          </div>
+
+          <div className="page-container relative z-10">
             <div className="text-center">
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-6xl text-gray-900 leading-tight mb-6"
+                className="text-3xl md:text-4xl text-white leading-tight mb-6"
               >
                 Enterprise Solutions
               </motion.h1>
@@ -234,17 +51,26 @@ export default function Solutions() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
+                className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto mb-12"
               >
                 Comprehensive cybersecurity and technology solutions designed to protect, transform, and scale your enterprise operations.
               </motion.p>
+              <div className="relative max-w-4xl mx-auto">
+                <Image 
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
+                  alt="Enterprise Solutions Visual"
+                  width={1200}
+                  height={600}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg border border-blue-600/30 shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
 
         {/* Solutions Grid */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
+          <div className="page-container">
             <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
               {/* Cybersecurity Solutions */}
               <motion.div

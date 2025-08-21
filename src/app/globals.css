@@ -10,6 +10,47 @@
   --color-primary: #0B4BBB;
 }
 
+/* Cisco Momentum Design System Typography Tokens */
+:root {
+  /* Cisco Font Family Stack */
+  --font-cisco: 'Momentum', 'Inter', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+  
+  /* Base Font Size - 16px as per Momentum Design System */
+  --mds-font-size-base: 16px;
+  
+  /* Body Text Sizes */
+  --mds-font-size-small: 12px;
+  --mds-font-size-midsize: 14px;
+  --mds-font-size-large: 16px;
+  
+  /* Heading Sizes */
+  --mds-font-size-h6: 20px;
+  --mds-font-size-h5: 24px;
+  --mds-font-size-h4: 32px;
+  --mds-font-size-h3: 32px;
+  --mds-font-size-h2: 40px;
+  --mds-font-size-h1: 40px;
+  --mds-font-size-headline: 52px;
+  
+  /* Line Heights */
+  --mds-line-height-small: 16px;
+  --mds-line-height-midsize: 20px;
+  --mds-line-height-large: 24px;
+  --mds-line-height-h6: 28px;
+  --mds-line-height-h5: 32px;
+  --mds-line-height-h4: 40px;
+  --mds-line-height-h3: 40px;
+  --mds-line-height-h2: 52px;
+  --mds-line-height-h1: 52px;
+  --mds-line-height-headline: 64px;
+  
+  /* Font Weights - Cisco Momentum Standard */
+  --mds-font-weight-light: 300;
+  --mds-font-weight-regular: 400;
+  --mds-font-weight-medium: 500;
+  --mds-font-weight-bold: 700;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -24,7 +65,101 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-cisco);
+  font-size: var(--mds-font-size-base);
+  line-height: var(--mds-line-height-large);
+  font-weight: var(--mds-font-weight-regular);
+}
+
+/* Cisco Momentum Typography Classes */
+.cisco-headline {
+  font-size: var(--mds-font-size-headline);
+  line-height: var(--mds-line-height-headline);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-h1 {
+  font-size: var(--mds-font-size-h1);
+  line-height: var(--mds-line-height-h1);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-h2 {
+  font-size: var(--mds-font-size-h2);
+  line-height: var(--mds-line-height-h2);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-h3 {
+  font-size: var(--mds-font-size-h3);
+  line-height: var(--mds-line-height-h3);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-h4 {
+  font-size: var(--mds-font-size-h4);
+  line-height: var(--mds-line-height-h4);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-h5 {
+  font-size: var(--mds-font-size-h5);
+  line-height: var(--mds-line-height-h5);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-h6 {
+  font-size: var(--mds-font-size-h6);
+  line-height: var(--mds-line-height-h6);
+  font-weight: var(--mds-font-weight-medium);
+}
+
+.cisco-body-large {
+  font-size: var(--mds-font-size-large);
+  line-height: var(--mds-line-height-large);
+  font-weight: var(--mds-font-weight-regular);
+}
+
+.cisco-body-midsize {
+  font-size: var(--mds-font-size-midsize);
+  line-height: var(--mds-line-height-midsize);
+  font-weight: var(--mds-font-weight-regular);
+}
+
+.cisco-body-small {
+  font-size: var(--mds-font-size-small);
+  line-height: var(--mds-line-height-small);
+  font-weight: var(--mds-font-weight-regular);
+}
+
+/* Shared container for all pages - reduced margins */
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Header should span full width but content has reduced margins */
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* Improve overall rendering performance */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prefer reduced motion for users who request it */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Custom animations */

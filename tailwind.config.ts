@@ -9,7 +9,28 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        'sans': ['var(--font-cisco)', 'system-ui', 'sans-serif'],
+        'cisco': ['var(--font-cisco)', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        // Cisco Momentum Design System Typography Scale
+        'cisco-small': ['12px', '16px'],
+        'cisco-midsize': ['14px', '20px'], 
+        'cisco-large': ['16px', '24px'],
+        'cisco-h6': ['20px', '28px'],
+        'cisco-h5': ['24px', '32px'],
+        'cisco-h4': ['32px', '40px'],
+        'cisco-h3': ['32px', '40px'],
+        'cisco-h2': ['40px', '52px'],
+        'cisco-h1': ['40px', '52px'],
+        'cisco-headline': ['52px', '64px'],
+      },
+      fontWeight: {
+        // Cisco Momentum Standard Weights
+        'cisco-light': '300',
+        'cisco-regular': '400', 
+        'cisco-medium': '500',
+        'cisco-bold': '700',
       },
       colors: {
         background: "var(--background)",

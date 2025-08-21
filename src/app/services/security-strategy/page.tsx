@@ -41,7 +41,7 @@ export default function SecurityStrategy() {
     >
       {/* Header */}
       <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="w-full px-6">
           <div className="flex justify-between items-center h-16">
             {/* Mobile Menu Button - Left Side */}
             <button
@@ -53,7 +53,10 @@ export default function SecurityStrategy() {
 
             {/* Logo - Left side on all screen sizes */}
             <div className="flex items-center">
-              <Link href="/" className="hover:opacity-80 transition-opacity">
+              <Link
+                href="/"
+                className="hover:opacity-80 transition-opacity flex items-center"
+              >
                 <Image
                   src="/assets/logo.png?v=2"
                   alt="Concepta Innovation Systems"
@@ -61,6 +64,9 @@ export default function SecurityStrategy() {
                   height={40}
                   className="w-10 h-10"
                 />
+                <span className="ml-3 text-2xl font-semibold text-gray-900">
+                  Concepta Innovation
+                </span>
               </Link>
             </div>
 
@@ -162,7 +168,7 @@ export default function SecurityStrategy() {
             "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="w-full px-6 py-4">
           <p className="text-sm text-center text-gray-700">
             🚀 New: Advanced AI-powered cybersecurity solutions now available
             for enterprise clients.
@@ -256,7 +262,7 @@ export default function SecurityStrategy() {
       >
         {/* Hero Section */}
         <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto px-8">
+          <div className="w-full px-8">
             <div className="text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
@@ -282,7 +288,7 @@ export default function SecurityStrategy() {
 
         {/* Security Resources Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
+          <div className="w-full px-8">
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Microsoft Digital Defense Report */}
               <motion.div
@@ -446,7 +452,7 @@ export default function SecurityStrategy() {
 
         {/* Additional Security Services */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-8">
+          <div className="w-full px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl text-gray-900 mb-4">
                 Our Security Services
@@ -530,6 +536,30 @@ export default function SecurityStrategy() {
                   Learn More →
                 </a>
               </motion.div>
+            </div>
+
+            {/* SBA Certified Badge */}
+            <div className="mt-16 flex justify-center">
+              <div className="flex items-center p-6 bg-white rounded-lg border border-blue-200 shadow-sm">
+                <Image
+                  src="/assets/sba.jpg"
+                  alt="SBA Certified Partner"
+                  width={64}
+                  height={64}
+                  className="w-16 h-16 mr-6"
+                />
+                <div>
+                  <p className="text-xl font-semibold text-gray-900">
+                    SBA Certified Partner
+                  </p>
+                  <p className="text-base text-gray-600">
+                    Small Business Administration
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Trusted government contractor
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -34,7 +34,7 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="header-content">
           <div className="flex justify-between items-center h-16">
             {/* Mobile Menu Button - Left Side */}
             <button
@@ -46,14 +46,20 @@ export default function Home() {
 
             {/* Logo - Left side on all screen sizes */}
             <div className="flex items-center">
-              <a href="/" className="hover:opacity-80 transition-opacity">
+              <a
+                href="/"
+                className="hover:opacity-80 transition-opacity flex items-center"
+              >
                 <Image
                   src="/assets/logo.png?v=2"
-                  alt="Concepta Innovation Systems"
+                  alt="Concepta Innovation Services"
                   width={40}
                   height={40}
                   className="w-10 h-10"
                 />
+                <span className="ml-3 cisco-h5 font-cisco-medium text-gray-900">
+                  Concepta Innovation Services
+                </span>
               </a>
             </div>
 
@@ -70,7 +76,7 @@ export default function Home() {
                 <div key={item.name} className="relative">
                   <a
                     href={item.href}
-                    className={`text-sm transition-colors py-2 ${
+                    className={`cisco-body-large transition-colors py-2 ${
                       item.isActive
                         ? "text-blue-600"
                         : "text-gray-700 hover:text-blue-600"
@@ -86,7 +92,7 @@ export default function Home() {
             </nav>
 
             {/* Right Side Icons */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
               {/* Search Icon */}
               <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
                 <svg
@@ -139,12 +145,12 @@ export default function Home() {
               </button>
 
               {/* Get Quote Button - Mobile */}
-              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded cisco-body-midsize font-cisco-medium transition-colors">
                 Quote
               </button>
 
               {/* Get Quote Button - Desktop */}
-              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded font-medium text-sm transition-colors">
+              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded font-cisco-medium cisco-body-large transition-colors">
                 Get a Quote
               </button>
             </div>
@@ -154,17 +160,13 @@ export default function Home() {
 
       {/* Notification Bar */}
       <div
-        className="fixed top-16 w-full text-white z-40"
+        className="fixed top-16 w-full z-40"
         style={{
-          background:
-            "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
+          background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
         }}
       >
-        <div className="max-w-7xl mx-auto px-6 py-3">
-          <p className="text-sm text-center text-gray-700">
-            🚀 New: Advanced AI-powered cybersecurity solutions now available
-            for enterprise clients.
-          </p>
+        <div className="header-content py-2">
+          <p className="cisco-body-large text-center text-gray-700">🚀 New: Advanced AI-powered cybersecurity solutions now available for enterprise clients.</p>
         </div>
       </div>
 
@@ -175,14 +177,34 @@ export default function Home() {
         initial={{ x: "-100%" }}
         animate={{ x: isMobileMenuOpen ? 0 : "-100%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-24 h-[calc(100vh-6rem)] w-80 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
+        className="fixed left-0 top-20 h-[calc(100vh-80px)] w-72 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
       >
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
+          <div className="flex items-center justify-between p-3 border-b border-gray-200/60">
+            <div className="flex items-center">
+              <Image
+                src="/assets/logo.png?v=2"
+                alt="Concepta Innovation Systems"
+                width={32}
+                height={32}
+                className="w-8 h-8"
+              />
+              <span className="ml-3 cisco-h6 text-gray-900">
+                Concepta Innovation Services
+              </span>
+            </div>
+            <button
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="text-gray-500 hover:text-gray-700 p-2"
+            >
+              <X className="w-6 h-6" />
+            </button>
+          </div>
 
           {/* Navigation Links */}
-          <div className="flex-1 py-6">
-            <nav className="space-y-2 px-6">
+          <div className="flex-1 py-3">
+            <nav className="space-y-1 px-3">
               {[
                 { name: "Home", isActive: true, href: "/" },
                 { name: "Solutions", isActive: false, href: "/solutions" },
@@ -195,7 +217,7 @@ export default function Home() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg transition-all duration-200 ${
+                  className={`block w-full text-left py-3 px-4 rounded-lg cisco-body-large transition-all duration-200 ${
                     item.isActive
                       ? "text-blue-600 bg-white/80 shadow-sm backdrop-blur-sm"
                       : "text-gray-700 hover:text-blue-600 hover:bg-white/40"
@@ -207,26 +229,26 @@ export default function Home() {
             </nav>
 
             {/* Divider */}
-            <div className="border-t border-gray-200/60 mx-6 my-6"></div>
+            <div className="border-t border-gray-200/60 mx-3 my-3"></div>
 
             {/* Additional Links */}
-            <div className="space-y-2 px-6">
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
+            <div className="space-y-1 px-3">
+              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg cisco-body-large transition-all duration-200">
                 Sign In
               </button>
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
+              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg cisco-body-large transition-all duration-200">
                 Support
               </button>
             </div>
           </div>
 
           {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-200/60">
-            <div className="text-sm text-gray-500 mb-4">
+          <div className="p-3 border-t border-gray-200/60">
+            <div className="cisco-body-large text-gray-500 mb-2">
               <p>(123) 455-7880</p>
               <p>info@conceptainnovation.com</p>
             </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-medium transition-colors">
+            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded cisco-body-large font-cisco-medium transition-colors">
               Get Started
             </button>
           </div>
@@ -235,20 +257,22 @@ export default function Home() {
 
       {/* Main Content */}
       <main
-        className={`transition-all duration-300 ${
+        className={`pt-20 transition-all duration-200 ${
           isMobileMenuOpen ? "brightness-75" : ""
         }`}
         onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
       >
         {/* Hero Section */}
         <section
-          className="pt-32 pb-20 relative overflow-hidden bg-cover bg-center bg-no-repeat bg-fixed"
+          className="pt-8 md:pt-12 pb-8 md:pb-12 relative overflow-hidden bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url(/hero.png)",
+            backgroundImage: "linear-gradient(rgba(11, 75, 187, 0.85), rgba(8, 46, 132, 0.85)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2000&auto=format&fit=crop')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           {/* Subtle Tech Pattern Overlay */}
-          <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
             <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <pattern
@@ -288,51 +312,28 @@ export default function Home() {
             </svg>
           </div>
 
-          {/* Floating Particle Effects */}
-          <div className="absolute inset-0 overflow-hidden opacity-10">
-            <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-            <div
-              className="absolute top-1/3 right-1/3 w-1 h-1 bg-white rounded-full animate-ping"
-              style={{ animationDelay: "1s" }}
-            ></div>
-            <div
-              className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-white rounded-full animate-pulse"
-              style={{ animationDelay: "2s" }}
-            ></div>
-            <div
-              className="absolute top-2/3 right-1/4 w-1 h-1 bg-white rounded-full animate-ping"
-              style={{ animationDelay: "3s" }}
-            ></div>
-            <div
-              className="absolute bottom-1/3 right-2/3 w-2 h-2 bg-white rounded-full animate-pulse"
-              style={{ animationDelay: "4s" }}
-            ></div>
-          </div>
-
-          <div className="relative z-10 max-w-7xl mx-auto px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="page-container relative z-10">
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
               {/* Left Column - Text Content */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="space-y-8"
+                className="space-y-6 md:space-y-8"
               >
-                <h1 className="text-5xl md:text-5xl text-white leading-tight">
-                  <div>Drive your business transformation with AI agents.</div>
+                <h1 className="cisco-headline text-white leading-tight">
+                  Cyber Solutions built on Innovation
                 </h1>
 
-                <p className="text-xl text-blue-100 leading-relaxed max-w-lg">
-                  Enterprise Innovation Services's an information technology and
-                  cybersecurity firm. Providing a comprehensive approach to IT
-                  and Cybersecurity Solutions through Innovation.
+                <p className="cisco-h6 text-blue-100 leading-relaxed max-w-xl">
+                  Concepta is an information technology and cybersecurity firm delivering secure, modern solutions across cloud, AI, and enterprise infrastructure.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-medium transition-colors">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded cisco-body-large font-cisco-medium transition-colors">
                     Explore Solutions
                   </button>
-                  <button className="text-white border border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded font-medium transition-all duration-300">
+                  <button className="text-white border border-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded cisco-body-large font-cisco-medium transition-all duration-200">
                     Schedule Demo
                   </button>
                 </div>
@@ -345,7 +346,7 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                <div className="bg-blue-800/30 rounded-lg p-8 backdrop-blur-sm border border-blue-600/30">
+                <div className="bg-blue-800/30 rounded-lg p-6 md:p-8 backdrop-blur-sm border border-blue-600/30">
                   {/* Dashboard Header */}
                   <div className="flex items-center justify-between mb-6">
                     <div className="h-2 bg-blue-400 rounded-full w-24"></div>
@@ -355,7 +356,7 @@ export default function Home() {
                   </div>
 
                   {/* Dashboard Grid */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
+                  <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
                     {[...Array(6)].map((_, i) => (
                       <div
                         key={i}
@@ -365,10 +366,8 @@ export default function Home() {
                   </div>
 
                   {/* Dashboard Main Area */}
-                  <div className="h-32 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                    <span className="text-white font-medium">
-                      At Sitolutics
-                    </span>
+                  <div className="h-28 md:h-32 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                    <span className="text-white font-cisco-medium">Secure. Modern. Scalable.</span>
                   </div>
                 </div>
               </motion.div>
@@ -377,16 +376,16 @@ export default function Home() {
         </section>
 
         {/* Core Services Section */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl text-gray-900 mb-3">Our Core Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <section className="py-8 bg-white">
+          <div className="page-container">
+            <div className="text-center mb-6">
+              <h2 className="cisco-h1 text-gray-900 mb-3">Our Core Services</h2>
+              <p className="cisco-h6 text-gray-600 max-w-2xl mx-auto">
                 Comprehensive cybersecurity and technology solutions
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-4">
               {/* Security Strategy */}
               <motion.a
                 href="/services/security-strategy"
@@ -413,7 +412,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="cisco-h6 text-gray-900 group-hover:text-blue-600 transition-colors">
                       Security Strategy & Architecture
                     </h3>
                   </div>
@@ -461,7 +460,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="cisco-h6 text-gray-900 group-hover:text-blue-600 transition-colors">
                       IT Support Services
                     </h3>
                   </div>
@@ -509,7 +508,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="cisco-h6 text-gray-900 group-hover:text-blue-600 transition-colors">
                       Cloud Modernization Services
                     </h3>
                   </div>
@@ -536,7 +535,7 @@ export default function Home() {
 
         {/* Statistics Section */}
         <section
-          className="py-20 relative overflow-hidden"
+          className="py-10 relative overflow-hidden"
           style={{
             background:
               "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
@@ -613,18 +612,18 @@ export default function Home() {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-4">
+          <div className="page-container relative z-10">
+            <div className="text-center mb-8">
+              <h2 className="cisco-headline text-gray-900 mb-4">
                 Trusted by Industry Leaders
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="cisco-h5 text-gray-600">
                 Delivering exceptional results across diverse industries and
                 enterprise environments
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -632,11 +631,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal text-blue-600 mb-2">
+                <div className="cisco-headline font-cisco-regular text-blue-600 mb-2">
                   50+
                 </div>
-                <div className="text-gray-600 font-medium">Clients Served</div>
-                <div className="text-sm text-gray-500">
+                <div className="cisco-h6 text-gray-600 font-cisco-medium">
+                  Clients Served
+                </div>
+                <div className="cisco-body-large text-gray-500">
                   Government & Enterprise
                 </div>
               </motion.div>
@@ -648,13 +649,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal text-blue-600 mb-2">
+                <div className="cisco-headline font-cisco-regular text-blue-600 mb-2">
                   99.9%
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="cisco-h6 text-gray-600 font-cisco-medium">
                   Uptime Guarantee
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="cisco-body-large text-gray-500">
                   Mission-Critical Systems
                 </div>
               </motion.div>
@@ -666,13 +667,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal text-blue-600 mb-2">
+                <div className="cisco-headline font-cisco-regular text-blue-600 mb-2">
                   24/7
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="cisco-h6 text-gray-600 font-cisco-medium">
                   Security Monitoring
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="cisco-body-large text-gray-500">
                   Threat Detection & Response
                 </div>
               </motion.div>
@@ -684,13 +685,13 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="text-4xl font-normal text-blue-600 mb-2">
+                <div className="cisco-headline font-cisco-regular text-blue-600 mb-2">
                   15+
                 </div>
-                <div className="text-gray-600 font-medium">
+                <div className="cisco-h6 text-gray-600 font-cisco-medium">
                   Years Experience
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="cisco-body-large text-gray-500">
                   Cybersecurity Excellence
                 </div>
               </motion.div>
@@ -699,14 +700,14 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <section className="py-10 bg-gray-50">
+          <div className="page-container">
+            <div className="grid lg:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-4xl text-gray-900 mb-6">
-                  Why Choose Concepta Innovation Systems?
+                <h2 className="cisco-headline text-gray-900 mb-3">
+                  Why Choose Concepta Innovation Services?
                 </h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                <p className="cisco-body-midsize text-gray-600 mb-4 leading-relaxed">
                   As a Microsoft Azure AI Partner, we combine deep technical
                   expertise with proven industry experience to deliver
                   transformative cybersecurity and technology solutions. We help
@@ -716,28 +717,40 @@ export default function Home() {
                 </p>
 
                 {/* Certifications & Badges */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-4">
                   <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="cisco-body-large font-cisco-medium text-gray-700">
                       Microsoft Azure AI Partner
                     </span>
                   </div>
                   <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="cisco-body-large font-cisco-medium text-gray-700">
                       ISO 27001 Certified
                     </span>
                   </div>
                   <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="cisco-body-large font-cisco-medium text-gray-700">
                       SOC 2 Type II Compliant
+                    </span>
+                  </div>
+                  <div className="flex items-center p-3 bg-white rounded-lg border border-gray-200">
+                    <Image
+                      src="/assets/sba.jpg"
+                      alt="SBA Certified Partner"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 mr-3 flex-shrink-0"
+                    />
+                    <span className="cisco-body-large font-cisco-medium text-gray-700">
+                      SBA Certified Partner
                     </span>
                   </div>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-3">
                   <div className="flex items-start">
                     <div
                       className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1 relative overflow-hidden"
@@ -759,10 +772,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="font-medium text-gray-900 mb-1">
+                      <h3 className="cisco-h6 font-cisco-medium text-gray-900 mb-2">
                         Government-Grade Security
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="cisco-h6 text-gray-600">
                         FedRAMP, FISMA, and SOC 2 compliant solutions for the
                         most demanding security requirements.
                       </p>
@@ -790,10 +803,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="font-medium text-gray-900 mb-1">
+                      <h3 className="cisco-h6 font-cisco-medium text-gray-900 mb-2">
                         Microsoft Certified Experts
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="cisco-h6 text-gray-600">
                         Our team holds advanced Azure certifications and
                         maintains direct relationships with Microsoft
                         engineering teams.
@@ -822,10 +835,10 @@ export default function Home() {
                       </svg>
                     </div>
                     <div className="ml-4">
-                      <h3 className="font-medium text-gray-900 mb-1">
+                      <h3 className="cisco-h6 font-cisco-medium text-gray-900 mb-2">
                         Rapid Deployment
                       </h3>
-                      <p className="text-gray-600">
+                      <p className="cisco-h6 text-gray-600">
                         Accelerated implementation timelines with minimal
                         business disruption using proven methodologies.
                       </p>
@@ -889,7 +902,7 @@ export default function Home() {
                   </div>
 
                   <div className="relative z-10">
-                    <h3 className="text-2xl font-medium mb-6">
+                    <h3 className="cisco-h5 font-cisco-medium mb-6">
                       Ready to Get Started?
                     </h3>
                     <p className="mb-6 opacity-90">
@@ -898,16 +911,16 @@ export default function Home() {
                       customized solution strategy.
                     </p>
                     <div className="space-y-4">
-                      <button className="w-full bg-white text-blue-900 px-6 py-3 rounded font-medium hover:bg-blue-50 transition-colors">
+                      <button className="w-full bg-white text-blue-900 px-6 py-3 rounded font-cisco-medium hover:bg-blue-50 transition-colors">
                         Schedule Free Consultation
                       </button>
-                      <button className="w-full border border-white text-white px-6 py-3 rounded font-medium hover:bg-white hover:text-blue-900 transition-all">
+                      <button className="w-full border border-white text-white px-6 py-3 rounded font-cisco-medium hover:bg-white hover:text-blue-900 transition-all">
                         Download Security Assessment Guide
                       </button>
                     </div>
                     <div className="mt-6 pt-6 border-t border-blue-600 text-center">
-                      <p className="text-sm opacity-75">Or call us directly:</p>
-                      <p className="text-xl font-medium">(123) 455-7880</p>
+                      <p className="cisco-body-midsize opacity-75">Or call us directly:</p>
+                      <p className="cisco-h6 font-cisco-medium">(123) 455-7880</p>
                     </div>
                   </div>
                 </div>
@@ -917,20 +930,20 @@ export default function Home() {
         </section>
 
         {/* Resources & Insights Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="py-10 bg-gray-50">
+          <div className="page-container">
             {/* Section Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-medium text-gray-900 mb-4">
+            <div className="text-center mb-8">
+              <h2 className="cisco-headline font-cisco-medium text-gray-900 mb-4">
                 Resources & Insights
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="cisco-h5 text-gray-600 max-w-3xl mx-auto">
                 Stay ahead with the latest cybersecurity insights, industry best
                 practices, and technology partnerships
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="grid lg:grid-cols-2 gap-8">
               {/* Left Column - Articles & Resources */}
               <div className="space-y-12">
                 {/* Featured Article */}
@@ -941,20 +954,20 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
                 >
-                  <div className="text-sm text-blue-600 font-medium mb-3 flex items-center">
+                  <div className="cisco-body-large text-blue-600 font-cisco-medium mb-3 flex items-center">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
                     LATEST INSIGHTS
                   </div>
-                  <h3 className="text-2xl font-medium text-gray-900 mb-4">
+                  <h3 className="cisco-h3 font-cisco-medium text-gray-900 mb-4">
                     Unleashing the Power of Generative AI in Enterprise Security
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="cisco-body-midsize text-gray-600 mb-6 leading-relaxed">
                     Discover how organizations are leveraging Azure OpenAI and
                     advanced AI technologies to enhance threat detection,
                     automate incident response, and strengthen their
                     cybersecurity posture.
                   </p>
-                  <div className="flex items-center text-sm text-gray-500 mb-4">
+                  <div className="flex items-center cisco-body-large text-gray-500 mb-4">
                     <svg
                       className="w-4 h-4 mr-2"
                       fill="currentColor"
@@ -983,7 +996,7 @@ export default function Home() {
                   </div>
                   <a
                     href="#"
-                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
+                    className="text-blue-600 hover:text-blue-700 font-cisco-medium inline-flex items-center group"
                   >
                     Read Full Article
                     <svg
@@ -1008,15 +1021,15 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
                 >
-                  <div className="text-sm text-blue-600 font-medium mb-3 flex items-center">
+                  <div className="cisco-body-large text-blue-600 font-cisco-medium mb-3 flex items-center">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
                     CASE STUDY
                   </div>
-                  <h3 className="text-2xl font-medium text-gray-900 mb-4">
+                  <h3 className="cisco-h3 font-cisco-medium text-gray-900 mb-4">
                     Revolutionizing Modern Cybersecurity for Fortune 500
                     Manufacturing
                   </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
+                  <p className="cisco-body-midsize text-gray-600 mb-6 leading-relaxed">
                     Learn how we helped a leading manufacturing company
                     implement zero-trust architecture, reducing security
                     incidents by 85% while improving operational efficiency
@@ -1025,26 +1038,26 @@ export default function Home() {
                   <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-6 mb-6">
                     <div className="grid grid-cols-3 gap-4 text-center">
                       <div>
-                        <div className="text-2xl font-bold text-blue-600">
+                        <div className="cisco-h3 font-cisco-bold text-blue-600">
                           85%
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="cisco-body-large text-gray-600">
                           Incident Reduction
                         </div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-blue-600">
+                        <div className="cisco-h3 font-cisco-bold text-blue-600">
                           60%
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="cisco-body-large text-gray-600">
                           Cost Savings
                         </div>
                       </div>
                       <div>
-                        <div className="text-2xl font-bold text-blue-600">
+                        <div className="cisco-h3 font-cisco-bold text-blue-600">
                           30 Days
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="cisco-body-large text-gray-600">
                           Implementation
                         </div>
                       </div>
@@ -1052,7 +1065,7 @@ export default function Home() {
                   </div>
                   <a
                     href="#"
-                    className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
+                    className="text-blue-600 hover:text-blue-700 font-cisco-medium inline-flex items-center group"
                   >
                     View Case Study
                     <svg
@@ -1077,11 +1090,11 @@ export default function Home() {
                   viewport={{ once: true }}
                   className="bg-white rounded-lg p-8 shadow-sm border border-gray-100"
                 >
-                  <div className="text-sm text-blue-600 font-medium mb-3 flex items-center">
+                  <div className="cisco-body-midsize text-blue-600 font-cisco-medium mb-3 flex items-center">
                     <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
                     RESOURCES
                   </div>
-                  <h3 className="text-xl font-medium text-gray-900 mb-6">
+                  <h3 className="cisco-h6 font-cisco-medium text-gray-900 mb-6">
                     Additional Resources
                   </h3>
                   <div className="space-y-4">
@@ -1094,7 +1107,7 @@ export default function Home() {
                       <a
                         key={index}
                         href="#"
-                        className="flex items-center text-blue-600 hover:text-blue-700 font-medium group py-2 px-3 rounded hover:bg-blue-50 transition-all"
+                        className="flex items-center text-blue-600 hover:text-blue-700 font-cisco-medium group py-2 px-3 rounded hover:bg-blue-50 transition-all"
                       >
                         <svg
                           className="w-4 h-4 mr-3 group-hover:translate-x-1 transition-transform"
@@ -1114,7 +1127,7 @@ export default function Home() {
                   <div className="mt-8 pt-6 border-t border-gray-200">
                     <a
                       href="#"
-                      className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
+                      className="text-blue-600 hover:text-blue-700 font-cisco-medium inline-flex items-center group"
                     >
                       View All Resources
                       <svg
@@ -1140,11 +1153,11 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
               >
-                <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-100 h-full">
-                  <h2 className="text-2xl font-medium text-gray-900 mb-6">
+                <div className="bg-white rounded-lg p-6 md:p-8 shadow-sm border border-gray-100 h-full">
+                  <h2 className="cisco-h5 font-cisco-medium text-gray-900 mb-6">
                     Our Technology Partners
                   </h2>
-                  <p className="text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-gray-600 mb-6 leading-relaxed">
                     Concepta partners with leading technology companies and
                     cloud service providers to deliver continuous innovation and
                     compliant services to our customers. This provides access to
@@ -1153,7 +1166,7 @@ export default function Home() {
                   </p>
 
                   {/* Partner Logos Grid */}
-                  <div className="grid grid-cols-3 gap-6 items-center text-center mb-8">
+                  <div className="grid grid-cols-3 sm:grid-cols-4 gap-4 md:gap-6 items-center text-center mb-6">
                     {[
                       { src: "/assets/partners/Acer-Logo.png", alt: "Acer" },
                       { src: "/assets/partners/Cisco-Logo.png", alt: "Cisco" },
@@ -1180,24 +1193,21 @@ export default function Home() {
                         alt: "Arrow",
                       },
                     ].map((partner, index) => (
-                      <div
-                        key={index}
-                        className="h-16 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                      >
+            <div key={index} className="h-12 md:h-14 flex items-center justify-center p-2 rounded-lg hover:bg-gray-50 transition-colors">
                         <Image
                           src={partner.src}
                           alt={partner.alt}
-                          width={80}
-                          height={40}
-                          className="max-h-10 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100"
+              width={80}
+              height={40}
+              className="max-h-8 md:max-h-10 w-auto grayscale hover:grayscale-0 transition-all duration-200 opacity-80 hover:opacity-100"
                         />
                       </div>
                     ))}
                   </div>
 
                   {/* Partnership Benefits */}
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6">
-                    <h3 className="text-lg font-medium text-gray-900 mb-4 flex items-center">
+          <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 md:p-6">
+                    <h3 className="cisco-h6 font-cisco-medium text-gray-900 mb-4 flex items-center">
                       <svg
                         className="w-5 h-5 text-blue-600 mr-2"
                         fill="currentColor"
@@ -1211,7 +1221,7 @@ export default function Home() {
                       </svg>
                       Partnership Benefits
                     </h3>
-                    <ul className="space-y-3 text-sm text-gray-600">
+                    <ul className="space-y-2 md:space-y-3 cisco-body-midsize text-gray-600">
                       {[
                         "Direct access to latest technology innovations",
                         "Specialized training and certifications",
@@ -1251,7 +1261,7 @@ export default function Home() {
 
         {/* Footer - Blue Design */}
         <footer
-          className="text-white py-12 relative overflow-hidden"
+          className="text-white py-6 relative overflow-hidden"
           style={{
             background:
               "radial-gradient(circle at top left, #0B4BBB, #082E84 70%)",
@@ -1272,7 +1282,6 @@ export default function Home() {
                   <circle cx="40" cy="40" r="0.8" fill="white" opacity="0.3" />
                   <circle cx="20" cy="20" r="0.4" fill="white" opacity="0.2" />
                   <circle cx="60" cy="20" r="0.4" fill="white" opacity="0.2" />
-                  <circle cx="20" cy="60" r="0.4" fill="white" opacity="0.2" />
                   <circle cx="60" cy="60" r="0.4" fill="white" opacity="0.2" />
                   <line
                     x1="40"
@@ -1298,7 +1307,7 @@ export default function Home() {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="page-container relative z-10">
             <div className="grid lg:grid-cols-4 gap-8 mb-8">
               {/* Company Info */}
               <div>
@@ -1313,9 +1322,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-3">
-                    <div className="text-lg font-medium">Concepta</div>
-                    <div className="text-blue-200 text-xs">
-                      Innovation Systems
+                    <div className="cisco-h6">Concepta</div>
+                    <div className="text-blue-200 cisco-body-midsize">
+                      Innovation Services
                     </div>
                   </div>
                 </div>
@@ -1323,10 +1332,10 @@ export default function Home() {
 
               {/* Services */}
               <div>
-                <h4 className="text-sm font-medium mb-3 text-blue-200">
+                <h4 className="cisco-body-large font-cisco-medium mb-3 text-blue-200">
                   Services
                 </h4>
-                <ul className="space-y-2 text-sm text-blue-100">
+                <ul className="space-y-2 cisco-body-large text-blue-100">
                   <li>
                     <a href="#" className="hover:text-white transition-colors">
                       Cybersecurity
@@ -1347,10 +1356,10 @@ export default function Home() {
 
               {/* Contact */}
               <div>
-                <h4 className="text-sm font-medium mb-3 text-blue-200">
+                <h4 className="cisco-body-large font-cisco-medium mb-3 text-blue-200">
                   Contact
                 </h4>
-                <div className="space-y-2 text-sm text-blue-100">
+                <div className="space-y-2 cisco-body-large text-blue-100">
                   <div>
                     <a
                       href="tel:123-455-7880"
@@ -1372,16 +1381,16 @@ export default function Home() {
 
               {/* Newsletter */}
               <div>
-                <h4 className="text-sm font-medium mb-3 text-blue-200">
+                <h4 className="cisco-body-large font-cisco-medium mb-3 text-blue-200">
                   Newsletter
                 </h4>
                 <div className="flex gap-2">
                   <input
                     type="email"
                     placeholder="Email Address"
-                    className="flex-1 px-3 py-2 bg-blue-800/50 border border-blue-600/50 rounded text-white text-sm placeholder-blue-300 focus:outline-none focus:ring-1 focus:ring-white focus:border-transparent"
+                    className="flex-1 px-3 py-2 bg-blue-800/50 border border-blue-600/50 rounded text-white cisco-body-large placeholder-blue-300 focus:outline-none focus:ring-1 focus:ring-white focus:border-transparent"
                   />
-                  <button className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
+                  <button className="bg-blue-500 hover:bg-blue-400 text-white px-4 py-2 rounded cisco-body-large font-cisco-medium transition-colors">
                     Subscribe
                   </button>
                 </div>
@@ -1418,8 +1427,8 @@ export default function Home() {
 
             {/* Bottom Border */}
             <div className="border-t border-blue-600/50 pt-6">
-              <div className="flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
-                <p>© 2025 Concepta Innovation Systems. All rights reserved.</p>
+              <div className="flex flex-col md:flex-row justify-between items-center cisco-body-midsize text-blue-200">
+                <p>© 2025 Concepta Innovation Services. All rights reserved.</p>
                 <div className="flex space-x-4 mt-2 md:mt-0">
                   <a href="#" className="hover:text-white transition-colors">
                     Privacy Policy
@@ -1515,13 +1524,13 @@ export default function Home() {
             </svg>
           </div>
 
-          <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="page-container relative z-10">
             <div className="flex flex-col lg:flex-row justify-between items-center">
               <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-4 lg:mb-0">
-                <p className="text-gray-700 text-sm">
-                  © 2025 Concepta Innovation Systems, LLC. All rights reserved.
+                <p className="text-gray-700 cisco-body-large">
+                  © 2025 Concepta Innovation Services, LLC. All rights reserved.
                 </p>
-                <div className="flex items-center space-x-4 text-sm">
+                <div className="flex items-center space-x-4 cisco-body-large">
                   <a
                     href="#"
                     className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -1549,7 +1558,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-center space-x-4">
-                <span className="text-gray-600 text-sm">Follow Us:</span>
+                <span className="text-gray-600 cisco-body-large">Follow Us:</span>
                 <div className="flex space-x-3">
                   <a
                     href="#"

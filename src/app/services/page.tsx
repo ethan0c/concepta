@@ -1,360 +1,386 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { Menu, X, Settings, Code, Database, Shield, Cloud, Users } from 'lucide-react'
-import Image from 'next/image'
+import { motion } from "framer-motion";
+import { Settings, Code, Database, Shield, Cloud, Users } from "lucide-react";
+import Header from "@/components/Header";
+import Image from "next/image";
 
 export default function Services() {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
-    
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMobileMenuOpen(false)
-      }
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    window.addEventListener('resize', handleResize)
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`min-h-screen bg-white transition-all duration-300 ${isMobileMenuOpen ? 'brightness-75' : ''}`}
-    >
-      {/* Header */}
-      <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
-            {/* Mobile Menu Button - Left Side */}
-            <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-
-            {/* Logo - Left side on all screen sizes */}
-            <div className="flex items-center">
-              <a href="/" className="hover:opacity-80 transition-opacity">
-                <Image
-                  src="/assets/logo.png?v=2"
-                  alt="Concepta Innovation Systems"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10"
-                />
-              </a>
-            </div>
-
-            {/* Desktop Navigation - Center */}
-            <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
-              {[
-                { name: 'Home', isActive: false, href: '/' },
-                { name: 'Solutions', isActive: false, href: '/solutions' },
-                { name: 'Services', isActive: true, href: '/services' },
-                { name: 'Resources', isActive: false, href: '/resources' },
-                { name: 'About', isActive: false, href: '/about' },
-                { name: 'Contact', isActive: false, href: '/contact' }
-              ].map((item) => (
-                <div key={item.name} className="relative">
-                  <a 
-                    href={item.href}
-                    className={`text-sm transition-colors py-2 ${
-                      item.isActive 
-                        ? 'text-blue-600' 
-                        : 'text-gray-700 hover:text-blue-600'
-                    }`}
-                  >
-                    {item.name}
-                  </a>
-                  {item.isActive && (
-                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right Side Icons */}
-            <div className="flex items-center space-x-4">
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </button>
-              
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9" />
-                </svg>
-              </button>
-              
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </button>
-
-              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition-colors">
-                Quote
-              </button>
-
-              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm transition-colors">
-                Get a Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Notification Bar */}
-      <div className="fixed top-16 w-full text-white z-40" style={{
-        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)'
-      }}>
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <p className="text-sm text-center text-gray-700">
-            🚀 New: Advanced AI-powered cybersecurity solutions now available for enterprise clients.
-          </p>
-        </div>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <motion.div
-        initial={{ x: '-100%' }}
-        animate={{ x: isMobileMenuOpen ? 0 : '-100%' }}
-        transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="fixed left-0 top-32 h-[calc(100vh-8rem)] w-80 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
-      >
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200/60">
-            <div className="flex items-center">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-              <span className="ml-3 text-lg text-gray-900">Concepta</span>
-            </div>
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-500 hover:text-gray-700 p-2"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex-1 py-6">
-            <nav className="space-y-2 px-6">
-              {[
-                { name: 'Home', isActive: false, href: '/' },
-                { name: 'Solutions', isActive: false, href: '/solutions' },
-                { name: 'Services', isActive: true, href: '/services' },
-                { name: 'Resources', isActive: false, href: '/resources' },
-                { name: 'About', isActive: false, href: '/about' },
-                { name: 'Contact', isActive: false, href: '/contact' }
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg transition-all duration-200 ${
-                    item.isActive 
-                      ? 'text-blue-600 bg-white/80 shadow-sm backdrop-blur-sm' 
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-white/40'
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-
-            <div className="border-t border-gray-200/60 mx-6 my-6"></div>
-
-            <div className="space-y-2 px-6">
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Sign In
-              </button>
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Support
-              </button>
-            </div>
-          </div>
-
-          {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-200/60">
-            <div className="text-sm text-gray-500 mb-4">
-              <p>(123) 455-7880</p>
-              <p>info@conceptainnovation.com</p>
-            </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition-colors">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </motion.div>
+    <div className="min-h-screen bg-white">
+      <Header currentPage="Services" />
 
       {/* Main Content */}
-      <main 
-        className="transition-all duration-300"
-        onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
-      >
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center">
-              <motion.h1 
+        <section
+          className="pt-12 md:pt-16 pb-12 md:pb-16 relative overflow-hidden"
+          style={{
+            background: "radial-gradient(circle at top left, #0B4BBB, #082E84 70%)",
+          }}
+        >
+          {/* Subtle Tech Pattern Overlay */}
+          <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
+            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern
+                  id="services-mesh"
+                  x="0"
+                  y="0"
+                  width="100"
+                  height="100"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle cx="50" cy="50" r="1" fill="white" opacity="0.3" />
+                  <circle cx="25" cy="25" r="0.5" fill="white" opacity="0.2" />
+                  <circle cx="75" cy="25" r="0.5" fill="white" opacity="0.2" />
+                  <circle cx="25" cy="75" r="0.5" fill="white" opacity="0.2" />
+                  <circle cx="75" cy="75" r="0.5" fill="white" opacity="0.2" />
+                  <line
+                    x1="50"
+                    y1="0"
+                    x2="50"
+                    y2="100"
+                    stroke="white"
+                    strokeWidth="0.2"
+                    opacity="0.1"
+                  />
+                  <line
+                    x1="0"
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    stroke="white"
+                    strokeWidth="0.2"
+                    opacity="0.1"
+                  />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#services-mesh)" />
+            </svg>
+          </div>
+
+          <div className="page-container relative z-10">
+            <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
+              {/* Left Column - Text Content */}
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-6xl text-gray-900 leading-tight mb-6"
+                className="space-y-6 md:space-y-8"
               >
-                Professional Services
-              </motion.h1>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                <h1 className="text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
+                  Comprehensive Technology Services
+                </h1>
+
+                <p className="text-base md:text-lg text-blue-100 leading-relaxed max-w-xl">
+                  Delivering secure, scalable, and innovative technology solutions that drive business transformation and protect your digital assets.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-sm md:text-base font-medium transition-colors">
+                    Get Started Today
+                  </button>
+                  <button className="text-white border border-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded text-sm md:text-base font-medium transition-all duration-200">
+                    Schedule Consultation
+                  </button>
+                </div>
+              </motion.div>
+
+              {/* Right Column - Services Graphic */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
+                className="relative"
               >
-                Expert consulting and implementation services to accelerate your digital transformation journey with proven methodologies.
-              </motion.p>
+                <div className="bg-blue-800/30 rounded-lg p-6 md:p-8 backdrop-blur-sm border border-blue-600/30">
+                  {/* Services Dashboard Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="h-2 bg-blue-400 rounded-full w-32"></div>
+                    <div className="flex space-x-2">
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                    </div>
+                  </div>
+
+                  {/* Services Icons Grid */}
+                  <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
+                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-blue-300" />
+                    </div>
+                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                      <Cloud className="w-6 h-6 text-blue-300" />
+                    </div>
+                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                      <Code className="w-6 h-6 text-blue-300" />
+                    </div>
+                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                      <Database className="w-6 h-6 text-blue-300" />
+                    </div>
+                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                      <Settings className="w-6 h-6 text-blue-300" />
+                    </div>
+                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-blue-300" />
+                    </div>
+                  </div>
+
+                  {/* Services Main Area */}
+                  <div className="h-28 md:h-32 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
+                    <span className="text-white font-medium">Secure. Scalable. Innovative.</span>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Services Grid */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Strategy & Consulting */}
+          <div className="page-container">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl text-gray-900 mb-3">Our Core Services</h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive cybersecurity and technology solutions
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Cybersecurity Services */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Cybersecurity Services
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Comprehensive security solutions including threat detection, incident response, and compliance management.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Security Risk Assessments</li>
+                  <li>• Penetration Testing</li>
+                  <li>• 24/7 Security Monitoring</li>
+                  <li>• Compliance Management</li>
+                </ul>
+              </motion.div>
+
+              {/* Cloud Services */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Settings className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">Strategy & Consulting</h3>
-                    <p className="text-gray-600 mb-4">Strategic guidance to align technology with business objectives and drive measurable outcomes.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• Digital Transformation Strategy</li>
-                      <li>• Technology Roadmap Development</li>
-                      <li>• Risk Assessment & Mitigation</li>
-                      <li>• Compliance & Governance</li>
-                    </ul>
-                  </div>
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Cloud className="w-6 h-6 text-blue-600" />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Code className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">Custom Development</h3>
-                    <p className="text-gray-600 mb-4">Tailored software solutions built to meet your specific business requirements and workflows.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• Web & Mobile Applications</li>
-                      <li>• API Development & Integration</li>
-                      <li>• Legacy System Modernization</li>
-                      <li>• Microservices Architecture</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Database className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">Data & Analytics</h3>
-                    <p className="text-gray-600 mb-4">Transform raw data into actionable insights with advanced analytics and visualization platforms.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• Data Warehouse Design</li>
-                      <li>• Business Intelligence Dashboards</li>
-                      <li>• Predictive Analytics Models</li>
-                      <li>• Real-time Data Processing</li>
-                    </ul>
-                  </div>
-                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Cloud Modernization
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Migrate, optimize, and secure your cloud infrastructure with Microsoft Azure expertise.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Cloud Migration Strategy</li>
+                  <li>• Azure Infrastructure Setup</li>
+                  <li>• Cloud Security Configuration</li>
+                  <li>• Performance Optimization</li>
+                </ul>
               </motion.div>
 
-              {/* Implementation & Support */}
+              {/* IT Support */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Settings className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  IT Support Services
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Reliable, responsive IT support to keep your business running smoothly.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• 24/7 Help Desk Support</li>
+                  <li>• Network Management</li>
+                  <li>• System Maintenance</li>
+                  <li>• Technology Consulting</li>
+                </ul>
+              </motion.div>
+
+              {/* Data Management */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Database className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Data Management
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Secure data storage, backup, and analytics solutions for informed decision-making.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Data Backup & Recovery</li>
+                  <li>• Database Management</li>
+                  <li>• Analytics & Reporting</li>
+                  <li>• Data Governance</li>
+                </ul>
+              </motion.div>
+
+              {/* Custom Development */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Code className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Custom Development
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Tailored software solutions built to meet your specific business requirements.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• Web Application Development</li>
+                  <li>• API Integration</li>
+                  <li>• Database Design</li>
+                  <li>• System Integration</li>
+                </ul>
+              </motion.div>
+
+              {/* Consulting */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+              >
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Users className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Technology Consulting
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Strategic technology guidance to align IT investments with business objectives.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li>• IT Strategy Development</li>
+                  <li>• Technology Assessment</li>
+                  <li>• Digital Transformation</li>
+                  <li>• Project Management</li>
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Stack Section with Images */}
+        <section 
+          className="py-20 relative overflow-hidden"
+          style={{
+            background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
+          }}
+        >
+          <div className="page-container">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl text-gray-900 mb-4">
+                Our Technology Stack
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Leveraging industry-leading technologies and platforms to deliver exceptional results
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              {/* Technology Image */}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="bg-white rounded-lg p-8 shadow-lg">
+                  <Image
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    alt="Technology Infrastructure"
+                    width={600}
+                    height={400}
+                    className="w-full h-64 object-cover rounded-lg"
+                  />
+                  <div className="absolute -top-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                    <div className="text-sm font-medium">Enterprise Grade</div>
+                    <div className="text-xs text-blue-100">Security & Compliance</div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Technology List */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
                 className="space-y-8"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">Security Implementation</h3>
-                    <p className="text-gray-600 mb-4">Comprehensive security assessments and implementation of enterprise-grade protection measures.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• Security Architecture Review</li>
-                      <li>• Penetration Testing</li>
-                      <li>• Zero Trust Implementation</li>
-                      <li>• Incident Response Planning</li>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Microsoft Azure</li>
+                      <li>• AWS</li>
+                      <li>• Google Cloud</li>
                     </ul>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Cloud className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">Cloud Migration</h3>
-                    <p className="text-gray-600 mb-4">Seamless migration to cloud platforms with minimal downtime and optimized performance.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• Cloud Readiness Assessment</li>
-                      <li>• Migration Strategy & Planning</li>
-                      <li>• Infrastructure as Code</li>
-                      <li>• Post-Migration Optimization</li>
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• Microsoft Sentinel</li>
+                      <li>• Azure Security Center</li>
+                      <li>• Defender 365</li>
                     </ul>
                   </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-blue-600" />
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• .NET Core</li>
+                      <li>• React & Next.js</li>
+                      <li>• Python & AI/ML</li>
+                    </ul>
                   </div>
-                  <div>
-                    <h3 className="text-xl text-gray-900 mb-3">Training & Support</h3>
-                    <p className="text-gray-600 mb-4">Comprehensive training programs and ongoing support to ensure successful technology adoption.</p>
-                    <ul className="space-y-2 text-sm text-gray-600">
-                      <li>• User Training & Onboarding</li>
-                      <li>• Technical Documentation</li>
-                      <li>• 24/7 Technical Support</li>
-                      <li>• Knowledge Transfer Sessions</li>
+                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
+                    <ul className="space-y-2 text-gray-600">
+                      <li>• SQL Server</li>
+                      <li>• Azure Cosmos DB</li>
+                      <li>• PostgreSQL</li>
                     </ul>
                   </div>
                 </div>
@@ -363,60 +389,26 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl text-gray-900 mb-4">Our Service Methodology</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                A proven approach that ensures successful project delivery and long-term value creation.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { step: '01', title: 'Discovery', desc: 'Understand your business needs and technical requirements' },
-                { step: '02', title: 'Strategy', desc: 'Develop comprehensive roadmap and implementation plan' },
-                { step: '03', title: 'Implementation', desc: 'Execute solution with agile methodology and regular updates' },
-                { step: '04', title: 'Optimization', desc: 'Monitor, optimize, and scale for continuous improvement' }
-              ].map((item, index) => (
-                <motion.div
-                  key={item.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-lg">
-                    {item.step}
-                  </div>
-                  <h3 className="text-lg text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-white">
-          <div className="max-w-4xl mx-auto px-8 text-center">
-            <h2 className="text-3xl text-gray-900 mb-6">Start Your Project Today</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Ready to leverage our expertise for your next technology initiative? Let's discuss your requirements.
+        <section className="py-20 bg-blue-600">
+          <div className="page-container text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Technology Infrastructure?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let's discuss how our comprehensive technology services can help your business achieve its goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded transition-colors">
-                Request Consultation
+              <button className="bg-white text-blue-600 px-8 py-3 rounded font-medium hover:bg-blue-50 transition-colors">
+                Schedule Consultation
               </button>
-              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded transition-all">
+              <button className="border border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-blue-600 transition-colors">
                 View Case Studies
               </button>
             </div>
           </div>
         </section>
       </main>
-    </motion.div>
-  )
+    </div>
+  );
 }

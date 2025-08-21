@@ -4,16 +4,17 @@ import "./globals.css";
 
 const inter = Inter({ 
   subsets: ["latin"],
-  variable: '--font-inter',
+  variable: '--font-cisco',
+  fallback: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
-  title: "Concepta Innovation Systems | Microsoft Azure AI Partner",
-  description: "Concepta Innovation Systems is an information technology and cybersecurity firm providing comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience. Microsoft Azure AI Partner specializing in government and enterprise solutions.",
+  title: "Concepta Innovation Services | Microsoft Azure AI Partner",
+  description: "Concepta Innovation Services is an information technology and cybersecurity firm providing comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience. Microsoft Azure AI Partner specializing in government and enterprise solutions.",
   keywords: "cybersecurity, IT solutions, Microsoft Azure, AI partner, government technology, enterprise security, cloud migration, cybersecurity consulting",
-  authors: [{ name: "Concepta Innovation Systems" }],
-  creator: "Concepta Innovation Systems",
-  publisher: "Concepta Innovation Systems",
+  authors: [{ name: "Concepta Innovation Services" }],
+  creator: "Concepta Innovation Services",
+  publisher: "Concepta Innovation Services",
   robots: "index, follow",
   icons: {
     icon: '/assets/logo.png',
@@ -21,16 +22,16 @@ export const metadata: Metadata = {
     apple: '/assets/logo.png',
   },
   openGraph: {
-    title: "Concepta Innovation Systems | Microsoft Azure AI Partner",
+    title: "Concepta Innovation Services | Microsoft Azure AI Partner",
     description: "Comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience.",
     url: "https://conceptainnovation.com",
-    siteName: "Concepta Innovation Systems",
+    siteName: "Concepta Innovation Services",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Concepta Innovation Systems | Microsoft Azure AI Partner",
+    title: "Concepta Innovation Services | Microsoft Azure AI Partner",
     description: "Comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience.",
   },
   viewport: "width=device-width, initial-scale=1",
@@ -44,9 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased`}
-      >
+      <body className={`${inter.className} antialiased cisco-body-large`}>
         {children}
       </body>
     </html>

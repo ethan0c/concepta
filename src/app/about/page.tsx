@@ -1,289 +1,57 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Menu, X, Award, Users, Target, Globe } from "lucide-react";
+import { Award, Users, Target, Globe } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import Header from "@/components/Header";
 
 export default function About() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={`min-h-screen bg-white transition-all duration-300 ${
-        isMobileMenuOpen ? "brightness-75" : ""
-      }`}
-    >
-      {/* Header */}
-      <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-center h-16">
-            {/* Mobile Menu Button - Left Side */}
-            <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
-
-            {/* Logo - Left side on all screen sizes */}
-            <div className="flex items-center">
-              <Link href="/" className="hover:opacity-80 transition-opacity">
-                <Image
-                  src="/assets/logo.png?v=2"
-                  alt="Concepta Innovation Systems"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10"
-                />
-              </Link>
-            </div>
-
-            {/* Desktop Navigation - Center */}
-            <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
-              {[
-                { name: "Home", isActive: false, href: "/" },
-                { name: "Solutions", isActive: false, href: "/solutions" },
-                { name: "Services", isActive: false, href: "/services" },
-                { name: "Resources", isActive: false, href: "/resources" },
-                { name: "About", isActive: true, href: "/about" },
-                { name: "Contact", isActive: false, href: "/contact" },
-              ].map((item) => (
-                <div key={item.name} className="relative">
-                  <Link
-                    href={item.href}
-                    className={`text-sm transition-colors py-2 ${
-                      item.isActive
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.isActive && (
-                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right Side Icons */}
-            <div className="flex items-center space-x-4">
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9"
-                  />
-                </svg>
-              </button>
-
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              </button>
-
-              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition-colors">
-                Quote
-              </button>
-
-              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm transition-colors">
-                Get a Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Notification Bar */}
-      <div
-        className="fixed top-16 w-full text-white z-40"
-        style={{
-          background:
-            "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <p className="text-sm text-center text-gray-700">
-            🚀 New: Advanced AI-powered cybersecurity solutions now available
-            for enterprise clients.
-          </p>
-        </div>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <motion.div
-        initial={{ x: "-100%" }}
-        animate={{ x: isMobileMenuOpen ? 0 : "-100%" }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-32 h-[calc(100vh-8rem)] w-80 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
-      >
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200/60">
-            <div className="flex items-center">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-              <span className="ml-3 text-lg text-gray-900">Concepta</span>
-            </div>
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-500 hover:text-gray-700 p-2"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex-1 py-6">
-            <nav className="space-y-2 px-6">
-              {[
-                { name: "Home", isActive: false, href: "/" },
-                { name: "Solutions", isActive: false, href: "/solutions" },
-                { name: "Services", isActive: false, href: "/services" },
-                { name: "Resources", isActive: false, href: "/resources" },
-                { name: "About", isActive: true, href: "/about" },
-                { name: "Contact", isActive: false, href: "/contact" },
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg transition-all duration-200 ${
-                    item.isActive
-                      ? "text-blue-600 bg-white/80 shadow-sm backdrop-blur-sm"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-white/40"
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-
-            <div className="border-t border-gray-200/60 mx-6 my-6"></div>
-
-            <div className="space-y-2 px-6">
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Sign In
-              </button>
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Support
-              </button>
-            </div>
-          </div>
-
-          {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-200/60">
-            <div className="text-sm text-gray-500 mb-4">
-              <p>(123) 455-7880</p>
-              <p>info@conceptainnovation.com</p>
-            </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition-colors">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </motion.div>
+    <div className="min-h-screen bg-white">
+      <Header currentPage="About" />
 
       {/* Main Content */}
-      <main
-        className="transition-all duration-300"
-        onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
-      >
+      <main className="pt-20">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="pt-12 pb-16 relative overflow-hidden" style={{
+          background: 'radial-gradient(circle at top left, #0B4BBB, #082E84 70%)'
+        }}>
+          <div className="page-container">
             <div className="text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-6xl text-gray-900 leading-tight mb-6"
+                className="cisco-h1 text-white leading-tight mb-6"
               >
-                About Concepta
+                About Concepta Innovation Services
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
+                className="cisco-h6 text-blue-100 leading-relaxed max-w-3xl mx-auto mb-8"
               >
-                Pioneering cybersecurity and technology innovation for
-                enterprise organizations since 2009.
+                Providing innovative technical solutions that promote business value, while ensuring security of business and customer data from growing cybersecurity threats.
               </motion.p>
+              <div className="relative max-w-4xl mx-auto">
+                <Image 
+                  src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=1600&auto=format&fit=crop"
+                  alt="About our team"
+                  width={1200}
+                  height={600}
+                  className="w-full h-64 md:h-80 object-cover rounded-lg border border-blue-600/30 shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Company Overview */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
+                 {/* Company Overview */}
+         <section className="py-20 bg-white">
+           <div className="page-container">
+             <div className="text-center mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -291,12 +59,11 @@ export default function About() {
                 viewport={{ once: true }}
                 className="max-w-4xl mx-auto"
               >
-                <h2 className="text-3xl text-gray-900 mb-6">About Us</h2>
-                <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                  Empowering Innovation Across Federal and Commercial Sectors
-                  with AI, Cybersecurity, and Professional IT Support Services.
+                <h2 className="cisco-h3 text-gray-900 mb-6">About Us</h2>
+                <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
+                  Providing innovative technical solutions that promote business value, while ensuring security of business and customer data from growing cybersecurity threats.
                 </p>
-                <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
                   At Concepta Innovation Services, we deliver intelligent
                   automation, secure infrastructure, and mission-aligned IT
                   support for government agencies and commercial enterprises.
@@ -305,31 +72,47 @@ export default function About() {
                   operations—enhancing performance, ensuring compliance, and
                   elevating user experience across industries.
                 </p>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
-                  <h3 className="text-2xl font-medium text-gray-900 mb-4">
-                    Our Tagline
-                  </h3>
-                  <p className="text-xl text-blue-600 font-medium mb-2">
-                    Smarter Solutions. Secure Infrastructure. Seamless Support.
-                  </p>
-                  <p className="text-lg text-gray-700">
-                    AI, Cybersecurity, and Professional IT Services for
-                    Government and Industry.
-                  </p>
-                </div>
+                                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
+                   <h3 className="cisco-h5 font-cisco-medium text-gray-900 mb-4">
+                     Our Mission
+                   </h3>
+                   <p className="cisco-h6 text-blue-600 font-cisco-medium mb-2">
+                     Cyber Solutions built on Innovation
+                   </p>
+                   <p className="cisco-h6 text-gray-700">
+                     IT Services and IT Consulting for Government and Industry.
+                   </p>
+                 </div>
+                 
+                 {/* SBA Certified Badge */}
+                 <div className="mt-8 flex justify-center">
+                   <div className="flex items-center p-4 bg-white rounded-lg border border-blue-200 shadow-sm">
+                     <Image
+                       src="/assets/sba.jpg"
+                       alt="SBA Certified Partner"
+                       width={48}
+                       height={48}
+                       className="w-12 h-12 mr-4"
+                     />
+                     <div>
+                       <p className="cisco-h6 font-cisco-medium text-gray-900">SBA Certified Partner</p>
+                       <p className="cisco-body-midsize text-gray-600">Small Business Administration</p>
+                     </div>
+                   </div>
+                 </div>
               </motion.div>
             </div>
           </div>
         </section>
 
-        {/* Key Differentiators */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl text-gray-900 mb-4">
+                 {/* Key Differentiators */}
+         <section className="py-20 bg-gray-50">
+           <div className="page-container">
+             <div className="text-center mb-16">
+              <h2 className="cisco-h3 text-gray-900 mb-4">
                 What Sets Us Apart
               </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="cisco-h6 text-gray-600 max-w-3xl mx-auto">
                 Our unique combination of expertise, partnerships, and proven
                 methodologies delivers exceptional value.
               </p>
@@ -346,7 +129,7 @@ export default function About() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Award className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">
+                <h3 className="cisco-h6 text-gray-900 mb-4">
                   Certified Excellence
                 </h3>
                 <p className="text-gray-600">
@@ -365,7 +148,7 @@ export default function About() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Expert Team</h3>
+                <h3 className="cisco-h6 text-gray-900 mb-4">Expert Team</h3>
                 <p className="text-gray-600">
                   Seasoned professionals with deep expertise in cybersecurity,
                   AI, and enterprise technology solutions.
@@ -382,7 +165,7 @@ export default function About() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Proven Results</h3>
+                <h3 className="cisco-h6 text-gray-900 mb-4">Proven Results</h3>
                 <p className="text-gray-600">
                   Track record of successful implementations with measurable
                   outcomes and customer satisfaction.
@@ -399,7 +182,7 @@ export default function About() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Globe className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Global Reach</h3>
+                <h3 className="cisco-h6 text-gray-900 mb-4">Global Reach</h3>
                 <p className="text-gray-600">
                   Serving clients worldwide with 24/7 support and localized
                   expertise across multiple industries.
@@ -409,12 +192,12 @@ export default function About() {
           </div>
         </section>
 
-        {/* Leadership Team */}
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl text-gray-900 mb-4">Leadership Team</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                 {/* Leadership Team */}
+         <section className="py-20 bg-white">
+           <div className="page-container">
+             <div className="text-center mb-16">
+              <h2 className="cisco-h3 text-gray-900 mb-4">Leadership Team</h2>
+              <p className="cisco-h6 text-gray-600 max-w-3xl mx-auto">
                 Experienced leaders driving innovation and excellence in
                 cybersecurity and technology.
               </p>
@@ -453,14 +236,14 @@ export default function About() {
                     <Users className="w-10 h-10 text-blue-600" />
                   </div>
 
-                  <h3 className="text-xl text-gray-900 text-center mb-2">
+                  <h3 className="cisco-h6 text-gray-900 text-center mb-2">
                     {leader.name}
                   </h3>
                   <p className="text-blue-600 text-center mb-4">
                     {leader.role}
                   </p>
-                  <p className="text-gray-600 text-sm mb-3">{leader.bio}</p>
-                  <p className="text-gray-500 text-xs text-center">
+                  <p className="text-gray-600 cisco-body-midsize mb-3">{leader.bio}</p>
+                  <p className="text-gray-500 cisco-body-small text-center">
                     {leader.education}
                   </p>
                 </motion.div>
@@ -472,24 +255,24 @@ export default function About() {
         {/* Call to Action */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-8 text-center">
-            <h2 className="text-3xl text-gray-900 mb-6">
+            <h2 className="cisco-h3 text-gray-900 mb-6">
               Ready to Work Together?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="cisco-h6 text-gray-600 mb-8">
               Let's discuss how our expertise can help secure and transform your
               organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded transition-colors">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded cisco-body-large font-cisco-medium transition-colors">
                 Contact Our Team
               </button>
-              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded transition-all">
+              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded cisco-body-large font-cisco-medium transition-all">
                 Learn More
               </button>
             </div>
           </div>
         </section>
       </main>
-    </motion.div>
+    </div>
   );
 }

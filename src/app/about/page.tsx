@@ -60,27 +60,21 @@ export default function About() {
                 className="max-w-4xl mx-auto"
               >
                 <h2 className="cisco-h3 text-gray-900 mb-6">About Us</h2>
+                <h3 className="cisco-h5 text-gray-800 mb-4 font-cisco-medium">
+                  Empowering Innovation Across Federal and Commercial Sectors with AI, Cybersecurity, and Professional IT Support Services.
+                </h3>
                 <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
-                  Providing innovative technical solutions that promote business value, while ensuring security of business and customer data from growing cybersecurity threats.
-                </p>
-                <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
-                  At Concepta Innovation Services, we deliver intelligent
-                  automation, secure infrastructure, and mission-aligned IT
-                  support for government agencies and commercial enterprises.
-                  Our professional services span AI-driven workflows, zero-trust
-                  cybersecurity frameworks, and responsive service desk
-                  operations—enhancing performance, ensuring compliance, and
-                  elevating user experience across industries.
+                  At Concepta Innovation Services, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our professional services span AI-driven workflows, zero-trust cybersecurity frameworks, and responsive service desk operations—enhancing performance, ensuring compliance, and elevating user experience across industries.
                 </p>
                                  <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
                    <h3 className="cisco-h5 font-cisco-medium text-gray-900 mb-4">
-                     Our Mission
+                     Our Tagline
                    </h3>
-                   <p className="cisco-h6 text-blue-600 font-cisco-medium mb-2">
-                     Cyber Solutions built on Innovation
+                   <p className="cisco-h5 text-blue-700 font-cisco-medium mb-3">
+                     Smarter Solutions. Secure Infrastructure. Seamless Support.
                    </p>
                    <p className="cisco-h6 text-gray-700">
-                     IT Services and IT Consulting for Government and Industry.
+                     AI, Cybersecurity, and Professional IT Services for Government and Industry.
                    </p>
                  </div>
                  

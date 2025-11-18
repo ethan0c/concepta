@@ -285,7 +285,7 @@ export default function ITSupport() {
                 transition={{ duration: 0.8 }}
                 className="text-5xl md:text-6xl text-gray-900 leading-tight mb-6"
               >
-                IT Support Services
+                Concepta IT Support Services
               </motion.h1>
 
               <motion.p
@@ -294,385 +294,195 @@ export default function ITSupport() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
               >
-                Comprehensive IT support and AI solutions to drive your business
-                forward with intelligent automation and secure infrastructure.
+                Your Trusted Partner for Comprehensive IT Solutions
+              </motion.p>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto"
+              >
+                At Concepta, we empower your business with a full suite of IT support services,
+                designed to keep your operations running efficiently, securely, and without interruption.
               </motion.p>
             </div>
           </div>
         </section>
 
-        {/* G&J Pepsi Case Study */}
+        {/* Our Services */}
         <section className="py-20 bg-white">
           <div className="w-full px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl text-gray-900 mb-6">
-                Client Success Stories
+                Our Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Real-world examples of how we help organizations overcome
-                cybersecurity challenges
+                Explore our comprehensive IT support offerings designed to keep your business running smoothly
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h3 className="text-3xl font-medium text-gray-900 mb-4">
-                    G&J Pepsi Reflect on Overcoming a Ransomware Attack
-                  </h3>
-                  <p className="text-blue-600 font-medium text-lg mb-6">
-                    Cybersecurity Resilience Case Study
-                  </p>
-
-                  <div className="prose prose-lg text-gray-700 mb-6">
-                    <p className="mb-4 text-lg">
-                      When G&J Pepsi faced a devastating ransomware attack that
-                      threatened to cripple their operations, our team worked
-                      around the clock to restore their systems and implement
-                      comprehensive security measures.
-                    </p>
-                    <p className="mb-4 text-lg">
-                      Through our incident response expertise and zero-trust
-                      security implementation, we not only recovered their
-                      systems but also strengthened their overall cybersecurity
-                      posture, preventing future attacks.
-                    </p>
-                  </div>
-
-                  <div className="bg-white rounded-lg p-4 border border-blue-200">
-                    <p className="text-base text-blue-800 font-medium mb-2">
-                      Key Outcomes:
-                    </p>
-                    <ul className="text-base text-blue-700 space-y-1">
-                      <li>• 100% data recovery within 48 hours</li>
-                      <li>• Zero-trust security framework implementation</li>
-                      <li>• 99.9% uptime guarantee maintained</li>
-                      <li>• Comprehensive security training for staff</li>
-                    </ul>
-                  </div>
+            {/* Managed Desktop Services */}
+            <div className="mb-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                  <Server className="w-8 h-8 text-white" />
                 </div>
-
-                <div className="text-center">
-                  <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Shield className="w-12 h-12 text-white" />
-                  </div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                    Microsoft Azure & Security Partnership
-                  </h4>
-                  <p className="text-gray-600 mb-6">
-                    G&J Pepsi-Cola Bottlers avoided both loss of data and ransom
-                    payment when a ransomware attack threatened the company in
-                    2021. It credits Microsoft Azure and Microsoft Security for
-                    saving the day.
-                  </p>
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-medium transition-colors">
-                    Read Full Case Study
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Artificial Intelligence Solutions */}
-        <section className="py-20 bg-gray-50">
-          <div className="w-full px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-6">
-                Artificial Intelligence Solutions
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Leverage the power of AI to transform your business operations
-                and enhance productivity
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Copilot Insights */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                    <Zap className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Insights from Copilot Early Users
-                  </h3>
-                </div>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Copilot sets a new baseline – one where every employee gains
-                  the skills to write, design, code, analyze data, and more. If
-                  you want to see how Copilot is driving measurable business
-                  value for organizations that have fully adopted the
-                  technology, check out the latest research.
-                </p>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  As a Microsoft Partner, we can help you realize these
-                  productivity gains by readying your processes and people for
-                  the AI-powered future of work.
-                </p>
-
-                <button className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group">
-                  Read More
-                  <svg
-                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Copilot for M365 */}
-              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                    <Users className="w-6 h-6 text-green-600" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Copilot for M365 | Day in the Life of an Executive
-                  </h3>
-                </div>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  As a busy executive, it's hard to get ahead at work. But
-                  imagine what you could accomplish with an AI-powered assistant
-                  at your disposal. You may have a tight schedule, but Copilot
-                  for Microsoft 365 can help you achieve more between meetings.
-                </p>
-
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Watch the video to see how executives use Copilot to stay
-                  focused throughout their workday. As a Microsoft Partner, we
-                  can help you achieve these results and more.
-                </p>
-
-                <button className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group">
-                  Watch Video
-                  <svg
-                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-
-            {/* AI Agents & Workflow Automation */}
-            <div className="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-8 text-white">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-semibold mb-4">
-                  AI Agents & Workflow Automation
+                <h3 className="text-3xl font-semibold text-gray-900">
+                  Managed Desktop Services
                 </h3>
-                <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                  Empowering Intelligent Operations with Concepta Innovation
-                  Services
-                </p>
               </div>
-
-              <div className="grid lg:grid-cols-3 gap-8 mb-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-8 h-8 text-white" />
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Proactive Monitoring:</span> 24/7 coverage to ensure your desktops are always performing at their best.
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">
-                    Intelligent Automation
-                  </h4>
-                  <p className="text-blue-100">
-                    Streamline operations with AI-powered workflows
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="w-8 h-8 text-white" />
+                </li>
+                <li className="flex items-start">
+                  <span className="text-blue-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Reactive User Support:</span> Round-the-clock assistance for any technical issues your team encounters.
                   </div>
-                  <h4 className="text-lg font-semibold mb-2">
-                    Enhanced Security
-                  </h4>
-                  <p className="text-blue-100">
-                    AI-driven threat detection and response
-                  </p>
-                </div>
-
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2">
-                    Productivity Boost
-                  </h4>
-                  <p className="text-blue-100">
-                    Empower teams with intelligent assistance
-                  </p>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <p className="text-lg mb-6">
-                  In today's fast-evolving digital landscape, AI agents are
-                  transforming how businesses operate—automating tasks,
-                  enhancing decision-making, and improving productivity.
-                </p>
-                <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded font-medium transition-colors">
-                  Ready to Transform with AI Agents?
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Transition Applications to Cloud */}
-        <section className="py-20 bg-white">
-          <div className="w-full px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-6">
-                Transition Applications to Cloud
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Modernize your infrastructure with cloud migration and Microsoft
-                Security solutions
-              </p>
+                </li>
+              </ul>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
-              {/* Bank Case Study */}
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border border-green-200">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
-                    <Cloud className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Bank Boosts Growth with Cloud Adoption
-                  </h3>
+            {/* Cybersecurity Services */}
+            <div className="mb-12 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 border border-red-200">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mr-4">
+                  <Shield className="w-8 h-8 text-white" />
                 </div>
-
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  When a bank aspires to faster growth, security can be a highly
-                  effective accelerator. Georgia Banking Company exemplifies the
-                  success that's possible with a tightly connected security tool
-                  set.
-                </p>
-
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  It completed its cloud transformation within 13 months and
-                  gained scalable security and efficiency by replacing a
-                  collection of disconnected products with Microsoft Security
-                  solutions.
-                </p>
-
-                <div className="bg-white rounded-lg p-4 border border-green-200">
-                  <p className="text-green-800 font-medium mb-2">
-                    Key Results:
-                  </p>
-                  <ul className="text-green-700 space-y-1">
-                    <li>• 13-month cloud transformation</li>
-                    <li>• Scalable security implementation</li>
-                    <li>• Enhanced operational efficiency</li>
-                    <li>• Integrated Microsoft Security suite</li>
-                  </ul>
-                </div>
+                <h3 className="text-3xl font-semibold text-gray-900">
+                  Cybersecurity Services
+                </h3>
               </div>
-
-              {/* Multicloud Security */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
-                    <Shield className="w-6 h-6 text-white" />
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Security Assessments:</span> Identify vulnerabilities and strengthen your defenses.
                   </div>
-                  <h3 className="text-2xl font-semibold text-gray-900">
-                    Data Protection Across Multicloud Estate
-                  </h3>
-                </div>
-
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  How many clouds does your business use? Is your data protected
-                  across them all? Find out how the right technology solutions
-                  can help you extend security across the clouds and cloud
-                  services your business relies on.
-                </p>
-
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  As a Microsoft partner, we can help your security operations
-                  team achieve similar results, with deeply integrated security
-                  solutions that span your entire digital estate.
-                </p>
-
-                <button className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group">
-                  Learn More
-                  <svg
-                    className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">24/7 Security Operations Center:</span> Continuous monitoring and rapid threat response.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Incident Response & Remediation:</span> Expert support to contain and resolve security incidents.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Advanced Endpoint Detection (EDR):</span> Cutting-edge protection for every device.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-red-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">SIEM & Log Management:</span> Azure Sentinel Services for comprehensive security intelligence.
+                  </div>
+                </li>
+              </ul>
             </div>
-          </div>
-        </section>
 
-        {/* SBA Certified Badge */}
-        <section className="py-20 bg-gray-50">
-          <div className="w-full px-8">
-            <div className="flex justify-center">
-              <div className="flex items-center p-8 bg-white rounded-2xl border border-blue-200 shadow-lg">
-                <Image
-                  src="/assets/sba.jpg"
-                  alt="SBA Certified Partner"
-                  width={80}
-                  height={80}
-                  className="w-20 h-20 mr-8"
-                />
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-2">
-                    SBA Certified Partner
-                  </h3>
-                  <p className="text-lg text-gray-600 mb-2">
-                    Small Business Administration
-                  </p>
-                  <p className="text-base text-gray-500">
-                    Trusted government contractor with proven track record
-                  </p>
+            {/* Backup and Disaster Recovery */}
+            <div className="mb-12 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                  <Cloud className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-3xl font-semibold text-gray-900">
+                  Backup and Disaster Recovery
+                </h3>
               </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-green-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Cloud Backup:</span> Reliable backup solutions for Azure and Microsoft 365 environments, protecting your critical data from loss.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Managed Server Services */}
+            <div className="mb-12 bg-gradient-to-r from-purple-50 to-violet-50 rounded-2xl p-8 border border-purple-200">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                  <Server className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-semibold text-gray-900">
+                  Managed Server Services
+                </h3>
+              </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-purple-600 mr-3 mt-1">✓</span>
+                  <div>
+                    Management and support for <span className="font-semibold">Windows Server 2012 and above</span>, ensuring optimal performance and reliability.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            {/* Managed Network Services */}
+            <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-2xl p-8 border border-cyan-200">
+              <div className="flex items-center mb-6">
+                <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mr-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-3xl font-semibold text-gray-900">
+                  Managed Network Services
+                </h3>
+              </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start">
+                  <span className="text-cyan-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Proactive Monitoring:</span> 24/7 oversight, utilizing SNMP or cloud-based tools to keep your network healthy and secure.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-600 mr-3 mt-1">✓</span>
+                  <div>
+                    <span className="font-semibold">Reactive Network Support:</span> Immediate assistance for any network issues, any time of day.
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-600 mr-3 mt-1">✓</span>
+                  <div>
+                    Comprehensive management for <span className="font-semibold">switches, routers, and access points (APs)</span>.
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
           <div className="w-full px-8 text-center">
-            <h2 className="text-3xl text-gray-900 mb-6">
-              Ready to Transform Your IT Infrastructure?
+            <h2 className="text-4xl mb-6">
+              Let Concepta Be the Backbone of Your IT Infrastructure
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let's discuss how our AI solutions and cloud expertise can help
-              secure and modernize your organization.
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
+              Contact us today to learn how our managed services can help your business thrive in a digital world.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded transition-colors">
-                Contact Our Team
-              </button>
-              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded transition-all">
-                Schedule Demo
+              <Link href="/contact">
+                <button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded font-medium transition-colors">
+                  Contact Our Team
+                </button>
+              </Link>
+              <button className="text-white border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded font-medium transition-all">
+                Schedule a Consultation
               </button>
             </div>
           </div>

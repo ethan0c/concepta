@@ -92,59 +92,8 @@ export default function Home() {
               ))}
             </nav>
 
-            {/* Right Side Icons */}
+            {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
-              {/* Search Icon */}
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-
-              {/* Globe Icon */}
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
-                  />
-                </svg>
-              </button>
-
-              {/* User Icon */}
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              </button>
-
               {/* Get Quote Button - Mobile */}
               <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded cisco-body-midsize font-cisco-medium transition-colors">
                 Quote

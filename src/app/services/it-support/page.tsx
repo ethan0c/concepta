@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import {
   Menu,
   X,
@@ -9,31 +9,12 @@ import {
   Cloud,
   Shield,
   Zap,
-  Search,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-
-// Search data for site pages
-const searchablePages = [
-  { title: "Home", href: "/", description: "Welcome to Concepta Innovation Systems" },
-  { title: "Solutions", href: "/solutions", description: "Our technology solutions and offerings" },
-  { title: "Services", href: "/services", description: "Professional IT and cybersecurity services" },
-  { title: "IT Support", href: "/services/it-support", description: "Managed IT support and helpdesk services" },
-  { title: "Security Strategy", href: "/services/security-strategy", description: "Cybersecurity strategy and consulting" },
-  { title: "Resources", href: "/resources", description: "Whitepapers, case studies, and insights" },
-  { title: "About", href: "/about", description: "About Concepta Innovation Systems" },
-  { title: "Contact", href: "/contact", description: "Get in touch with our team" },
-];
 
 export default function ITSupport() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState(searchablePages);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,51 +27,14 @@ export default function ITSupport() {
       }
     };
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
-        e.preventDefault();
-        setIsSearchOpen(true);
-      }
-      if (e.key === "Escape") {
-        setIsSearchOpen(false);
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
-    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
-      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
-
-  useEffect(() => {
-    if (isSearchOpen && searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [isSearchOpen]);
-
-  useEffect(() => {
-    if (searchQuery.trim() === "") {
-      setSearchResults(searchablePages);
-    } else {
-      const filtered = searchablePages.filter(
-        (page) =>
-          page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          page.description.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setSearchResults(filtered);
-    }
-  }, [searchQuery]);
-
-  const handleSearchSelect = (href: string) => {
-    setIsSearchOpen(false);
-    setSearchQuery("");
-    router.push(href);
-  };
 
   return (
     <motion.div
@@ -101,62 +45,6 @@ export default function ITSupport() {
         isMobileMenuOpen ? "brightness-75" : ""
       }`}
     >
-      {/* Search Modal */}
-      <AnimatePresence>
-        {isSearchOpen && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60]"
-              onClick={() => setIsSearchOpen(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95, y: -20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95, y: -20 }}
-              className="fixed top-20 left-1/2 -translate-x-1/2 w-full max-w-xl bg-white rounded-xl shadow-2xl z-[70] overflow-hidden"
-            >
-              <div className="flex items-center px-4 border-b border-gray-200">
-                <Search className="w-5 h-5 text-gray-400" />
-                <input
-                  ref={searchInputRef}
-                  type="text"
-                  placeholder="Search pages, services, solutions..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="flex-1 px-4 py-4 text-gray-900 placeholder-gray-400 focus:outline-none"
-                />
-                <kbd className="hidden sm:inline-flex items-center px-2 py-1 text-xs text-gray-400 bg-gray-100 rounded">ESC</kbd>
-              </div>
-              <div className="max-h-80 overflow-y-auto">
-                {searchResults.length > 0 ? (
-                  <ul className="py-2">
-                    {searchResults.map((result, index) => (
-                      <li key={index}>
-                        <button
-                          onClick={() => handleSearchSelect(result.href)}
-                          className="w-full px-4 py-3 text-left hover:bg-blue-50 transition-colors flex items-start space-x-3"
-                        >
-                          <Search className="w-4 h-4 text-gray-400 mt-1 flex-shrink-0" />
-                          <div>
-                            <p className="text-gray-900 font-medium">{result.title}</p>
-                            <p className="text-sm text-gray-500">{result.description}</p>
-                          </div>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                ) : (
-                  <div className="px-4 py-8 text-center text-gray-500">No results found</div>
-                )}
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
       {/* Header */}
       <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
         <div className="w-full px-6">
@@ -218,16 +106,6 @@ export default function ITSupport() {
 
             {/* Right Side Icons */}
             <div className="flex items-center space-x-4">
-              {/* Search Button */}
-              <button 
-                onClick={() => setIsSearchOpen(true)}
-                className="hidden lg:flex items-center text-gray-700 hover:text-gray-900 px-3 py-1.5 rounded-lg border border-gray-300 hover:border-gray-400 transition-colors space-x-2"
-              >
-                <Search className="w-4 h-4" />
-                <span className="text-sm text-gray-500">Search...</span>
-                <kbd className="hidden xl:inline-flex items-center px-1.5 py-0.5 text-xs text-gray-400 bg-gray-100 rounded">⌘K</kbd>
-              </button>
-
               {/* Get Quote Button - Mobile */}
               <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm font-medium transition-colors">
                 Quote
@@ -322,13 +200,6 @@ export default function ITSupport() {
 
             {/* Additional Links */}
             <div className="space-y-2 px-6">
-              <button 
-                onClick={() => { setIsMobileMenuOpen(false); setIsSearchOpen(true); }}
-                className="flex items-center w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200"
-              >
-                <Search className="w-4 h-4 mr-3" />
-                Search
-              </button>
               <Link 
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}

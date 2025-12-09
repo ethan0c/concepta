@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -7,6 +7,12 @@ const inter = Inter({
   variable: '--font-cisco',
   fallback: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#0B4BBB",
+};
 
 export const metadata: Metadata = {
   title: "Concepta Innovation Services | Microsoft Azure AI Partner",
@@ -34,8 +40,6 @@ export const metadata: Metadata = {
     title: "Concepta Innovation Services | Microsoft Azure AI Partner",
     description: "Comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience.",
   },
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#0B4BBB",
 };
 
 export default function RootLayout({

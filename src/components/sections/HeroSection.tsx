@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -83,159 +84,137 @@ export default function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right Column - Dashboard Graphic */}
+          {/* Right Column - Microsoft Partnership */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-blue-800/30 rounded-lg p-6 md:p-8 backdrop-blur-sm border border-blue-600/30">
-              {/* Dashboard Header */}
-              <div className="flex items-center justify-between mb-6">
-                <div className="h-2 bg-blue-400 rounded-full w-24"></div>
-                <div className="w-4 h-4 bg-green-400 rounded-full flex items-center justify-center">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
+            <div className="bg-white/10 rounded-lg p-6 md:p-8 backdrop-blur-sm border border-white/20">
+              {/* Partnership Header */}
+              <div className="flex items-center justify-center mb-6">
+                <div className="flex items-center space-x-3">
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <span className="text-white cisco-body-large font-cisco-medium">
+                    Microsoft Partner
+                  </span>
                 </div>
               </div>
 
-              {/* Dashboard Grid */}
-              <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
-                >
-                  <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">
-                    99.9%
-                  </div>
-                  <div className="text-blue-200 text-xs font-cisco-medium">
-                    Uptime
-                  </div>
-                </motion.div>
+              {/* Microsoft Logo */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex justify-center mb-6"
+              >
+                <Image
+                  src="/assets/partners/Microsoft-Logo.png"
+                  alt="Microsoft Partner"
+                  width={180}
+                  height={40}
+                  className="h-10 w-auto brightness-0 invert"
+                />
+              </motion.div>
 
+              {/* Partnership Badges */}
+              <div className="grid grid-cols-2 gap-3 mb-6">
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-blue-400/50"
-                >
-                  <div className="text-blue-300 cisco-body-small font-cisco-bold drop-shadow-lg">
-                    24/7
-                  </div>
-                  <div className="text-blue-200 text-xs font-cisco-medium">
-                    Monitoring
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                  className="bg-white/10 rounded-lg p-4 text-center border border-white/10"
                 >
-                  <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">
-                    0
+                  <div className="text-white cisco-body-large font-cisco-bold mb-1">
+                    Azure AI
                   </div>
-                  <div className="text-blue-200 text-xs font-cisco-medium">
-                    Threats
+                  <div className="text-blue-200 text-xs">
+                    Partner
                   </div>
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                  className="bg-white/10 rounded-lg p-4 text-center border border-white/10"
                 >
-                  <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">
-                    256
+                  <div className="text-white cisco-body-large font-cisco-bold mb-1">
+                    Security
                   </div>
-                  <div className="text-blue-200 text-xs font-cisco-medium">
-                    Secured
+                  <div className="text-blue-200 text-xs">
+                    Specialization
                   </div>
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.7 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-blue-400/50"
+                  className="bg-white/10 rounded-lg p-4 text-center border border-white/10"
                 >
-                  <div className="text-blue-300 cisco-body-small font-cisco-bold drop-shadow-lg">
-                    15ms
+                  <div className="text-white cisco-body-large font-cisco-bold mb-1">
+                    Cloud
                   </div>
-                  <div className="text-blue-200 text-xs font-cisco-medium">
-                    Response
+                  <div className="text-blue-200 text-xs">
+                    Solutions
                   </div>
                 </motion.div>
 
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 }}
-                  whileHover={{ scale: 1.02 }}
-                  className="h-16 bg-gradient-to-br from-blue-700/40 to-blue-800/60 rounded-lg border border-blue-500/30 flex flex-col items-center justify-center p-2 cursor-pointer transition-all duration-300 hover:border-green-400/50"
+                  className="bg-white/10 rounded-lg p-4 text-center border border-white/10"
                 >
-                  <div className="text-green-400 cisco-body-small font-cisco-bold drop-shadow-lg">
-                    100%
+                  <div className="text-white cisco-body-large font-cisco-bold mb-1">
+                    Copilot
                   </div>
-                  <div className="text-blue-200 text-xs font-cisco-medium">
-                    Protected
+                  <div className="text-blue-200 text-xs">
+                    Ready
                   </div>
                 </motion.div>
               </div>
 
-              {/* Dashboard Main Area */}
+              {/* Partnership Status */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.9 }}
-                className="h-28 md:h-32 bg-gradient-to-br from-blue-700/40 via-blue-800/50 to-blue-900/60 rounded-lg border border-blue-500/30 p-4 flex flex-col justify-between backdrop-blur-sm"
+                className="bg-gradient-to-r from-white/10 to-white/5 rounded-lg border border-white/10 p-4"
               >
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mb-3">
                   <span className="text-blue-200 cisco-body-small font-cisco-medium">
-                    System Status
+                    Certified Expertise
                   </span>
                   <div className="flex items-center space-x-2">
                     <motion.div
                       animate={{ opacity: [0.7, 1, 0.7] }}
                       transition={{ duration: 2, repeat: Infinity }}
-                      className="w-2 h-2 bg-green-400 rounded-full shadow-sm"
+                      className="w-2 h-2 bg-green-400 rounded-full"
                     />
                     <span className="text-green-400 cisco-body-small font-cisco-bold">
-                      All Systems Operational
+                      Verified
                     </span>
                   </div>
                 </div>
 
-                <div className="mt-3">
-                  <div className="flex justify-between cisco-body-small text-blue-200 mb-1">
-                    <span className="font-cisco-medium">Security Score</span>
-                    <span className="font-cisco-bold text-green-400">
-                      98/100
-                    </span>
+                <div className="flex items-center justify-center space-x-6 text-center">
+                  <div>
+                    <div className="text-white cisco-h5 font-cisco-bold">15+</div>
+                    <div className="text-blue-200 text-xs">Years</div>
                   </div>
-                  <div className="w-full bg-blue-800/50 rounded-full h-2 overflow-hidden">
-                    <motion.div
-                      initial={{ width: "0%" }}
-                      animate={{ width: "98%" }}
-                      transition={{ duration: 2, delay: 1.5, ease: "easeOut" }}
-                      className="h-2 rounded-full bg-gradient-to-r from-green-400 to-blue-400"
-                    />
+                  <div className="h-8 w-px bg-white/20"></div>
+                  <div>
+                    <div className="text-white cisco-h5 font-cisco-bold">500+</div>
+                    <div className="text-blue-200 text-xs">Clients</div>
                   </div>
-                </div>
-
-                <div className="text-center mt-2">
-                  <span className="text-white cisco-body-large font-cisco-bold">
-                    Secure. Modern. Scalable.
-                  </span>
+                  <div className="h-8 w-px bg-white/20"></div>
+                  <div>
+                    <div className="text-white cisco-h5 font-cisco-bold">100%</div>
+                    <div className="text-blue-200 text-xs">Certified</div>
+                  </div>
                 </div>
               </motion.div>
             </div>

@@ -253,7 +253,7 @@ export default function About() {
               Ready to Work Together?
             </h2>
             <p className="cisco-h6 text-gray-600 mb-8">
-              Let's discuss how our expertise can help secure and transform your
+              Let&apos;s discuss how our expertise can help secure and transform your
               organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -4,31 +4,25 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface HeaderProps {
   currentPage?: string;
 }
 
 export default function Header({ currentPage = "Home" }: HeaderProps) {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setIsMobileMenuOpen(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
@@ -58,7 +52,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
 
             {/* Logo - Left side on all screen sizes */}
             <div className="flex items-center">
-              <a
+              <Link
                 href="/"
                 className="hover:opacity-80 transition-opacity flex items-center"
               >
@@ -72,14 +66,14 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                 <span className="ml-3 cisco-h5 font-cisco-medium text-gray-900">
                   Concepta Innovation Services
                 </span>
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation - Center */}
             <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative">
-                  <a
+                  <Link
                     href={item.href}
                     className={`cisco-body-large transition-colors py-2 ${
                       item.name === currentPage
@@ -88,7 +82,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                     }`}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                   {item.name === currentPage && (
                     <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
                   )}
@@ -96,59 +90,8 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
               ))}
             </nav>
 
-            {/* Right Side Icons */}
+            {/* Right Side */}
             <div className="flex items-center space-x-3">
-              {/* Search Icon */}
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-
-              {/* Globe Icon */}
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9"
-                  />
-                </svg>
-              </button>
-
-              {/* User Icon */}
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              </button>
-
               {/* Get Quote Button - Mobile */}
               <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded cisco-body-midsize font-cisco-medium transition-colors">
                 Quote
@@ -195,13 +138,13 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <div className="flex items-center">
               <Image
                 src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Services"
+                alt="Concepta Innovation Systems"
                 width={32}
                 height={32}
                 className="w-8 h-8"
               />
-              <span className="ml-3 cisco-h6 text-gray-900">
-                Concepta Innovation Services
+              <span className="ml-3 cisco-body-large text-gray-900">
+                Concepta Innovation
               </span>
             </div>
             <button
@@ -216,7 +159,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
           <div className="flex-1 py-3">
             <nav className="space-y-1 px-3">
               {navigationItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -227,7 +170,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   }`}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
 
@@ -236,20 +179,21 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
 
             {/* Additional Links */}
             <div className="space-y-1 px-3">
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg cisco-body-large transition-all duration-200">
-                Sign In
-              </button>
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg cisco-body-large transition-all duration-200">
+              <Link 
+                href="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg cisco-body-large transition-all duration-200"
+              >
                 Support
-              </button>
+              </Link>
             </div>
           </div>
 
           {/* Sidebar Footer */}
           <div className="p-6 border-t border-gray-200/60">
             <div className="cisco-body-large text-gray-500 mb-4">
-              <p>(123) 455-7880</p>
-              <p>info@conceptainnovation.com</p>
+              <p>(404) 875-3741</p>
+              <p>info@conceptais.com</p>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded cisco-body-large font-cisco-medium transition-colors">
               Get Started

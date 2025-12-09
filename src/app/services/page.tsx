@@ -87,50 +87,98 @@ export default function Services() {
                 </div>
               </motion.div>
 
-              {/* Right Column - Services Graphic */}
+              {/* Right Column - Services Showcase */}
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
-                <div className="bg-blue-800/30 rounded-lg p-6 md:p-8 backdrop-blur-sm border border-blue-600/30">
-                  {/* Services Dashboard Header */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="h-2 bg-blue-400 rounded-full w-32"></div>
-                    <div className="flex space-x-2">
-                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
-                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+                  {/* Microsoft Partner Badge */}
+                  <div className="flex items-center justify-center mb-8">
+                    <div className="bg-white rounded-xl px-6 py-4 flex items-center space-x-4 shadow-lg">
+                      <Image
+                        src="/assets/partners/microsoft-logo.png"
+                        alt="Microsoft Partner"
+                        width={120}
+                        height={40}
+                        className="h-8 w-auto"
+                      />
+                      <div className="border-l border-gray-300 pl-4">
+                        <p className="text-xs text-gray-500 uppercase tracking-wide">Certified</p>
+                        <p className="text-sm font-semibold text-gray-800">Azure AI Partner</p>
+                      </div>
                     </div>
                   </div>
 
                   {/* Services Icons Grid */}
-                  <div className="grid grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
-                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-blue-300" />
-                    </div>
-                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                      <Cloud className="w-6 h-6 text-blue-300" />
-                    </div>
-                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                      <Code className="w-6 h-6 text-blue-300" />
-                    </div>
-                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                      <Database className="w-6 h-6 text-blue-300" />
-                    </div>
-                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                      <Settings className="w-6 h-6 text-blue-300" />
-                    </div>
-                    <div className="h-16 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                      <Users className="w-6 h-6 text-blue-300" />
-                    </div>
+                  <div className="grid grid-cols-3 gap-3 md:gap-4 mb-6">
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.3 }}
+                      className="bg-white/10 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <Shield className="w-6 h-6 text-white mb-2" />
+                      <span className="text-white text-xs font-medium">Security</span>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.4 }}
+                      className="bg-white/10 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <Cloud className="w-6 h-6 text-white mb-2" />
+                      <span className="text-white text-xs font-medium">Cloud</span>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.5 }}
+                      className="bg-white/10 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <Code className="w-6 h-6 text-white mb-2" />
+                      <span className="text-white text-xs font-medium">Dev</span>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.6 }}
+                      className="bg-white/10 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <Database className="w-6 h-6 text-white mb-2" />
+                      <span className="text-white text-xs font-medium">Data</span>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.7 }}
+                      className="bg-white/10 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <Settings className="w-6 h-6 text-white mb-2" />
+                      <span className="text-white text-xs font-medium">IT Ops</span>
+                    </motion.div>
+                    <motion.div 
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.4, delay: 0.8 }}
+                      className="bg-white/10 rounded-xl p-4 border border-white/10 flex flex-col items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <Users className="w-6 h-6 text-white mb-2" />
+                      <span className="text-white text-xs font-medium">Support</span>
+                    </motion.div>
                   </div>
 
-                  {/* Services Main Area */}
-                  <div className="h-28 md:h-32 bg-blue-700/40 rounded border border-blue-500/30 flex items-center justify-center">
-                    <span className="text-white font-medium">Secure. Scalable. Innovative.</span>
-                  </div>
+                  {/* Tagline */}
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 0.9 }}
+                    className="text-center pt-4 border-t border-white/10"
+                  >
+                    <p className="text-white font-medium">Secure. Scalable. Innovative.</p>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>

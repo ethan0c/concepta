@@ -1,14 +1,32 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Menu, X, Shield, Lock, Eye } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, Shield, Lock, Eye, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+// Search data for site pages
+const searchablePages = [
+  { title: "Home", href: "/", description: "Welcome to Concepta Innovation Systems" },
+  { title: "Solutions", href: "/solutions", description: "Our technology solutions and offerings" },
+  { title: "Services", href: "/services", description: "Professional IT and cybersecurity services" },
+  { title: "IT Support", href: "/services/it-support", description: "Managed IT support and helpdesk services" },
+  { title: "Security Strategy", href: "/services/security-strategy", description: "Cybersecurity strategy and consulting" },
+  { title: "Resources", href: "/resources", description: "Whitepapers, case studies, and insights" },
+  { title: "About", href: "/about", description: "About Concepta Innovation Systems" },
+  { title: "Contact", href: "/contact", description: "Get in touch with our team" },
+];
 
 export default function SecurityStrategy() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState(searchablePages);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,14 +39,51 @@ export default function SecurityStrategy() {
       }
     };
 
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "k") {
+        e.preventDefault();
+        setIsSearchOpen(true);
+      }
+      if (e.key === "Escape") {
+        setIsSearchOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
+
+  useEffect(() => {
+    if (isSearchOpen && searchInputRef.current) {
+      searchInputRef.current.focus();
+    }
+  }, [isSearchOpen]);
+
+  useEffect(() => {
+    if (searchQuery.trim() === "") {
+      setSearchResults(searchablePages);
+    } else {
+      const filtered = searchablePages.filter(
+        (page) =>
+          page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          page.description.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filtered);
+    }
+  }, [searchQuery]);
+
+  const handleSearchSelect = (href: string) => {
+    setIsSearchOpen(false);
+    setSearchQuery("");
+    router.push(href);
+  };
 
   return (
     <motion.div

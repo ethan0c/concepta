@@ -5,11 +5,9 @@ import { useState, useEffect, useRef } from "react";
 import {
   Menu,
   X,
-  Headphones,
   Server,
   Cloud,
   Shield,
-  Users,
   Zap,
   Search,
 } from "lucide-react";
@@ -30,7 +28,6 @@ const searchablePages = [
 ];
 
 export default function ITSupport() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -40,7 +37,7 @@ export default function ITSupport() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Scroll tracking for future header animations
     };
 
     const handleResize = () => {

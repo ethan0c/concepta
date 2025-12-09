@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
-import { Menu, X, Shield, Lock, Eye, Search } from "lucide-react";
+import { Menu, X, Shield, Lock, Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -20,17 +20,15 @@ const searchablePages = [
 ];
 
 export default function SecurityStrategy() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState(searchablePages);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Scroll tracking for future header animations
     };
 
     const handleResize = () => {
@@ -65,25 +63,6 @@ export default function SecurityStrategy() {
       searchInputRef.current.focus();
     }
   }, [isSearchOpen]);
-
-  useEffect(() => {
-    if (searchQuery.trim() === "") {
-      setSearchResults(searchablePages);
-    } else {
-      const filtered = searchablePages.filter(
-        (page) =>
-          page.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          page.description.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setSearchResults(filtered);
-    }
-  }, [searchQuery]);
-
-  const handleSearchSelect = (href: string) => {
-    setIsSearchOpen(false);
-    setSearchQuery("");
-    router.push(href);
-  };
 
   return (
     <motion.div
@@ -370,7 +349,7 @@ export default function SecurityStrategy() {
                       G&J Pepsi-Cola Bottlers avoided both loss of data and ransom payment when a ransomware attack threatened the company in 2021. It credits Microsoft Azure and Microsoft Security for saving the day.
                     </p>
                     <p className="mb-4 text-lg">
-                      Read the story and join our mailing list to stay in touch. Reach out if you'd like to discuss how we can help you protect against cyber-attacks.
+                      Read the story and join our mailing list to stay in touch. Reach out if you&apos;d like to discuss how we can help you protect against cyber-attacks.
                     </p>
                   </div>
 
@@ -395,7 +374,7 @@ export default function SecurityStrategy() {
                     Microsoft Azure & Security Partnership
                   </h4>
                   <p className="text-gray-600 mb-6">
-                    Leveraging Microsoft's comprehensive security solutions to protect against ransomware and cyber threats.
+                    Leveraging Microsoft&apos;s comprehensive security solutions to protect against ransomware and cyber threats.
                   </p>
                   <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded font-medium transition-colors">
                     Read Full Story
@@ -433,10 +412,10 @@ export default function SecurityStrategy() {
                   Do you know what your current cybersecurity landscape looks
                   like? Can you gauge how at-risk your business is? Read the
                   Microsoft Digital Defense Report 2022 to get answers to these
-                  questions—and more. You'll learn about the scope and scale of
-                  today's threats, how Microsoft is helping to dismantle
+                  questions—and more. You&apos;ll learn about the scope and scale of
+                  today&apos;s threats, how Microsoft is helping to dismantle
                   cybercrime, and what we can do, as a Microsoft partner to help
-                  address your business' vulnerabilities.
+                  address your business&apos; vulnerabilities.
                 </p>
                 <a
                   href="#"
@@ -519,7 +498,7 @@ export default function SecurityStrategy() {
                   Building supplier US LMB had acquired many different
                   businesses, all of which had independently managed IT
                   organizations and disparate security solutions. Even worse,
-                  many of those security solutions didn't work together. The
+                  many of those security solutions didn&apos;t work together. The
                   company adopted Microsoft Sentinel and Microsoft 365 Defender
                   for a complete SIEM and extended detection and response
                   solution and achieved a better than benchmark security score.
@@ -620,7 +599,7 @@ export default function SecurityStrategy() {
                   Day in the Life of an Executive
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  As a busy executive, it's hard to get ahead at work. But imagine what you could accomplish with an AI-powered assistant at your disposal. You may have a tight schedule, but Copilot for Microsoft 365 can help you achieve more between meetings.
+                  As a busy executive, it&apos;s hard to get ahead at work. But imagine what you could accomplish with an AI-powered assistant at your disposal. You may have a tight schedule, but Copilot for Microsoft 365 can help you achieve more between meetings.
                 </p>
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Watch the video to see how executives use Copilot to stay focused throughout their workday. As a Microsoft Partner, we can help you achieve these results and more. Unleash productivity today.
@@ -643,7 +622,7 @@ export default function SecurityStrategy() {
                   How to Onboard Copilot, Your Everyday Work Companion
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  There's art and science to using Copilot for Microsoft 365. It's not enough to merely turn Copilot on – your people need guidance on how to build new skills that help them get the most out of generative AI. Learn how you can navigate your AI journey with confidence by working with a Microsoft Partner to ready your organization for the new AI-powered era of work. Read the eBook for more insights.
+                  There&apos;s art and science to using Copilot for Microsoft 365. It&apos;s not enough to merely turn Copilot on – your people need guidance on how to build new skills that help them get the most out of generative AI. Learn how you can navigate your AI journey with confidence by working with a Microsoft Partner to ready your organization for the new AI-powered era of work. Read the eBook for more insights.
                 </p>
                 <button className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group">
                   Read more
@@ -666,7 +645,7 @@ export default function SecurityStrategy() {
                   Empowering Intelligent Operations with Concepta Innovation Services
                 </p>
                 <p className="text-blue-100 mb-6 leading-relaxed">
-                  In today's fast-evolving digital landscape, AI agents are transforming how businesses operate—automating tasks, enhancing decision-making, and improving productivity. At Concepta Innovation Services, we specialize in deploying AI-powered solutions that align with your mission, scale with your growth, and deliver measurable impact.
+                  In today&apos;s fast-evolving digital landscape, AI agents are transforming how businesses operate—automating tasks, enhancing decision-making, and improving productivity. At Concepta Innovation Services, we specialize in deploying AI-powered solutions that align with your mission, scale with your growth, and deliver measurable impact.
                 </p>
                 <div className="bg-white/10 rounded-lg p-4 mb-6 border border-white/20">
                   <p className="text-white font-medium">
@@ -707,7 +686,7 @@ export default function SecurityStrategy() {
                   Bank Boosts Growth with Cloud Adoption and Microsoft Security
                 </h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
-                  When a bank aspires to faster growth, security can be a highly effective accelerator. Georgia Banking Company exemplifies the success that's possible with a tightly connected security tool set.
+                  When a bank aspires to faster growth, security can be a highly effective accelerator. Georgia Banking Company exemplifies the success that&apos;s possible with a tightly connected security tool set.
                 </p>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   It completed its cloud transformation within 13 months and gained scalable security and efficiency by replacing a collection of disconnected products with Microsoft Security solutions.
@@ -777,7 +756,7 @@ export default function SecurityStrategy() {
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive cybersecurity solutions tailored to your
-                organization's needs
+                organization&apos;s needs
               </p>
             </div>
 
@@ -889,7 +868,7 @@ export default function SecurityStrategy() {
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Let's discuss how our cybersecurity expertise can protect and
+              Let&apos;s discuss how our cybersecurity expertise can protect and
               transform your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

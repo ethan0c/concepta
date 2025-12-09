@@ -3,17 +3,17 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { NotificationBar, Footer, BottomFooter } from "@/components/layout";
 import { HeroSection, CoreServicesSection, StatisticsSection, WhyChooseUsSection, ResourcesInsightsSection } from "@/components/sections";
 
 export default function Home() {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      // Scroll tracking for future header animations
     };
 
     const handleResize = () => {
@@ -47,7 +47,7 @@ export default function Home() {
 
             {/* Logo - Left side on all screen sizes */}
             <div className="flex items-center">
-              <a
+              <Link
                 href="/"
                 className="hover:opacity-80 transition-opacity flex items-center"
               >
@@ -61,7 +61,7 @@ export default function Home() {
                 <span className="ml-3 cisco-h5 font-cisco-medium text-gray-900">
                   Concepta Innovation Services
                 </span>
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Navigation - Center */}

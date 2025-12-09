@@ -1,8 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { BookOpen, Download, Video, FileText, Calendar, Users } from 'lucide-react'
-import Image from 'next/image'
+import { BookOpen, Download, Video, FileText, Calendar } from 'lucide-react'
 import Header from '@/components/Header'
 
 export default function Resources() {

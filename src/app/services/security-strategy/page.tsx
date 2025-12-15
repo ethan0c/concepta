@@ -1,276 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { Menu, X, Shield, Lock, Eye } from "lucide-react";
+import { Shield, Lock, Eye } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import Header from "@/components/Header";
 
 export default function SecurityStrategy() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      // Scroll tracking for future header animations
-    };
-
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setIsMobileMenuOpen(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={`min-h-screen bg-white transition-all duration-300 ${
-        isMobileMenuOpen ? "brightness-75" : ""
-      }`}
-    >
-      {/* Header */}
-      <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="w-full px-6">
-          <div className="flex justify-between items-center h-16">
-            {/* Mobile Menu Button - Left Side */}
-            <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              <Menu className="w-6 h-6" />
-            </button>
+    <div className="min-h-screen bg-white">
+      <Header currentPage="Services" />
 
-            {/* Logo - Left side on all screen sizes */}
-            <div className="flex items-center">
-              <Link
-                href="/"
-                className="hover:opacity-80 transition-opacity flex items-center"
-              >
-                <Image
-                  src="/assets/logo.png?v=2"
-                  alt="Concepta Innovation Systems"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10"
-                />
-                <span className="ml-3 text-2xl font-semibold text-gray-900">
-                  Concepta Innovation
-                </span>
-              </Link>
-            </div>
-
-            {/* Desktop Navigation - Center */}
-            <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
-              {[
-                { name: "Home", isActive: false, href: "/" },
-                { name: "Solutions", isActive: false, href: "/solutions" },
-                { name: "Services", isActive: true, href: "/services" },
-                { name: "Resources", isActive: false, href: "/resources" },
-                { name: "About", isActive: false, href: "/about" },
-                { name: "Contact", isActive: false, href: "/contact" },
-              ].map((item) => (
-                <div key={item.name} className="relative">
-                  <Link
-                    href={item.href}
-                    className={`text-sm transition-colors py-2 ${
-                      item.isActive
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.isActive && (
-                    <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-blue-600 rounded-full"></div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right Side Icons */}
-            <div className="flex items-center space-x-4">
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
-
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 919-9"
-                  />
-                </svg>
-              </button>
-
-              <button className="hidden lg:block text-gray-700 hover:text-gray-900 p-2 transition-colors">
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                  />
-                </svg>
-              </button>
-
-              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm transition-colors">
-                Quote
-              </button>
-
-              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded text-sm transition-colors">
-                Get a Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Contact Info Bar */}
-      <div className="fixed top-16 w-full z-40 bg-[#0B4BBB]">
-        <div className="w-full px-6 py-2 flex justify-center items-center space-x-6">
-          <a href="tel:+14048753741" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            (404) 875-3741
-          </a>
-          <span className="text-blue-300">|</span>
-          <a href="mailto:info@conceptais.com" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            info@conceptais.com
-          </a>
-        </div>
-      </div>
-
-      {/* Mobile Sidebar */}
-      <motion.div
-        initial={{ x: "-100%" }}
-        animate={{ x: isMobileMenuOpen ? 0 : "-100%" }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-32 h-[calc(100vh-8rem)] w-80 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
-      >
-        <div className="flex flex-col h-full">
-          {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-200/60">
-            <div className="flex items-center">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
-              <span className="ml-3 text-lg text-gray-900">Concepta</span>
-            </div>
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-500 hover:text-gray-700 p-2"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="flex-1 py-6">
-            <nav className="space-y-2 px-6">
-              {[
-                { name: "Home", isActive: false, href: "/" },
-                { name: "Solutions", isActive: false, href: "/solutions" },
-                { name: "Services", isActive: true, href: "/services" },
-                { name: "Resources", isActive: false, href: "/resources" },
-                { name: "About", isActive: false, href: "/about" },
-                { name: "Contact", isActive: false, href: "/contact" },
-              ].map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg transition-all duration-200 ${
-                    item.isActive
-                      ? "text-blue-600 bg-white/80 shadow-sm backdrop-blur-sm"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-white/40"
-                  }`}
-                >
-                  {item.name}
-                </a>
-              ))}
-            </nav>
-
-            <div className="border-t border-gray-200/60 mx-6 my-6"></div>
-
-            <div className="space-y-2 px-6">
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Sign In
-              </button>
-              <button className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg transition-all duration-200">
-                Support
-              </button>
-            </div>
-          </div>
-
-          {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-200/60">
-            <div className="text-sm text-gray-500 mb-4">
-              <p>(123) 455-7880</p>
-              <p>info@conceptainnovation.com</p>
-            </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded transition-colors">
-              Get Started
-            </button>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Main Content */}
-      <main
-        className="transition-all duration-300"
-        onClick={() => isMobileMenuOpen && setIsMobileMenuOpen(false)}
-      >
+      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
+      <main className="pt-14 sm:pt-24">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="w-full px-8">
+        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-6xl text-gray-900 leading-tight mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight mb-4 sm:mb-6"
               >
                 Cybersecurity Strategy & Architecture
               </motion.h1>
@@ -279,7 +29,7 @@ export default function SecurityStrategy() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
+                className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12"
               >
                 Comprehensive cybersecurity strategy and architecture solutions to protect your business from modern threats
               </motion.p>
@@ -288,11 +38,11 @@ export default function SecurityStrategy() {
         </section>
 
         {/* G&J Pepsi Case Study - Featured */}
-        <section className="py-20 bg-white">
-          <div className="w-full px-8">
+        <section className="py-12 sm:py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
-                NEW: August 20, 2025
+                FEATURED CASE STUDY
               </div>
               <h2 className="text-4xl text-gray-900 mb-6">
                 Featured Success Story
@@ -383,7 +133,7 @@ export default function SecurityStrategy() {
                   address your business&apos; vulnerabilities.
                 </p>
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
                 >
                   Read more
@@ -425,7 +175,7 @@ export default function SecurityStrategy() {
                   costs.
                 </p>
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
                 >
                   Read more
@@ -475,7 +225,7 @@ export default function SecurityStrategy() {
                   </p>
                 </div>
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-medium inline-flex items-center group"
                 >
                   Read more
@@ -744,7 +494,7 @@ export default function SecurityStrategy() {
                   identify and address security gaps in your infrastructure.
                 </p>
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-medium"
                 >
                   Learn More →
@@ -769,7 +519,7 @@ export default function SecurityStrategy() {
                   protect your organization from modern cyber threats.
                 </p>
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-medium"
                 >
                   Learn More →
@@ -792,7 +542,7 @@ export default function SecurityStrategy() {
                   response capabilities to protect your business.
                 </p>
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-medium"
                 >
                   Learn More →

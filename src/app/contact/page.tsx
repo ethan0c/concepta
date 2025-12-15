@@ -32,10 +32,10 @@ export default function Contact() {
     <div className="min-h-screen bg-white">
       <Header currentPage="Contact" />
 
-      {/* Main Content */}
-      <main className="pt-20">
+      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
+      <main className="pt-14 sm:pt-24">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center">
               <motion.h1 
@@ -85,7 +85,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600">(123) 455-7880</p>
+                      <p className="text-gray-600">(877)-594-1944</p>
                       <p className="text-sm text-gray-500">Available 24/7 for emergency support</p>
                     </div>
                   </div>
@@ -96,7 +96,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Email</h3>
-                      <p className="text-gray-600">info@conceptainnovation.com</p>
+                      <p className="text-gray-600">support@conceptainnovation.com</p>
                       <p className="text-sm text-gray-500">We respond within 24 hours</p>
                     </div>
                   </div>
@@ -108,9 +108,8 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
                       <p className="text-gray-600">
-                        1234 Technology Drive<br />
-                        Suite 500<br />
-                        Washington, DC 20004
+                        1451 Rockville Pike #2-230<br />
+                        Rockville, MD 20852
                       </p>
                     </div>
                   </div>
@@ -135,7 +134,7 @@ export default function Contact() {
                     For critical security incidents requiring immediate attention, contact our 24/7 emergency response team.
                   </p>
                   <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded transition-colors">
-                    Emergency Hotline: (123) 911-HELP
+                    Emergency Hotline: (877)-594-1944
                   </button>
                 </div>
               </motion.div>

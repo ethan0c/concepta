@@ -32,9 +32,9 @@ const defaultArticle: Article = {
   title: "Unleashing the Power of Generative AI in Enterprise Security",
   description:
     "Discover how organizations are leveraging Azure OpenAI and advanced AI technologies to enhance threat detection, automate incident response, and strengthen their cybersecurity posture.",
-  publishedDate: "August 10, 2025",
+  publishedDate: "December 2024",
   readTime: "5 min read",
-  href: "#",
+  href: "/resources",
   linkText: "Read Full Article",
 };
 
@@ -48,7 +48,7 @@ const defaultCaseStudy: CaseStudy = {
     { value: "60%", label: "Cost Savings" },
     { value: "30 Days", label: "Implementation" },
   ],
-  href: "#",
+  href: "/resources",
   linkText: "View Case Study",
 };
 
@@ -251,7 +251,7 @@ export default function ResourcesInsightsSection({
                 {resources.map((resource, index) => (
                   <a
                     key={index}
-                    href="#"
+                    href="/resources"
                     className="flex items-center text-blue-600 hover:text-blue-700 font-cisco-medium group py-2 px-3 rounded hover:bg-blue-50 transition-all"
                   >
                     <svg
@@ -271,7 +271,7 @@ export default function ResourcesInsightsSection({
               </div>
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <a
-                  href="#"
+                  href="/resources"
                   className="text-blue-600 hover:text-blue-700 font-cisco-medium inline-flex items-center group"
                 >
                   View All Resources

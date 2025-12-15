@@ -16,10 +16,10 @@ export default function Solutions() {
     >
       <Header currentPage="Solutions" />
 
-      {/* Main Content */}
-      <main>
+      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
+      <main className="pt-14 sm:pt-24">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 relative overflow-hidden" style={{
+        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 relative overflow-hidden" style={{
           background: 'radial-gradient(circle at top left, #0B4BBB, #082E84 70%)'
         }}>
           {/* subtle overlay */}

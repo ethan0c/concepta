@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
 interface HeaderProps {
@@ -22,10 +22,18 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
 
     window.addEventListener("resize", handleResize);
 
+    // Prevent body scroll when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.body.style.overflow = 'unset';
     };
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const navigationItems = [
     { name: "Home", href: "/" },
@@ -40,18 +48,19 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
     <>
       {/* Header */}
       <header className="fixed w-full z-50 bg-white shadow-sm border-b border-gray-200">
-        <div className="header-content">
-          <div className="flex justify-between items-center h-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-14 sm:h-16">
             {/* Mobile Menu Button - Left Side */}
             <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 transition-colors"
+              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 -ml-2 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Toggle menu"
             >
-              <Menu className="w-6 h-6" />
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
 
-            {/* Logo - Left side on all screen sizes */}
-            <div className="flex items-center">
+            {/* Logo */}
+            <div className="flex items-center flex-1 lg:flex-none justify-center lg:justify-start">
               <Link
                 href="/"
                 className="hover:opacity-80 transition-opacity flex items-center"
@@ -61,23 +70,23 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   alt="Concepta Innovation Services"
                   width={40}
                   height={40}
-                  className="w-10 h-10"
+                  className="w-8 h-8 sm:w-10 sm:h-10"
                 />
-                <span className="ml-3 cisco-h5 font-cisco-medium text-gray-900">
-                  Concepta Innovation Services
+                <span className="ml-2 sm:ml-3 text-sm sm:text-base font-semibold text-gray-900 hidden xs:block">
+                  Concepta Innovation
                 </span>
               </Link>
             </div>
 
             {/* Desktop Navigation - Center */}
-            <nav className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 flex-1 justify-center">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative">
                   <Link
                     href={item.href}
-                    className={`cisco-body-large transition-colors py-2 ${
+                    className={`text-sm xl:text-base transition-colors py-2 ${
                       item.name === currentPage
-                        ? "text-blue-600"
+                        ? "text-blue-600 font-medium"
                         : "text-gray-700 hover:text-blue-600"
                     }`}
                   >
@@ -91,82 +100,105 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             </nav>
 
             {/* Right Side */}
-            <div className="flex items-center space-x-3">
-              {/* Get Quote Button - Mobile */}
-              <button className="lg:hidden bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded cisco-body-midsize font-cisco-medium transition-colors">
-                Quote
-              </button>
-
-              {/* Get Quote Button - Desktop */}
-              <button className="hidden lg:block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded font-cisco-medium cisco-body-large transition-colors">
-                Get a Quote
-              </button>
+            <div className="flex items-center">
+              {/* Get Quote Button */}
+              <Link 
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-5 py-1.5 sm:py-2 rounded text-sm font-medium transition-colors"
+              >
+                <span className="hidden sm:inline">Get a Quote</span>
+                <span className="sm:hidden">Quote</span>
+              </Link>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Contact Info Bar */}
-      <div className="fixed top-16 w-full z-40 bg-[#0B4BBB]">
-        <div className="header-content py-2 flex justify-center items-center space-x-6">
-          <a href="tel:+14048753741" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            (404) 875-3741
+      {/* Contact Info Bar - Desktop only */}
+      <div className="fixed top-14 sm:top-16 w-full z-40 bg-[#0B4BBB] hidden sm:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex justify-center items-center space-x-6">
+          <a href="tel:+18775941944" className="text-xs sm:text-sm text-white hover:text-blue-200 transition-colors flex items-center">
+            <Phone className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+            (877)-594-1944
           </a>
-          <span className="text-blue-300">|</span>
-          <a href="mailto:info@conceptais.com" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-            info@conceptais.com
+          <span className="text-blue-300 hidden sm:inline">|</span>
+          <a href="mailto:support@conceptainnovation.com" className="text-xs sm:text-sm text-white hover:text-blue-200 transition-colors flex items-center">
+            <Mail className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
+            <span className="hidden md:inline">support@conceptainnovation.com</span>
+            <span className="md:hidden">Email Us</span>
           </a>
         </div>
       </div>
+
+      {/* Mobile Sidebar Overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Mobile Sidebar */}
       <motion.div
         initial={{ x: "-100%" }}
         animate={{ x: isMobileMenuOpen ? 0 : "-100%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed left-0 top-[88px] h-[calc(100vh-88px)] w-72 bg-white/95 backdrop-blur-md shadow-xl z-50 lg:hidden"
+        className="fixed left-0 top-0 h-full w-[280px] sm:w-80 bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
       >
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col min-h-full">
           {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-3 border-b border-gray-200/60">
+          <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
             <div className="flex items-center">
               <Image
                 src="/assets/logo.png?v=2"
-                alt="Concepta Innovation Systems"
+                alt="Concepta Innovation"
                 width={32}
                 height={32}
                 className="w-8 h-8"
               />
-              <span className="ml-3 cisco-body-large text-gray-900">
+              <span className="ml-3 text-sm font-semibold text-gray-900">
                 Concepta Innovation
               </span>
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-500 hover:text-gray-700 p-2"
+              className="text-gray-500 hover:text-gray-700 p-2 -mr-2"
+              aria-label="Close menu"
             >
-              <X className="w-6 h-6" />
+              <X className="w-5 h-5" />
             </button>
           </div>
 
+          {/* Contact Info - Mobile */}
+          <div className="bg-[#0B4BBB] px-4 py-3">
+            <a href="tel:+18775941944" className="flex items-center text-white text-sm mb-2">
+              <Phone className="w-4 h-4 mr-2" />
+              (877)-594-1944
+            </a>
+            <a href="mailto:support@conceptainnovation.com" className="flex items-center text-white text-sm">
+              <Mail className="w-4 h-4 mr-2" />
+              support@conceptainnovation.com
+            </a>
+          </div>
+
           {/* Navigation Links */}
-          <div className="flex-1 py-3">
+          <div className="flex-1 py-4">
             <nav className="space-y-1 px-3">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left py-3 px-4 rounded-lg cisco-body-large transition-all duration-200 ${
+                  className={`block w-full text-left py-3 px-4 rounded-lg text-base transition-all duration-200 ${
                     item.name === currentPage
-                      ? "text-blue-600 bg-white/80 shadow-sm backdrop-blur-sm"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-white/40"
+                      ? "text-blue-600 bg-blue-50 font-medium"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
                   }`}
                 >
                   {item.name}
@@ -175,40 +207,40 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             </nav>
 
             {/* Divider */}
-            <div className="border-t border-gray-200/60 mx-6 my-6"></div>
+            <div className="border-t border-gray-200 mx-4 my-4"></div>
 
-            {/* Additional Links */}
-            <div className="space-y-1 px-3">
+            {/* Service Links */}
+            <div className="px-3">
+              <p className="px-4 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Services</p>
               <Link 
-                href="/contact"
+                href="/services/security-strategy"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block w-full text-left py-3 px-4 text-gray-700 hover:text-blue-600 hover:bg-white/40 rounded-lg cisco-body-large transition-all duration-200"
+                className="block w-full text-left py-2.5 px-4 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg text-sm transition-all duration-200"
               >
-                Support
+                Security Strategy
+              </Link>
+              <Link 
+                href="/services/it-support"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block w-full text-left py-2.5 px-4 text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-lg text-sm transition-all duration-200"
+              >
+                IT Support
               </Link>
             </div>
           </div>
 
           {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-200/60">
-            <div className="cisco-body-large text-gray-500 mb-4">
-              <p>(404) 875-3741</p>
-              <p>info@conceptais.com</p>
-            </div>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded cisco-body-large font-cisco-medium transition-colors">
+          <div className="p-4 border-t border-gray-200 bg-gray-50">
+            <Link 
+              href="/contact"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg text-center font-medium transition-colors"
+            >
               Get Started
-            </button>
+            </Link>
           </div>
         </div>
       </motion.div>
-
-      {/* Overlay when mobile menu is open */}
-      {isMobileMenuOpen && (
-        <div
-          className="fixed inset-0 bg-black/20 z-40 lg:hidden"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      )}
     </>
   );
 }

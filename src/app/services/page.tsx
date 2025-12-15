@@ -10,8 +10,8 @@ export default function Services() {
     <div className="min-h-screen bg-white">
       <Header currentPage="Services" />
 
-      {/* Main Content */}
-      <main className="pt-20">
+      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
+      <main className="pt-14 sm:pt-24">
         {/* Hero Section */}
         <section
           className="pt-12 md:pt-16 pb-12 md:pb-16 relative overflow-hidden"

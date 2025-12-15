@@ -123,18 +123,18 @@ export default function ITSupport() {
       {/* Contact Info Bar */}
       <div className="fixed top-16 w-full z-40 bg-[#0B4BBB]">
         <div className="w-full px-6 py-2 flex justify-center items-center space-x-6">
-          <a href="tel:+14048753741" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
+          <a href="tel:+18775941944" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            (404) 875-3741
+            (877)-594-1944
           </a>
           <span className="text-blue-300">|</span>
-          <a href="mailto:info@conceptais.com" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
+          <a href="mailto:support@conceptainnovation.com" className="text-sm text-white hover:text-blue-200 transition-colors flex items-center">
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
-            info@conceptais.com
+            support@conceptainnovation.com
           </a>
         </div>
       </div>
@@ -213,8 +213,8 @@ export default function ITSupport() {
           {/* Sidebar Footer */}
           <div className="p-6 border-t border-gray-200/60">
             <div className="text-sm text-gray-500 mb-4">
-              <p>(404) 875-3741</p>
-              <p>info@conceptais.com</p>
+              <p>(877)-594-1944</p>
+              <p>support@conceptainnovation.com</p>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-medium transition-colors">
               Get Started

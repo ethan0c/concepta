@@ -55,7 +55,7 @@ export default function WhyChooseUsSection({
   features = defaultFeatures,
   ctaTitle = "Ready to Get Started?",
   ctaDescription = "Schedule a consultation with our cybersecurity experts to discuss your specific requirements and develop a customized solution strategy.",
-  phone = "(123) 455-7880",
+  phone = "(877)-594-1944",
 }: WhyChooseUsSectionProps) {
   return (
     <section className="py-10 bg-gray-50">

@@ -183,8 +183,8 @@ export default function Home() {
           {/* Sidebar Footer */}
           <div className="p-3 border-t border-gray-200/60">
             <div className="cisco-body-large text-gray-500 mb-2">
-              <p>(123) 455-7880</p>
-              <p>info@conceptainnovation.com</p>
+              <p>(877)-594-1944</p>
+              <p>support@conceptainnovation.com</p>
             </div>
             <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded cisco-body-large font-cisco-medium transition-colors">
               Get Started

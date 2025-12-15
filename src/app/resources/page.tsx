@@ -9,10 +9,10 @@ export default function Resources() {
     <div className="min-h-screen bg-white">
       <Header currentPage="Resources" />
 
-      {/* Main Content */}
-      <main className="pt-20">
+      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
+      <main className="pt-14 sm:pt-24">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
           <div className="max-w-7xl mx-auto px-8">
             <div className="text-center">
               <motion.h1 

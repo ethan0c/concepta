@@ -38,7 +38,7 @@ interface StatisticsSectionProps {
 }
 
 export default function StatisticsSection({
-  title = "Trusted by Industry Leaders",
+  title = "Proven Results",
   subtitle = "Delivering exceptional results across diverse industries and enterprise environments",
   stats = defaultStats,
 }: StatisticsSectionProps) {

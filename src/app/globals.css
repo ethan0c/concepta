@@ -2,60 +2,42 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
-}
-
-/* Custom variables */
-:root {
+  --foreground: #161616;
   --color-primary: #0B4BBB;
+  --color-primary-dark: #082E84;
+  --color-dark: #161616;
+  --color-dark-alt: #262626;
 }
 
-/* Cisco Momentum Design System Typography Tokens */
+/* Typography Tokens */
 :root {
-  /* Cisco Font Family Stack */
-  --font-cisco: 'Momentum', 'Inter', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
-  
-  /* Base Font Size - 16px as per Momentum Design System */
+  --font-cisco: 'Inter', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
   --mds-font-size-base: 16px;
-  
-  /* Body Text Sizes */
   --mds-font-size-small: 12px;
   --mds-font-size-midsize: 14px;
   --mds-font-size-large: 16px;
-  
-  /* Heading Sizes */
-  --mds-font-size-h6: 20px;
-  --mds-font-size-h5: 24px;
-  --mds-font-size-h4: 32px;
+  --mds-font-size-h6: 18px;
+  --mds-font-size-h5: 20px;
+  --mds-font-size-h4: 28px;
   --mds-font-size-h3: 32px;
-  --mds-font-size-h2: 40px;
+  --mds-font-size-h2: 36px;
   --mds-font-size-h1: 40px;
-  --mds-font-size-headline: 52px;
-  
-  /* Line Heights */
+  --mds-font-size-headline: 48px;
   --mds-line-height-small: 16px;
   --mds-line-height-midsize: 20px;
   --mds-line-height-large: 24px;
-  --mds-line-height-h6: 28px;
-  --mds-line-height-h5: 32px;
-  --mds-line-height-h4: 40px;
+  --mds-line-height-h6: 26px;
+  --mds-line-height-h5: 28px;
+  --mds-line-height-h4: 36px;
   --mds-line-height-h3: 40px;
-  --mds-line-height-h2: 52px;
-  --mds-line-height-h1: 52px;
-  --mds-line-height-headline: 64px;
-  
-  /* Font Weights - Cisco Momentum Standard */
+  --mds-line-height-h2: 44px;
+  --mds-line-height-h1: 48px;
+  --mds-line-height-headline: 56px;
   --mds-font-weight-light: 300;
   --mds-font-weight-regular: 400;
   --mds-font-weight-medium: 500;
+  --mds-font-weight-semibold: 600;
   --mds-font-weight-bold: 700;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 html {
@@ -69,35 +51,39 @@ body {
   font-size: var(--mds-font-size-base);
   line-height: var(--mds-line-height-large);
   font-weight: var(--mds-font-weight-regular);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Cisco Momentum Typography Classes */
+/* Typography Classes - responsive with clamp */
 .cisco-headline {
-  font-size: var(--mds-font-size-headline);
-  line-height: var(--mds-line-height-headline);
-  font-weight: var(--mds-font-weight-medium);
+  font-size: clamp(28px, 5vw, var(--mds-font-size-headline));
+  line-height: 1.15;
+  font-weight: var(--mds-font-weight-semibold);
+  letter-spacing: -0.02em;
 }
 
 .cisco-h1 {
-  font-size: var(--mds-font-size-h1);
-  line-height: var(--mds-line-height-h1);
-  font-weight: var(--mds-font-weight-medium);
+  font-size: clamp(26px, 4vw, var(--mds-font-size-h1));
+  line-height: 1.2;
+  font-weight: var(--mds-font-weight-semibold);
+  letter-spacing: -0.01em;
 }
 
 .cisco-h2 {
-  font-size: var(--mds-font-size-h2);
-  line-height: var(--mds-line-height-h2);
-  font-weight: var(--mds-font-weight-medium);
+  font-size: clamp(24px, 3.5vw, var(--mds-font-size-h2));
+  line-height: 1.25;
+  font-weight: var(--mds-font-weight-semibold);
 }
 
 .cisco-h3 {
-  font-size: var(--mds-font-size-h3);
+  font-size: clamp(22px, 3vw, var(--mds-font-size-h3));
   line-height: var(--mds-line-height-h3);
   font-weight: var(--mds-font-weight-medium);
 }
 
 .cisco-h4 {
-  font-size: var(--mds-font-size-h4);
+  font-size: clamp(20px, 2.5vw, var(--mds-font-size-h4));
   line-height: var(--mds-line-height-h4);
   font-weight: var(--mds-font-weight-medium);
 }
@@ -132,28 +118,54 @@ body {
   font-weight: var(--mds-font-weight-regular);
 }
 
-/* Shared container for all pages - reduced margins */
+/* Responsive container with proper padding */
 .page-container {
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/* Header should span full width but content has reduced margins */
+@media (min-width: 640px) {
+  .page-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
 .header-content {
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
-/* Improve overall rendering performance */
+@media (min-width: 640px) {
+  .header-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Rendering */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Prefer reduced motion for users who request it */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation: none !important;
@@ -162,36 +174,44 @@ body {
   }
 }
 
-/* Custom animations */
+/* Animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(60px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Smooth transitions for all interactive elements */
+/* Smooth transitions */
 button, a, input {
   transition: all 0.2s ease-in-out;
 }
 
-/* Focus styles for accessibility */
+/* Focus styles */
 button:focus-visible,
 a:focus-visible,
 input:focus-visible {
-  outline: 2px solid #0B4BBB;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
 }

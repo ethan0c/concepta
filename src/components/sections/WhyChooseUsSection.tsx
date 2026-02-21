@@ -1,6 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Certification {
   label: string;
@@ -43,67 +45,84 @@ interface WhyChooseUsSectionProps {
   description?: string;
   certifications?: Certification[];
   features?: Feature[];
-  ctaTitle?: string;
-  ctaDescription?: string;
   phone?: string;
 }
 
 export default function WhyChooseUsSection({
-  title = "Why Choose Concepta Innovation Services?",
-  description = "As a Microsoft Azure AI Partner, we combine deep technical expertise with proven industry experience to deliver transformative cybersecurity and technology solutions. We help government contractors, Fortune 500 companies, and growing enterprises achieve secure digital transformation through innovative technology solutions.",
+  title = "Why Concepta?",
+  description = "As a Microsoft Azure AI Partner, we combine deep technical expertise with proven industry experience to deliver transformative cybersecurity and technology solutions.",
   certifications = defaultCertifications,
   features = defaultFeatures,
-  ctaTitle = "Ready to Get Started?",
-  ctaDescription = "Schedule a consultation with our cybersecurity experts to discuss your specific requirements and develop a customized solution strategy.",
-  phone = "(877)-594-1944",
+  phone = "(877) 594-1944",
 }: WhyChooseUsSectionProps) {
   return (
-    <section className="py-10 bg-gray-50">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
       <div className="page-container">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+          {/* Left Column - Content */}
           <div>
-            <h2 className="cisco-headline text-gray-900 mb-3">{title}</h2>
-            <p className="cisco-body-midsize text-gray-600 mb-4 leading-relaxed">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="cisco-headline text-gray-900 mb-4"
+            >
+              {title}
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed"
+            >
               {description}
-            </p>
+            </motion.p>
 
-            {/* Certifications & Badges */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-4">
+            {/* Certification Badges */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap gap-2 mb-10"
+            >
               {certifications.map((cert, index) => (
                 <div
                   key={index}
-                  className="flex items-center p-3 bg-white rounded-lg border border-gray-200"
+                  className="inline-flex items-center gap-2 px-3 py-2 bg-white border border-gray-200 text-xs sm:text-sm font-medium text-gray-700"
                 >
                   {cert.hasImage && cert.imageSrc ? (
                     <Image
                       src={cert.imageSrc}
                       alt={cert.label}
-                      width={24}
-                      height={24}
-                      className="w-6 h-6 mr-3 flex-shrink-0"
+                      width={20}
+                      height={20}
+                      className="w-5 h-5"
                     />
                   ) : (
-                    <div className="w-2 h-2 bg-green-500 rounded-full mr-3 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-[#0B4BBB] rounded-full" />
                   )}
-                  <span className="cisco-body-large font-cisco-medium text-gray-700">
-                    {cert.label}
-                  </span>
+                  {cert.label}
                 </div>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="space-y-3">
+            {/* Features */}
+            <div className="space-y-6">
               {features.map((feature, index) => (
-                <div key={index} className="flex items-start">
-                  <div
-                    className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-1 relative overflow-hidden"
-                    style={{
-                      background:
-                        "radial-gradient(circle at top left, #0B4BBB, #082E84 70%)",
-                    }}
-                  >
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex gap-4"
+                >
+                  <div className="w-8 h-8 bg-[#0B4BBB] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg
-                      className="w-3 h-3 text-white relative z-10"
+                      className="w-4 h-4 text-white"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -114,91 +133,69 @@ export default function WhyChooseUsSection({
                       />
                     </svg>
                   </div>
-                  <div className="ml-4">
-                    <h3 className="cisco-h6 font-cisco-medium text-gray-900 mb-2">
+                  <div>
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
                       {feature.title}
                     </h3>
-                    <p className="cisco-h6 text-gray-600">{feature.description}</p>
+                    <p className="text-sm sm:text-base text-gray-500 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
 
-          <div className="relative">
-            <div
-              className="rounded-lg p-8 text-white relative overflow-hidden"
-              style={{
-                background:
-                  "radial-gradient(circle at top left, #0B4BBB, #082E84 70%)",
-              }}
-            >
-              {/* Subtle overlay pattern */}
-              <div className="absolute inset-0 opacity-5">
-                <svg
-                  className="w-full h-full"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <pattern
-                      id="card-mesh"
-                      x="0"
-                      y="0"
-                      width="50"
-                      height="50"
-                      patternUnits="userSpaceOnUse"
-                    >
-                      <circle
-                        cx="25"
-                        cy="25"
-                        r="0.5"
-                        fill="white"
-                        opacity="0.4"
-                      />
-                      <line
-                        x1="25"
-                        y1="0"
-                        x2="25"
-                        y2="50"
-                        stroke="white"
-                        strokeWidth="0.1"
-                        opacity="0.2"
-                      />
-                      <line
-                        x1="0"
-                        y1="25"
-                        x2="50"
-                        y2="25"
-                        stroke="white"
-                        strokeWidth="0.1"
-                        opacity="0.2"
-                      />
-                    </pattern>
-                  </defs>
-                  <rect width="100%" height="100%" fill="url(#card-mesh)" />
-                </svg>
-              </div>
+          {/* Right Column - CTA Card + Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            {/* Image */}
+            <div className="relative h-48 sm:h-64 lg:h-72 overflow-hidden">
+              <Image
+                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&w=900&q=80"
+                alt="Team collaboration"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+            </div>
 
-              <div className="relative z-10">
-                <h3 className="cisco-h5 font-cisco-medium mb-6">{ctaTitle}</h3>
-                <p className="mb-6 opacity-90">{ctaDescription}</p>
-                <div className="space-y-4">
-                  <button className="w-full bg-white text-blue-900 px-6 py-3 rounded font-cisco-medium hover:bg-blue-50 transition-colors">
-                    Schedule Free Consultation
-                  </button>
-                  <button className="w-full border border-white text-white px-6 py-3 rounded font-cisco-medium hover:bg-white hover:text-blue-900 transition-all">
-                    Download Security Assessment Guide
-                  </button>
-                </div>
-                <div className="mt-6 pt-6 border-t border-blue-600 text-center">
-                  <p className="cisco-body-midsize opacity-75">
-                    Or call us directly:
-                  </p>
-                  <p className="cisco-h6 font-cisco-medium">{phone}</p>
-                </div>
+            {/* CTA Card */}
+            <div className="bg-[#0B4BBB] p-6 sm:p-8 text-white">
+              <h3 className="text-xl sm:text-2xl font-semibold mb-3">
+                Ready to get started?
+              </h3>
+              <p className="text-blue-200 text-sm sm:text-base mb-6 leading-relaxed">
+                Schedule a consultation with our cybersecurity experts to discuss your 
+                requirements and develop a customized solution strategy.
+              </p>
+              <div className="space-y-3">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-white text-[#0B4BBB] px-6 py-3 text-sm font-medium text-center hover:bg-gray-100 transition-colors"
+                >
+                  Schedule Free Consultation
+                </Link>
+                <Link
+                  href="/resources"
+                  className="block w-full border border-white/50 text-white px-6 py-3 text-sm font-medium text-center hover:bg-white/10 transition-colors"
+                >
+                  Download Security Assessment Guide
+                </Link>
+              </div>
+              <div className="mt-6 pt-5 border-t border-white/20 text-center">
+                <p className="text-blue-200 text-xs mb-1">Or call us directly</p>
+                <a href="tel:+18775941944" className="text-lg font-semibold hover:text-blue-200 transition-colors">
+                  {phone}
+                </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

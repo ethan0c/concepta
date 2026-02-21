@@ -1,224 +1,209 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { Shield, Brain, Cloud, Lock, Zap, Users } from 'lucide-react'
-import Image from 'next/image'
-import Header from '@/components/Header'
+import { motion } from "framer-motion";
+import { Shield, Brain, Cloud, Lock, Zap, Users, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import Header from "@/components/Header";
+import { Footer } from "@/components/layout";
+
+const solutions = [
+  {
+    icon: Shield,
+    title: "Cybersecurity Solutions",
+    description: "Advanced threat detection, prevention, and response systems to protect your critical infrastructure.",
+    features: ["24/7 Security Operations Center", "Threat Intelligence & Analysis", "Incident Response & Recovery", "Vulnerability Assessment"],
+    href: "/services/security-strategy",
+  },
+  {
+    icon: Brain,
+    title: "AI & Machine Learning",
+    description: "Intelligent automation and predictive analytics to drive business transformation and efficiency.",
+    features: ["Predictive Analytics Platform", "Automated Decision Making", "Natural Language Processing", "Computer Vision Solutions"],
+    href: "/solutions",
+  },
+  {
+    icon: Cloud,
+    title: "Cloud Infrastructure",
+    description: "Scalable, secure cloud solutions built on Microsoft Azure for enterprise-grade performance.",
+    features: ["Azure Cloud Migration", "Hybrid Cloud Architecture", "Container Orchestration", "DevOps & CI/CD Pipelines"],
+    href: "/solutions",
+  },
+  {
+    icon: Lock,
+    title: "Zero Trust Security",
+    description: "Next-generation security framework that verifies every user and device before granting access.",
+    features: ["Identity & Access Management", "Multi-Factor Authentication", "Network Segmentation", "Conditional Access Policies"],
+    href: "/services/security-strategy",
+  },
+  {
+    icon: Zap,
+    title: "Digital Transformation",
+    description: "Comprehensive modernization strategies to digitize operations and enhance productivity.",
+    features: ["Business Process Automation", "Legacy System Modernization", "Data Analytics & Insights", "Employee Experience Platform"],
+    href: "/solutions",
+  },
+  {
+    icon: Users,
+    title: "Managed Services",
+    description: "End-to-end IT management and support services to optimize your technology infrastructure.",
+    features: ["24/7 Infrastructure Monitoring", "Help Desk & User Support", "System Administration", "Performance Optimization"],
+    href: "/services/it-support",
+  },
+];
 
 export default function Solutions() {
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-white"
-    >
+    <div className="min-h-screen bg-white">
       <Header currentPage="Solutions" />
 
-      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
-      <main className="pt-14 sm:pt-24">
+      <main className="pt-14 sm:pt-16">
         {/* Hero Section */}
-        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 relative overflow-hidden" style={{
-          background: 'radial-gradient(circle at top left, #0B4BBB, #082E84 70%)'
-        }}>
-          {/* subtle overlay */}
-          <div className="absolute inset-0 opacity-5 pointer-events-none select-none">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern id="solutions-hero" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                  <circle cx="50" cy="50" r="1" fill="white" opacity="0.3" />
-                  <line x1="50" y1="0" x2="50" y2="100" stroke="white" strokeWidth="0.2" opacity="0.1" />
-                  <line x1="0" y1="50" x2="100" y2="50" stroke="white" strokeWidth="0.2" opacity="0.1" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#solutions-hero)" />
-            </svg>
-          </div>
+        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
+          <div className="page-container">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 mb-6"
+              >
+                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
+                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                  Enterprise Solutions
+                </span>
+              </motion.div>
 
-          <div className="page-container relative z-10">
-            <div className="text-center">
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-3xl md:text-4xl text-white leading-tight mb-6"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
               >
-                Enterprise Solutions
+                Technology solutions that protect and transform
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-blue-100 leading-relaxed max-w-3xl mx-auto mb-12"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8"
               >
-                Comprehensive cybersecurity and technology solutions designed to protect, transform, and scale your enterprise operations.
+                Comprehensive cybersecurity and technology solutions designed to protect, 
+                transform, and scale your enterprise operations.
               </motion.p>
-              <div className="relative max-w-4xl mx-auto">
-                <Image 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop"
-                  alt="Enterprise Solutions Visual"
-                  width={1200}
-                  height={600}
-                  className="w-full h-64 md:h-80 object-cover rounded-lg border border-blue-600/30 shadow-lg"
-                />
-              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col sm:flex-row gap-3"
+              >
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3.5 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+                >
+                  Get started
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+                <Link
+                  href="/resources"
+                  className="inline-flex items-center justify-center px-6 py-3.5 border border-gray-500 text-white text-sm font-medium hover:border-white hover:bg-white/5 transition-all"
+                >
+                  View case studies
+                </Link>
+              </motion.div>
             </div>
           </div>
         </section>
 
         {/* Solutions Grid */}
-        <section className="py-20 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
-            <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-              {/* Cybersecurity Solutions */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">Cybersecurity Solutions</h3>
-                <p className="text-gray-600 mb-6">Advanced threat detection, prevention, and response systems to protect your critical infrastructure.</p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 24/7 Security Operations Center (SOC)</li>
-                  <li>• Threat Intelligence & Analysis</li>
-                  <li>• Incident Response & Recovery</li>
-                  <li>• Vulnerability Assessment</li>
-                </ul>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="mb-12"
+            >
+              <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
+                What we offer
+              </h2>
+              <p className="text-gray-600 max-w-2xl">
+                End-to-end solutions tailored for enterprise security and digital transformation.
+              </p>
+            </motion.div>
 
-              {/* AI & Machine Learning */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">AI & Machine Learning</h3>
-                <p className="text-gray-600 mb-6">Intelligent automation and predictive analytics to drive business transformation and efficiency.</p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Predictive Analytics Platform</li>
-                  <li>• Automated Decision Making</li>
-                  <li>• Natural Language Processing</li>
-                  <li>• Computer Vision Solutions</li>
-                </ul>
-              </motion.div>
-
-              {/* Cloud Infrastructure */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Cloud className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">Cloud Infrastructure</h3>
-                <p className="text-gray-600 mb-6">Scalable, secure cloud solutions built on Microsoft Azure for enterprise-grade performance.</p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Azure Cloud Migration</li>
-                  <li>• Hybrid Cloud Architecture</li>
-                  <li>• Container Orchestration</li>
-                  <li>• DevOps & CI/CD Pipelines</li>
-                </ul>
-              </motion.div>
-
-              {/* Zero Trust Security */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Lock className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">Zero Trust Security</h3>
-                <p className="text-gray-600 mb-6">Next-generation security framework that verifies every user and device before granting access.</p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Identity & Access Management</li>
-                  <li>• Multi-Factor Authentication</li>
-                  <li>• Network Segmentation</li>
-                  <li>• Conditional Access Policies</li>
-                </ul>
-              </motion.div>
-
-              {/* Digital Transformation */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">Digital Transformation</h3>
-                <p className="text-gray-600 mb-6">Comprehensive modernization strategies to digitize operations and enhance productivity.</p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Business Process Automation</li>
-                  <li>• Legacy System Modernization</li>
-                  <li>• Data Analytics & Insights</li>
-                  <li>• Employee Experience Platform</li>
-                </ul>
-              </motion.div>
-
-              {/* Managed Services */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow"
-              >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl text-gray-900 mb-4">Managed Services</h3>
-                <p className="text-gray-600 mb-6">End-to-end IT management and support services to optimize your technology infrastructure.</p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 24/7 Infrastructure Monitoring</li>
-                  <li>• Help Desk & User Support</li>
-                  <li>• System Administration</li>
-                  <li>• Performance Optimization</li>
-                </ul>
-              </motion.div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-300">
+              {solutions.map((solution, index) => (
+                <motion.div
+                  key={solution.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-6 sm:p-8 group"
+                >
+                  <div className="border-t-2 border-[#0B4BBB] pt-6">
+                    <solution.icon className="w-6 h-6 text-[#0B4BBB] mb-4" />
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
+                      {solution.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                      {solution.description}
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      {solution.features.map((feature) => (
+                        <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
+                          <span className="w-1 h-1 rounded-full bg-[#0B4BBB] mt-2 shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={solution.href}
+                      className="inline-flex items-center text-sm text-[#0B4BBB] font-medium group-hover:underline"
+                    >
+                      Learn more
+                      <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-8 text-center">
-            <h2 className="text-3xl text-gray-900 mb-6">Ready to Transform Your Enterprise?</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Let&apos;s discuss how our solutions can address your specific challenges and drive your business forward.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded transition-colors">
-                Schedule Consultation
-              </button>
-              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded transition-all">
-                Download Solutions Guide
-              </button>
+        <section className="bg-[#0B4BBB] py-16 sm:py-20">
+          <div className="page-container">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
+                Ready to transform your enterprise?
+              </h2>
+              <p className="text-blue-100 mb-8">
+                Let&apos;s discuss how our solutions can address your specific challenges and drive your business forward.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors"
+                >
+                  Schedule consultation
+                </Link>
+                <Link
+                  href="/resources"
+                  className="inline-flex items-center justify-center px-6 py-3.5 border border-white text-white text-sm font-medium hover:bg-white/10 transition-colors"
+                >
+                  Download solutions guide
+                </Link>
+              </div>
             </div>
           </div>
         </section>
+
+        <Footer />
       </main>
-    </motion.div>
-  )
+    </div>
+  );
 }

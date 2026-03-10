@@ -29,19 +29,16 @@ export default function Footer({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-2.5 mb-4">
+            <div className="flex items-center gap-3 mb-4">
               <Image
                 src="/logo.png"
                 alt="Concepta Innovation"
-                width={28}
-                height={28}
-                className="w-7 h-7"
+                width={120}
+                height={40}
+                className="h-10 w-auto"
               />
-              <div>
-                <div className="text-sm font-semibold">Concepta Innovation</div>
-                <div className="text-xs text-gray-400">Services, LLC</div>
-              </div>
             </div>
+            <p className="text-sm font-semibold text-white mb-1">Concepta Innovation Services, LLC</p>
             <p className="text-xs text-gray-500 leading-relaxed max-w-xs">
               Enterprise-grade cybersecurity, cloud infrastructure, and AI solutions for government and commercial organizations.
             </p>

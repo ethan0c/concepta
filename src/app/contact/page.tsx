@@ -32,17 +32,29 @@ export default function Contact() {
     <div className="min-h-screen bg-white">
       <Header currentPage="Contact" />
 
-      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
-      <main className="pt-14 sm:pt-24">
+      {/* Main Content */}
+      <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-center">
+        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
+          <div className="page-container">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 mb-6"
+              >
+                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
+                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                  Contact Us
+                </span>
+              </motion.div>
+
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="cisco-headline text-gray-900 leading-tight mb-6"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
               >
                 Get in Touch
               </motion.h1>
@@ -50,8 +62,8 @@ export default function Contact() {
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
               >
                 Ready to secure and transform your enterprise? Our cybersecurity experts are here to help you navigate your technology challenges.
               </motion.p>
@@ -61,7 +73,7 @@ export default function Contact() {
 
         {/* Contact Information & Form */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-8">
+          <div className="page-container">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Information */}
               <motion.div

@@ -11,7 +11,7 @@ export default function Home() {
       <Header currentPage="Home" />
 
       {/* Main Content */}
-      <main className="pt-14 sm:pt-16">
+      <main className="pt-16 sm:pt-20">
         <HeroSection />
         <CoreServicesSection />
         <WhyChooseUsSection />

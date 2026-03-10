@@ -56,7 +56,7 @@ export default function Solutions() {
     <div className="min-h-screen bg-white">
       <Header currentPage="Solutions" />
 
-      <main className="pt-14 sm:pt-16">
+      <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
         <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
           <div className="page-container">

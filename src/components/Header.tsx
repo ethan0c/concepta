@@ -58,7 +58,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
           : "bg-[#0B4BBB]"
       }`}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-14 sm:h-16">
+          <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden text-white hover:text-blue-200 p-2 -ml-2 transition-colors"
@@ -72,19 +72,15 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <div className="flex items-center flex-1 lg:flex-none justify-center lg:justify-start">
               <Link
                 href="/"
-                className="hover:opacity-80 transition-opacity flex items-center gap-2.5"
+                className="hover:opacity-80 transition-opacity flex items-center"
               >
                 <Image
                   src="/logo.png"
                   alt="Concepta Innovation Services"
-                  width={44}
-                  height={44}
-                  className="w-10 h-10 sm:w-11 sm:h-11"
+                  width={160}
+                  height={56}
+                  className="h-12 sm:h-14 w-auto"
                 />
-                <div className="hidden sm:flex flex-col leading-none">
-                  <span className="text-[13px] font-semibold text-white tracking-tight">Concepta</span>
-                  <span className="text-[13px] font-semibold text-white tracking-tight">Innovation</span>
-                </div>
               </Link>
             </div>
 

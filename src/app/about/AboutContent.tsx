@@ -10,19 +10,29 @@ export default function AboutContent() {
     <div className="min-h-screen bg-white">
       <Header currentPage="About" />
 
-      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
-      <main className="pt-14 sm:pt-24">
+      {/* Main Content */}
+      <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="pt-8 sm:pt-12 pb-12 sm:pb-16 relative overflow-hidden" style={{
-          background: 'radial-gradient(circle at top left, #0B4BBB, #082E84 70%)'
-        }}>
+        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24 relative overflow-hidden">
           <div className="page-container">
-            <div className="text-center">
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 mb-6"
+              >
+                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
+                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                  About Us
+                </span>
+              </motion.div>
+
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="cisco-h1 text-white leading-tight mb-6"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
               >
                 About Concepta Innovation Services
               </motion.h1>
@@ -30,20 +40,11 @@ export default function AboutContent() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="cisco-h6 text-blue-100 leading-relaxed max-w-3xl mx-auto mb-8"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
               >
                 Providing innovative technical solutions that promote business value, while ensuring security of business and customer data from growing cybersecurity threats.
               </motion.p>
-              <div className="relative max-w-4xl mx-auto">
-                <Image 
-                  src="https://images.unsplash.com/photo-1542744173-05336fcc7ad4?q=80&w=1600&auto=format&fit=crop"
-                  alt="About our team"
-                  width={1200}
-                  height={600}
-                  className="w-full h-64 md:h-80 object-cover rounded-lg border border-blue-600/30 shadow-lg"
-                />
-              </div>
             </div>
           </div>
         </section>

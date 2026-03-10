@@ -10,11 +10,11 @@ export default function SecurityStrategy() {
     <div className="min-h-screen bg-white">
       <Header currentPage="Services" />
 
-      {/* Main Content - pt-14 mobile, pt-24 desktop (header + contact bar) */}
-      <main className="pt-14 sm:pt-24">
+      {/* Main Content */}
+      <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
         <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="page-container">
             <div className="text-center">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ export default function SecurityStrategy() {
 
         {/* G&J Pepsi Case Study - Featured */}
         <section className="py-12 sm:py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="page-container">
             <div className="text-center mb-16">
               <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium mb-4">
                 FEATURED CASE STUDY
@@ -279,7 +279,7 @@ export default function SecurityStrategy() {
 
         {/* Artificial Intelligence Solutions */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="page-container">
             <div className="text-center mb-16">
               <h2 className="text-4xl text-gray-900 mb-6">
                 Artificial Intelligence Solutions
@@ -389,7 +389,7 @@ export default function SecurityStrategy() {
 
         {/* Transition Applications to Cloud */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="page-container">
             <div className="text-center mb-16">
               <h2 className="text-4xl text-gray-900 mb-6">
                 Transition Applications to Cloud
@@ -473,7 +473,7 @@ export default function SecurityStrategy() {
 
         {/* Additional Security Services */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="page-container">
             <div className="text-center mb-16">
               <h2 className="text-3xl text-gray-900 mb-4">
                 Our Security Services

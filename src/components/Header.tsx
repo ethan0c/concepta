@@ -90,7 +90,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`relative px-3.5 py-2 text-sm font-medium transition-colors rounded-md ${
+                  className={`relative px-3.5 py-2 text-sm font-medium transition-colors ${
                     item.name === currentPage
                       ? "text-white"
                       : "text-blue-100 hover:text-white hover:bg-white/10"
@@ -114,7 +114,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
               </a>
               <Link 
                 href="/contact"
-                className="bg-white hover:bg-blue-50 text-[#0B4BBB] px-4 sm:px-5 py-2 text-sm font-medium transition-colors rounded-sm"
+                className="bg-white hover:bg-blue-50 text-[#0B4BBB] px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>
@@ -156,7 +156,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             </div>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-gray-400 hover:text-gray-600 p-1.5 rounded-md hover:bg-gray-100"
+              className="text-gray-400 hover:text-gray-600 p-1.5 hover:bg-gray-100"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />
@@ -171,7 +171,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center justify-between w-full py-3 px-4 rounded-lg text-[15px] transition-all duration-150 ${
+                  className={`flex items-center justify-between w-full py-3 px-4 text-[15px] transition-all duration-150 ${
                     item.name === currentPage
                       ? "text-[#0B4BBB] bg-blue-50 font-medium"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
@@ -192,14 +192,14 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
               <Link 
                 href="/services/security-strategy"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2.5 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg text-sm transition-colors"
+                className="block py-2.5 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 text-sm transition-colors"
               >
                 Security Strategy
               </Link>
               <Link 
                 href="/services/it-support"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2.5 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg text-sm transition-colors"
+                className="block py-2.5 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 text-sm transition-colors"
               >
                 IT Support
               </Link>
@@ -215,7 +215,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <Link 
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 rounded-sm text-center text-sm font-medium transition-colors"
+              className="block w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 text-center text-sm font-medium transition-colors"
             >
               Get Started
             </Link>

@@ -80,15 +80,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white p-8 border border-gray-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Artificial Intelligence & AI Governance
                 </h3>
-                <p className="text-sm text-blue-600 font-medium mb-4">
+                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
                   Responsible AI solutions built for governance, compliance, and scale.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -108,15 +108,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white p-8 border border-gray-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <Shield className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Cybersecurity & Zero Trust Architecture
                 </h3>
-                <p className="text-sm text-blue-600 font-medium mb-4">
+                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
                   Security strategies that protect mission-critical systems and data.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -136,15 +136,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white p-8 border border-gray-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Code className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <Code className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Application & Platform Support
                 </h3>
-                <p className="text-sm text-blue-600 font-medium mb-4">
+                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
                   Reliable application and platform support for continuous operations.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -164,15 +164,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white p-8 border border-gray-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Cloud className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <Cloud className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Solution Architecture & Cloud Enablement
                 </h3>
-                <p className="text-sm text-blue-600 font-medium mb-4">
+                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
                   Architecting secure, scalable solutions for modern environments.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -192,15 +192,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white p-8 border border-gray-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Headphones className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <Headphones className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Service Desk & IT Operations Support
                 </h3>
-                <p className="text-sm text-blue-600 font-medium mb-4">
+                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
                   Responsive IT support that keeps organizations running.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -220,15 +220,15 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
+                className="bg-white p-8 border border-gray-200"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Database className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <Database className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Data Management & Analytics
                 </h3>
-                <p className="text-sm text-blue-600 font-medium mb-4">
+                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
                   Secure data solutions for informed decision-making.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -246,23 +246,18 @@ export default function Services() {
         </section>
 
         {/* Technology Stack Section with Images */}
-        <section 
-          className="py-20 relative overflow-hidden"
-          style={{
-            background: "linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #cbd5e1 100%)",
-          }}
-        >
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
                 Our Technology Stack
               </h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Leveraging industry-leading technologies and platforms to deliver exceptional results
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Technology Image */}
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
@@ -271,15 +266,15 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="bg-white rounded-lg p-8 shadow-lg">
+                <div className="bg-[#f4f4f4] p-8 border border-gray-200">
                   <Image
                     src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Technology Infrastructure"
                     width={600}
                     height={400}
-                    className="w-full h-64 object-cover rounded-lg"
+                    className="w-full h-64 object-cover"
                   />
-                  <div className="absolute -top-4 -right-4 bg-blue-600 text-white p-4 rounded-lg shadow-lg">
+                  <div className="absolute -top-4 -right-4 bg-[#0B4BBB] text-white p-4">
                     <div className="text-sm font-medium">Enterprise Grade</div>
                     <div className="text-xs text-blue-100">Security & Compliance</div>
                   </div>
@@ -295,7 +290,7 @@ export default function Services() {
                 className="space-y-8"
               >
                 <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <div className="bg-white p-6 border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• Microsoft Azure</li>
@@ -303,7 +298,7 @@ export default function Services() {
                       <li>• Google Cloud</li>
                     </ul>
                   </div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <div className="bg-white p-6 border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• Microsoft Sentinel</li>
@@ -311,7 +306,7 @@ export default function Services() {
                       <li>• Defender 365</li>
                     </ul>
                   </div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <div className="bg-white p-6 border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• .NET Core</li>
@@ -319,7 +314,7 @@ export default function Services() {
                       <li>• Python & AI/ML</li>
                     </ul>
                   </div>
-                  <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                  <div className="bg-white p-6 border border-gray-200">
                     <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
                     <ul className="space-y-2 text-gray-600">
                       <li>• SQL Server</li>
@@ -334,19 +329,19 @@ export default function Services() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-blue-600">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#0B4BBB]">
           <div className="page-container text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
               Ready to Transform Your Technology Infrastructure?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
               Let&apos;s discuss how our comprehensive technology services can help your business achieve its goals.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded font-medium hover:bg-blue-50 transition-colors">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors">
                 Schedule Consultation
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded font-medium hover:bg-white hover:text-blue-600 transition-colors">
+              <button className="inline-flex items-center justify-center px-6 py-3 border border-white text-white text-sm font-medium hover:bg-white/10 transition-colors">
                 View Case Studies
               </button>
             </div>

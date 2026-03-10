@@ -72,7 +72,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Information & Form */}
-        <section className="py-20 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Information */}
@@ -92,8 +92,8 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-6 h-6 text-[#0B4BBB]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
@@ -103,8 +103,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-6 h-6 text-[#0B4BBB]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Email</h3>
@@ -114,8 +114,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[#0B4BBB]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
@@ -127,8 +127,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-blue-600" />
+                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                      <Clock className="w-6 h-6 text-[#0B4BBB]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Business Hours</h3>
@@ -140,12 +140,12 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-gray-50 rounded-lg p-6">
+                <div className="bg-[#f4f4f4] p-6">
                   <h3 className="text-lg text-gray-900 mb-3">Emergency Support</h3>
                   <p className="text-gray-600 mb-4">
                     For critical security incidents requiring immediate attention, contact our 24/7 emergency response team.
                   </p>
-                  <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded transition-colors">
+                  <button className="inline-flex items-center justify-center px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors">
                     Emergency Hotline: (877)-594-1944
                   </button>
                 </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-gray-50 rounded-lg p-8"
+                className="bg-[#f4f4f4] p-8"
               >
                 <h2 className="text-2xl text-gray-900 mb-6">Send Us a Message</h2>
                 
@@ -174,7 +174,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="Your full name"
                       />
                     </div>
@@ -190,7 +190,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="your.email@company.com"
                       />
                     </div>
@@ -207,7 +207,7 @@ export default function Contact() {
                         name="company"
                         value={formData.company}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
@@ -222,7 +222,7 @@ export default function Contact() {
                         name="phone"
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="(123) 456-7890"
                       />
                     </div>
@@ -238,7 +238,7 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                     >
                       <option value="">Select a subject</option>
                       <option value="security-assessment">Security Assessment</option>
@@ -262,7 +262,7 @@ export default function Contact() {
                       onChange={handleInputChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-vertical"
+                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent resize-vertical"
                       placeholder="Tell us about your cybersecurity needs, challenges, or questions..."
                     />
                   </div>
@@ -272,7 +272,7 @@ export default function Contact() {
                       type="checkbox"
                       id="consent"
                       required
-                      className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-600"
+                      className="mt-1 w-4 h-4 text-[#0B4BBB] border-gray-300 focus:ring-[#0B4BBB]"
                     />
                     <label htmlFor="consent" className="text-sm text-gray-600">
                       I agree to receive communications from Concepta Innovation Systems and understand that I can unsubscribe at any time. *
@@ -281,7 +281,7 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                    className="w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2"
                   >
                     <Send className="w-4 h-4" />
                     <span>Send Message</span>
@@ -291,7 +291,7 @@ export default function Contact() {
                 <div className="mt-6 pt-6 border-t border-gray-200 text-center">
                   <p className="text-sm text-gray-600">
                     Prefer to schedule a call?{' '}
-                    <button className="text-blue-600 hover:text-blue-700 transition-colors">
+                    <button className="text-[#0B4BBB] hover:text-[#0a3d9c] transition-colors">
                       Book a consultation
                     </button>
                   </p>
@@ -302,17 +302,17 @@ export default function Contact() {
         </section>
 
         {/* Map or Additional CTA */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-8 text-center">
-            <h2 className="text-3xl text-gray-900 mb-6">Ready to Get Started?</h2>
-            <p className="text-xl text-gray-600 mb-8">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+          <div className="page-container text-center">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Join hundreds of organizations that trust Concepta Innovation Systems to secure their digital future.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded transition-colors">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="inline-flex items-center justify-center px-6 py-3 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors">
                 Schedule Free Consultation
               </button>
-              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded transition-all">
+              <button className="inline-flex items-center justify-center px-6 py-3 border border-[#0B4BBB] text-[#0B4BBB] text-sm font-medium hover:bg-[#0B4BBB] hover:text-white transition-colors">
                 Download Security Guide
               </button>
             </div>

@@ -50,9 +50,9 @@ export default function AboutContent() {
         </section>
 
         {/* Company Overview */}
-        <section className="py-20 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export default function AboutContent() {
                 <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
                   At Concepta Innovation Services, LLC, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our professional services span AI-driven workflows, zero-trust cybersecurity frameworks, and responsive service desk operations—enhancing performance, ensuring compliance, and elevating user experience across industries.
                 </p>
-                <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
+                <div className="bg-[#f4f4f4] p-8 border border-gray-200">
                   <h3 className="cisco-h5 font-cisco-medium text-gray-900 mb-4">
                     Our Tagline
                   </h3>
@@ -81,7 +81,7 @@ export default function AboutContent() {
                 
                 {/* SBA Certified Badge */}
                 <div className="mt-8 flex justify-center">
-                  <div className="flex items-center p-4 bg-white rounded-lg border border-blue-200 shadow-sm">
+                  <div className="flex items-center p-4 bg-white border border-gray-200">
                     <Image
                       src="/assets/sba.jpg"
                       alt="SBA Certified Partner"
@@ -101,9 +101,9 @@ export default function AboutContent() {
         </section>
 
         {/* Key Differentiators */}
-        <section className="py-20 bg-gray-50">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="cisco-h3 text-gray-900 mb-4">
                 What Sets Us Apart
               </h2>
@@ -121,8 +121,8 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-8 h-8 text-[#0B4BBB]" />
                 </div>
                 <h3 className="cisco-h6 text-gray-900 mb-4">
                   Certified Excellence
@@ -140,8 +140,8 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Users className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center mx-auto mb-6">
+                  <Users className="w-8 h-8 text-[#0B4BBB]" />
                 </div>
                 <h3 className="cisco-h6 text-gray-900 mb-4">Expert Team</h3>
                 <p className="text-gray-600">
@@ -157,8 +157,8 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-[#0B4BBB]" />
                 </div>
                 <h3 className="cisco-h6 text-gray-900 mb-4">Proven Results</h3>
                 <p className="text-gray-600">
@@ -174,8 +174,8 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Globe className="w-8 h-8 text-blue-600" />
+                <div className="w-16 h-16 bg-blue-50 flex items-center justify-center mx-auto mb-6">
+                  <Globe className="w-8 h-8 text-[#0B4BBB]" />
                 </div>
                 <h3 className="cisco-h6 text-gray-900 mb-4">Global Reach</h3>
                 <p className="text-gray-600">
@@ -188,9 +188,9 @@ export default function AboutContent() {
         </section>
 
         {/* Leadership Team */}
-        <section className="py-20 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="cisco-h3 text-gray-900 mb-4">Leadership Team</h2>
               <p className="cisco-h6 text-gray-600 max-w-3xl mx-auto">
                 Experienced leaders driving innovation and excellence in
@@ -225,16 +225,16 @@ export default function AboutContent() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 rounded-lg p-6"
+                  className="bg-[#f4f4f4] p-6"
                 >
-                  <div className="w-20 h-20 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-10 h-10 text-blue-600" />
+                  <div className="w-20 h-20 bg-blue-50 mx-auto mb-4 flex items-center justify-center">
+                    <Users className="w-10 h-10 text-[#0B4BBB]" />
                   </div>
 
                   <h3 className="cisco-h6 text-gray-900 text-center mb-2">
                     {leader.name}
                   </h3>
-                  <p className="text-blue-600 text-center mb-4">
+                  <p className="text-[#0B4BBB] text-center mb-4">
                     {leader.role}
                   </p>
                   <p className="text-gray-600 cisco-body-midsize mb-3">{leader.bio}</p>
@@ -248,8 +248,8 @@ export default function AboutContent() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-8 text-center">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+          <div className="page-container text-center">
             <h2 className="cisco-h3 text-gray-900 mb-6">
               Ready to Work Together?
             </h2>
@@ -257,11 +257,11 @@ export default function AboutContent() {
               Let&apos;s discuss how our expertise can help secure and transform your
               organization.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded cisco-body-large font-cisco-medium transition-colors">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <button className="inline-flex items-center justify-center px-6 py-3 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors">
                 Contact Our Team
               </button>
-              <button className="text-blue-600 border border-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded cisco-body-large font-cisco-medium transition-all">
+              <button className="inline-flex items-center justify-center px-6 py-3 border border-[#0B4BBB] text-[#0B4BBB] text-sm font-medium hover:bg-[#0B4BBB] hover:text-white transition-colors">
                 Learn More
               </button>
             </div>

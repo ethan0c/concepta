@@ -64,7 +64,7 @@ export default function AboutContent() {
                   Empowering Innovation Across Federal and Commercial Sectors with AI, Cybersecurity, and Professional IT Support Services.
                 </h3>
                 <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
-                  At Concepta Innovation Services, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our professional services span AI-driven workflows, zero-trust cybersecurity frameworks, and responsive service desk operations—enhancing performance, ensuring compliance, and elevating user experience across industries.
+                  At Concepta Innovation Services, LLC, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our professional services span AI-driven workflows, zero-trust cybersecurity frameworks, and responsive service desk operations—enhancing performance, ensuring compliance, and elevating user experience across industries.
                 </p>
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg p-8 border border-blue-200">
                   <h3 className="cisco-h5 font-cisco-medium text-gray-900 mb-4">

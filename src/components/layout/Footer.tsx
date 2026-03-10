@@ -31,15 +31,15 @@ export default function Footer({
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2.5 mb-4">
               <Image
-                src="/assets/logo.png?v=2"
+                src="/logo.png"
                 alt="Concepta Innovation"
                 width={28}
                 height={28}
                 className="w-7 h-7"
               />
               <div>
-                <div className="text-sm font-semibold">Concepta</div>
-                <div className="text-xs text-gray-400">Innovation Services</div>
+                <div className="text-sm font-semibold">Concepta Innovation</div>
+                <div className="text-xs text-gray-400">Services, LLC</div>
               </div>
             </div>
             <p className="text-xs text-gray-500 leading-relaxed max-w-xs">

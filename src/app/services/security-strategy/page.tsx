@@ -16,22 +16,31 @@ export default function SecurityStrategy() {
         <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <motion.h1
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-blue-600 text-sm md:text-base font-medium uppercase tracking-wider mb-4"
+              >
+                Security strategies that protect mission-critical systems and data.
+              </motion.p>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight mb-4 sm:mb-6"
               >
-                Cybersecurity Strategy & Architecture
+                Cybersecurity & Zero Trust Architecture
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12"
+                className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8 sm:mb-12"
               >
-                Comprehensive cybersecurity strategy and architecture solutions to protect your business from modern threats
+                Concepta delivers modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience across identity, endpoints, networks, applications, and data. Our approach emphasizes continuous monitoring, compliance alignment, and secure operations tailored for regulated environments.
               </motion.p>
             </div>
           </div>

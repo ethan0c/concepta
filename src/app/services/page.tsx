@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Settings, Code, Database, Shield, Cloud, Users } from "lucide-react";
+import { Settings, Code, Database, Shield, Cloud, Users, Brain, Layers, Headphones } from "lucide-react";
 import Header from "@/components/Header";
 import Image from "next/image";
 
@@ -69,12 +69,16 @@ export default function Services() {
                 transition={{ duration: 0.8 }}
                 className="space-y-6 md:space-y-8"
               >
+                <p className="text-blue-200 text-sm md:text-base font-medium uppercase tracking-wider">
+                  Modern IT services designed for secure, regulated environments.
+                </p>
+                
                 <h1 className="text-3xl md:text-5xl lg:text-6xl text-white leading-tight">
-                  Comprehensive Technology Services
+                  Professional IT Services
                 </h1>
 
                 <p className="text-base md:text-lg text-blue-100 leading-relaxed max-w-xl">
-                  Delivering secure, scalable, and innovative technology solutions that drive business transformation and protect your digital assets.
+                  Concepta Innovation Services delivers AI-enabled, security-first, and mission-aligned IT services that help government agencies and commercial organizations modernize responsibly and operate with confidence. Our services span AI governance, cybersecurity, application and platform support, and secure operations—supporting performance, compliance, and resilience across complex environments.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -191,12 +195,12 @@ export default function Services() {
             <div className="text-center mb-12">
               <h2 className="text-4xl text-gray-900 mb-3">Our Core Services</h2>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Comprehensive cybersecurity and technology solutions
+                AI-enabled, security-first solutions for government and enterprise
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Cybersecurity Services */}
+              {/* AI & AI Governance */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -205,23 +209,26 @@ export default function Services() {
                 className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-blue-600" />
+                  <Brain className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Cybersecurity Services
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Artificial Intelligence & AI Governance
                 </h3>
+                <p className="text-sm text-blue-600 font-medium mb-4">
+                  Responsible AI solutions built for governance, compliance, and scale.
+                </p>
                 <p className="text-gray-600 mb-6">
-                  Comprehensive security solutions including threat detection, incident response, and compliance management.
+                  Concepta provides AI-driven solutions that enhance operational efficiency while maintaining strong governance, ethics, and compliance.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Security Risk Assessments</li>
-                  <li>• Penetration Testing</li>
-                  <li>• 24/7 Security Monitoring</li>
-                  <li>• Compliance Management</li>
+                  <li>• AI-enabled workflows</li>
+                  <li>• Intelligent automation</li>
+                  <li>• Decision-support capabilities</li>
+                  <li>• Regulatory compliance alignment</li>
                 </ul>
               </motion.div>
 
-              {/* Cloud Services */}
+              {/* Cybersecurity & Zero Trust */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -230,23 +237,26 @@ export default function Services() {
                 className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Cloud className="w-6 h-6 text-blue-600" />
+                  <Shield className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Cloud Modernization
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Cybersecurity & Zero Trust Architecture
                 </h3>
+                <p className="text-sm text-blue-600 font-medium mb-4">
+                  Security strategies that protect mission-critical systems and data.
+                </p>
                 <p className="text-gray-600 mb-6">
-                  Migrate, optimize, and secure your cloud infrastructure with Microsoft Azure expertise.
+                  Modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Cloud Migration Strategy</li>
-                  <li>• Azure Infrastructure Setup</li>
-                  <li>• Cloud Security Configuration</li>
-                  <li>• Performance Optimization</li>
+                  <li>• Zero Trust implementation</li>
+                  <li>• Continuous monitoring</li>
+                  <li>• Compliance alignment</li>
+                  <li>• Identity & endpoint protection</li>
                 </ul>
               </motion.div>
 
-              {/* IT Support */}
+              {/* Application & Platform Support */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -255,23 +265,26 @@ export default function Services() {
                 className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Settings className="w-6 h-6 text-blue-600" />
+                  <Code className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  IT Support Services
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Application & Platform Support
                 </h3>
+                <p className="text-sm text-blue-600 font-medium mb-4">
+                  Reliable application and platform support for continuous operations.
+                </p>
                 <p className="text-gray-600 mb-6">
-                  Reliable, responsive IT support to keep your business running smoothly.
+                  Application and platform support services ensuring system availability, performance, and security for enterprise and government systems.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 24/7 Help Desk Support</li>
-                  <li>• Network Management</li>
-                  <li>• System Maintenance</li>
-                  <li>• Technology Consulting</li>
+                  <li>• System maintenance</li>
+                  <li>• Platform modernization</li>
+                  <li>• Data integration</li>
+                  <li>• Operational support</li>
                 </ul>
               </motion.div>
 
-              {/* Data Management */}
+              {/* Solution Architecture & Cloud */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -280,23 +293,26 @@ export default function Services() {
                 className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Database className="w-6 h-6 text-blue-600" />
+                  <Cloud className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Data Management
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Solution Architecture & Cloud Enablement
                 </h3>
+                <p className="text-sm text-blue-600 font-medium mb-4">
+                  Architecting secure, scalable solutions for modern environments.
+                </p>
                 <p className="text-gray-600 mb-6">
-                  Secure data storage, backup, and analytics solutions for informed decision-making.
+                  Concepta designs and supports solution architectures that integrate cloud, data, and security technologies to meet mission and business needs.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Data Backup & Recovery</li>
-                  <li>• Database Management</li>
-                  <li>• Analytics & Reporting</li>
-                  <li>• Data Governance</li>
+                  <li>• Cloud architecture design</li>
+                  <li>• Data & security integration</li>
+                  <li>• Governance alignment</li>
+                  <li>• Long-term sustainability</li>
                 </ul>
               </motion.div>
 
-              {/* Custom Development */}
+              {/* Service Desk & IT Operations */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -305,23 +321,26 @@ export default function Services() {
                 className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Code className="w-6 h-6 text-blue-600" />
+                  <Headphones className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Custom Development
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Service Desk & IT Operations Support
                 </h3>
+                <p className="text-sm text-blue-600 font-medium mb-4">
+                  Responsive IT support that keeps organizations running.
+                </p>
                 <p className="text-gray-600 mb-6">
-                  Tailored software solutions built to meet your specific business requirements.
+                  Service desk and IT operations support designed for reliability and user experience across hybrid, onsite, and remote environments.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Web Application Development</li>
-                  <li>• API Integration</li>
-                  <li>• Database Design</li>
-                  <li>• System Integration</li>
+                  <li>• 24/7 responsive support</li>
+                  <li>• Proactive monitoring</li>
+                  <li>• Issue resolution</li>
+                  <li>• Operational continuity</li>
                 </ul>
               </motion.div>
 
-              {/* Consulting */}
+              {/* Data Management */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -330,19 +349,22 @@ export default function Services() {
                 className="bg-white p-8 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-blue-600" />
+                  <Database className="w-6 h-6 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                  Technology Consulting
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  Data Management & Analytics
                 </h3>
+                <p className="text-sm text-blue-600 font-medium mb-4">
+                  Secure data solutions for informed decision-making.
+                </p>
                 <p className="text-gray-600 mb-6">
-                  Strategic technology guidance to align IT investments with business objectives.
+                  Comprehensive data management including secure storage, backup, analytics, and governance for regulated environments.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• IT Strategy Development</li>
-                  <li>• Technology Assessment</li>
-                  <li>• Digital Transformation</li>
-                  <li>• Project Management</li>
+                  <li>• Data backup & recovery</li>
+                  <li>• Analytics & reporting</li>
+                  <li>• Data governance</li>
+                  <li>• Compliance management</li>
                 </ul>
               </motion.div>
             </div>

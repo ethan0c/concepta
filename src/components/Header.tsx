@@ -54,14 +54,14 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
     <>
       <header className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-sm" 
-          : "bg-white"
-      } border-b border-gray-200/80`}>
+          ? "bg-[#0B4BBB]/95 backdrop-blur-md shadow-lg" 
+          : "bg-[#0B4BBB]"
+      }`}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-14 sm:h-16">
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 -ml-2 transition-colors"
+              className="lg:hidden text-white hover:text-blue-200 p-2 -ml-2 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -75,15 +75,16 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                 className="hover:opacity-80 transition-opacity flex items-center gap-2.5"
               >
                 <Image
-                  src="/assets/logo.png?v=2"
+                  src="/logo.png"
                   alt="Concepta Innovation Services"
-                  width={36}
-                  height={36}
-                  className="w-8 h-8 sm:w-9 sm:h-9"
+                  width={44}
+                  height={44}
+                  className="w-10 h-10 sm:w-11 sm:h-11"
                 />
-                <span className="text-sm sm:text-[15px] font-semibold text-gray-900 tracking-tight hidden sm:block">
-                  Concepta Innovation
-                </span>
+                <div className="hidden sm:flex flex-col leading-none">
+                  <span className="text-[13px] font-semibold text-white tracking-tight">Concepta</span>
+                  <span className="text-[13px] font-semibold text-white tracking-tight">Innovation</span>
+                </div>
               </Link>
             </div>
 
@@ -95,13 +96,13 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   href={item.href}
                   className={`relative px-3.5 py-2 text-sm font-medium transition-colors rounded-md ${
                     item.name === currentPage
-                      ? "text-[#0B4BBB]"
-                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                      ? "text-white"
+                      : "text-blue-100 hover:text-white hover:bg-white/10"
                   }`}
                 >
                   {item.name}
                   {item.name === currentPage && (
-                    <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-[#0B4BBB] rounded-full" />
+                    <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-white rounded-full" />
                   )}
                 </Link>
               ))}
@@ -111,13 +112,13 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <div className="flex items-center gap-3">
               <a 
                 href="tel:+18775941944"
-                className="hidden xl:flex items-center text-xs text-gray-500 hover:text-gray-700 transition-colors"
+                className="hidden xl:flex items-center text-xs text-blue-100 hover:text-white transition-colors"
               >
                 (877) 594-1944
               </a>
               <Link 
                 href="/contact"
-                className="bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors rounded-sm"
+                className="bg-white hover:bg-blue-50 text-[#0B4BBB] px-4 sm:px-5 py-2 text-sm font-medium transition-colors rounded-sm"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>
@@ -152,13 +153,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
           {/* Sidebar Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-100">
             <div className="flex items-center gap-2.5">
-              <Image
-                src="/assets/logo.png?v=2"
-                alt="Concepta Innovation"
-                width={32}
-                height={32}
-                className="w-8 h-8"
-              />
+            
               <span className="text-sm font-semibold text-gray-900">
                 Concepta Innovation
               </span>

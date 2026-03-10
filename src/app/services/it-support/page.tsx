@@ -21,32 +21,31 @@ export default function ITSupport() {
         <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
-              <motion.h1
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+                className="text-blue-600 text-sm md:text-base font-medium uppercase tracking-wider mb-4"
+              >
+                Responsive IT support that keeps organizations running.
+              </motion.p>
+              
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight mb-4 sm:mb-6"
               >
-                Concepta IT Support Services
+                Service Desk & IT Operations Support
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto mb-6 sm:mb-12"
+                className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto"
               >
-                Your Trusted Partner for Comprehensive IT Solutions
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-4xl mx-auto"
-              >
-                At Concepta, we empower your business with a full suite of IT support services,
-                designed to keep your operations running efficiently, securely, and without interruption.
+                Concepta provides service desk and IT operations support designed for reliability and user experience. Our teams deliver responsive issue resolution, proactive monitoring, and operational continuity—supporting hybrid, onsite, and remote environments.
               </motion.p>
             </div>
           </div>

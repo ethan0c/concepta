@@ -18,23 +18,26 @@ export default function ITSupport() {
       {/* Main Content */}
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="pt-8 sm:pt-12 pb-12 sm:pb-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
           <div className="page-container">
-            <div className="text-center">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8 }}
-                className="text-blue-600 text-sm md:text-base font-medium uppercase tracking-wider mb-4"
+            <div className="max-w-3xl">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className="inline-flex items-center gap-2 mb-6"
               >
-                Responsive IT support that keeps organizations running.
-              </motion.p>
+                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
+                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                  Responsive IT support that keeps organizations running
+                </span>
+              </motion.div>
               
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight mb-4 sm:mb-6"
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
               >
                 Service Desk & IT Operations Support
               </motion.h1>
@@ -42,8 +45,8 @@ export default function ITSupport() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto"
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
               >
                 Concepta provides service desk and IT operations support designed for reliability and user experience. Our teams deliver responsive issue resolution, proactive monitoring, and operational continuity—supporting hybrid, onsite, and remote environments.
               </motion.p>
@@ -52,44 +55,44 @@ export default function ITSupport() {
         </section>
 
         {/* Our Services */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
-            <div className="text-center mb-10 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl text-gray-900 mb-4 sm:mb-6">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
                 Our Services
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Explore our comprehensive IT support offerings designed to keep your business running smoothly
               </p>
             </div>
 
             {/* Services Grid */}
-            <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
+            <div className="grid gap-8 md:grid-cols-2">
               {/* Managed Desktop Services */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-blue-200"
+                className="bg-white p-6 sm:p-8 border border-gray-200"
               >
-                <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-blue-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
-                    <Server className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-[#0B4BBB] flex items-center justify-center mr-4 flex-shrink-0">
+                    <Server className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Desktop Services
                   </h3>
                 </div>
-                <ul className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
+                <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
                   <li className="flex items-start">
-                    <span className="text-blue-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Proactive Monitoring:</span> 24/7 coverage to ensure your desktops are always performing at their best.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-blue-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Reactive User Support:</span> Round-the-clock assistance for any technical issues your team encounters.
                     </div>
@@ -103,31 +106,31 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-red-200"
+                className="bg-white p-6 sm:p-8 border border-gray-200"
               >
-                <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-red-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
-                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-[#0B4BBB] flex items-center justify-center mr-4 flex-shrink-0">
+                    <Shield className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Cybersecurity Services
                   </h3>
                 </div>
-                <ul className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
+                <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
                   <li className="flex items-start">
-                    <span className="text-red-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Security Assessments:</span> Identify vulnerabilities and strengthen your defenses.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">24/7 Security Operations Center:</span> Continuous monitoring and rapid threat response.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-red-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Advanced Endpoint Detection (EDR):</span> Cutting-edge protection for every device.
                     </div>
@@ -141,25 +144,25 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-green-200"
+                className="bg-white p-6 sm:p-8 border border-gray-200"
               >
-                <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-green-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
-                    <Cloud className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-[#0B4BBB] flex items-center justify-center mr-4 flex-shrink-0">
+                    <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Backup & Disaster Recovery
                   </h3>
                 </div>
-                <ul className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
+                <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Cloud Backup:</span> Reliable backup solutions for Azure and Microsoft 365 environments.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-green-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Disaster Recovery:</span> Rapid recovery plans to minimize downtime and data loss.
                     </div>
@@ -173,25 +176,25 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-cyan-200"
+                className="bg-white p-6 sm:p-8 border border-gray-200"
               >
-                <div className="flex items-center mb-4 sm:mb-6">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-cyan-600 rounded-full flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
-                    <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-[#0B4BBB] flex items-center justify-center mr-4 flex-shrink-0">
+                    <Zap className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Network Services
                   </h3>
                 </div>
-                <ul className="space-y-3 sm:space-y-4 text-gray-700 text-sm sm:text-base">
+                <ul className="space-y-3 text-gray-700 text-sm sm:text-base">
                   <li className="flex items-start">
-                    <span className="text-cyan-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Proactive Monitoring:</span> 24/7 oversight utilizing SNMP or cloud-based tools.
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-cyan-600 mr-2 sm:mr-3 mt-0.5 sm:mt-1">✓</span>
+                    <span className="text-[#0B4BBB] mr-3 mt-0.5">✓</span>
                     <div>
                       <span className="font-semibold">Network Support:</span> Immediate assistance for switches, routers, and access points.
                     </div>
@@ -203,21 +206,21 @@ export default function ITSupport() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-12 sm:py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#0B4BBB]">
           <div className="page-container text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
               Let Concepta Be the Backbone of Your IT Infrastructure
             </h2>
-            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-blue-100">
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
               Contact us today to learn how our managed services can help your business thrive in a digital world.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/contact">
-                <button className="w-full sm:w-auto bg-white text-blue-600 hover:bg-blue-50 px-6 sm:px-8 py-3 rounded font-medium transition-colors">
+                <button className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors">
                   Contact Our Team
                 </button>
               </Link>
-              <button className="w-full sm:w-auto text-white border-2 border-white hover:bg-white hover:text-blue-600 px-6 sm:px-8 py-3 rounded font-medium transition-all">
+              <button className="inline-flex items-center justify-center px-6 py-3 border border-white text-white text-sm font-medium hover:bg-white/10 transition-colors">
                 Schedule a Consultation
               </button>
             </div>

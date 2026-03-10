@@ -19,7 +19,6 @@ const defaultCertifications: Certification[] = [
   { label: "Microsoft Azure AI Partner" },
   { label: "ISO 27001 Certified" },
   { label: "SOC 2 Type II Compliant" },
-  { label: "SBA Certified Partner", hasImage: true, imageSrc: "/assets/sba.jpg" },
 ];
 
 const defaultFeatures: Feature[] = [

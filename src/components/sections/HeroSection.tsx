@@ -44,11 +44,7 @@ export default function HeroSection() {
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-semibold text-white leading-[1.1] tracking-tight mb-6">
-              Secure your digital future with{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4589ff] to-[#0B4BBB]">
-                AI-powered
-              </span>{" "}
-              cybersecurity
+              Empowering innovation across federal and commercial sectors through AI, cybersecurity, and modern IT services—from governance to secure operations.
             </h1>
 
             {/* Subheading */}
@@ -56,10 +52,19 @@ export default function HeroSection() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-base sm:text-lg text-gray-400 max-w-xl mb-8 leading-relaxed"
+              className="text-base sm:text-lg text-gray-400 max-w-xl mb-4 leading-relaxed"
             >
-              Enterprise-grade security, cloud infrastructure, and AI solutions 
-              that help organizations stay ahead in a rapidly evolving threat landscape.
+              Concepta Innovation Services delivers intelligent automation, Zero Trust cybersecurity, and mission-aligned IT support to help organizations modernize responsibly, operate securely, and perform at scale in complex, regulated environments.
+            </motion.p>
+
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="text-sm text-[#6ea6ff] font-medium tracking-wide mb-8"
+            >
+              Smarter Solutions. Secure Infrastructure. Seamless Support.
             </motion.p>
 
             {/* CTA Buttons */}

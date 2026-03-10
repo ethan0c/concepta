@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Award, Users, Target, Globe } from "lucide-react";
-import Image from "next/image";
 import Header from "@/components/Header";
 
 export default function AboutContent() {
@@ -64,8 +63,11 @@ export default function AboutContent() {
                 <h3 className="cisco-h5 text-gray-800 mb-4 font-cisco-medium">
                   Empowering Innovation Across Federal and Commercial Sectors with AI, Cybersecurity, and Professional IT Support Services.
                 </h3>
+                <p className="cisco-h6 text-gray-600 mb-6 leading-relaxed">
+                  At Concepta Innovation Services, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our services are designed to help organizations modernize responsibly, operate securely, and perform at scale in complex, regulated environments.
+                </p>
                 <p className="cisco-h6 text-gray-600 mb-8 leading-relaxed">
-                  At Concepta Innovation Services, LLC, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our professional services span AI-driven workflows, zero-trust cybersecurity frameworks, and responsive service desk operations—enhancing performance, ensuring compliance, and elevating user experience across industries.
+                  Our professional capabilities span AI-driven workflows, AI governance, ethics, and compliance, application and platform support, solution architecture, Zero Trust cybersecurity frameworks, and responsive service desk operations. Together, these services enhance operational performance, strengthen compliance, and elevate the end-user experience across industries.
                 </p>
                 <div className="bg-[#f4f4f4] p-8 border border-gray-200">
                   <h3 className="cisco-h5 font-cisco-medium text-gray-900 mb-4">
@@ -79,22 +81,7 @@ export default function AboutContent() {
                   </p>
                 </div>
                 
-                {/* SBA Certified Badge */}
-                <div className="mt-8 flex justify-center">
-                  <div className="flex items-center p-4 bg-white border border-gray-200">
-                    <Image
-                      src="/assets/sba.jpg"
-                      alt="SBA Certified Partner"
-                      width={48}
-                      height={48}
-                      className="w-12 h-12 mr-4"
-                    />
-                    <div>
-                      <p className="cisco-h6 font-cisco-medium text-gray-900">SBA Certified Partner</p>
-                      <p className="cisco-body-midsize text-gray-600">Small Business Administration</p>
-                    </div>
-                  </div>
-                </div>
+
               </motion.div>
             </div>
           </div>

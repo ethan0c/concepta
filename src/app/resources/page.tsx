@@ -68,7 +68,7 @@ export default function Resources() {
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <Download className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                    <Download className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-sm text-gray-900 mb-1">Zero Trust Architecture Guide</h4>
                       <p className="text-xs text-gray-500">Comprehensive implementation roadmap</p>
@@ -76,7 +76,7 @@ export default function Resources() {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <Download className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                    <Download className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-sm text-gray-900 mb-1">AI Security Threat Report 2024</h4>
                       <p className="text-xs text-gray-500">Latest threat intelligence insights</p>
@@ -84,7 +84,7 @@ export default function Resources() {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <Download className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                    <Download className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-sm text-gray-900 mb-1">Cloud Migration Best Practices</h4>
                       <p className="text-xs text-gray-500">Strategic planning and execution</p>
@@ -113,7 +113,7 @@ export default function Resources() {
                 
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <Calendar className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                    <Calendar className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-sm text-gray-900 mb-1">Upcoming: AI in Cybersecurity</h4>
                       <p className="text-xs text-gray-500">Dec 15, 2024 | 2:00 PM EST</p>
@@ -121,7 +121,7 @@ export default function Resources() {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <Video className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                    <Video className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-sm text-gray-900 mb-1">Cloud Security Fundamentals</h4>
                       <p className="text-xs text-gray-500">45 min recording available</p>
@@ -129,7 +129,7 @@ export default function Resources() {
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <Video className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                    <Video className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="text-sm text-gray-900 mb-1">Digital Transformation Strategies</h4>
                       <p className="text-xs text-gray-500">Expert panel discussion</p>
@@ -237,7 +237,7 @@ export default function Resources() {
                     <span className="text-xs text-gray-500">{article.date}</span>
                   </div>
                   
-                  <h3 className="text-lg text-gray-900 mb-3 hover:text-blue-600 transition-colors">{article.title}</h3>
+                  <h3 className="text-lg text-gray-900 mb-3 hover:text-[#0B4BBB] transition-colors">{article.title}</h3>
                   <p className="text-gray-600 mb-4 text-sm">{article.excerpt}</p>
                   
                   <div className="flex items-center justify-between">

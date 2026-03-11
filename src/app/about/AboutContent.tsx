@@ -11,42 +11,7 @@ export default function AboutContent() {
 
       {/* Main Content */}
       <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-          <div className="page-container">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  About Us
-                </span>
-              </motion.div>
 
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
-              >
-                About Concepta Innovation Services
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
-              >
-                Providing innovative technical solutions that promote business value, while ensuring security of business and customer data from growing cybersecurity threats.
-              </motion.p>
-            </div>
-          </div>
-        </section>
 
         {/* Company Overview */}
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
@@ -174,65 +139,7 @@ export default function AboutContent() {
           </div>
         </section>
 
-        {/* Leadership Team */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
-          <div className="page-container">
-            <div className="text-center mb-12">
-              <h2 className="cisco-h3 text-gray-900 mb-4">Leadership Team</h2>
-              <p className="cisco-h6 text-gray-600 max-w-3xl mx-auto">
-                Experienced leaders driving innovation and excellence in
-                cybersecurity and technology.
-              </p>
-            </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "John Smith",
-                  role: "Chief Executive Officer",
-                  bio: "20+ years in cybersecurity leadership with expertise in enterprise security architecture and digital transformation.",
-                  education: "M.S. Computer Science, Stanford University",
-                },
-                {
-                  name: "Sarah Johnson",
-                  role: "Chief Technology Officer",
-                  bio: "Former Microsoft Principal Engineer with deep expertise in AI, cloud security, and enterprise software development.",
-                  education: "Ph.D. Computer Science, MIT",
-                },
-                {
-                  name: "Michael Chen",
-                  role: "Chief Security Officer",
-                  bio: "Former NSA cybersecurity specialist with 15+ years in threat intelligence and incident response leadership.",
-                  education: "M.S. Cybersecurity, Carnegie Mellon",
-                },
-              ].map((leader, index) => (
-                <motion.div
-                  key={leader.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-[#f4f4f4] p-6"
-                >
-                  <div className="w-20 h-20 bg-blue-50 mx-auto mb-4 flex items-center justify-center">
-                    <Users className="w-10 h-10 text-[#0B4BBB]" />
-                  </div>
-
-                  <h3 className="cisco-h6 text-gray-900 text-center mb-2">
-                    {leader.name}
-                  </h3>
-                  <p className="text-[#0B4BBB] text-center mb-4">
-                    {leader.role}
-                  </p>
-                  <p className="text-gray-600 cisco-body-midsize mb-3">{leader.bio}</p>
-                  <p className="text-gray-500 cisco-body-small text-center">
-                    {leader.education}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Call to Action */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">

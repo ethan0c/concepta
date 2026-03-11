@@ -1,53 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Brain, Cloud, Lock, Zap, Users, ArrowRight } from "lucide-react";
+import { Brain, Shield, Cloud, Layers, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import { Footer } from "@/components/layout";
 
 const solutions = [
   {
-    icon: Shield,
-    title: "Cybersecurity Solutions",
-    description: "Advanced threat detection, prevention, and response systems to protect your critical infrastructure.",
-    features: ["24/7 Security Operations Center", "Threat Intelligence & Analysis", "Incident Response & Recovery", "Vulnerability Assessment"],
-    href: "/services/security-strategy",
+    icon: Brain,
+    title: "Artificial Intelligence Solutions",
+    tagline: "AI solutions that enhance operations while maintaining governance and trust.",
+    description:
+      "Concepta delivers AI-enabled solutions that support intelligent automation, decision support, and workflow optimization—while ensuring alignment with governance, ethics, and compliance requirements.",
+    href: "/solutions",
   },
   {
-    icon: Brain,
-    title: "AI & Machine Learning",
-    description: "Intelligent automation and predictive analytics to drive business transformation and efficiency.",
-    features: ["Predictive Analytics Platform", "Automated Decision Making", "Natural Language Processing", "Computer Vision Solutions"],
-    href: "/solutions",
+    icon: Shield,
+    title: "Cybersecurity & Zero Trust Solutions",
+    tagline: "Security solutions built to protect mission-critical systems and data.",
+    description:
+      "Our cybersecurity solutions apply Zero Trust principles to safeguard identities, endpoints, networks, applications, and data—helping organizations reduce risk and operate securely in regulated environments.",
+    href: "/services/security-strategy",
   },
   {
     icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Scalable, secure cloud solutions built on Microsoft Azure for enterprise-grade performance.",
-    features: ["Azure Cloud Migration", "Hybrid Cloud Architecture", "Container Orchestration", "DevOps & CI/CD Pipelines"],
+    title: "Cloud & Enterprise Solutions",
+    tagline: "Scalable cloud solutions designed for secure modernization.",
+    description:
+      "Concepta supports cloud adoption and enterprise modernization through secure architectures that integrate governance, resilience, and operational efficiency across hybrid and cloud environments.",
     href: "/solutions",
   },
   {
-    icon: Lock,
-    title: "Zero Trust Security",
-    description: "Next-generation security framework that verifies every user and device before granting access.",
-    features: ["Identity & Access Management", "Multi-Factor Authentication", "Network Segmentation", "Conditional Access Policies"],
-    href: "/services/security-strategy",
-  },
-  {
-    icon: Zap,
-    title: "Digital Transformation",
-    description: "Comprehensive modernization strategies to digitize operations and enhance productivity.",
-    features: ["Business Process Automation", "Legacy System Modernization", "Data Analytics & Insights", "Employee Experience Platform"],
+    icon: Layers,
+    title: "Application & Platform Solutions",
+    tagline: "Application solutions that support reliability, performance, and continuity.",
+    description:
+      "We deliver application and platform solutions that improve system availability, support modernization efforts, and enable organizations to adapt and scale with confidence.",
     href: "/solutions",
-  },
-  {
-    icon: Users,
-    title: "Managed Services",
-    description: "End-to-end IT management and support services to optimize your technology infrastructure.",
-    features: ["24/7 Infrastructure Monitoring", "Help Desk & User Support", "System Administration", "Performance Optimization"],
-    href: "/services/it-support",
   },
 ];
 
@@ -61,42 +51,28 @@ export default function Solutions() {
         <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
           <div className="page-container">
             <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Enterprise Solutions
-                </span>
-              </motion.div>
-
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.6 }}
                 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
               >
-                Technology solutions that protect and transform
+                Solutions designed to support secure, governed, and scalable operations.
               </motion.h1>
 
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
                 className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8"
               >
-                Comprehensive cybersecurity and technology solutions designed to protect, 
-                transform, and scale your enterprise operations.
+                Concepta Innovation Services delivers integrated technology solutions that help government agencies and commercial organizations address complex operational, security, and compliance challenges. Our solutions combine AI, cybersecurity, cloud, and enterprise technologies to support governance, risk management, and secure operations across regulated environments.
               </motion.p>
 
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-3"
               >
                 <Link
                   href="/contact"
@@ -104,12 +80,6 @@ export default function Solutions() {
                 >
                   Get started
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <Link
-                  href="/resources"
-                  className="inline-flex items-center justify-center px-6 py-3.5 border border-gray-500 text-white text-sm font-medium hover:border-white hover:bg-white/5 transition-all"
-                >
-                  View case studies
                 </Link>
               </motion.div>
             </div>
@@ -119,22 +89,7 @@ export default function Solutions() {
         {/* Solutions Grid */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
-              <h2 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
-                What we offer
-              </h2>
-              <p className="text-gray-600 max-w-2xl">
-                End-to-end solutions tailored for enterprise security and digital transformation.
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-300">
+            <div className="grid md:grid-cols-2 gap-px bg-gray-300">
               {solutions.map((solution, index) => (
                 <motion.div
                   key={solution.title}
@@ -146,20 +101,15 @@ export default function Solutions() {
                 >
                   <div className="border-t-2 border-[#0B4BBB] pt-6">
                     <solution.icon className="w-6 h-6 text-[#0B4BBB] mb-4" />
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">
                       {solution.title}
                     </h3>
-                    <p className="text-sm text-gray-600 mb-6 leading-relaxed">
+                    <p className="text-sm font-medium text-[#0B4BBB] mb-3">
+                      {solution.tagline}
+                    </p>
+                    <p className="text-sm text-gray-600 leading-relaxed mb-6">
                       {solution.description}
                     </p>
-                    <ul className="space-y-2 mb-6">
-                      {solution.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-2 text-sm text-gray-600">
-                          <span className="w-1 h-1 rounded-full bg-[#0B4BBB] mt-2 shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
                     <Link
                       href={solution.href}
                       className="inline-flex items-center text-sm text-[#0B4BBB] font-medium group-hover:underline"
@@ -179,25 +129,17 @@ export default function Solutions() {
           <div className="page-container">
             <div className="max-w-3xl">
               <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-4">
-                Ready to transform your enterprise?
+                Ready to modernize securely?
               </h2>
               <p className="text-blue-100 mb-8">
-                Let&apos;s discuss how our solutions can address your specific challenges and drive your business forward.
+                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors"
-                >
-                  Schedule consultation
-                </Link>
-                <Link
-                  href="/resources"
-                  className="inline-flex items-center justify-center px-6 py-3.5 border border-white text-white text-sm font-medium hover:bg-white/10 transition-colors"
-                >
-                  Download solutions guide
-                </Link>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 py-3.5 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </section>

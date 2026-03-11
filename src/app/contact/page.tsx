@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'
 import Header from '@/components/Header'
+import HeroBackground from '@/components/HeroBackground'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -35,8 +36,9 @@ export default function Contact() {
       {/* Main Content */}
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
-          <div className="page-container">
+        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
+          <HeroBackground />
+          <div className="page-container relative z-10">
             <div className="max-w-3xl">
               <motion.div
                 initial={{ opacity: 0 }}

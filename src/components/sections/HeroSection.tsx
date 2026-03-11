@@ -2,31 +2,21 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import HeroBackground from "@/components/HeroBackground";
 
 export default function HeroSection() {
   return (
     <section className="relative bg-[#161616] overflow-hidden">
-      {/* Subtle abstract governance grid background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 opacity-[0.07]"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(11,75,187,0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(11,75,187,0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#161616] via-transparent to-[#161616]/90" />
-      </div>
+      <HeroBackground />
 
       {/* Content */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh] py-[60px] sm:py-[80px] lg:py-0 flex items-center">
+        <div className="min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh] py-[60px] sm:py-[80px] lg:py-[60px] flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
             className="max-w-4xl"
           >
             {/* H1 — Dominates the page visually, single sentence */}
@@ -37,8 +27,9 @@ export default function HeroSection() {
             {/* H2 — Lighter and clearly secondary */}
             <motion.p
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
               className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-light"
             >
               Concepta Innovation helps government and commercial organizations govern risk, secure operations, and modernize with confidence across complex, regulated environments.
@@ -47,8 +38,9 @@ export default function HeroSection() {
             {/* Single Primary CTA */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true }}
             >
               <Link
                 href="/services"

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Brain, Shield, Cloud, Layers, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Header from "@/components/Header";
+import HeroBackground from "@/components/HeroBackground";
 import { Footer } from "@/components/layout";
 
 const solutions = [
@@ -48,8 +49,9 @@ export default function Solutions() {
 
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="bg-[#161616] py-16 sm:py-20 lg:py-24">
-          <div className="page-container">
+        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
+          <HeroBackground />
+          <div className="page-container relative z-10">
             <div className="max-w-3xl">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}

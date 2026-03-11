@@ -17,7 +17,7 @@ export default function WhoWeServeSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="cisco-headline text-gray-900 mb-4"
+          className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
         >
           Who we serve
         </motion.h2>

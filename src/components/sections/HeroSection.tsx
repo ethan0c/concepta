@@ -20,8 +20,8 @@ export default function HeroSection() {
             className="max-w-4xl"
           >
             {/* H1 — Dominates the page visually, single sentence */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal text-white leading-[1.1] tracking-tight mb-6">
-              AI, cybersecurity, and modern IT services—built for regulated environments.
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold text-white leading-[1.1] tracking-tight mb-6">
+              Technology for regulated environments. Done right.
             </h1>
 
             {/* H2 — Lighter and clearly secondary */}
@@ -32,7 +32,7 @@ export default function HeroSection() {
               viewport={{ once: true }}
               className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-light"
             >
-              Concepta Innovation helps government and commercial organizations govern risk, secure operations, and modernize with confidence across complex, regulated environments.
+              AI, cybersecurity, and modern IT services built for secure, governed operations.
             </motion.p>
 
             {/* Single Primary CTA */}

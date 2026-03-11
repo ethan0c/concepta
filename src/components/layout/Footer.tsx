@@ -40,12 +40,10 @@ export default function Footer({
             </div>
             <p className="text-sm font-semibold text-white mb-1">Concepta Innovation Services, LLC</p>
             <p className="text-xs text-gray-400 leading-relaxed mb-2">
-              1451 Rockville Pike #2-230<br />
+              1451 Rockville Pike, Suite 250<br />
               Rockville, MD 20852
             </p>
-            <p className="text-xs text-gray-500 leading-relaxed max-w-xs">
-              Certified woman-owned, minority-owned small business providing enterprise-grade cybersecurity, cloud infrastructure, and AI solutions.
-            </p>
+
           </div>
 
           {/* Services */}

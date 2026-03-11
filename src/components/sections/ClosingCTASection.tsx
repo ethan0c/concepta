@@ -14,7 +14,7 @@ export default function ClosingCTASection() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <h2 className="cisco-headline text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
             Ready to modernize securely?
           </h2>
           <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">

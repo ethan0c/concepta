@@ -2,7 +2,7 @@
 
 import Header from "@/components/Header";
 import { Footer, BottomFooter } from "@/components/layout";
-import { HeroSection, CoreServicesSection, WhoWeServeSection, WhyChooseUsSection, ClosingCTASection, ResourcesInsightsSection } from "@/components/sections";
+import { HeroSection, CoreServicesSection, WhoWeServeSection, WhyChooseUsSection, ClosingCTASection } from "@/components/sections";
 
 export default function Home() {
   return (
@@ -14,7 +14,6 @@ export default function Home() {
         <CoreServicesSection />
         <WhoWeServeSection />
         <WhyChooseUsSection />
-        <ResourcesInsightsSection />
         <ClosingCTASection />
         <Footer />
         <BottomFooter />

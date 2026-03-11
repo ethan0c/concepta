@@ -61,10 +61,19 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4"
               >
-                Get in Touch
+                Contact Concepta Innovation Services
               </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="text-xl sm:text-2xl text-gray-300 leading-snug max-w-xl mb-4 font-light"
+              >
+                Let&apos;s talk about secure, governed, and modern IT solutions.
+              </motion.p>
               
               <motion.p 
                 initial={{ opacity: 0, y: 20 }}
@@ -72,7 +81,7 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
               >
-                Ready to secure and transform your enterprise? Our cybersecurity experts are here to help you navigate your technology challenges.
+                Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
               </motion.p>
             </div>
           </div>
@@ -93,7 +102,7 @@ export default function Contact() {
                 <div>
                   <h2 className="text-3xl text-gray-900 mb-6">Contact Information</h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Connect with our cybersecurity experts to discuss your security needs and explore how we can help protect and transform your organization.
+                    Reach out to start a conversation about how Concepta can support your organization&apos;s technology and modernization goals.
                   </p>
                 </div>
 
@@ -105,7 +114,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
                       <p className="text-gray-600">(877)-594-1944</p>
-                      <p className="text-sm text-gray-500">Available 24/7 for emergency support</p>
+                      <p className="text-sm text-gray-500">Monday – Friday, 8:00 AM – 6:00 PM EST</p>
                     </div>
                   </div>
 
@@ -127,7 +136,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
                       <p className="text-gray-600">
-                        1451 Rockville Pike #2-230<br />
+                        1451 Rockville Pike, Suite 250<br />
                         Rockville, MD 20852
                       </p>
                     </div>
@@ -148,12 +157,12 @@ export default function Contact() {
                 </div>
 
                 <div className="bg-[#f4f4f4] p-6">
-                  <h3 className="text-lg text-gray-900 mb-3">Emergency Support</h3>
+                  <h3 className="text-lg text-gray-900 mb-3">Ready to Connect?</h3>
                   <p className="text-gray-600 mb-4">
-                    For critical security incidents requiring immediate attention, contact our 24/7 emergency response team.
+                    Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
                   </p>
-                  <a href="tel:+18775941944" className="inline-flex items-center justify-center px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors">
-                    Emergency Hotline: (877)-594-1944
+                  <a href="tel:+18775941944" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white text-sm font-medium transition-colors">
+                    Call (877)-594-1944
                   </a>
                 </div>
               </motion.div>
@@ -242,7 +251,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="subject" className="block text-sm text-gray-700 mb-2">
-                      Subject *
+                      Area of Interest *
                     </label>
                     <select
                       id="subject"
@@ -250,14 +259,13 @@ export default function Contact() {
                       required
                       className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                     >
-                      <option value="">Select a subject</option>
-                      <option value="security-assessment">Security Assessment</option>
-                      <option value="consulting">Consulting Services</option>
-                      <option value="cloud-migration">Cloud Migration</option>
-                      <option value="incident-response">Incident Response</option>
-                      <option value="ai-solutions">AI Solutions</option>
-                      <option value="general-inquiry">General Inquiry</option>
-                      <option value="partnership">Partnership Opportunity</option>
+                      <option value="">Select an area of interest</option>
+                      <option value="ai-intelligent-automation">AI &amp; Intelligent Automation</option>
+                      <option value="cybersecurity-zero-trust">Cybersecurity &amp; Zero Trust</option>
+                      <option value="application-platform-support">Application &amp; Platform Support</option>
+                      <option value="it-operations-service-desk">IT Operations &amp; Service Desk</option>
+                      <option value="cloud-solution-architecture">Cloud &amp; Solution Architecture</option>
+                      <option value="general-it-consulting">General IT Consulting / Advisory</option>
                     </select>
                   </div>
 
@@ -271,7 +279,7 @@ export default function Contact() {
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent resize-vertical"
-                      placeholder="Tell us about your cybersecurity needs, challenges, or questions..."
+                      placeholder="Tell us about your IT, AI, cybersecurity, or modernization needs..."
                     />
                   </div>
 

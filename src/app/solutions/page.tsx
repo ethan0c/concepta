@@ -92,7 +92,7 @@ export default function Solutions() {
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Our Solutions</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Integrated technology solutions for governance, security, and scalable operations
+                Integrated solutions supporting governance, security, and modern operations across regulated environments.
               </p>
             </div>
 

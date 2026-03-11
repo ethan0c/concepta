@@ -9,8 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['var(--font-cisco)', 'system-ui', 'sans-serif'],
-        'cisco': ['var(--font-cisco)', 'system-ui', 'sans-serif'],
+        'sans': ['var(--font-manrope)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         // Cisco Momentum Design System Typography Scale

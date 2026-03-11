@@ -1,10 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
+const manrope = Manrope({ 
   subsets: ["latin"],
-  variable: '--font-cisco',
+  variable: '--font-manrope',
   fallback: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
 });
 
@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased cisco-body-large`}>
+      <body className={`${manrope.className} antialiased`}>
         {children}
       </body>
     </html>

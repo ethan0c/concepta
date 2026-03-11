@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { BookOpen, Download, Video, FileText, Calendar } from 'lucide-react'
 import Header from '@/components/Header'
 import HeroBackground from '@/components/HeroBackground'
+import { Footer, BottomFooter } from '@/components/layout'
 
 export default function Resources() {
   return (
@@ -33,7 +34,7 @@ export default function Resources() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
               >
                 Resources & Insights
               </motion.h1>
@@ -51,8 +52,15 @@ export default function Resources() {
         </section>
 
         {/* Resource Categories */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Resource Library</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Explore whitepapers, webinars, and tools to strengthen your security and technology strategy.
+              </p>
+            </div>
+
             <div className="grid lg:grid-cols-3 gap-8">
               {/* Whitepapers & Reports */}
               <motion.div
@@ -60,12 +68,12 @@ export default function Resources() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-200 p-6"
+                className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
                   <FileText className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Whitepapers & Reports</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Whitepapers & Reports</h3>
                 <p className="text-gray-600 mb-6">In-depth analysis and research on cybersecurity trends, threat landscapes, and technology innovations.</p>
                 
                 <div className="space-y-4">
@@ -105,12 +113,12 @@ export default function Resources() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-200 p-6"
+                className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
                   <Video className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Webinars & Videos</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Webinars & Videos</h3>
                 <p className="text-gray-600 mb-6">Educational content and expert insights delivered through engaging video presentations and live sessions.</p>
                 
                 <div className="space-y-4">
@@ -150,12 +158,12 @@ export default function Resources() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white border border-gray-200 p-6"
+                className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
                   <BookOpen className="w-6 h-6 text-[#0B4BBB]" />
                 </div>
-                <h3 className="text-xl text-gray-900 mb-4">Tools & Calculators</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Tools & Calculators</h3>
                 <p className="text-gray-600 mb-6">Interactive tools and calculators to help assess your security posture and plan technology investments.</p>
                 
                 <div className="space-y-4">
@@ -193,7 +201,7 @@ export default function Resources() {
         </section>
 
         {/* Latest Articles */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Latest Insights</h2>
@@ -232,7 +240,7 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 cursor-pointer border border-gray-200"
+                  className="bg-[#f4f4f4] p-8 cursor-pointer border border-gray-200"
                 >
                   <div className="flex items-center space-x-2 mb-3">
                     <span className="text-xs text-[#0B4BBB] bg-blue-50 px-2 py-1">{article.category}</span>
@@ -255,7 +263,7 @@ export default function Resources() {
         </section>
 
         {/* Newsletter Signup */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container text-center">
             <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">Stay Updated</h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
@@ -278,6 +286,9 @@ export default function Resources() {
             </p>
           </div>
         </section>
+
+        <Footer />
+        <BottomFooter />
       </main>
     </div>
   )

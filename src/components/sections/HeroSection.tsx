@@ -20,7 +20,7 @@ export default function HeroSection() {
             className="max-w-4xl"
           >
             {/* H1 — Dominates the page visually, single sentence */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold text-white leading-[1.1] tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-normal text-white leading-[1.1] tracking-tight mb-6">
               AI, cybersecurity, and modern IT services—built for regulated environments.
             </h1>
 

@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Settings, Code, Database, Shield, Cloud, Users, Brain, Layers, Headphones } from "lucide-react";
+import Link from "next/link";
+import { Shield, Cloud, Brain, Headphones, Code, Database } from "lucide-react";
 import Header from "@/components/Header";
 import HeroBackground from "@/components/HeroBackground";
-import Image from "next/image";
+import { Footer, BottomFooter } from "@/components/layout";
 
 export default function Services() {
   return (
@@ -30,28 +31,23 @@ export default function Services() {
                 </span>
               </motion.div>
 
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
+              >
+                Professional IT Services
+              </motion.h1>
+
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8 max-w-xl"
+                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
               >
                 Concepta Innovation Services delivers AI-enabled, security-first, and mission-aligned IT services that help government agencies and commercial organizations modernize responsibly and operate with confidence.
               </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col sm:flex-row gap-3"
-              >
-                <button className="inline-flex items-center justify-center px-6 py-3.5 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors">
-                  Get Started Today
-                </button>
-                <button className="inline-flex items-center justify-center px-6 py-3.5 border border-gray-500 text-white text-sm font-medium hover:border-white hover:bg-white/5 transition-all">
-                  Schedule Consultation
-                </button>
-              </motion.div>
             </div>
           </div>
         </section>
@@ -238,7 +234,7 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Technology Stack Section with Images */}
+        {/* Technology Stack Section */}
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-12">
@@ -250,96 +246,98 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-              {/* Technology Image */}
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="relative"
+                className="bg-[#f4f4f4] p-6 border border-gray-200"
               >
-                <div className="bg-[#f4f4f4] p-8 border border-gray-200">
-                  <Image
-                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                    alt="Technology Infrastructure"
-                    width={600}
-                    height={400}
-                    className="w-full h-64 object-cover"
-                  />
-                  <div className="absolute -top-4 -right-4 bg-[#0B4BBB] text-white p-4">
-                    <div className="text-sm font-medium">Enterprise Grade</div>
-                    <div className="text-xs text-blue-100">Security & Compliance</div>
-                  </div>
-                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Microsoft Azure</li>
+                  <li>• AWS</li>
+                  <li>• Google Cloud</li>
+                </ul>
               </motion.div>
-
-              {/* Technology List */}
               <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="space-y-8"
+                className="bg-[#f4f4f4] p-6 border border-gray-200"
               >
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="bg-white p-6 border border-gray-200">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• Microsoft Azure</li>
-                      <li>• AWS</li>
-                      <li>• Google Cloud</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white p-6 border border-gray-200">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• Microsoft Sentinel</li>
-                      <li>• Azure Security Center</li>
-                      <li>• Defender 365</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white p-6 border border-gray-200">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• .NET Core</li>
-                      <li>• React & Next.js</li>
-                      <li>• Python & AI/ML</li>
-                    </ul>
-                  </div>
-                  <div className="bg-white p-6 border border-gray-200">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• SQL Server</li>
-                      <li>• Azure Cosmos DB</li>
-                      <li>• PostgreSQL</li>
-                    </ul>
-                  </div>
-                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• Microsoft Sentinel</li>
+                  <li>• Azure Security Center</li>
+                  <li>• Defender 365</li>
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="bg-[#f4f4f4] p-6 border border-gray-200"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• .NET Core</li>
+                  <li>• React & Next.js</li>
+                  <li>• Python & AI/ML</li>
+                </ul>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="bg-[#f4f4f4] p-6 border border-gray-200"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li>• SQL Server</li>
+                  <li>• Azure Cosmos DB</li>
+                  <li>• PostgreSQL</li>
+                </ul>
               </motion.div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#0B4BBB]">
-          <div className="page-container text-center">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
-              Ready to Transform Your Technology Infrastructure?
-            </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              Let&apos;s discuss how our comprehensive technology services can help your business achieve its goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors">
-                Schedule Consultation
-              </button>
-              <button className="inline-flex items-center justify-center px-6 py-3 border border-white text-white text-sm font-medium hover:bg-white/10 transition-colors">
-                View Case Studies
-              </button>
-            </div>
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="max-w-3xl"
+            >
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
+                Ready to modernize securely?
+              </h2>
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
+                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+              >
+                Contact Us
+                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </motion.div>
           </div>
         </section>
+
+        <Footer />
+        <BottomFooter />
       </main>
     </div>
   );

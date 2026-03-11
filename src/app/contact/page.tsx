@@ -2,31 +2,36 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react'
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
 import Header from '@/components/Header'
 import HeroBackground from '@/components/HeroBackground'
+import { Footer, BottomFooter } from '@/components/layout'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
-  })
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    setStatus('submitting')
+
+    const form = e.currentTarget
+    const data = new FormData(form)
+
+    try {
+      const res = await fetch('https://formspree.io/f/mojkeolo', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
 
   return (
@@ -56,7 +61,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
               >
                 Get in Touch
               </motion.h1>
@@ -162,6 +167,19 @@ export default function Contact() {
                 className="bg-[#f4f4f4] p-8"
               >
                 <h2 className="text-2xl text-gray-900 mb-6">Send Us a Message</h2>
+
+                {status === 'success' && (
+                  <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 text-green-800 text-sm mb-6">
+                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    <span>Thank you! Your message has been sent. We&apos;ll be in touch soon.</span>
+                  </div>
+                )}
+
+                {status === 'error' && (
+                  <div className="p-4 bg-red-50 border border-red-200 text-red-800 text-sm mb-6">
+                    Something went wrong. Please try again or email us directly at support@conceptainnovation.com.
+                  </div>
+                )}
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
@@ -173,8 +191,6 @@ export default function Contact() {
                         type="text"
                         id="name"
                         name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="Your full name"
@@ -189,8 +205,6 @@ export default function Contact() {
                         type="email"
                         id="email"
                         name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="your.email@company.com"
@@ -207,8 +221,6 @@ export default function Contact() {
                         type="text"
                         id="company"
                         name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="Your company name"
                       />
@@ -222,8 +234,6 @@ export default function Contact() {
                         type="tel"
                         id="phone"
                         name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                         placeholder="(123) 456-7890"
                       />
@@ -237,8 +247,6 @@ export default function Contact() {
                     <select
                       id="subject"
                       name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                     >
@@ -260,8 +268,6 @@ export default function Contact() {
                     <textarea
                       id="message"
                       name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
                       required
                       rows={6}
                       className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent resize-vertical"
@@ -283,10 +289,11 @@ export default function Contact() {
 
                   <button
                     type="submit"
-                    className="w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2"
+                    disabled={status === 'submitting'}
+                    className="w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send className="w-4 h-4" />
-                    <span>Send Message</span>
+                    <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
                   </button>
                 </form>
 
@@ -303,23 +310,8 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Map or Additional CTA */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
-          <div className="page-container text-center">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">Ready to Get Started?</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Join hundreds of organizations that trust Concepta Innovation Systems to secure their digital future.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button className="inline-flex items-center justify-center px-6 py-3 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors">
-                Schedule Free Consultation
-              </button>
-              <button className="inline-flex items-center justify-center px-6 py-3 border border-[#0B4BBB] text-[#0B4BBB] text-sm font-medium hover:bg-[#0B4BBB] hover:text-white transition-colors">
-                Download Security Guide
-              </button>
-            </div>
-          </div>
-        </section>
+        <Footer />
+        <BottomFooter />
       </main>
     </div>
   )

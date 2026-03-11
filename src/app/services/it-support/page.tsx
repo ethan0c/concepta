@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import Header from "@/components/Header";
 import HeroBackground from "@/components/HeroBackground";
+import { Footer, BottomFooter } from "@/components/layout";
 
 export default function ITSupport() {
   return (
@@ -39,7 +40,7 @@ export default function ITSupport() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
               >
                 Service Desk & IT Operations Support
               </motion.h1>
@@ -208,26 +209,36 @@ export default function ITSupport() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#0B4BBB]">
-          <div className="page-container text-center">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-6">
-              Let Concepta Be the Backbone of Your IT Infrastructure
-            </h2>
-            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
-              Contact us today to learn how our managed services can help your business thrive in a digital world.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/contact">
-                <button className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#0B4BBB] text-sm font-medium hover:bg-gray-100 transition-colors">
-                  Contact Our Team
-                </button>
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="max-w-3xl"
+            >
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
+                Ready to modernize securely?
+              </h2>
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
+                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+              >
+                Contact Us
+                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
-              <button className="inline-flex items-center justify-center px-6 py-3 border border-white text-white text-sm font-medium hover:bg-white/10 transition-colors">
-                Schedule a Consultation
-              </button>
-            </div>
+            </motion.div>
           </div>
         </section>
+
+        <Footer />
+        <BottomFooter />
       </main>
     </div>
   );

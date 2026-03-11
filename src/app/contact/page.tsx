@@ -152,9 +152,9 @@ export default function Contact() {
                   <p className="text-gray-600 mb-4">
                     For critical security incidents requiring immediate attention, contact our 24/7 emergency response team.
                   </p>
-                  <button className="inline-flex items-center justify-center px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors">
+                  <a href="tel:+18775941944" className="inline-flex items-center justify-center px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white text-sm font-medium transition-colors">
                     Emergency Hotline: (877)-594-1944
-                  </button>
+                  </a>
                 </div>
               </motion.div>
 
@@ -283,7 +283,7 @@ export default function Contact() {
                       className="mt-1 w-4 h-4 text-[#0B4BBB] border-gray-300 focus:ring-[#0B4BBB]"
                     />
                     <label htmlFor="consent" className="text-sm text-gray-600">
-                      I agree to receive communications from Concepta Innovation Systems and understand that I can unsubscribe at any time. *
+                      I agree to receive communications from Concepta Innovation Services and understand that I can unsubscribe at any time. *
                     </label>
                   </div>
 
@@ -300,9 +300,9 @@ export default function Contact() {
                 <div className="mt-6 pt-6 border-t border-gray-200 text-center">
                   <p className="text-sm text-gray-600">
                     Prefer to schedule a call?{' '}
-                    <button className="text-[#0B4BBB] hover:text-[#0a3d9c] transition-colors">
-                      Book a consultation
-                    </button>
+                    <a href="tel:+18775941944" className="text-[#0B4BBB] hover:text-[#0a3d9c] transition-colors">
+                      Call (877) 594-1944
+                    </a>
                   </p>
                 </div>
               </motion.div>

@@ -39,8 +39,12 @@ export default function Footer({
               />
             </div>
             <p className="text-sm font-semibold text-white mb-1">Concepta Innovation Services, LLC</p>
+            <p className="text-xs text-gray-400 leading-relaxed mb-2">
+              1451 Rockville Pike #2-230<br />
+              Rockville, MD 20852
+            </p>
             <p className="text-xs text-gray-500 leading-relaxed max-w-xs">
-              Enterprise-grade cybersecurity, cloud infrastructure, and AI solutions for government and commercial organizations.
+              Certified woman-owned, minority-owned small business providing enterprise-grade cybersecurity, cloud infrastructure, and AI solutions.
             </p>
           </div>
 
@@ -144,10 +148,9 @@ export default function Footer({
               &copy; {new Date().getFullYear()} Concepta Innovation Services, LLC. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="text-xs text-gray-500 hover:text-white transition-colors">Privacy</Link>
-              <Link href="/contact" className="text-xs text-gray-500 hover:text-white transition-colors">Terms</Link>
-              <Link href="/services/security-strategy" className="text-xs text-gray-500 hover:text-white transition-colors">Security</Link>
-              <Link href="/contact" className="text-xs text-gray-500 hover:text-white transition-colors">Accessibility</Link>
+              <Link href="/privacy" className="text-xs text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="text-xs text-gray-500 hover:text-white transition-colors">Terms of Use</Link>
+              <Link href="/contact" className="text-xs text-gray-500 hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>

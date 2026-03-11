@@ -14,7 +14,7 @@ const solutions = [
     tagline: "AI solutions that enhance operations while maintaining governance and trust.",
     description:
       "Concepta delivers AI-enabled solutions that support intelligent automation, decision support, and workflow optimization—while ensuring alignment with governance, ethics, and compliance requirements.",
-    href: "/solutions",
+    href: "/services",
   },
   {
     icon: Shield,
@@ -30,7 +30,7 @@ const solutions = [
     tagline: "Scalable cloud solutions designed for secure modernization.",
     description:
       "Concepta supports cloud adoption and enterprise modernization through secure architectures that integrate governance, resilience, and operational efficiency across hybrid and cloud environments.",
-    href: "/solutions",
+    href: "/services",
   },
   {
     icon: Layers,
@@ -38,7 +38,7 @@ const solutions = [
     tagline: "Application solutions that support reliability, performance, and continuity.",
     description:
       "We deliver application and platform solutions that improve system availability, support modernization efforts, and enable organizations to adapt and scale with confidence.",
-    href: "/solutions",
+    href: "/services",
   },
 ];
 

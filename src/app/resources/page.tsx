@@ -1,17 +1,69 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { BookOpen, Download, Video, FileText, Calendar } from 'lucide-react'
+import Link from 'next/link'
+import { Shield, Brain, Cloud, Lock, FileText, ArrowRight } from 'lucide-react'
 import Header from '@/components/Header'
 import HeroBackground from '@/components/HeroBackground'
 import { Footer, BottomFooter } from '@/components/layout'
+
+const topics = [
+  {
+    icon: Shield,
+    category: "Cybersecurity",
+    title: "Zero Trust Architecture & Implementation",
+    description: "Concepta implements end-to-end Zero Trust frameworks across identity services, endpoints, devices, data, network, and infrastructure. We help organizations verify explicitly, enforce least-privilege access, and assume breach to reduce their attack surface.",
+    points: ["Identity & access management", "Endpoint protection & compliance", "Network segmentation & monitoring", "NIST 800-207 alignment"],
+  },
+  {
+    icon: Brain,
+    category: "Artificial Intelligence",
+    title: "AI-Powered Solutions & Governance",
+    description: "Our AI solutions integrate Microsoft Azure AI and Copilot for Microsoft 365 to enhance productivity, automate workflows, and support decision-making—while maintaining governance, ethics, and regulatory compliance.",
+    points: ["Microsoft Copilot deployment & readiness", "Intelligent automation & workflow optimization", "AI governance & ethical frameworks", "Azure OpenAI integration"],
+  },
+  {
+    icon: Cloud,
+    category: "Cloud & Infrastructure",
+    title: "Cloud Migration & Modernization",
+    description: "Concepta provides comprehensive cloud architecture solutions to help organizations migrate applications, modernize infrastructure, and build resilient hybrid environments aligned with security and compliance requirements.",
+    points: ["Azure cloud architecture & migration", "Hybrid cloud & multi-cloud strategy", "Disaster recovery & backup solutions", "Secure configuration management"],
+  },
+  {
+    icon: Lock,
+    category: "Compliance & Risk",
+    title: "Enterprise Risk Management & Compliance",
+    description: "We help organizations meet compliance obligations including HIPAA, FISMA, NIST RMF, NIST 800-171, and CMMC through comprehensive security assessments, authority to operate documentation, and continuous monitoring.",
+    points: ["HIPAA assessment & compliance programs", "FISMA & FedRAMP alignment", "NIST RMF & 800-171 compliance", "Supply chain risk management (SCRM)"],
+  },
+]
+
+const caseStudies = [
+  {
+    category: "Ransomware Recovery",
+    title: "G&J Pepsi: Overcoming a Ransomware Attack",
+    description: "G&J Pepsi-Cola Bottlers avoided both loss of data and ransom payment when a ransomware attack threatened the company. Microsoft Azure and Microsoft Security were credited for the successful outcome.",
+    result: "Zero data loss, no ransom paid, complete system recovery",
+  },
+  {
+    category: "Cloud Transformation",
+    title: "Georgia Banking Company: Cloud Adoption with Microsoft Security",
+    description: "A growing bank completed its cloud transformation within 13 months and gained scalable security by replacing disconnected products with integrated Microsoft Security solutions.",
+    result: "13-month cloud transformation with scalable, integrated security",
+  },
+  {
+    category: "Enterprise Security",
+    title: "US LBM: Centralizing IT with Microsoft Security",
+    description: "Building supplier US LBM centralized IT across multiple acquisitions by adopting Microsoft Sentinel and Microsoft 365 Defender for a complete SIEM and extended detection and response solution.",
+    result: "Better than benchmark security score with unified XDR and SIEM",
+  },
+]
 
 export default function Resources() {
   return (
     <div className="min-h-screen bg-white">
       <Header currentPage="Resources" />
 
-      {/* Main Content */}
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
         <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
@@ -30,7 +82,7 @@ export default function Resources() {
                 </span>
               </motion.div>
 
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -38,252 +90,164 @@ export default function Resources() {
               >
                 Resources & Insights
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
               >
-                Stay ahead with insights, guides, and resources to navigate the evolving cybersecurity and technology landscape.
+                Insights, strategies, and real-world outcomes across cybersecurity, AI, cloud, and compliance—drawn from our work with government and enterprise clients.
               </motion.p>
             </div>
           </div>
         </section>
 
-        {/* Resource Categories */}
+        {/* Topic Areas */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Resource Library</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Areas of Expertise</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore whitepapers, webinars, and tools to strengthen your security and technology strategy.
+                Deep domain knowledge across the capabilities that matter most to regulated organizations.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Whitepapers & Reports */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
-              >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <FileText className="w-6 h-6 text-[#0B4BBB]" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Whitepapers & Reports</h3>
-                <p className="text-gray-600 mb-6">In-depth analysis and research on cybersecurity trends, threat landscapes, and technology innovations.</p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Download className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Zero Trust Architecture Guide</h4>
-                      <p className="text-xs text-gray-500">Comprehensive implementation roadmap</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Download className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">AI Security Threat Report 2024</h4>
-                      <p className="text-xs text-gray-500">Latest threat intelligence insights</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Download className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Cloud Migration Best Practices</h4>
-                      <p className="text-xs text-gray-500">Strategic planning and execution</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full mt-6 text-[#0B4BBB] border border-[#0B4BBB] hover:bg-[#0B4BBB] hover:text-white py-2.5 transition-colors text-sm">
-                  View All Reports
-                </button>
-              </motion.div>
-
-              {/* Webinars & Videos */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
-              >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Video className="w-6 h-6 text-[#0B4BBB]" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Webinars & Videos</h3>
-                <p className="text-gray-600 mb-6">Educational content and expert insights delivered through engaging video presentations and live sessions.</p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <Calendar className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Upcoming: AI in Cybersecurity</h4>
-                      <p className="text-xs text-gray-500">Dec 15, 2024 | 2:00 PM EST</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Video className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Cloud Security Fundamentals</h4>
-                      <p className="text-xs text-gray-500">45 min recording available</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <Video className="w-4 h-4 text-[#0B4BBB] mt-1 flex-shrink-0" />
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Digital Transformation Strategies</h4>
-                      <p className="text-xs text-gray-500">Expert panel discussion</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full mt-6 text-[#0B4BBB] border border-[#0B4BBB] hover:bg-[#0B4BBB] hover:text-white py-2.5 transition-colors text-sm">
-                  Browse Content Library
-                </button>
-              </motion.div>
-
-              {/* Tools & Calculators */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
-              >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <BookOpen className="w-6 h-6 text-[#0B4BBB]" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Tools & Calculators</h3>
-                <p className="text-gray-600 mb-6">Interactive tools and calculators to help assess your security posture and plan technology investments.</p>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-4 h-4 bg-[#0B4BBB] mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Security Maturity Assessment</h4>
-                      <p className="text-xs text-gray-500">Evaluate your current security posture</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-4 h-4 bg-[#0B4BBB] mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Cloud Migration ROI Calculator</h4>
-                      <p className="text-xs text-gray-500">Calculate potential cost savings</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-4 h-4 bg-[#0B4BBB] mt-1 flex-shrink-0"></div>
-                    <div>
-                      <h4 className="text-sm text-gray-900 mb-1">Compliance Checklist Generator</h4>
-                      <p className="text-xs text-gray-500">Industry-specific requirements</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <button className="w-full mt-6 text-[#0B4BBB] border border-[#0B4BBB] hover:bg-[#0B4BBB] hover:text-white py-2.5 transition-colors text-sm">
-                  Access Tools
-                </button>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Latest Articles */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
-          <div className="page-container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Latest Insights</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Stay informed with our latest articles and analysis on cybersecurity trends and technology innovations.
-              </p>
-            </div>
-
-            <div className="grid lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "The Future of Zero Trust in Enterprise Security",
-                  excerpt: "Exploring how zero trust architecture is reshaping enterprise security strategies and implementation best practices.",
-                  date: "Dec 10, 2024",
-                  readTime: "8 min read",
-                  category: "Security"
-                },
-                {
-                  title: "AI-Powered Threat Detection: Game Changer or Hype?",
-                  excerpt: "Analyzing the real-world impact of artificial intelligence in cybersecurity threat detection and response.",
-                  date: "Dec 8, 2024",
-                  readTime: "6 min read",
-                  category: "AI & Security"
-                },
-                {
-                  title: "Cloud Migration Strategies for Government Contractors",
-                  excerpt: "Essential considerations and compliance requirements for successful cloud adoption in the public sector.",
-                  date: "Dec 5, 2024",
-                  readTime: "10 min read",
-                  category: "Cloud"
-                }
-              ].map((article, index) => (
-                <motion.article
-                  key={article.title}
+            <div className="grid md:grid-cols-2 gap-8">
+              {topics.map((topic, index) => (
+                <motion.div
+                  key={topic.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#f4f4f4] p-8 cursor-pointer border border-gray-200"
+                  className="bg-white p-8 border border-gray-200"
                 >
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="text-xs text-[#0B4BBB] bg-blue-50 px-2 py-1">{article.category}</span>
-                    <span className="text-xs text-gray-500">{article.date}</span>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center">
+                      <topic.icon className="w-6 h-6 text-[#0B4BBB]" />
+                    </div>
+                    <span className="text-xs text-[#0B4BBB] font-medium uppercase tracking-wider">{topic.category}</span>
                   </div>
-                  
-                  <h3 className="text-lg text-gray-900 mb-3 hover:text-[#0B4BBB] transition-colors">{article.title}</h3>
-                  <p className="text-gray-600 mb-4 text-sm">{article.excerpt}</p>
-                  
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-500">{article.readTime}</span>
-                    <button className="text-[#0B4BBB] text-sm hover:text-[#0a3d9c] transition-colors">
-                      Read More →
-                    </button>
-                  </div>
-                </motion.article>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{topic.title}</h3>
+                  <p className="text-gray-600 mb-6 text-sm leading-relaxed">{topic.description}</p>
+                  <ul className="space-y-2 text-sm text-gray-600 mb-6">
+                    {topic.points.map((point) => (
+                      <li key={point}>• {point}</li>
+                    ))}
+                  </ul>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center text-sm text-[#0B4BBB] font-medium hover:underline"
+                  >
+                    Discuss with our team
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Newsletter Signup */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
-          <div className="page-container text-center">
-            <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">Stay Updated</h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter for the latest cybersecurity insights, industry updates, and exclusive resources.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
-              />
-              <button className="bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-6 py-3 text-sm font-medium transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
+        {/* Case Studies */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+          <div className="page-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Client Outcomes</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Real results from organizations that partnered with Concepta and Microsoft to strengthen security and modernize operations.
+              </p>
             </div>
-            
-            <p className="text-sm text-gray-500 mt-4">
-              No spam. Unsubscribe at any time. Privacy policy applies.
-            </p>
+
+            <div className="grid lg:grid-cols-3 gap-8">
+              {caseStudies.map((study, index) => (
+                <motion.div
+                  key={study.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-[#f4f4f4] p-8 border border-gray-200"
+                >
+                  <span className="text-xs text-[#0B4BBB] bg-blue-50 px-2 py-1 font-medium uppercase">{study.category}</span>
+                  <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-3">{study.title}</h3>
+                  <p className="text-gray-600 text-sm mb-6 leading-relaxed">{study.description}</p>
+                  <div className="bg-white p-4 border border-gray-200">
+                    <p className="text-sm text-gray-500 mb-1">Result</p>
+                    <p className="text-sm text-gray-900 font-medium">{study.result}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Frameworks & Standards */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+          <div className="page-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Frameworks & Standards</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our solutions align with leading industry frameworks and regulatory requirements.
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { name: "NIST RMF", desc: "Risk Management Framework" },
+                { name: "NIST 800-171", desc: "Protecting Controlled Unclassified Information" },
+                { name: "FISMA", desc: "Federal Information Security Modernization Act" },
+                { name: "HIPAA", desc: "Health Insurance Portability & Accountability" },
+                { name: "NIST CSF", desc: "Cybersecurity Framework" },
+                { name: "Zero Trust", desc: "NIST 800-207 Architecture" },
+                { name: "CMMC", desc: "Cybersecurity Maturity Model Certification" },
+                { name: "FedRAMP", desc: "Federal Risk & Authorization Management" },
+              ].map((framework, index) => (
+                <motion.div
+                  key={framework.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="bg-white p-6 border border-gray-200"
+                >
+                  <div className="w-10 h-10 bg-blue-50 flex items-center justify-center mb-3">
+                    <FileText className="w-5 h-5 text-[#0B4BBB]" />
+                  </div>
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">{framework.name}</h3>
+                  <p className="text-xs text-gray-500">{framework.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+          <div className="page-container">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="max-w-3xl"
+            >
+              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
+                Ready to modernize securely?
+              </h2>
+              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
+                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+              >
+                Contact Us
+                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </motion.div>
           </div>
         </section>
 

@@ -106,9 +106,9 @@ export default function SecurityStrategy() {
                   <p className="text-gray-600 mb-6">
                     Leveraging Microsoft&apos;s comprehensive security solutions to protect against ransomware and cyber threats.
                   </p>
-                  <button className="bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-6 py-3 font-medium transition-colors">
-                    Read Full Story
-                  </button>
+                  <Link href="/contact" className="inline-block bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-6 py-3 font-medium transition-colors">
+                    Get in Touch
+                  </Link>
                 </div>
               </div>
             </div>
@@ -141,13 +141,13 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Do you know what your current cybersecurity landscape looks
                   like? Can you gauge how at-risk your business is? Read the
-                  Microsoft Digital Defense Report 2022 to get answers to these
+                  Microsoft Digital Defense Report to get answers to these
                   questions—and more. You&apos;ll learn about the scope and scale of
                   today&apos;s threats, how Microsoft is helping to dismantle
                   cybercrime, and what we can do, as a Microsoft partner to help
                   address your business&apos; vulnerabilities.
                 </p>
-                <a
+                <Link
                   href="/resources"
                   className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group"
                 >
@@ -163,7 +163,7 @@ export default function SecurityStrategy() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </motion.div>
 
               {/* Zero Trust Defense */}
@@ -189,7 +189,7 @@ export default function SecurityStrategy() {
                   Trust to push security transformation while reducing business
                   costs.
                 </p>
-                <a
+                <Link
                   href="/resources"
                   className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group"
                 >
@@ -205,7 +205,7 @@ export default function SecurityStrategy() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </motion.div>
 
               {/* US LBM Case Study */}
@@ -239,7 +239,7 @@ export default function SecurityStrategy() {
                     score achieved through integrated XDR and SIEM solution.
                   </p>
                 </div>
-                <a
+                <Link
                   href="/resources"
                   className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group"
                 >
@@ -255,7 +255,7 @@ export default function SecurityStrategy() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </a>
+                </Link>
               </motion.div>
             </div>
 
@@ -271,12 +271,9 @@ export default function SecurityStrategy() {
                   integrated XDR and SIEM solution.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="bg-white text-[#0B4BBB] px-8 py-3 font-medium hover:bg-gray-100 transition-colors">
-                    Sign Up for Mailing List
-                  </button>
-                  <button className="border border-white text-white px-8 py-3 font-medium hover:bg-white hover:text-[#0B4BBB] transition-all">
+                  <Link href="/contact" className="inline-block bg-white text-[#0B4BBB] px-8 py-3 font-medium hover:bg-gray-100 transition-colors">
                     Contact Us Today
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -311,12 +308,12 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   As a Microsoft Partner, we can help you realize these productivity gains by readying your processes and people for the AI-powered future of work. Reach out to learn more today.
                 </p>
-                <button className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* Copilot for M365 */}
@@ -334,12 +331,12 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Watch the video to see how executives use Copilot to stay focused throughout their workday. As a Microsoft Partner, we can help you achieve these results and more. Unleash productivity today.
                 </p>
-                <button className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* Copilot Onboarding */}
@@ -354,12 +351,12 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   There&apos;s art and science to using Copilot for Microsoft 365. It&apos;s not enough to merely turn Copilot on – your people need guidance on how to build new skills that help them get the most out of generative AI. Learn how you can navigate your AI journey with confidence by working with a Microsoft Partner to ready your organization for the new AI-powered era of work. Read the eBook for more insights.
                 </p>
-                <button className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* AI Agents & Workflow Automation */}
@@ -385,9 +382,9 @@ export default function SecurityStrategy() {
                     Let Concepta Innovation Services help you design, deploy, and optimize AI-powered workflows that drive results.
                   </p>
                 </div>
-                <button className="bg-white text-[#0B4BBB] hover:bg-gray-100 px-6 py-3 font-medium transition-colors">
+                <Link href="/contact" className="inline-block bg-white text-[#0B4BBB] hover:bg-gray-100 px-6 py-3 font-medium transition-colors">
                   Schedule a Consultation
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -435,12 +432,12 @@ export default function SecurityStrategy() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   As a Microsoft partner, we can help your security operations team achieve similar results, with deeply integrated security solutions that span your entire digital estate. Read the story.
                 </p>
-                <button className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* Multicloud Security */}
@@ -466,12 +463,12 @@ export default function SecurityStrategy() {
                     <li>• Comprehensive data protection</li>
                   </ul>
                 </div>
-                <button className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -508,12 +505,12 @@ export default function SecurityStrategy() {
                   Comprehensive security audits and vulnerability assessments to
                   identify and address security gaps in your infrastructure.
                 </p>
-                <a
-                  href="/resources"
+                <Link
+                  href="/contact"
                   className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium"
                 >
                   Learn More →
-                </a>
+                </Link>
               </motion.div>
 
               <motion.div
@@ -533,12 +530,12 @@ export default function SecurityStrategy() {
                   Design and implement zero-trust security architectures to
                   protect your organization from modern cyber threats.
                 </p>
-                <a
-                  href="/resources"
+                <Link
+                  href="/contact"
                   className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium"
                 >
                   Learn More →
-                </a>
+                </Link>
               </motion.div>
 
               <motion.div
@@ -556,12 +553,12 @@ export default function SecurityStrategy() {
                   Continuous security monitoring and threat detection with rapid
                   response capabilities to protect your business.
                 </p>
-                <a
-                  href="/resources"
+                <Link
+                  href="/contact"
                   className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium"
                 >
                   Learn More →
-                </a>
+                </Link>
               </motion.div>
             </div>
           </div>

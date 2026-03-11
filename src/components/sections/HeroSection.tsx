@@ -11,7 +11,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh] py-[60px] sm:py-[80px] lg:py-[60px] flex items-center">
+        <div className="min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh] pt-[80px] pb-[60px] sm:pt-[100px] sm:pb-[80px] lg:pt-[100px] lg:pb-[80px] flex items-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -19,8 +19,8 @@ export default function HeroSection() {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            {/* H1 — Dominates the page visually, single sentence */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold text-white leading-[1.1] tracking-tight mb-6">
+            {/* H1 — Dominates the page visually, single sentence, no forced breaks */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold text-white leading-[1.1] tracking-tight mb-8 sm:mb-10">
               Technology for regulated environments. Done right.
             </h1>
 
@@ -30,7 +30,7 @@ export default function HeroSection() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed font-light"
+              className="text-base sm:text-lg lg:text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed font-light"
             >
               AI, cybersecurity, and modern IT services built for secure, governed operations.
             </motion.p>

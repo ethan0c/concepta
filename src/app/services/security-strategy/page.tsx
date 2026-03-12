@@ -263,7 +263,7 @@ export default function SecurityStrategy() {
             <div className="text-center mt-12">
               <div className="bg-[#0B4BBB] p-8 text-white">
                 <h3 className="text-2xl font-medium mb-4">
-                  Ready to Transform Your Security Posture?
+                  Ready to Transform Your Security Posture? 
                 </h3>
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Sign up for our mailing list for details—and reach out to

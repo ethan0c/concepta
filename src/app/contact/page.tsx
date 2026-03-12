@@ -260,12 +260,12 @@ export default function Contact() {
                       className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
                     >
                       <option value="">Select an area of interest</option>
-                      <option value="ai-intelligent-automation">AI &amp; Intelligent Automation</option>
-                      <option value="cybersecurity-zero-trust">Cybersecurity &amp; Zero Trust</option>
-                      <option value="application-platform-support">Application &amp; Platform Support</option>
-                      <option value="it-operations-service-desk">IT Operations &amp; Service Desk</option>
-                      <option value="cloud-solution-architecture">Cloud &amp; Solution Architecture</option>
-                      <option value="general-it-consulting">General IT Consulting / Advisory</option>
+                      <option value="AI & Intelligent Automation">AI &amp; Intelligent Automation</option>
+                      <option value="Cybersecurity & Zero Trust">Cybersecurity &amp; Zero Trust</option>
+                      <option value="Application & Platform Support">Application &amp; Platform Support</option>
+                      <option value="IT Operations & Service Desk">IT Operations &amp; Service Desk</option>
+                      <option value="Cloud & Solution Architecture">Cloud &amp; Solution Architecture</option>
+                      <option value="General IT Consulting / Advisory">General IT Consulting / Advisory</option>
                     </select>
                   </div>
 

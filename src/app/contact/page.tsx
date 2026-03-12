@@ -23,13 +23,18 @@ export default function Contact() {
     let emailSubject = firstName
     if (company) emailSubject += ` from ${company}`
     if (subject) emailSubject += ` (${subject})`
-    data.set('_subject', emailSubject)
+
+    const payload: Record<string, string> = {}
+    data.forEach((value, key) => {
+      payload[key] = value as string
+    })
+    payload._subject = emailSubject
 
     try {
       const res = await fetch('https://formspree.io/f/mojkeolo', {
         method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
+        body: JSON.stringify(payload),
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
       })
       if (res.ok) {
         setStatus('success')

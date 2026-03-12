@@ -17,6 +17,14 @@ export default function Contact() {
     const form = e.currentTarget
     const data = new FormData(form)
 
+    const firstName = ((data.get('name') as string) || '').split(' ')[0]
+    const company = (data.get('company') as string) || ''
+    const subject = (data.get('subject') as string) || ''
+    let emailSubject = firstName
+    if (company) emailSubject += ` from ${company}`
+    if (subject) emailSubject += ` (${subject})`
+    data.set('_subject', emailSubject)
+
     try {
       const res = await fetch('https://formspree.io/f/mojkeolo', {
         method: 'POST',

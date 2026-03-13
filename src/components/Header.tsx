@@ -52,16 +52,16 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
 
   return (
     <>
-      <header style={{ boxShadow: "0 0.5px 0 0 #0B4BBB" }} className={`fixed w-full z-50 transition-all duration-300 ${
+      <header className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-sm" 
-          : "bg-white"
+          ? "bg-[#0B4BBB]/95 backdrop-blur-md shadow-lg" 
+          : "bg-[#0B4BBB]"
       }`}>
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-gray-700 hover:text-gray-900 p-2 -ml-2 transition-colors"
+              className="lg:hidden text-white hover:text-blue-200 p-2 -ml-2 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -92,13 +92,13 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   href={item.href}
                   className={`relative px-3.5 py-2 text-sm transition-colors ${
                     item.name === currentPage
-                      ? "text-[#0B4BBB] font-medium"
-                      : "text-gray-700 font-normal hover:text-gray-900 hover:bg-gray-50"
+                      ? "text-white font-medium"
+                      : "text-blue-100 font-normal hover:text-white hover:bg-white/10"
                   }`}
                 >
                   {item.name}
                   {item.name === currentPage && (
-                    <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-[#0B4BBB] rounded-full" />
+                    <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-white rounded-full" />
                   )}
                 </Link>
               ))}
@@ -108,13 +108,13 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <div className="flex items-center gap-3">
               <a 
                 href="tel:+18775941944"
-                className="hidden xl:flex items-center text-xs text-gray-600 hover:text-gray-900 transition-colors"
+                className="hidden xl:flex items-center text-xs text-blue-100 hover:text-white transition-colors"
               >
                 (877) 594-1944
               </a>
               <Link 
                 href="/contact"
-                className="bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
+                className="bg-white hover:bg-blue-50 text-[#0B4BBB] px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>

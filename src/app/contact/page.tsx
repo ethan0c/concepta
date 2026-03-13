@@ -65,7 +65,7 @@ export default function Contact() {
                 className="inline-flex items-center gap-2 mb-6"
               >
                 <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                <span className="text-[#0B4BBB] text-xs sm:text-sm font-medium tracking-wider uppercase">
                   Contact Us
                 </span>
               </motion.div>
@@ -74,7 +74,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-4"
               >
                 Contact Concepta Innovation Services
               </motion.h1>
@@ -83,7 +83,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="text-xl sm:text-2xl text-gray-300 leading-snug max-w-xl mb-4 font-light"
+                className="text-xl sm:text-2xl text-black leading-snug max-w-xl mb-4 font-light"
               >
                 Let&apos;s talk about secure, governed, and modern IT solutions.
               </motion.p>
@@ -92,7 +92,7 @@ export default function Contact() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
               >
                 Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
               </motion.p>
@@ -101,7 +101,7 @@ export default function Contact() {
         </section>
 
         {/* Contact Information & Form */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
           <div className="page-container">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Information */}
@@ -169,7 +169,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-[#f4f4f4] p-6">
+                <div className="bg-white p-6">
                   <h3 className="text-lg text-gray-900 mb-3">Ready to Connect?</h3>
                   <p className="text-gray-600 mb-4">
                     Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
@@ -186,7 +186,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] p-8"
+                className="bg-white p-8"
               >
                 <h2 className="text-2xl text-gray-900 mb-6">Send Us a Message</h2>
 

@@ -60,7 +60,7 @@ export default function Solutions() {
                 className="inline-flex items-center gap-2 mb-6"
               >
                 <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                <span className="text-[#0B4BBB] text-xs sm:text-sm font-medium tracking-wider uppercase">
                   Technology Solutions for Regulated Environments
                 </span>
               </motion.div>
@@ -69,7 +69,7 @@ export default function Solutions() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
               >
                 Solutions designed to support secure, governed, and scalable operations.
               </motion.h1>
@@ -78,7 +78,7 @@ export default function Solutions() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
               >
                 Integrated technology solutions combining AI, cybersecurity, cloud, and enterprise technologies to support governance, risk management, and secure operations.
               </motion.p>

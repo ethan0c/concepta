@@ -26,7 +26,7 @@ export default function SecurityStrategy() {
                 className="inline-flex items-center gap-2 mb-6"
               >
                 <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                <span className="text-[#0B4BBB] text-xs sm:text-sm font-medium tracking-wider uppercase">
                   Security strategies that protect mission-critical systems and data
                 </span>
               </motion.div>
@@ -35,7 +35,7 @@ export default function SecurityStrategy() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
+                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
               >
                 Cybersecurity & Zero Trust Architecture
               </motion.h1>
@@ -44,7 +44,7 @@ export default function SecurityStrategy() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
+                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
               >
                 Concepta delivers modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience across identity, endpoints, networks, applications, and data.
               </motion.p>

@@ -26,7 +26,7 @@ export default function AboutContent() {
                 className="inline-flex items-center gap-2 mb-6"
               >
                 <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#0B4BBB] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
                   About Concepta Innovation Services
                 </span>
               </motion.div>

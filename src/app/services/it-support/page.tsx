@@ -31,7 +31,7 @@ export default function ITSupport() {
                 className="inline-flex items-center gap-2 mb-6"
               >
                 <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#0B4BBB] text-xs sm:text-sm font-medium tracking-wider uppercase">
+                <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
                   Responsive IT support that keeps organizations running
                 </span>
               </motion.div>

@@ -58,7 +58,7 @@ export default function ITSupport() {
         </section>
 
         {/* Our Services */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">

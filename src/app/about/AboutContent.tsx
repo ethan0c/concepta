@@ -53,7 +53,7 @@ export default function AboutContent() {
         </section>
 
         {/* Company Overview */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
           <div className="page-container">
             <div className="text-center mb-12">
               <motion.div

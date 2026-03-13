@@ -18,6 +18,9 @@ export default function HeroBackground() {
       {/* Layer 1 — deep dark-blue gradient base */}
       <motion.div
         className="absolute inset-0 will-change-transform"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         style={{ y: baseY }}
       >
         <Image
@@ -34,7 +37,10 @@ export default function HeroBackground() {
       {/* Layer 2 — subtle wave highlight, screen blend */}
       <motion.div
         className="absolute inset-0 will-change-transform"
-        style={{ y: waveY, opacity: 0.65, mixBlendMode: "screen" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.65 }}
+        transition={{ duration: 1.1, delay: 0.12, ease: "easeOut" }}
+        style={{ y: waveY, mixBlendMode: "screen" }}
       >
         <Image
           src="/assets/Subtle parallax.jpg"

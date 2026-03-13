@@ -20,7 +20,7 @@ export default function HeroSection() {
 
       {/* Foreground content — static, fade-in only */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="min-h-[70vh] sm:min-h-[75vh] lg:min-h-[80vh] pt-[80px] pb-[60px] sm:pt-[100px] sm:pb-[80px] lg:pt-[100px] lg:pb-[80px] flex items-center">
+        <div className="min-h-[56vh] sm:min-h-[60vh] lg:min-h-[62vh] pt-[72px] pb-[40px] sm:pt-[84px] sm:pb-[52px] lg:pt-[88px] lg:pb-[56px] flex items-center">
           <div className="max-w-4xl">
             {/* H1 */}
             <motion.h1

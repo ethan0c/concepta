@@ -49,7 +49,7 @@ export default function Solutions() {
 
       <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
+        <section className="relative bg-[#161616] py-12 sm:py-14 lg:py-16 overflow-hidden">
           <HeroBackground />
           <div className="page-container relative z-10">
             <div className="max-w-3xl">
@@ -87,7 +87,7 @@ export default function Solutions() {
         </section>
 
         {/* Solutions Grid */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Our Solutions</h2>

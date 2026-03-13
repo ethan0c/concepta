@@ -53,7 +53,7 @@ export default function SecurityStrategy() {
         </section>
 
         {/* G&J Pepsi Case Study - Featured */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-20 bg-[#F5F7FA]">
           <div className="page-container">
             <div className="text-center mb-16">
               <div className="inline-block bg-[#0B4BBB] text-white px-4 py-1 text-sm font-medium mb-4">

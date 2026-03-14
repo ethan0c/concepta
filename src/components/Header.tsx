@@ -77,13 +77,13 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
     return scrolled ? "rgb(var(--color-header-bg-rgb) / 0.95)" : "var(--color-header-bg)";
   };
 
-  const headerTextClass = theme === "light" && !scrolled ? "text-gray-900" : "text-white";
-  const headerSubtleTextClass = theme === "light" && !scrolled ? "text-gray-600" : "text-blue-100";
+  const headerTextClass = "text-black";
+  const headerSubtleTextClass = "text-black";
 
   return (
     <>
       <header
-        className={`fixed w-full z-50 transition-all duration-300 ${
+        className={`fixed w-full z-50 border-b border-[var(--color-border-subtle)] transition-all duration-300 ${
           scrolled ? "backdrop-blur-md shadow-lg" : ""
         }`}
         style={{ backgroundColor: getHeaderBackgroundColor() }}
@@ -93,7 +93,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             {/* Mobile Menu Button */}
             <button
               className={`lg:hidden p-2 -ml-2 transition-colors ${headerTextClass} ${
-                theme === "light" && !scrolled ? "hover:text-gray-700" : "hover:text-blue-200"
+                theme === "light" && !scrolled ? "hover:text-[var(--color-primary-hover)]" : "hover:text-[var(--color-primary-hover)]"
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
@@ -127,7 +127,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                     isCurrentPageActive(item.name, item.href)
                       ? `${headerTextClass} font-medium`
                       : `${headerSubtleTextClass} font-normal ${
-                          theme === "light" && !scrolled ? "hover:text-gray-900 hover:bg-gray-900/5" : "hover:text-white hover:bg-white/10"
+                          theme === "light" && !scrolled ? "hover:text-[var(--color-primary-hover)] hover:bg-blue-900/5" : "hover:text-[var(--color-primary-hover)] hover:bg-blue-900/5"
                         }`
                   }`}
                 >
@@ -135,7 +135,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   {isCurrentPageActive(item.name, item.href) && (
                     <span
                       className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] rounded-full ${
-                        theme === "light" && !scrolled ? "bg-gray-900" : "bg-white"
+                        "bg-[var(--color-primary)]"
                       }`}
                     />
                   )}
@@ -148,14 +148,14 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
               <a 
                 href="tel:+18775941944"
                 className={`hidden xl:flex items-center text-xs transition-colors ${headerSubtleTextClass} ${
-                  theme === "light" && !scrolled ? "hover:text-gray-900" : "hover:text-white"
+                  theme === "light" && !scrolled ? "hover:text-[var(--color-primary-hover)]" : "hover:text-[var(--color-primary-hover)]"
                 }`}
               >
                 (877) 594-1944
               </a>
               <Link 
                 href="/contact"
-                className="bg-white hover:bg-blue-50 text-[var(--color-header-bg)] px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
+                className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>

@@ -5,7 +5,7 @@ import { HeroSection, CoreServicesSection, WhoWeServeSection, PartnerNetworkSect
 
 export default function Home() {
   return (
-    <PageShell currentPage="Home">
+    <PageShell currentPage="Home" headerTheme="light">
       <HeroSection />
       <div className="bg-[var(--color-page-bg)]">
         <CoreServicesSection />

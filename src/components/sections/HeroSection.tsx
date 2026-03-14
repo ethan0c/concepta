@@ -25,7 +25,7 @@ export default function HeroSection() {
 
             {/* H1 */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-[var(--color-primary)] leading-[1.1] tracking-tight mb-6 sm:mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-black leading-[1.1] tracking-tight mb-6 sm:mb-8"
               variants={fadeUp}
               initial="hidden"
               animate="show"
@@ -36,7 +36,7 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <motion.p
-              className="text-base sm:text-lg lg:text-xl text-black max-w-2xl mb-10 sm:mb-12 leading-relaxed font-light"
+              className="text-base sm:text-lg lg:text-xl text-[var(--color-primary)] max-w-2xl mb-10 sm:mb-12 leading-relaxed font-light"
               variants={fadeUp}
               initial="hidden"
               animate="show"
@@ -81,7 +81,7 @@ export default function HeroSection() {
 
             {/* Supporting microcopy */}
             <motion.p
-              className="mt-5 text-xs sm:text-sm text-gray-500 leading-relaxed"
+              className="mt-5 text-xs sm:text-sm text-gray-600 leading-relaxed"
               variants={fadeUp}
               initial="hidden"
               animate="show"

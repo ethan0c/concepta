@@ -14,6 +14,8 @@
   --color-primary-dark: #082E84;
   --color-header-bg: #0B4BBB;
   --color-header-bg-rgb: 11 75 187;
+  --color-border-subtle: rgba(11, 75, 187, 0.14);
+  --color-border-strong: rgba(11, 75, 187, 0.24);
   --color-hero-bg: #161616;
   --color-dark: #161616;
   --color-dark-alt: #262626;
@@ -137,10 +139,78 @@ body {
   padding-right: 1rem;
 }
 
+.concepta-card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-subtle);
+  padding: 1.5rem;
+}
+
+.concepta-card-subtle {
+  background: var(--color-surface-muted);
+}
+
+.concepta-card-tight {
+  padding: 1rem;
+}
+
+.concepta-card-compact {
+  padding: 1.5rem;
+}
+
+.concepta-card-interactive {
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.concepta-card-interactive:hover {
+  background: var(--color-surface-muted-hover);
+  border-color: var(--color-border-strong);
+}
+
+.concepta-card-brand {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.concepta-icon-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: var(--color-primary);
+}
+
+.concepta-icon-tile-sm {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.concepta-icon-tile-lg {
+  width: 4rem;
+  height: 4rem;
+}
+
+.concepta-icon-tile-strong {
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
 @media (min-width: 640px) {
   .page-container {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .concepta-card {
+    padding: 2rem;
+  }
+
+  .concepta-card-compact {
+    padding: 1.75rem;
   }
 }
 

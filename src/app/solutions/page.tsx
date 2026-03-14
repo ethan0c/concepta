@@ -69,9 +69,9 @@ export default function Solutions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 border border-gray-200 group"
+                  className="concepta-card concepta-card-interactive group"
                 >
-                  <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                  <div className="concepta-icon-tile mb-6">
                     <solution.icon className="w-6 h-6 text-[var(--color-primary)]" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">

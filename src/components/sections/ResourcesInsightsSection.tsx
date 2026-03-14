@@ -82,9 +82,9 @@ export default function ResourcesInsightsSection() {
             >
               <Link
                 href={item.href}
-                className="group block bg-[var(--color-surface-muted)] hover:bg-[var(--color-surface-muted-hover)] transition-colors h-full p-6 sm:p-8 border border-gray-200"
+                className="concepta-card concepta-card-subtle concepta-card-interactive group h-full"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-5">
+                <div className="concepta-icon-tile mb-5">
                   <item.icon className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <span className="text-xs font-medium text-[var(--color-primary)] uppercase tracking-wider">

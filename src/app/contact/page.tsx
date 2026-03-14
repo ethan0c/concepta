@@ -93,7 +93,7 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <div className="concepta-icon-tile flex-shrink-0">
                       <Phone className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
@@ -104,7 +104,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <div className="concepta-icon-tile flex-shrink-0">
                       <Mail className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
@@ -115,7 +115,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <div className="concepta-icon-tile flex-shrink-0">
                       <MapPin className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
@@ -128,7 +128,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
+                    <div className="concepta-icon-tile flex-shrink-0">
                       <Clock className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
@@ -141,7 +141,7 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-white p-6">
+                <div className="concepta-card concepta-card-compact bg-white">
                   <h3 className="text-lg text-gray-900 mb-3">Ready to Connect?</h3>
                   <p className="text-gray-600 mb-4">
                     Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
@@ -158,7 +158,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-white p-8"
+                className="concepta-card bg-white"
               >
                 <h2 className="text-2xl text-gray-900 mb-6">Send Us a Message</h2>
 

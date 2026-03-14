@@ -40,10 +40,10 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 border border-gray-200"
+                className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
                     <Server className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
@@ -72,10 +72,10 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 border border-gray-200"
+                className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
                     <Shield className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
@@ -110,10 +110,10 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 border border-gray-200"
+                className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
                     <Cloud className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
@@ -142,10 +142,10 @@ export default function ITSupport() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 sm:p-8 border border-gray-200"
+                className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-[var(--color-primary)] flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
                     <Zap className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">

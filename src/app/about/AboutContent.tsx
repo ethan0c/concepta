@@ -36,7 +36,7 @@ export default function AboutContent() {
                 <p className="text-base text-gray-600 mb-8 leading-relaxed">
                   Our professional capabilities span AI-driven workflows, AI governance, ethics, and compliance, application and platform support, solution architecture, Zero Trust cybersecurity frameworks, and responsive service desk operations. Together, these services enhance operational performance, strengthen compliance, and elevate the end-user experience across industries.
                 </p>
-                <div className="bg-[var(--color-surface-muted)] p-8 border border-gray-200">
+                <div className="concepta-card concepta-card-subtle">
                   <h3 className="text-xl font-medium text-gray-900 mb-4">
                     Our Tagline
                   </h3>
@@ -73,9 +73,9 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Award className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
@@ -92,9 +92,9 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Users className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
@@ -109,9 +109,9 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Target className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
@@ -126,9 +126,9 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Globe className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Reach</h3>

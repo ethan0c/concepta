@@ -97,9 +97,9 @@ export default function CoreServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
               viewport={{ once: true }}
-              className="border border-gray-200 bg-[var(--color-surface)] p-6 sm:p-8 flex flex-col"
+              className="concepta-card concepta-card-compact flex flex-col"
             >
-              <div className="w-11 h-11 bg-blue-50 text-[var(--color-primary)] flex items-center justify-center mb-5">
+              <div className="concepta-icon-tile concepta-icon-tile-sm mb-5">
                 <pillar.icon className="w-5 h-5" />
               </div>
 

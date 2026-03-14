@@ -85,10 +85,10 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-white p-8 border border-gray-200"
+                  className="concepta-card"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center">
+                    <div className="concepta-icon-tile">
                       <topic.icon className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <span className="text-xs text-[var(--color-primary)] font-medium uppercase tracking-wider">{topic.category}</span>
@@ -131,12 +131,12 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[var(--color-surface-muted)] p-8 border border-gray-200"
+                  className="concepta-card concepta-card-subtle"
                 >
                   <span className="text-xs text-[var(--color-primary)] bg-blue-50 px-2 py-1 font-medium uppercase">{study.category}</span>
                   <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-3">{study.title}</h3>
                   <p className="text-gray-600 text-sm mb-6 leading-relaxed">{study.description}</p>
-                  <div className="bg-white p-4 border border-gray-200">
+                  <div className="concepta-card concepta-card-tight bg-white">
                     <p className="text-sm text-gray-500 mb-1">Result</p>
                     <p className="text-sm text-gray-900 font-medium">{study.result}</p>
                   </div>
@@ -173,9 +173,9 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="bg-white p-6 border border-gray-200"
+                  className="concepta-card concepta-card-compact"
                 >
-                  <div className="w-10 h-10 bg-blue-50 flex items-center justify-center mb-3">
+                  <div className="concepta-icon-tile concepta-icon-tile-sm mb-3">
                     <FileText className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <h3 className="text-base font-semibold text-gray-900 mb-1">{framework.name}</h3>

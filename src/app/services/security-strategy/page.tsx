@@ -27,7 +27,7 @@ export default function SecurityStrategy() {
               </h2>
             </div>
 
-            <div className="bg-[var(--color-surface-muted)] p-8 border border-gray-200 mb-16">
+            <div className="concepta-card concepta-card-subtle mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h3 className="text-3xl font-medium text-gray-900 mb-4">
@@ -46,7 +46,7 @@ export default function SecurityStrategy() {
                     </p>
                   </div>
 
-                  <div className="bg-white p-4 border border-gray-200">
+                  <div className="concepta-card concepta-card-tight bg-white">
                     <p className="text-base text-gray-900 font-medium mb-2">
                       Key Outcomes:
                     </p>
@@ -60,7 +60,7 @@ export default function SecurityStrategy() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-[var(--color-primary)] flex items-center justify-center mx-auto mb-6">
+                  <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                     <Shield className="w-12 h-12 text-white" />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-4">
@@ -92,7 +92,7 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
@@ -135,7 +135,7 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
@@ -177,7 +177,7 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
@@ -224,7 +224,7 @@ export default function SecurityStrategy() {
 
             {/* Call to Action */}
             <div className="text-center mt-12">
-              <div className="bg-[var(--color-primary)] p-8 text-white">
+              <div className="concepta-card concepta-card-brand text-white">
                 <h3 className="text-2xl font-medium mb-4">
                   Ready to Transform Your Security Posture? 
                 </h3>
@@ -257,7 +257,7 @@ export default function SecurityStrategy() {
 
             <div className="grid lg:grid-cols-2 gap-12 mb-12">
               {/* Copilot Insights */}
-              <div className="bg-white p-8 border border-gray-200">
+              <div className="concepta-card">
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   GENERATIVE AI AT WORK
@@ -280,7 +280,7 @@ export default function SecurityStrategy() {
               </div>
 
               {/* Copilot for M365 */}
-              <div className="bg-white p-8 border border-gray-200">
+              <div className="concepta-card">
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   COPILOT FOR M365
@@ -303,7 +303,7 @@ export default function SecurityStrategy() {
               </div>
 
               {/* Copilot Onboarding */}
-              <div className="bg-white p-8 border border-gray-200">
+              <div className="concepta-card">
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   ONBOARDING GUIDE
@@ -323,7 +323,7 @@ export default function SecurityStrategy() {
               </div>
 
               {/* AI Agents & Workflow Automation */}
-              <div className="bg-[var(--color-primary)] p-8 text-white">
+              <div className="concepta-card concepta-card-brand text-white">
                 <div className="text-sm text-blue-100 font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-white mr-2"></div>
                   AI AUTOMATION
@@ -367,7 +367,7 @@ export default function SecurityStrategy() {
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Bank Case Study */}
-              <div className="bg-[var(--color-surface-muted)] p-8 border border-gray-200">
+              <div className="concepta-card concepta-card-subtle">
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   CLOUD TRANSFORMATION
@@ -381,7 +381,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   It completed its cloud transformation within 13 months and gained scalable security and efficiency by replacing a collection of disconnected products with Microsoft Security solutions.
                 </p>
-                <div className="bg-white p-4 border border-gray-200 mb-6">
+                <div className="concepta-card concepta-card-tight bg-white mb-6">
                   <p className="text-gray-900 font-medium mb-2">
                     Key Results:
                   </p>
@@ -404,7 +404,7 @@ export default function SecurityStrategy() {
               </div>
 
               {/* Multicloud Security */}
-              <div className="bg-[var(--color-surface-muted)] p-8 border border-gray-200">
+              <div className="concepta-card concepta-card-subtle">
                 <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   MULTICLOUD SECURITY
@@ -415,7 +415,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   How many clouds does your business use? Is your data protected across them all? Find out how the right technology solutions can help you extend security across the clouds and cloud services your business relies on—and what we can do to help you get there.
                 </p>
-                <div className="bg-white p-4 border border-gray-200 mb-6">
+                <div className="concepta-card concepta-card-tight bg-white mb-6">
                   <p className="text-gray-900 font-medium mb-2">
                     Multicloud Security Benefits:
                   </p>
@@ -456,9 +456,9 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200 text-center"
+                className="concepta-card text-center"
               >
-                <div className="w-16 h-16 bg-[var(--color-primary)] flex items-center justify-center mx-auto mb-6">
+                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">
@@ -481,9 +481,9 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200 text-center"
+                className="concepta-card text-center"
               >
-                <div className="w-16 h-16 bg-[var(--color-primary)] flex items-center justify-center mx-auto mb-6">
+                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                   <Lock className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">
@@ -506,9 +506,9 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200 text-center"
+                className="concepta-card text-center"
               >
-                <div className="w-16 h-16 bg-[var(--color-primary)] flex items-center justify-center mx-auto mb-6">
+                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">24/7 Monitoring</h3>

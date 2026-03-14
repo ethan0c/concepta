@@ -33,9 +33,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Brain className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -61,9 +61,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Shield className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -89,9 +89,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Code className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -117,9 +117,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Cloud className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -145,9 +145,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Headphones className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -173,9 +173,9 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
+                <div className="concepta-icon-tile mb-6">
                   <Database className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -216,7 +216,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
+                className="concepta-card concepta-card-subtle concepta-card-compact"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -230,7 +230,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
+                className="concepta-card concepta-card-subtle concepta-card-compact"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -244,7 +244,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
+                className="concepta-card concepta-card-subtle concepta-card-compact"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -258,7 +258,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
+                className="concepta-card concepta-card-subtle concepta-card-compact"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
                 <ul className="space-y-2 text-gray-600">

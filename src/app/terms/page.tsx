@@ -7,7 +7,7 @@ import { Footer, BottomFooter } from "@/components/layout";
 
 export default function TermsAndConditions() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f4fafd]">
       <Header currentPage="" />
 
       <main className="pt-16 sm:pt-20">

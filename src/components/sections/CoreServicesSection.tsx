@@ -10,9 +10,7 @@ import {
   SettingsCogMultiple24Regular,
   ShieldCheckmark24Regular,
 } from "@fluentui/react-icons";
-import {
-  ArrowRight,
-} from "lucide-react";
+import { ArrowRight24Regular } from "@fluentui/react-icons";
 
 interface Pillar {
   title: string;
@@ -116,7 +114,7 @@ export default function CoreServicesSection() {
                 className="mt-auto text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center gap-2 group"
               >
                 Learn more
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight24Regular className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </motion.div>
           ))}

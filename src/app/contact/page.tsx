@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
+import { Phone24Regular, Mail24Regular, Location24Regular, Clock24Regular, Send24Regular, CheckmarkCircle24Regular } from "@fluentui/react-icons";
 import { PageShell } from '@/components/layout'
 import { InternalHeroSection } from '@/components/sections'
 
@@ -94,7 +94,7 @@ export default function Contact() {
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="concepta-icon-tile flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[var(--color-primary)]" />
+                      <Phone24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
@@ -105,7 +105,7 @@ export default function Contact() {
 
                   <div className="flex items-start space-x-4">
                     <div className="concepta-icon-tile flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[var(--color-primary)]" />
+                      <Mail24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Email</h3>
@@ -116,7 +116,7 @@ export default function Contact() {
 
                   <div className="flex items-start space-x-4">
                     <div className="concepta-icon-tile flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[var(--color-primary)]" />
+                      <Location24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
@@ -129,7 +129,7 @@ export default function Contact() {
 
                   <div className="flex items-start space-x-4">
                     <div className="concepta-icon-tile flex-shrink-0">
-                      <Clock className="w-6 h-6 text-[var(--color-primary)]" />
+                      <Clock24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Business Hours</h3>
@@ -164,7 +164,7 @@ export default function Contact() {
 
                 {status === 'success' && (
                   <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 text-green-800 text-sm mb-6">
-                    <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                    <CheckmarkCircle24Regular className="w-5 h-5 flex-shrink-0" />
                     <span>Thank you! Your message has been sent. We&apos;ll be in touch soon.</span>
                   </div>
                 )}
@@ -285,7 +285,7 @@ export default function Contact() {
                     disabled={status === 'submitting'}
                     className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send24Regular className="w-4 h-4" />
                     <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
                   </button>
                 </form>

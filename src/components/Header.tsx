@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Menu, X, ChevronRight } from "lucide-react";
+import { Navigation24Regular, Dismiss24Regular, ChevronRight24Regular } from "@fluentui/react-icons";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -98,7 +98,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileMenuOpen ? <Dismiss24Regular className="w-5 h-5" /> : <Navigation24Regular className="w-5 h-5" />}
             </button>
 
             {/* Logo */}
@@ -200,7 +200,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
               className="text-gray-400 hover:text-gray-600 p-1.5 hover:bg-gray-100"
               aria-label="Close menu"
             >
-              <X className="w-5 h-5" />
+              <Dismiss24Regular className="w-5 h-5" />
             </button>
           </div>
 
@@ -219,7 +219,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   }`}
                 >
                   {item.name}
-                  <ChevronRight className="w-4 h-4 text-gray-400" />
+                  <ChevronRight24Regular className="w-4 h-4 text-gray-400" />
                 </Link>
               ))}
             </nav>

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Shield, Brain, Cloud, Lock, FileText, ArrowRight } from 'lucide-react'
+import { ShieldCheckmark24Regular, BrainCircuit24Regular, CloudArrowUp24Regular, LockClosed24Regular, Document24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from '@/components/layout'
 import { InternalHeroSection } from '@/components/sections'
 

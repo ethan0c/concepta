@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Brain, Shield, Cloud, Layers, ArrowRight } from "lucide-react";
+import { BrainCircuit24Regular, ShieldCheckmark24Regular, CloudArrowUp24Regular, Stack24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import Link from "next/link";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
 const solutions = [
   {
-    icon: Brain,
+    icon: BrainCircuit24Regular,
     title: "Artificial Intelligence Solutions",
     tagline: "AI solutions that enhance operations while maintaining governance and trust.",
     description:
@@ -16,7 +16,7 @@ const solutions = [
     href: "/services",
   },
   {
-    icon: Shield,
+    icon: ShieldCheckmark24Regular,
     title: "Cybersecurity & Zero Trust Solutions",
     tagline: "Security solutions built to protect mission-critical systems and data.",
     description:
@@ -24,7 +24,7 @@ const solutions = [
     href: "/services/security-strategy",
   },
   {
-    icon: Cloud,
+    icon: CloudArrowUp24Regular,
     title: "Cloud & Enterprise Solutions",
     tagline: "Scalable cloud solutions designed for secure modernization.",
     description:
@@ -32,7 +32,7 @@ const solutions = [
     href: "/services",
   },
   {
-    icon: Layers,
+    icon: Stack24Regular,
     title: "Application & Platform Solutions",
     tagline: "Application solutions that support reliability, performance, and continuity.",
     description:
@@ -88,7 +88,7 @@ export default function Solutions() {
                     className="inline-flex items-center text-sm text-[var(--color-primary)] font-medium group-hover:underline"
                   >
                     Learn more
-                    <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight24Regular className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
               ))}

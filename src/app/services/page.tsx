@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Shield, Cloud, Brain, Headphones, Code, Database } from "lucide-react";
+import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
@@ -36,7 +36,7 @@ export default function Services() {
                 className="concepta-card"
               >
                 <div className="concepta-icon-tile mb-6">
-                  <Brain className="w-6 h-6 text-[var(--color-primary)]" />
+                  <BrainCircuit24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Artificial Intelligence & AI Governance
@@ -64,7 +64,7 @@ export default function Services() {
                 className="concepta-card"
               >
                 <div className="concepta-icon-tile mb-6">
-                  <Shield className="w-6 h-6 text-[var(--color-primary)]" />
+                  <ShieldCheckmark24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Cybersecurity & Zero Trust Architecture
@@ -92,7 +92,7 @@ export default function Services() {
                 className="concepta-card"
               >
                 <div className="concepta-icon-tile mb-6">
-                  <Code className="w-6 h-6 text-[var(--color-primary)]" />
+                  <Code24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Application & Platform Support
@@ -120,7 +120,7 @@ export default function Services() {
                 className="concepta-card"
               >
                 <div className="concepta-icon-tile mb-6">
-                  <Cloud className="w-6 h-6 text-[var(--color-primary)]" />
+                  <CloudArrowUp24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Solution Architecture & Cloud Enablement
@@ -148,7 +148,7 @@ export default function Services() {
                 className="concepta-card"
               >
                 <div className="concepta-icon-tile mb-6">
-                  <Headphones className="w-6 h-6 text-[var(--color-primary)]" />
+                  <Headset24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Service Desk & IT Operations Support
@@ -176,7 +176,7 @@ export default function Services() {
                 className="concepta-card"
               >
                 <div className="concepta-icon-tile mb-6">
-                  <Database className="w-6 h-6 text-[var(--color-primary)]" />
+                  <DataBarVertical24Regular className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Data Management & Analytics

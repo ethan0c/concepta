@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { Shield, Brain, Cloud } from "lucide-react";
+import { ShieldCheckmark24Regular, BrainCircuit24Regular, CloudArrowUp24Regular } from "@fluentui/react-icons";
 
 const partners = [
   { src: "/assets/partners/acer-logo.png", alt: "Acer" },
@@ -19,7 +19,7 @@ const partners = [
 
 const highlights = [
   {
-    icon: Shield,
+    icon: ShieldCheckmark24Regular,
     category: "Cybersecurity",
     title: "Zero Trust & Threat Protection",
     description:
@@ -27,7 +27,7 @@ const highlights = [
     href: "/services/security-strategy",
   },
   {
-    icon: Brain,
+    icon: BrainCircuit24Regular,
     category: "AI Solutions",
     title: "AI-Powered Enterprise Productivity",
     description:
@@ -35,7 +35,7 @@ const highlights = [
     href: "/solutions",
   },
   {
-    icon: Cloud,
+    icon: CloudArrowUp24Regular,
     category: "Cloud & Compliance",
     title: "Secure Cloud for Regulated Industries",
     description:

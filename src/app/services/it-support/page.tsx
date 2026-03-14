@@ -1,12 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Server,
-  Cloud,
-  Shield,
-  Zap,
-} from "lucide-react";
+import { Server24Regular, CloudArrowUp24Regular, ShieldCheckmark24Regular, Flash24Regular } from "@fluentui/react-icons";
 import Link from "next/link";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
@@ -44,7 +39,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <Server className="w-6 h-6 text-white" />
+                    <Server24Regular className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Desktop Services
@@ -76,7 +71,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <Shield className="w-6 h-6 text-white" />
+                    <ShieldCheckmark24Regular className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Cybersecurity Services
@@ -114,7 +109,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <Cloud className="w-6 h-6 text-white" />
+                    <CloudArrowUp24Regular className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Backup & Disaster Recovery
@@ -146,7 +141,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <Zap className="w-6 h-6 text-white" />
+                    <Flash24Regular className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Network Services

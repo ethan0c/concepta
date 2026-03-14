@@ -5,14 +5,17 @@ import { Menu, X, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
   currentPage?: string;
+  theme?: "default" | "light" | "transparent";
 }
 
-export default function Header({ currentPage = "Home" }: HeaderProps) {
+export default function Header({ currentPage, theme = "default" }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,18 +53,48 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
     { name: "Contact", href: "/contact" },
   ];
 
+  const isCurrentPageActive = (itemName: string, itemHref: string): boolean => {
+    if (currentPage && currentPage.length > 0) {
+      return itemName === currentPage;
+    }
+
+    if (itemHref === "/") {
+      return pathname === "/";
+    }
+
+    return pathname === itemHref || pathname.startsWith(`${itemHref}/`);
+  };
+
+  const getHeaderBackgroundColor = (): string => {
+    if (theme === "light") {
+      return scrolled ? "rgb(var(--color-surface-rgb) / 0.95)" : "var(--color-surface)";
+    }
+
+    if (theme === "transparent") {
+      return scrolled ? "rgb(var(--color-header-bg-rgb) / 0.95)" : "transparent";
+    }
+
+    return scrolled ? "rgb(var(--color-header-bg-rgb) / 0.95)" : "var(--color-header-bg)";
+  };
+
+  const headerTextClass = theme === "light" && !scrolled ? "text-gray-900" : "text-white";
+  const headerSubtleTextClass = theme === "light" && !scrolled ? "text-gray-600" : "text-blue-100";
+
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled 
-          ? "bg-[#0B4BBB]/95 backdrop-blur-md shadow-lg" 
-          : "bg-[#0B4BBB]"
-      }`}>
+      <header
+        className={`fixed w-full z-50 transition-all duration-300 ${
+          scrolled ? "backdrop-blur-md shadow-lg" : ""
+        }`}
+        style={{ backgroundColor: getHeaderBackgroundColor() }}
+      >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 sm:h-20">
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden text-white hover:text-blue-200 p-2 -ml-2 transition-colors"
+              className={`lg:hidden p-2 -ml-2 transition-colors ${headerTextClass} ${
+                theme === "light" && !scrolled ? "hover:text-gray-700" : "hover:text-blue-200"
+              }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -91,14 +124,20 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   key={item.name}
                   href={item.href}
                   className={`relative px-3.5 py-2 text-sm transition-colors ${
-                    item.name === currentPage
-                      ? "text-white font-medium"
-                      : "text-blue-100 font-normal hover:text-white hover:bg-white/10"
+                    isCurrentPageActive(item.name, item.href)
+                      ? `${headerTextClass} font-medium`
+                      : `${headerSubtleTextClass} font-normal ${
+                          theme === "light" && !scrolled ? "hover:text-gray-900 hover:bg-gray-900/5" : "hover:text-white hover:bg-white/10"
+                        }`
                   }`}
                 >
                   {item.name}
-                  {item.name === currentPage && (
-                    <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-white rounded-full" />
+                  {isCurrentPageActive(item.name, item.href) && (
+                    <span
+                      className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] rounded-full ${
+                        theme === "light" && !scrolled ? "bg-gray-900" : "bg-white"
+                      }`}
+                    />
                   )}
                 </Link>
               ))}
@@ -108,13 +147,15 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <div className="flex items-center gap-3">
               <a 
                 href="tel:+18775941944"
-                className="hidden xl:flex items-center text-xs text-blue-100 hover:text-white transition-colors"
+                className={`hidden xl:flex items-center text-xs transition-colors ${headerSubtleTextClass} ${
+                  theme === "light" && !scrolled ? "hover:text-gray-900" : "hover:text-white"
+                }`}
               >
                 (877) 594-1944
               </a>
               <Link 
                 href="/contact"
-                className="bg-white hover:bg-blue-50 text-[#0B4BBB] px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
+                className="bg-white hover:bg-blue-50 text-[var(--color-header-bg)] px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>
@@ -172,8 +213,8 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`flex items-center justify-between w-full py-3 px-4 text-[15px] transition-all duration-150 ${
-                    item.name === currentPage
-                      ? "text-[#0B4BBB] bg-blue-50 font-medium"
+                    isCurrentPageActive(item.name, item.href)
+                      ? "text-[var(--color-primary)] bg-blue-50 font-medium"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
                   }`}
                 >
@@ -215,7 +256,7 @@ export default function Header({ currentPage = "Home" }: HeaderProps) {
             <Link 
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 text-center text-sm font-medium transition-colors"
+              className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white py-3 text-center text-sm font-medium transition-colors"
             >
               Get Started
             </Link>

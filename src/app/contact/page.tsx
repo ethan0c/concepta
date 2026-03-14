@@ -3,9 +3,8 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react'
-import Header from '@/components/Header'
-import HeroBackground from '@/components/HeroBackground'
-import { Footer, BottomFooter } from '@/components/layout'
+import { PageShell } from '@/components/layout'
+import { InternalHeroSection } from '@/components/sections'
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -48,60 +47,33 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
-      <Header currentPage="Contact" />
+    <PageShell currentPage="Contact">
+        <InternalHeroSection
+          label="Contact Us"
+          title="Contact Concepta Innovation Services"
+          titleClassName="text-3xl sm:text-4xl lg:text-5xl font-normal text-[var(--color-primary)] leading-tight mb-4"
+        >
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="text-xl sm:text-2xl text-black leading-snug max-w-xl mb-4 font-light"
+          >
+            Let&apos;s talk about secure, governed, and modern IT solutions.
+          </motion.p>
 
-      {/* Main Content */}
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Contact Us
-                </span>
-              </motion.div>
-
-              <motion.h1 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-4"
-              >
-                Contact Concepta Innovation Services
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.15 }}
-                className="text-xl sm:text-2xl text-gray-300 leading-snug max-w-xl mb-4 font-light"
-              >
-                Let&apos;s talk about secure, governed, and modern IT solutions.
-              </motion.p>
-              
-              <motion.p 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
-              >
-                Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
-              </motion.p>
-            </div>
-          </div>
-        </section>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
+          >
+            Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
+          </motion.p>
+        </InternalHeroSection>
 
         {/* Contact Information & Form */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Information */}
@@ -121,8 +93,8 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#0B4BBB]" />
+                    <div className="concepta-icon-tile flex-shrink-0">
+                      <Phone className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
@@ -132,8 +104,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#0B4BBB]" />
+                    <div className="concepta-icon-tile flex-shrink-0">
+                      <Mail className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Email</h3>
@@ -143,8 +115,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#0B4BBB]" />
+                    <div className="concepta-icon-tile flex-shrink-0">
+                      <MapPin className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
@@ -156,8 +128,8 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-blue-50 flex items-center justify-center flex-shrink-0">
-                      <Clock className="w-6 h-6 text-[#0B4BBB]" />
+                    <div className="concepta-icon-tile flex-shrink-0">
+                      <Clock className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Business Hours</h3>
@@ -169,12 +141,12 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="bg-[#f4f4f4] p-6">
+                <div className="concepta-card concepta-card-compact bg-white">
                   <h3 className="text-lg text-gray-900 mb-3">Ready to Connect?</h3>
                   <p className="text-gray-600 mb-4">
                     Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
                   </p>
-                  <a href="tel:+18775941944" className="inline-flex items-center justify-center px-6 py-2.5 bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white text-sm font-medium transition-colors">
+                  <a href="tel:+18775941944" className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white text-sm font-medium transition-colors">
                     Call (877)-594-1944
                   </a>
                 </div>
@@ -186,7 +158,7 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] p-8"
+                className="concepta-card bg-white"
               >
                 <h2 className="text-2xl text-gray-900 mb-6">Send Us a Message</h2>
 
@@ -214,7 +186,7 @@ export default function Contact() {
                         id="name"
                         name="name"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                         placeholder="Your full name"
                       />
                     </div>
@@ -228,7 +200,7 @@ export default function Contact() {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                         placeholder="your.email@company.com"
                       />
                     </div>
@@ -243,7 +215,7 @@ export default function Contact() {
                         type="text"
                         id="company"
                         name="company"
-                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                         placeholder="Your company name"
                       />
                     </div>
@@ -256,7 +228,7 @@ export default function Contact() {
                         type="tel"
                         id="phone"
                         name="phone"
-                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                         placeholder="(123) 456-7890"
                       />
                     </div>
@@ -270,7 +242,7 @@ export default function Contact() {
                       id="subject"
                       name="subject"
                       required
-                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent"
                     >
                       <option value="">Select an area of interest</option>
                       <option value="AI & Intelligent Automation">AI &amp; Intelligent Automation</option>
@@ -291,7 +263,7 @@ export default function Contact() {
                       name="message"
                       required
                       rows={6}
-                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#0B4BBB] focus:border-transparent resize-vertical"
+                      className="w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:border-transparent resize-vertical"
                       placeholder="Tell us about your IT, AI, cybersecurity, or modernization needs..."
                     />
                   </div>
@@ -301,7 +273,7 @@ export default function Contact() {
                       type="checkbox"
                       id="consent"
                       required
-                      className="mt-1 w-4 h-4 text-[#0B4BBB] border-gray-300 focus:ring-[#0B4BBB]"
+                      className="mt-1 w-4 h-4 text-[var(--color-primary)] border-gray-300 focus:ring-[var(--color-primary)]"
                     />
                     <label htmlFor="consent" className="text-sm text-gray-600">
                       I agree to receive communications from Concepta Innovation Services and understand that I can unsubscribe at any time. *
@@ -311,7 +283,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <Send className="w-4 h-4" />
                     <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
@@ -321,7 +293,7 @@ export default function Contact() {
                 <div className="mt-6 pt-6 border-t border-gray-200 text-center">
                   <p className="text-sm text-gray-600">
                     Prefer to schedule a call?{' '}
-                    <a href="tel:+18775941944" className="text-[#0B4BBB] hover:text-[#0a3d9c] transition-colors">
+                    <a href="tel:+18775941944" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors">
                       Call (877) 594-1944
                     </a>
                   </p>
@@ -331,9 +303,6 @@ export default function Contact() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   )
 }

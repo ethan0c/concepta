@@ -1,44 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Header from "@/components/Header";
-import HeroBackground from "@/components/HeroBackground";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
+import { InternalHeroSection } from "@/components/sections";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header currentPage="" />
-
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Legal
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
-              >
-                Privacy Policy
-              </motion.h1>
-            </div>
-          </div>
-        </section>
+    <PageShell>
+        <InternalHeroSection label="Legal" title="Privacy Policy" />
 
         {/* Content */}
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
@@ -133,7 +101,7 @@ export default function PrivacyPolicy() {
                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contacting Us</h2>
                   <p className="text-gray-700 leading-relaxed">
                     If you have any questions, please send us an email at{" "}
-                    <a href="mailto:support@conceptainnovation.com" className="text-[#0B4BBB] hover:text-[#0a3d9c] transition-colors">
+                    <a href="mailto:support@conceptainnovation.com" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors">
                       support@conceptainnovation.com
                     </a>.
                   </p>
@@ -143,9 +111,6 @@ export default function PrivacyPolicy() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   );
 }

@@ -43,7 +43,7 @@ export default function StatisticsSection({
   stats = defaultStats,
 }: StatisticsSectionProps) {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
       <div className="page-container">
         {/* Header */}
         <div className="max-w-2xl mb-12 sm:mb-16">
@@ -78,7 +78,7 @@ export default function StatisticsSection({
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="border-t-2 border-[#0B4BBB] pt-6">
+              <div className="border-t-2 border-[var(--color-primary)] pt-6">
                 <div className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-white mb-2 tracking-tight">
                   {stat.value}
                 </div>

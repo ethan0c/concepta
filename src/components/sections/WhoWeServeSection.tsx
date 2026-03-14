@@ -32,7 +32,7 @@ const sectors = [
 
 export default function WhoWeServeSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-page-bg)]">
       <div className="page-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -65,13 +65,10 @@ export default function WhoWeServeSection() {
               viewport={{ once: true }}
               className="bg-white p-6 border border-gray-200"
             >
-              <div className="w-1 h-8 bg-[#0B4BBB] mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                {sector.title}
-              </h3>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                {sector.description}
-              </p>
+              <span className="w-2 h-2 bg-[var(--color-primary)] rounded-full shrink-0" />
+              <span className="text-lg sm:text-xl text-gray-800 font-medium">
+                {audience}
+              </span>
             </motion.div>
           ))}
         </div>

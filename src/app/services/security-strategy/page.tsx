@@ -3,60 +3,23 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Shield, Lock, Eye } from "lucide-react";
-import Header from "@/components/Header";
-import HeroBackground from "@/components/HeroBackground";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
+import { InternalHeroSection } from "@/components/sections";
 
 export default function SecurityStrategy() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header currentPage="Services" />
-
-      {/* Main Content */}
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-[#6ea6ff] text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Security strategies that protect mission-critical systems and data
-                </span>
-              </motion.div>
-              
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6"
-              >
-                Cybersecurity & Zero Trust Architecture
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-gray-400 leading-relaxed max-w-xl"
-              >
-                Concepta delivers modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience across identity, endpoints, networks, applications, and data.
-              </motion.p>
-            </div>
-          </div>
-        </section>
+    <PageShell currentPage="Services">
+        <InternalHeroSection
+          label="Security strategies that protect mission-critical systems and data"
+          title="Cybersecurity & Zero Trust Architecture"
+          description="Concepta delivers modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience across identity, endpoints, networks, applications, and data."
+        />
 
         {/* G&J Pepsi Case Study - Featured */}
-        <section className="py-12 sm:py-20 bg-white">
+        <section className="py-12 sm:py-20 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-16">
-              <div className="inline-block bg-[#0B4BBB] text-white px-4 py-1 text-sm font-medium mb-4">
+              <div className="inline-block bg-[var(--color-primary)] text-white px-4 py-1 text-sm font-medium mb-4">
                 FEATURED CASE STUDY
               </div>
               <h2 className="text-4xl text-gray-900 mb-6">
@@ -64,13 +27,13 @@ export default function SecurityStrategy() {
               </h2>
             </div>
 
-            <div className="bg-[#f4f4f4] p-8 border border-gray-200 mb-16">
+            <div className="concepta-card concepta-card-subtle mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h3 className="text-3xl font-medium text-gray-900 mb-4">
                     G&J Pepsi Reflect on Overcoming a Ransomware Attack
                   </h3>
-                  <p className="text-[#0B4BBB] font-medium text-lg mb-6">
+                  <p className="text-[var(--color-primary)] font-medium text-lg mb-6">
                     Cybersecurity Resilience Case Study
                   </p>
 
@@ -83,7 +46,7 @@ export default function SecurityStrategy() {
                     </p>
                   </div>
 
-                  <div className="bg-white p-4 border border-gray-200">
+                  <div className="concepta-card concepta-card-tight bg-white">
                     <p className="text-base text-gray-900 font-medium mb-2">
                       Key Outcomes:
                     </p>
@@ -97,7 +60,7 @@ export default function SecurityStrategy() {
                 </div>
 
                 <div className="text-center">
-                  <div className="w-24 h-24 bg-[#0B4BBB] flex items-center justify-center mx-auto mb-6">
+                  <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                     <Shield className="w-12 h-12 text-white" />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-4">
@@ -106,7 +69,7 @@ export default function SecurityStrategy() {
                   <p className="text-gray-600 mb-6">
                     Leveraging Microsoft&apos;s comprehensive security solutions to protect against ransomware and cyber threats.
                   </p>
-                  <Link href="/contact" className="inline-block bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-6 py-3 font-medium transition-colors">
+                  <Link href="/contact" className="inline-block bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-6 py-3 font-medium transition-colors">
                     Get in Touch
                   </Link>
                 </div>
@@ -129,10 +92,10 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   MICROSOFT PARTNER
                 </div>
                 <h3 className="text-xl font-medium text-gray-900 mb-4">
@@ -149,7 +112,7 @@ export default function SecurityStrategy() {
                 </p>
                 <Link
                   href="/resources"
-                  className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group"
+                  className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group"
                 >
                   Read more
                   <svg
@@ -172,10 +135,10 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   ZERO TRUST
                 </div>
                 <h3 className="text-xl font-medium text-gray-900 mb-4">
@@ -191,7 +154,7 @@ export default function SecurityStrategy() {
                 </p>
                 <Link
                   href="/resources"
-                  className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group"
+                  className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group"
                 >
                   Read more
                   <svg
@@ -214,10 +177,10 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200"
+                className="concepta-card"
               >
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   CASE STUDY
                 </div>
                 <h3 className="text-xl font-medium text-gray-900 mb-4">
@@ -233,7 +196,7 @@ export default function SecurityStrategy() {
                   for a complete SIEM and extended detection and response
                   solution and achieved a better than benchmark security score.
                 </p>
-                <div className="bg-[#f4f4f4] p-4 mb-6 border border-gray-200">
+                <div className="bg-[var(--color-surface-muted)] p-4 mb-6 border border-gray-200">
                   <p className="text-sm text-gray-800">
                     <strong>Result:</strong> Better than benchmark security
                     score achieved through integrated XDR and SIEM solution.
@@ -241,7 +204,7 @@ export default function SecurityStrategy() {
                 </div>
                 <Link
                   href="/resources"
-                  className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group"
+                  className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group"
                 >
                   Read more
                   <svg
@@ -261,9 +224,9 @@ export default function SecurityStrategy() {
 
             {/* Call to Action */}
             <div className="text-center mt-12">
-              <div className="bg-[#0B4BBB] p-8 text-white">
+              <div className="concepta-card concepta-card-brand text-white">
                 <h3 className="text-2xl font-medium mb-4">
-                  Ready to Transform Your Security Posture?
+                  Ready to Transform Your Security Posture? 
                 </h3>
                 <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
                   Sign up for our mailing list for details—and reach out to
@@ -271,7 +234,7 @@ export default function SecurityStrategy() {
                   integrated XDR and SIEM solution.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-block bg-white text-[#0B4BBB] px-8 py-3 font-medium hover:bg-gray-100 transition-colors">
+                  <Link href="/contact" className="inline-block bg-white text-[var(--color-primary)] px-8 py-3 font-medium hover:bg-gray-100 transition-colors">
                     Contact Us Today
                   </Link>
                 </div>
@@ -281,7 +244,7 @@ export default function SecurityStrategy() {
         </section>
 
         {/* Artificial Intelligence Solutions */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-16">
               <h2 className="text-4xl text-gray-900 mb-6">
@@ -294,9 +257,9 @@ export default function SecurityStrategy() {
 
             <div className="grid lg:grid-cols-2 gap-12 mb-12">
               {/* Copilot Insights */}
-              <div className="bg-white p-8 border border-gray-200">
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+              <div className="concepta-card">
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   GENERATIVE AI AT WORK
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -308,7 +271,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   As a Microsoft Partner, we can help you realize these productivity gains by readying your processes and people for the AI-powered future of work. Reach out to learn more today.
                 </p>
-                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -317,9 +280,9 @@ export default function SecurityStrategy() {
               </div>
 
               {/* Copilot for M365 */}
-              <div className="bg-white p-8 border border-gray-200">
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+              <div className="concepta-card">
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   COPILOT FOR M365
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -331,7 +294,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   Watch the video to see how executives use Copilot to stay focused throughout their workday. As a Microsoft Partner, we can help you achieve these results and more. Unleash productivity today.
                 </p>
-                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -340,9 +303,9 @@ export default function SecurityStrategy() {
               </div>
 
               {/* Copilot Onboarding */}
-              <div className="bg-white p-8 border border-gray-200">
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+              <div className="concepta-card">
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   ONBOARDING GUIDE
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -351,7 +314,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   There&apos;s art and science to using Copilot for Microsoft 365. It&apos;s not enough to merely turn Copilot on – your people need guidance on how to build new skills that help them get the most out of generative AI. Learn how you can navigate your AI journey with confidence by working with a Microsoft Partner to ready your organization for the new AI-powered era of work. Read the eBook for more insights.
                 </p>
-                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -360,7 +323,7 @@ export default function SecurityStrategy() {
               </div>
 
               {/* AI Agents & Workflow Automation */}
-              <div className="bg-[#0B4BBB] p-8 text-white">
+              <div className="concepta-card concepta-card-brand text-white">
                 <div className="text-sm text-blue-100 font-medium mb-3 flex items-center">
                   <div className="w-2 h-2 bg-white mr-2"></div>
                   AI AUTOMATION
@@ -382,7 +345,7 @@ export default function SecurityStrategy() {
                     Let Concepta Innovation Services help you design, deploy, and optimize AI-powered workflows that drive results.
                   </p>
                 </div>
-                <Link href="/contact" className="inline-block bg-white text-[#0B4BBB] hover:bg-gray-100 px-6 py-3 font-medium transition-colors">
+                <Link href="/contact" className="inline-block bg-white text-[var(--color-primary)] hover:bg-gray-100 px-6 py-3 font-medium transition-colors">
                   Schedule a Consultation
                 </Link>
               </div>
@@ -404,9 +367,9 @@ export default function SecurityStrategy() {
 
             <div className="grid lg:grid-cols-2 gap-12">
               {/* Bank Case Study */}
-              <div className="bg-[#f4f4f4] p-8 border border-gray-200">
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+              <div className="concepta-card concepta-card-subtle">
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   CLOUD TRANSFORMATION
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -418,7 +381,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   It completed its cloud transformation within 13 months and gained scalable security and efficiency by replacing a collection of disconnected products with Microsoft Security solutions.
                 </p>
-                <div className="bg-white p-4 border border-gray-200 mb-6">
+                <div className="concepta-card concepta-card-tight bg-white mb-6">
                   <p className="text-gray-900 font-medium mb-2">
                     Key Results:
                   </p>
@@ -432,7 +395,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   As a Microsoft partner, we can help your security operations team achieve similar results, with deeply integrated security solutions that span your entire digital estate. Read the story.
                 </p>
-                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -441,9 +404,9 @@ export default function SecurityStrategy() {
               </div>
 
               {/* Multicloud Security */}
-              <div className="bg-[#f4f4f4] p-8 border border-gray-200">
-                <div className="text-sm text-[#0B4BBB] font-medium mb-3 flex items-center">
-                  <div className="w-2 h-2 bg-[#0B4BBB] mr-2"></div>
+              <div className="concepta-card concepta-card-subtle">
+                <div className="text-sm text-[var(--color-primary)] font-medium mb-3 flex items-center">
+                  <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   MULTICLOUD SECURITY
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -452,7 +415,7 @@ export default function SecurityStrategy() {
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   How many clouds does your business use? Is your data protected across them all? Find out how the right technology solutions can help you extend security across the clouds and cloud services your business relies on—and what we can do to help you get there.
                 </p>
-                <div className="bg-white p-4 border border-gray-200 mb-6">
+                <div className="concepta-card concepta-card-tight bg-white mb-6">
                   <p className="text-gray-900 font-medium mb-2">
                     Multicloud Security Benefits:
                   </p>
@@ -463,7 +426,7 @@ export default function SecurityStrategy() {
                     <li>• Comprehensive data protection</li>
                   </ul>
                 </div>
-                <Link href="/contact" className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium inline-flex items-center group">
+                <Link href="/contact" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center group">
                   Read more
                   <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -475,7 +438,7 @@ export default function SecurityStrategy() {
         </section>
 
         {/* Additional Security Services */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-16">
               <h2 className="text-3xl text-gray-900 mb-4">
@@ -493,9 +456,9 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200 text-center"
+                className="concepta-card text-center"
               >
-                <div className="w-16 h-16 bg-[#0B4BBB] flex items-center justify-center mx-auto mb-6">
+                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">
@@ -507,7 +470,7 @@ export default function SecurityStrategy() {
                 </p>
                 <Link
                   href="/contact"
-                  className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium"
+                  className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium"
                 >
                   Learn More →
                 </Link>
@@ -518,9 +481,9 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200 text-center"
+                className="concepta-card text-center"
               >
-                <div className="w-16 h-16 bg-[#0B4BBB] flex items-center justify-center mx-auto mb-6">
+                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                   <Lock className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">
@@ -532,7 +495,7 @@ export default function SecurityStrategy() {
                 </p>
                 <Link
                   href="/contact"
-                  className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium"
+                  className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium"
                 >
                   Learn More →
                 </Link>
@@ -543,9 +506,9 @@ export default function SecurityStrategy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 border border-gray-200 text-center"
+                className="concepta-card text-center"
               >
-                <div className="w-16 h-16 bg-[#0B4BBB] flex items-center justify-center mx-auto mb-6">
+                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl text-gray-900 mb-4">24/7 Monitoring</h3>
@@ -555,7 +518,7 @@ export default function SecurityStrategy() {
                 </p>
                 <Link
                   href="/contact"
-                  className="text-[#0B4BBB] hover:text-[#0a3d9c] font-medium"
+                  className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium"
                 >
                   Learn More →
                 </Link>
@@ -565,7 +528,7 @@ export default function SecurityStrategy() {
         </section>
 
         {/* Call to Action */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -582,7 +545,7 @@ export default function SecurityStrategy() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
               >
                 Contact Us
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -593,9 +556,6 @@ export default function SecurityStrategy() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   );
 }

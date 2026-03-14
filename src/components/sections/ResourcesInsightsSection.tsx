@@ -6,15 +6,15 @@ import Link from "next/link";
 import { Shield, Brain, Cloud } from "lucide-react";
 
 const partners = [
-  { src: "/assets/partners/Acer-Logo.png", alt: "Acer" },
-  { src: "/assets/partners/Cisco-Logo.png", alt: "Cisco" },
+  { src: "/assets/partners/acer-logo.png", alt: "Acer" },
+  { src: "/assets/partners/cisco-logo.png", alt: "Cisco" },
   { src: "/assets/partners/dell.png", alt: "Dell Technologies" },
-  { src: "/assets/partners/DH-80px_2019.png", alt: "D&H" },
-  { src: "/assets/partners/HP-Logo.png", alt: "HP" },
-  { src: "/assets/partners/purepng.com-ibm-logologobrand-logoiconslogos-251519939176ka7y8.png", alt: "IBM" },
-  { src: "/assets/partners/purepng.com-ingram-micro-logologobrand-logoiconslogos-25151993953320b2j.png", alt: "Ingram Micro" },
-  { src: "/assets/partners/Microsoft-Logo.png", alt: "Microsoft" },
-  { src: "/assets/partners/logo-arrow-five-years-out.svg", alt: "Arrow Electronics" },
+  { src: "/assets/partners/dh-logo.png", alt: "D&H" },
+  { src: "/assets/partners/hp-logo.png", alt: "HP" },
+  { src: "/assets/partners/ibm-logo.png", alt: "IBM" },
+  { src: "/assets/partners/ingram-micro-logo.png", alt: "Ingram Micro" },
+  { src: "/assets/partners/microsoft-logo.png", alt: "Microsoft" },
+  { src: "/assets/partners/arrow-logo.svg", alt: "Arrow Electronics" },
 ];
 
 const highlights = [

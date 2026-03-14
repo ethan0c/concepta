@@ -37,7 +37,7 @@ export default function HeroBackground() {
         style={{ y: waveY, mixBlendMode: "screen" }}
       >
         <Image
-          src="/assets/Subtle parallax.jpg"
+          src="/assets/hero-wave.jpg"
           alt=""
           fill
           sizes="100vw"

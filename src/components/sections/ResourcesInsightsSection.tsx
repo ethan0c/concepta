@@ -82,21 +82,21 @@ export default function ResourcesInsightsSection() {
             >
               <Link
                 href={item.href}
-                className="group block bg-[#f4f4f4] hover:bg-[#e8e8e8] transition-colors h-full p-6 sm:p-8 border border-gray-200"
+                className="group block bg-[var(--color-surface-muted)] hover:bg-[var(--color-surface-muted-hover)] transition-colors h-full p-6 sm:p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-5">
-                  <item.icon className="w-6 h-6 text-[#0B4BBB]" />
+                  <item.icon className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
-                <span className="text-xs font-medium text-[#0B4BBB] uppercase tracking-wider">
+                <span className="text-xs font-medium text-[var(--color-primary)] uppercase tracking-wider">
                   {item.category}
                 </span>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-[#0B4BBB] transition-colors leading-snug">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-[var(--color-primary)] transition-colors leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-4">
                   {item.description}
                 </p>
-                <span className="inline-flex items-center text-sm font-medium text-[#0B4BBB] group-hover:translate-x-1 transition-transform">
+                <span className="inline-flex items-center text-sm font-medium text-[var(--color-primary)] group-hover:translate-x-1 transition-transform">
                   Learn more
                   <svg
                     className="w-4 h-4 ml-1"

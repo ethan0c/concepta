@@ -11,7 +11,7 @@ const reasons = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4fafd]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-page-bg)]">
       <div className="page-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function WhyChooseUsSection() {
               viewport={{ once: true }}
               className="flex items-start gap-4"
             >
-              <div className="w-8 h-8 bg-[#0B4BBB] flex items-center justify-center flex-shrink-0 mt-0.5">
+              <div className="w-8 h-8 bg-[var(--color-primary)] flex items-center justify-center flex-shrink-0 mt-0.5">
                 <svg
                   className="w-4 h-4 text-white"
                   fill="currentColor"

@@ -3,9 +3,8 @@
 import { motion } from "framer-motion";
 import { Brain, Shield, Cloud, Layers, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Header from "@/components/Header";
-import HeroBackground from "@/components/HeroBackground";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
+import { InternalHeroSection } from "@/components/sections";
 
 const solutions = [
   {
@@ -44,50 +43,16 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <div className="min-h-screen bg-[#f4fafd]">
-      <Header currentPage="Solutions" />
-
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-12 sm:py-14 lg:py-16 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Technology Solutions for Regulated Environments
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
-              >
-                Solutions designed to support secure, governed, and scalable operations.
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
-              >
-                Integrated technology solutions combining AI, cybersecurity, cloud, and enterprise technologies to support governance, risk management, and secure operations.
-              </motion.p>
-            </div>
-          </div>
-        </section>
+    <PageShell currentPage="Solutions">
+        <InternalHeroSection
+          label="Technology Solutions for Regulated Environments"
+          title="Solutions designed to support secure, governed, and scalable operations."
+          description="Integrated technology solutions combining AI, cybersecurity, cloud, and enterprise technologies to support governance, risk management, and secure operations."
+          sectionClassName="py-12 sm:py-14 lg:py-16"
+        />
 
         {/* Solutions Grid */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Our Solutions</h2>
@@ -107,12 +72,12 @@ export default function Solutions() {
                   className="bg-white p-8 border border-gray-200 group"
                 >
                   <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                    <solution.icon className="w-6 h-6 text-[#0B4BBB]" />
+                    <solution.icon className="w-6 h-6 text-[var(--color-primary)]" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {solution.title}
                   </h3>
-                  <p className="text-sm font-medium text-[#0B4BBB] mb-3">
+                  <p className="text-sm font-medium text-[var(--color-primary)] mb-3">
                     {solution.tagline}
                   </p>
                   <p className="text-sm text-gray-600 leading-relaxed mb-6">
@@ -120,7 +85,7 @@ export default function Solutions() {
                   </p>
                   <Link
                     href={solution.href}
-                    className="inline-flex items-center text-sm text-[#0B4BBB] font-medium group-hover:underline"
+                    className="inline-flex items-center text-sm text-[var(--color-primary)] font-medium group-hover:underline"
                   >
                     Learn more
                     <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
@@ -132,7 +97,7 @@ export default function Solutions() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -149,7 +114,7 @@ export default function Solutions() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
               >
                 Contact Us
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -160,9 +125,6 @@ export default function Solutions() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   );
 }

@@ -5,3 +5,4 @@ export { default as WhyChooseUsSection } from "./WhyChooseUsSection";
 export { default as ClosingCTASection } from "./ClosingCTASection";
 export { default as StatisticsSection } from "./StatisticsSection";
 export { default as ResourcesInsightsSection } from "./ResourcesInsightsSection";
+export { default as InternalHeroSection } from "./InternalHeroSection";

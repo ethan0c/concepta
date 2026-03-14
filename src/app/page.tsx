@@ -1,25 +1,18 @@
 "use client";
 
-import Header from "@/components/Header";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
 import { HeroSection, CoreServicesSection, WhoWeServeSection, WhyChooseUsSection, ClosingCTASection } from "@/components/sections";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#f4fafd]">
-      <Header currentPage="Home" />
-
-      <main className="pt-16 sm:pt-20">
-        <HeroSection />
-        <div className="bg-[#f4fafd]">
-          <CoreServicesSection />
-          <WhoWeServeSection />
-          <WhyChooseUsSection />
-          <ClosingCTASection />
-        </div>
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    <PageShell currentPage="Home">
+      <HeroSection />
+      <div className="bg-[var(--color-page-bg)]">
+        <CoreServicesSection />
+        <WhoWeServeSection />
+        <WhyChooseUsSection />
+        <ClosingCTASection />
+      </div>
+    </PageShell>
   );
 }

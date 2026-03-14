@@ -27,7 +27,7 @@ const pillars: Pillar[] = [
 
 export default function CoreServicesSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4fafd]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-page-bg)]">
       <div className="page-container">
         {/* Section Header */}
         <motion.h2
@@ -49,7 +49,7 @@ export default function CoreServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * (index + 1) }}
               viewport={{ once: true }}
-              className="border-t-2 border-[#0B4BBB] pt-6"
+              className="border-t-2 border-[var(--color-primary)] pt-6"
             >
               <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">
                 {pillar.title}

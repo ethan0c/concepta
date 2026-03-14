@@ -3,57 +3,21 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Shield, Cloud, Brain, Headphones, Code, Database } from "lucide-react";
-import Header from "@/components/Header";
-import HeroBackground from "@/components/HeroBackground";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
+import { InternalHeroSection } from "@/components/sections";
 
 export default function Services() {
   return (
-    <div className="min-h-screen bg-[#f4fafd]">
-      <Header currentPage="Services" />
-
-      {/* Main Content */}
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-12 sm:py-14 lg:py-16 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Modern IT services designed for secure, regulated environments
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
-              >
-                Professional IT Services
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
-              >
-                Concepta Innovation Services delivers AI-enabled, security-first, and mission-aligned IT services that help government agencies and commercial organizations modernize responsibly and operate with confidence.
-              </motion.p>
-            </div>
-          </div>
-        </section>
+    <PageShell currentPage="Services">
+        <InternalHeroSection
+          label="Modern IT services designed for secure, regulated environments"
+          title="Professional IT Services"
+          description="Concepta Innovation Services delivers AI-enabled, security-first, and mission-aligned IT services that help government agencies and commercial organizations modernize responsibly and operate with confidence."
+          sectionClassName="py-12 sm:py-14 lg:py-16"
+        />
 
         {/* Services Grid */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-3">Our Core Services</h2>
@@ -72,12 +36,12 @@ export default function Services() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-[#0B4BBB]" />
+                  <Brain className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Artificial Intelligence & AI Governance
                 </h3>
-                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Responsible AI solutions built for governance, compliance, and scale.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -100,12 +64,12 @@ export default function Services() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Shield className="w-6 h-6 text-[#0B4BBB]" />
+                  <Shield className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Cybersecurity & Zero Trust Architecture
                 </h3>
-                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Security strategies that protect mission-critical systems and data.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -128,12 +92,12 @@ export default function Services() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Code className="w-6 h-6 text-[#0B4BBB]" />
+                  <Code className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Application & Platform Support
                 </h3>
-                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Reliable application and platform support for continuous operations.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -156,12 +120,12 @@ export default function Services() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Cloud className="w-6 h-6 text-[#0B4BBB]" />
+                  <Cloud className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Solution Architecture & Cloud Enablement
                 </h3>
-                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Architecting secure, scalable solutions for modern environments.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -184,12 +148,12 @@ export default function Services() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Headphones className="w-6 h-6 text-[#0B4BBB]" />
+                  <Headphones className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Service Desk & IT Operations Support
                 </h3>
-                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Responsive IT support that keeps organizations running.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -212,12 +176,12 @@ export default function Services() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Database className="w-6 h-6 text-[#0B4BBB]" />
+                  <Database className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Data Management & Analytics
                 </h3>
-                <p className="text-sm text-[#0B4BBB] font-medium mb-4">
+                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Secure data solutions for informed decision-making.
                 </p>
                 <p className="text-gray-600 mb-6">
@@ -252,7 +216,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] p-6 border border-gray-200"
+                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -266,7 +230,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] p-6 border border-gray-200"
+                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -280,7 +244,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] p-6 border border-gray-200"
+                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -294,7 +258,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="bg-[#f4f4f4] p-6 border border-gray-200"
+                className="bg-[var(--color-surface-muted)] p-6 border border-gray-200"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
                 <ul className="space-y-2 text-gray-600">
@@ -308,7 +272,7 @@ export default function Services() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -325,7 +289,7 @@ export default function Services() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
               >
                 Contact Us
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -336,9 +300,6 @@ export default function Services() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   );
 }

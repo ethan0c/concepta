@@ -3,57 +3,20 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Award, Users, Target, Globe } from "lucide-react";
-import Header from "@/components/Header";
-import HeroBackground from "@/components/HeroBackground";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
+import { InternalHeroSection } from "@/components/sections";
 
 export default function AboutContent() {
   return (
-    <div className="min-h-screen bg-[#f4fafd]">
-      <Header currentPage="About" />
-
-      {/* Main Content */}
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  About Concepta Innovation Services
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
-              >
-                Mission-Aligned IT for Government & Industry
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
-              >
-                We deliver intelligent automation, secure infrastructure, and responsive support for organizations operating in complex, regulated environments.
-              </motion.p>
-            </div>
-          </div>
-        </section>
+    <PageShell currentPage="About">
+        <InternalHeroSection
+          label="About Concepta Innovation Services"
+          title="Mission-Aligned IT for Government & Industry"
+          description="We deliver intelligent automation, secure infrastructure, and responsive support for organizations operating in complex, regulated environments."
+        />
 
         {/* Company Overview */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
               <motion.div
@@ -73,11 +36,11 @@ export default function AboutContent() {
                 <p className="text-base text-gray-600 mb-8 leading-relaxed">
                   Our professional capabilities span AI-driven workflows, AI governance, ethics, and compliance, application and platform support, solution architecture, Zero Trust cybersecurity frameworks, and responsive service desk operations. Together, these services enhance operational performance, strengthen compliance, and elevate the end-user experience across industries.
                 </p>
-                <div className="bg-[#f4f4f4] p-8 border border-gray-200">
+                <div className="bg-[var(--color-surface-muted)] p-8 border border-gray-200">
                   <h3 className="text-xl font-medium text-gray-900 mb-4">
                     Our Tagline
                   </h3>
-                  <p className="text-xl text-[#0B4BBB] font-medium mb-3">
+                  <p className="text-xl text-[var(--color-primary)] font-medium mb-3">
                     Smarter Solutions. Secure Infrastructure. Seamless Support.
                   </p>
                   <p className="text-base text-gray-700">
@@ -92,7 +55,7 @@ export default function AboutContent() {
         </section>
 
         {/* Key Differentiators */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
@@ -113,7 +76,7 @@ export default function AboutContent() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Award className="w-6 h-6 text-[#0B4BBB]" />
+                  <Award className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Certified Excellence
@@ -132,7 +95,7 @@ export default function AboutContent() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-[#0B4BBB]" />
+                  <Users className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
                 <p className="text-gray-600">
@@ -149,7 +112,7 @@ export default function AboutContent() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-[#0B4BBB]" />
+                  <Target className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
                 <p className="text-gray-600">
@@ -166,7 +129,7 @@ export default function AboutContent() {
                 className="bg-white p-8 border border-gray-200"
               >
                 <div className="w-12 h-12 bg-blue-50 flex items-center justify-center mb-6">
-                  <Globe className="w-6 h-6 text-[#0B4BBB]" />
+                  <Globe className="w-6 h-6 text-[var(--color-primary)]" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Reach</h3>
                 <p className="text-gray-600">
@@ -181,7 +144,7 @@ export default function AboutContent() {
 
 
         {/* Call to Action */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -198,7 +161,7 @@ export default function AboutContent() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
               >
                 Contact Us
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -209,9 +172,6 @@ export default function AboutContent() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   );
 }

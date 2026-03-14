@@ -10,7 +10,7 @@ const audiences = [
 
 export default function WhoWeServeSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4fafd]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-page-bg)]">
       <div className="page-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export default function WhoWeServeSection() {
               viewport={{ once: true }}
               className="flex items-center gap-4"
             >
-              <span className="w-2 h-2 bg-[#0B4BBB] rounded-full shrink-0" />
+              <span className="w-2 h-2 bg-[var(--color-primary)] rounded-full shrink-0" />
               <span className="text-lg sm:text-xl text-gray-800 font-medium">
                 {audience}
               </span>

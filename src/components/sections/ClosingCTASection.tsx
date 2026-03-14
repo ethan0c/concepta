@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ClosingCTASection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
       <div className="page-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ export default function ClosingCTASection() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+            className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
           >
             Contact Us
             <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -24,7 +24,7 @@ export default function Footer({
   ],
 }: FooterProps) {
   return (
-    <footer className="bg-[#161616] text-white">
+    <footer className="bg-[var(--color-hero-bg)] text-white">
       <div className="page-container py-12 sm:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           {/* Company Info */}
@@ -93,9 +93,9 @@ export default function Footer({
               <input
                 type="email"
                 placeholder="Email address"
-                className="flex-1 min-w-0 px-3 py-2 bg-[#262626] border border-[#393939] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#0B4BBB]"
+                className="flex-1 min-w-0 px-3 py-2 bg-[var(--color-dark-alt)] border border-[var(--color-border-dark)] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[var(--color-primary)]"
               />
-              <button className="bg-[#0B4BBB] hover:bg-[#0a3d9c] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
+              <button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
                 Subscribe
               </button>
             </div>
@@ -140,7 +140,7 @@ export default function Footer({
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#393939] pt-6">
+        <div className="border-t border-[var(--color-border-dark)] pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
             <p className="text-xs text-gray-500">
               &copy; {new Date().getFullYear()} Concepta Innovation Services, LLC. All rights reserved.

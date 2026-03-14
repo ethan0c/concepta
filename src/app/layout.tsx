@@ -2,10 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({ 
+const manrope = Manrope({
   subsets: ["latin"],
-  variable: '--font-manrope',
-  fallback: ['Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+  variable: "--font-manrope",
+  fallback: ["Arial", "Helvetica Neue", "Helvetica", "sans-serif"],
 });
 
 export const viewport: Viewport = {

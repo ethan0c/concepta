@@ -1,44 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Header from "@/components/Header";
-import HeroBackground from "@/components/HeroBackground";
-import { Footer, BottomFooter } from "@/components/layout";
+import { PageShell } from "@/components/layout";
+import { InternalHeroSection } from "@/components/sections";
 
 export default function TermsAndConditions() {
   return (
-    <div className="min-h-screen bg-[#f4fafd]">
-      <Header currentPage="" />
-
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                   <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Legal
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
-              >
-                Terms and Conditions
-              </motion.h1>
-            </div>
-          </div>
-        </section>
+    <PageShell>
+        <InternalHeroSection label="Legal" title="Terms and Conditions" />
 
         {/* Content */}
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
@@ -97,9 +65,6 @@ export default function TermsAndConditions() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   );
 }

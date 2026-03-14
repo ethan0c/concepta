@@ -1,12 +1,23 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f4fafd;
   --foreground: #161616;
+  --color-page-bg: #f4fafd;
+  --color-surface: #ffffff;
+  --color-surface-rgb: 255 255 255;
+  --color-surface-subtle: #f5f7fa;
+  --color-surface-muted: #f4f4f4;
+  --color-surface-muted-hover: #e8e8e8;
   --color-primary: #0B4BBB;
+  --color-primary-hover: #0a3d9c;
   --color-primary-dark: #082E84;
+  --color-header-bg: #0B4BBB;
+  --color-header-bg-rgb: 11 75 187;
+  --color-hero-bg: #161616;
   --color-dark: #161616;
   --color-dark-alt: #262626;
+  --color-border-dark: #393939;
 }
 
 /* Typography Tokens */

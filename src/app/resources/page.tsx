@@ -3,9 +3,8 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Shield, Brain, Cloud, Lock, FileText, ArrowRight } from 'lucide-react'
-import Header from '@/components/Header'
-import HeroBackground from '@/components/HeroBackground'
-import { Footer, BottomFooter } from '@/components/layout'
+import { PageShell } from '@/components/layout'
+import { InternalHeroSection } from '@/components/sections'
 
 const topics = [
   {
@@ -61,50 +60,15 @@ const caseStudies = [
 
 export default function Resources() {
   return (
-    <div className="min-h-screen bg-[#f4fafd]">
-      <Header currentPage="Resources" />
-
-      <main className="pt-16 sm:pt-20">
-        {/* Hero Section */}
-        <section className="relative bg-[#161616] py-16 sm:py-20 lg:py-24 overflow-hidden">
-          <HeroBackground />
-          <div className="page-container relative z-10">
-            <div className="max-w-3xl">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.55 }}
-                className="inline-flex items-center gap-2 mb-6"
-              >
-                <span className="w-8 h-[2px] bg-[#0B4BBB]" />
-                <span className="text-gray-500 text-xs sm:text-sm font-medium tracking-wider uppercase">
-                  Knowledge Center
-                </span>
-              </motion.div>
-
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#0B4BBB] leading-tight mb-6"
-              >
-                Resources & Insights
-              </motion.h1>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
-              >
-                Insights, strategies, and real-world outcomes across cybersecurity, AI, cloud, and compliance—drawn from our work with government and enterprise clients.
-              </motion.p>
-            </div>
-          </div>
-        </section>
+    <PageShell currentPage="Resources">
+        <InternalHeroSection
+          label="Knowledge Center"
+          title="Resources & Insights"
+          description="Insights, strategies, and real-world outcomes across cybersecurity, AI, cloud, and compliance, drawn from our work with government and enterprise clients."
+        />
 
         {/* Topic Areas */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Areas of Expertise</h2>
@@ -125,9 +89,9 @@ export default function Resources() {
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-12 h-12 bg-blue-50 flex items-center justify-center">
-                      <topic.icon className="w-6 h-6 text-[#0B4BBB]" />
+                      <topic.icon className="w-6 h-6 text-[var(--color-primary)]" />
                     </div>
-                    <span className="text-xs text-[#0B4BBB] font-medium uppercase tracking-wider">{topic.category}</span>
+                    <span className="text-xs text-[var(--color-primary)] font-medium uppercase tracking-wider">{topic.category}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{topic.title}</h3>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed">{topic.description}</p>
@@ -138,7 +102,7 @@ export default function Resources() {
                   </ul>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm text-[#0B4BBB] font-medium hover:underline"
+                    className="inline-flex items-center text-sm text-[var(--color-primary)] font-medium hover:underline"
                   >
                     Discuss with our team
                     <ArrowRight className="w-4 h-4 ml-1" />
@@ -167,9 +131,9 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-[#f4f4f4] p-8 border border-gray-200"
+                  className="bg-[var(--color-surface-muted)] p-8 border border-gray-200"
                 >
-                  <span className="text-xs text-[#0B4BBB] bg-blue-50 px-2 py-1 font-medium uppercase">{study.category}</span>
+                  <span className="text-xs text-[var(--color-primary)] bg-blue-50 px-2 py-1 font-medium uppercase">{study.category}</span>
                   <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-3">{study.title}</h3>
                   <p className="text-gray-600 text-sm mb-6 leading-relaxed">{study.description}</p>
                   <div className="bg-white p-4 border border-gray-200">
@@ -183,7 +147,7 @@ export default function Resources() {
         </section>
 
         {/* Frameworks & Standards */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Frameworks & Standards</h2>
@@ -212,7 +176,7 @@ export default function Resources() {
                   className="bg-white p-6 border border-gray-200"
                 >
                   <div className="w-10 h-10 bg-blue-50 flex items-center justify-center mb-3">
-                    <FileText className="w-5 h-5 text-[#0B4BBB]" />
+                    <FileText className="w-5 h-5 text-[var(--color-primary)]" />
                   </div>
                   <h3 className="text-base font-semibold text-gray-900 mb-1">{framework.name}</h3>
                   <p className="text-xs text-gray-500">{framework.desc}</p>
@@ -223,7 +187,7 @@ export default function Resources() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[#161616]">
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
           <div className="page-container">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -240,7 +204,7 @@ export default function Resources() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[#0B4BBB] text-white text-sm font-medium hover:bg-[#0a3d9c] transition-colors"
+                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
               >
                 Contact Us
                 <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -251,9 +215,6 @@ export default function Resources() {
           </div>
         </section>
 
-        <Footer />
-        <BottomFooter />
-      </main>
-    </div>
+    </PageShell>
   )
 }

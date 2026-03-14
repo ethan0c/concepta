@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import HeroBackground from "@/components/HeroBackground";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 20 },
   show: (delay: number) => ({
     opacity: 1,
     y: 0,
@@ -18,49 +18,78 @@ export default function HeroSection() {
     <section className="relative bg-[var(--color-hero-bg)] overflow-hidden">
       <HeroBackground />
 
-      {/* Foreground content — static, fade-in only */}
+      {/* Foreground content — no parallax, fade-in only */}
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="min-h-[56vh] sm:min-h-[60vh] lg:min-h-[62vh] pt-[72px] pb-[40px] sm:pt-[84px] sm:pb-[52px] lg:pt-[88px] lg:pb-[56px] flex items-center">
+        <div className="min-h-[56vh] sm:min-h-[60vh] lg:min-h-[64vh] pt-[72px] pb-[48px] sm:pt-[84px] sm:pb-[60px] lg:pt-[96px] lg:pb-[72px] flex items-center">
           <div className="max-w-4xl">
+
             {/* H1 */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold text-[var(--color-primary)] leading-[1.1] tracking-tight mb-8 sm:mb-10"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-[var(--color-primary)] leading-[1.1] tracking-tight mb-6 sm:mb-8"
               variants={fadeUp}
               initial="hidden"
               animate="show"
               custom={0.1}
             >
-              Technology for regulated environments. Done right.
+              Secure, modern technology for complex, regulated environments.
             </motion.h1>
 
-            {/* Subhead */}
+            {/* Subheadline */}
             <motion.p
-              className="text-base sm:text-lg lg:text-xl text-black max-w-2xl mb-12 leading-relaxed font-light"
+              className="text-base sm:text-lg lg:text-xl text-black max-w-2xl mb-10 sm:mb-12 leading-relaxed font-light"
               variants={fadeUp}
               initial="hidden"
               animate="show"
               custom={0.3}
             >
-              AI, cybersecurity, and modern IT services built for secure, governed operations.
+              AI, cybersecurity, and cloud solutions engineered for governed, mission‑critical operations.
             </motion.p>
 
-            {/* CTA */}
-            <motion.div
+            {/* CTAs — primary at 0.42 s, secondary staggered 120 ms later */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                custom={0.42}
+              >
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
+                >
+                  Talk to an Expert
+                  <svg className="w-4 h-4 ml-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </motion.div>
+
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="show"
+                custom={0.54}
+              >
+                <Link
+                  href="/solutions"
+                  className="inline-flex items-center justify-center px-7 py-4 border border-white/50 text-white text-sm font-medium hover:border-white hover:bg-white/10 transition-colors"
+                >
+                  Explore Our Capabilities
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Supporting microcopy */}
+            <motion.p
+              className="mt-5 text-xs sm:text-sm text-gray-500 leading-relaxed"
               variants={fadeUp}
               initial="hidden"
               animate="show"
-              custom={0.5}
+              custom={0.64}
             >
-              <Link
-                href="/services"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                Explore Our Services
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
+              Designed for organizations operating in secure, governed, and mission‑critical environments.
+            </motion.p>
+
           </div>
         </div>
       </div>

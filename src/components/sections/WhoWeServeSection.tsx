@@ -63,12 +63,19 @@ export default function WhoWeServeSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.1 * (index + 1) }}
               viewport={{ once: true }}
-              className="bg-white p-6 border border-gray-200"
+              className="concepta-card concepta-card-compact"
             >
-              <span className="w-2 h-2 bg-[var(--color-primary)] rounded-full shrink-0" />
-              <span className="text-lg sm:text-xl text-gray-800 font-medium">
-                {audience}
-              </span>
+              <div className="flex items-start gap-3">
+                <span className="mt-2 w-2 h-2 bg-[var(--color-primary)] rounded-full shrink-0" />
+                <div>
+                  <h3 className="text-lg sm:text-xl text-gray-900 font-medium mb-2">
+                    {sector.title}
+                  </h3>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {sector.description}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

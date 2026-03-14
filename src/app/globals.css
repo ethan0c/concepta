@@ -2,21 +2,27 @@
 
 :root {
   --background: #f4fafd;
-  --foreground: #161616;
+  --foreground: #000000;
   --color-page-bg: #f4fafd;
   --color-surface: #ffffff;
   --color-surface-rgb: 255 255 255;
   --color-surface-subtle: #f5f7fa;
   --color-surface-muted: #f4f4f4;
   --color-surface-muted-hover: #e8e8e8;
-  --color-primary: #0B4BBB;
-  --color-primary-hover: #0a3d9c;
-  --color-primary-dark: #082E84;
-  --color-header-bg: #0B4BBB;
-  --color-header-bg-rgb: 11 75 187;
-  --color-border-subtle: rgba(11, 75, 187, 0.14);
-  --color-border-strong: rgba(11, 75, 187, 0.24);
+  --color-primary: #0A1A2F;
+  --color-primary-hover: #132947;
+  --color-primary-dark: #000000;
+  --color-icon-navy: #0A1A2F;
+  --color-icon-navy-hover: #1E3A8A;
+  --color-header-bg: #0A1A2F;
+  --color-header-bg-rgb: 10 26 47;
+  --color-border-subtle: rgba(10, 26, 47, 0.14);
+  --color-border-strong: rgba(10, 26, 47, 0.24);
   --color-hero-bg: #161616;
+  --color-hero-title: #000000;
+  --color-hero-body: #0A1A2F;
+  --color-hero-body-muted: #374151;
+  --color-hero-label: #0A1A2F;
   --color-dark: #161616;
   --color-dark-alt: #262626;
   --color-border-dark: #393939;
@@ -131,6 +137,22 @@ body {
   font-weight: var(--mds-font-weight-regular);
 }
 
+.hero-title {
+  color: var(--color-hero-title);
+}
+
+.hero-body {
+  color: var(--color-hero-body);
+}
+
+.hero-body-muted {
+  color: var(--color-hero-body-muted);
+}
+
+.hero-label {
+  color: var(--color-hero-label);
+}
+
 /* Responsive container with proper padding */
 .page-container {
   max-width: 1280px;
@@ -197,6 +219,33 @@ body {
 .concepta-icon-tile-strong {
   background: var(--color-primary);
   color: #ffffff;
+}
+
+.capability-icon,
+.sector-icon {
+  color: var(--color-icon-navy);
+  width: 48px;
+  height: 48px;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: color 0.2s ease-in-out;
+}
+
+.why-icon {
+  color: var(--color-icon-navy);
+  width: 48px;
+  height: 48px;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: color 0.2s ease-in-out;
+}
+
+.concepta-card:hover .capability-icon,
+.concepta-card:hover .sector-icon,
+.concepta-card:hover .why-icon {
+  color: var(--color-icon-navy-hover);
 }
 
 @media (min-width: 640px) {

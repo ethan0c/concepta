@@ -5,7 +5,7 @@ import { InternalHeroSection } from "@/components/sections";
 
 export default function TermsAndConditions() {
   return (
-    <PageShell>
+    <PageShell headerTheme="light">
         <InternalHeroSection label="Legal" title="Terms and Conditions" />
 
         {/* Content */}

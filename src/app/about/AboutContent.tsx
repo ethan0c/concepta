@@ -8,7 +8,7 @@ import { InternalHeroSection } from "@/components/sections";
 
 export default function AboutContent() {
   return (
-    <PageShell currentPage="About">
+    <PageShell currentPage="About" headerTheme="light">
         <InternalHeroSection
           label="About Concepta Innovation Services"
           title="Mission-Aligned IT for Government & Industry"

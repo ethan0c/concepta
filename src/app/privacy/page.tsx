@@ -5,7 +5,7 @@ import { InternalHeroSection } from "@/components/sections";
 
 export default function PrivacyPolicy() {
   return (
-    <PageShell>
+    <PageShell headerTheme="light">
         <InternalHeroSection label="Legal" title="Privacy Policy" />
 
         {/* Content */}

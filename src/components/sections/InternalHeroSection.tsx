@@ -18,8 +18,8 @@ export default function InternalHeroSection({
   title,
   description,
   sectionClassName = "py-16 sm:py-20 lg:py-24",
-  titleClassName = "text-3xl sm:text-4xl lg:text-5xl font-normal text-white leading-tight mb-6",
-  descriptionClassName = "text-base sm:text-lg text-white/75 leading-relaxed max-w-xl",
+  titleClassName = "hero-title text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight mb-6",
+  descriptionClassName = "hero-body-muted text-base sm:text-lg leading-relaxed max-w-xl",
   children,
 }: InternalHeroSectionProps) {
   return (
@@ -33,8 +33,8 @@ export default function InternalHeroSection({
             transition={{ duration: 0.55 }}
             className="inline-flex items-center gap-2 mb-6"
           >
-            <span className="w-8 h-[2px] bg-[var(--color-primary)]" />
-            <span className="text-blue-300 text-xs sm:text-sm font-medium tracking-wider uppercase">{label}</span>
+            <span className="w-8 h-[2px] bg-[var(--color-icon-navy)]" />
+            <span className="hero-label text-xs sm:text-sm font-medium tracking-wider uppercase">{label}</span>
           </motion.div>
 
           <motion.h1

@@ -13,7 +13,7 @@ import { InternalHeroSection } from "@/components/sections";
 
 export default function ITSupport() {
   return (
-    <PageShell currentPage="Services">
+    <PageShell currentPage="Services" headerTheme="light">
         <InternalHeroSection
           label="Responsive IT support that keeps organizations running"
           title="Service Desk & IT Operations Support"

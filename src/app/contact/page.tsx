@@ -47,17 +47,17 @@ export default function Contact() {
   }
 
   return (
-    <PageShell currentPage="Contact">
+    <PageShell currentPage="Contact" headerTheme="light">
         <InternalHeroSection
           label="Contact Us"
           title="Contact Concepta Innovation Services"
-          titleClassName="text-3xl sm:text-4xl lg:text-5xl font-normal text-[var(--color-primary)] leading-tight mb-4"
+          titleClassName="hero-title text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight mb-4"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="text-xl sm:text-2xl text-black leading-snug max-w-xl mb-4 font-light"
+            className="hero-body text-xl sm:text-2xl leading-snug max-w-xl mb-4 font-light"
           >
             Let&apos;s talk about secure, governed, and modern IT solutions.
           </motion.p>
@@ -66,7 +66,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg text-black leading-relaxed max-w-xl"
+            className="hero-body-muted text-base sm:text-lg leading-relaxed max-w-xl"
           >
             Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
           </motion.p>

@@ -3,13 +3,15 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
+  BrainCircuit24Regular,
+  CloudArrowUp24Regular,
+  Code24Regular,
+  DataBarVertical24Regular,
+  SettingsCogMultiple24Regular,
+  ShieldCheckmark24Regular,
+} from "@fluentui/react-icons";
+import {
   ArrowRight,
-  Bot,
-  Cloud,
-  Code2,
-  Compass,
-  RefreshCw,
-  ShieldCheck,
 } from "lucide-react";
 
 interface Pillar {
@@ -21,46 +23,46 @@ interface Pillar {
 
 const pillars: Pillar[] = [
   {
-    title: "Digital Modernization",
+    title: "AI & Automation",
     description:
-      "We modernize legacy systems, streamline workflows, and build scalable digital platforms that support long-term growth.",
+      "We deploy intelligent automation that reduces manual effort, improves decision velocity, and scales cognitive workflows across teams.",
     href: "/solutions",
-    icon: RefreshCw,
+    icon: BrainCircuit24Regular,
   },
   {
-    title: "Cloud & Data Engineering",
+    title: "Cloud Modernization",
     description:
-      "We architect secure, high-performance cloud and data solutions that improve reliability, accelerate insights, and reduce operational complexity.",
-    href: "/services",
-    icon: Cloud,
-  },
-  {
-    title: "AI-Driven Automation",
-    description:
-      "We deploy intelligent automation that eliminates manual work, enhances decision-making, and increases efficiency across the organization.",
-    href: "/services",
-    icon: Bot,
-  },
-  {
-    title: "Cybersecurity & Compliance",
-    description:
-      "We protect critical systems with enterprise-grade security, continuous monitoring, and compliance frameworks aligned to industry and regulatory standards.",
-    href: "/services/security-strategy",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Custom Software Development",
-    description:
-      "We design and build tailored applications that solve complex business challenges and integrate seamlessly with your existing ecosystem.",
+      "We modernize platforms through secure cloud migration, architecture optimization, and resilient operating models for long-term agility.",
     href: "/solutions",
-    icon: Code2,
+    icon: CloudArrowUp24Regular,
   },
   {
-    title: "Advisory & Strategy",
+    title: "Cybersecurity",
     description:
-      "We help organizations align technology investments with business goals through expert guidance, road mapping, and strategic planning.",
-    href: "/contact",
-    icon: Compass,
+      "We protect critical systems with enterprise security controls, proactive monitoring, and compliance-first governance practices.",
+    href: "/solutions",
+    icon: ShieldCheckmark24Regular,
+  },
+  {
+    title: "Data & Analytics",
+    description:
+      "We build trusted data foundations and analytics pipelines that improve visibility, forecasting, and strategic execution.",
+    href: "/solutions",
+    icon: DataBarVertical24Regular,
+  },
+  {
+    title: "Application Development",
+    description:
+      "We engineer modern, secure applications tailored to complex workflows, integration needs, and long-term maintainability.",
+    href: "/solutions",
+    icon: Code24Regular,
+  },
+  {
+    title: "Infrastructure & DevOps",
+    description:
+      "We strengthen infrastructure reliability and delivery velocity through automation, observability, and mature DevOps practices.",
+    href: "/solutions",
+    icon: SettingsCogMultiple24Regular,
   },
 ];
 
@@ -99,15 +101,13 @@ export default function CoreServicesSection() {
               viewport={{ once: true }}
               className="concepta-card concepta-card-compact flex flex-col"
             >
-              <div className="concepta-icon-tile concepta-icon-tile-sm mb-5">
-                <pillar.icon className="w-5 h-5" />
-              </div>
+              <pillar.icon className="capability-icon mb-4" />
 
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
                 {pillar.title}
               </h3>
 
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
+              <p className="text-base text-gray-600 leading-relaxed mb-7">
                 {pillar.description}
               </p>
 

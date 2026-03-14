@@ -43,7 +43,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <PageShell currentPage="Solutions">
+    <PageShell currentPage="Solutions" headerTheme="light">
         <InternalHeroSection
           label="Technology Solutions for Regulated Environments"
           title="Solutions designed to support secure, governed, and scalable operations."

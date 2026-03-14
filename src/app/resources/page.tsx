@@ -60,7 +60,7 @@ const caseStudies = [
 
 export default function Resources() {
   return (
-    <PageShell currentPage="Resources">
+    <PageShell currentPage="Resources" headerTheme="light">
         <InternalHeroSection
           label="Knowledge Center"
           title="Resources & Insights"

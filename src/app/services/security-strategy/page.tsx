@@ -8,7 +8,7 @@ import { InternalHeroSection } from "@/components/sections";
 
 export default function SecurityStrategy() {
   return (
-    <PageShell currentPage="Services">
+    <PageShell currentPage="Services" headerTheme="light">
         <InternalHeroSection
           label="Security strategies that protect mission-critical systems and data"
           title="Cybersecurity & Zero Trust Architecture"

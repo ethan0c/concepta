@@ -8,7 +8,7 @@ import { InternalHeroSection } from "@/components/sections";
 
 export default function Services() {
   return (
-    <PageShell currentPage="Services">
+    <PageShell currentPage="Services" headerTheme="light">
         <InternalHeroSection
           label="Modern IT services designed for secure, regulated environments"
           title="Professional IT Services"

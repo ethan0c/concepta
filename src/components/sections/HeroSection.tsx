@@ -25,7 +25,7 @@ export default function HeroSection() {
 
             {/* H1 */}
             <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold text-black leading-[1.1] tracking-tight mb-6 sm:mb-8"
+              className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] tracking-tight mb-6 sm:mb-8"
               variants={fadeUp}
               initial="hidden"
               animate="show"
@@ -36,13 +36,13 @@ export default function HeroSection() {
 
             {/* Subheadline */}
             <motion.p
-              className="text-base sm:text-lg lg:text-xl text-[var(--color-primary)] max-w-2xl mb-10 sm:mb-12 leading-relaxed font-light"
+              className="hero-body text-base sm:text-lg lg:text-xl max-w-2xl mb-10 sm:mb-12 leading-relaxed font-light"
               variants={fadeUp}
               initial="hidden"
               animate="show"
               custom={0.3}
             >
-              AI, cybersecurity, and cloud solutions engineered for governed, mission‑critical operations.
+              AI, cybersecurity, and modern IT services built for rigorous governance and compliance-driven operations.
             </motion.p>
 
             {/* CTAs — primary at 0.42 s, secondary staggered 120 ms later */}
@@ -55,7 +55,7 @@ export default function HeroSection() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
+                  className="inline-flex items-center justify-center px-7 py-4 bg-[#1E3A8A] text-white text-sm font-medium hover:bg-[#1e40af] transition-colors"
                 >
                   Talk to an Expert
                   <svg className="w-4 h-4 ml-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -81,7 +81,7 @@ export default function HeroSection() {
 
             {/* Supporting microcopy */}
             <motion.p
-              className="mt-5 text-xs sm:text-sm text-gray-600 leading-relaxed"
+              className="hero-body-muted mt-5 text-xs sm:text-sm leading-relaxed"
               variants={fadeUp}
               initial="hidden"
               animate="show"

@@ -70,7 +70,6 @@ export default function Footer({
             <ul className="space-y-2.5">
               <li><Link href="/about" className="text-sm text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/resources" className="text-sm text-gray-300 hover:text-white transition-colors">Resources</Link></li>
-              <li><Link href="/contact" className="text-sm text-gray-300 hover:text-white transition-colors">Contact</Link></li>
             </ul>
           </div>
 
@@ -88,6 +87,13 @@ export default function Footer({
               </a>
             </div>
 
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-4 py-2.5 mb-5 bg-white text-[var(--color-primary)] text-xs font-semibold hover:bg-blue-50 transition-colors"
+            >
+              Talk to an Expert
+            </Link>
+
             {/* Newsletter */}
             <div className="flex gap-0">
               <input
@@ -95,7 +101,7 @@ export default function Footer({
                 placeholder="Email address"
                 className="flex-1 min-w-0 px-3 py-2 bg-[var(--color-dark-alt)] border border-[var(--color-border-dark)] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[var(--color-primary)]"
               />
-              <button className="bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
+              <button className="bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
                 Subscribe
               </button>
             </div>
@@ -148,7 +154,6 @@ export default function Footer({
             <div className="flex flex-wrap gap-4">
               <Link href="/privacy" className="text-xs text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="text-xs text-gray-500 hover:text-white transition-colors">Terms of Use</Link>
-              <Link href="/contact" className="text-xs text-gray-500 hover:text-white transition-colors">Contact</Link>
             </div>
           </div>
         </div>

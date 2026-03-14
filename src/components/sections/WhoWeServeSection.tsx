@@ -2,10 +2,32 @@
 
 import { motion } from "framer-motion";
 
-const audiences = [
-  "Federal, State, and Local Government",
-  "Healthcare and Regulated Industries",
-  "Enterprise and Critical Infrastructure Organizations",
+const sectors = [
+  {
+    title: "Public Sector (Federal, State, Local)",
+    description:
+      "We support agencies that require secure, reliable, and mission‑critical digital operations.",
+  },
+  {
+    title: "Healthcare & Life Sciences",
+    description:
+      "We modernize systems, improve data flows, and support compliance‑driven clinical and research environments.",
+  },
+  {
+    title: "Technology & SaaS",
+    description:
+      "We help high‑growth digital businesses scale through cloud, data, and automation solutions built for performance.",
+  },
+  {
+    title: "Transportation",
+    description:
+      "We engineer solutions that improve operational efficiency, safety, and real‑time data visibility across transportation networks.",
+  },
+  {
+    title: "Energy & Utilities",
+    description:
+      "We strengthen operational resilience and support modernization across critical infrastructure environments.",
+  },
 ];
 
 export default function WhoWeServeSection() {
@@ -19,7 +41,7 @@ export default function WhoWeServeSection() {
           viewport={{ once: true }}
           className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
         >
-          Who we serve
+          Who We Serve
         </motion.h2>
 
         <motion.p
@@ -29,23 +51,27 @@ export default function WhoWeServeSection() {
           viewport={{ once: true }}
           className="text-base sm:text-lg text-gray-600 mb-10 leading-relaxed max-w-2xl"
         >
-          Built for organizations operating in regulated environments.
+          We partner with organizations operating in complex, high‑stakes
+          environments where reliability, security, and scalability matter most.
         </motion.p>
 
-        <div className="space-y-4">
-          {audiences.map((audience, index) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {sectors.map((sector, index) => (
             <motion.div
-              key={audience}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: 0.15 * (index + 1) }}
+              key={sector.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.1 * (index + 1) }}
               viewport={{ once: true }}
-              className="flex items-center gap-4"
+              className="bg-white p-6 border border-gray-200"
             >
-              <span className="w-2 h-2 bg-[#0B4BBB] rounded-full shrink-0" />
-              <span className="text-lg sm:text-xl text-gray-800 font-medium">
-                {audience}
-              </span>
+              <div className="w-1 h-8 bg-[#0B4BBB] mb-4" />
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                {sector.title}
+              </h3>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                {sector.description}
+              </p>
             </motion.div>
           ))}
         </div>

@@ -72,7 +72,7 @@ export default function HeroSection() {
               >
                 <Link
                   href="/solutions"
-                  className="inline-flex items-center justify-center px-7 py-4 border border-black/60 text-black text-sm font-medium hover:border-black hover:bg-black/10 transition-colors"
+                  className="inline-flex items-center justify-center px-7 py-4 border border-white bg-white text-gray-900 text-sm font-medium hover:bg-gray-100 hover:border-gray-100 transition-colors"
                 >
                   Explore Our Capabilities
                 </Link>

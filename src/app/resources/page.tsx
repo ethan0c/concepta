@@ -61,7 +61,7 @@ const caseStudies = [
 
 export default function Resources() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f4fafd]">
       <Header currentPage="Resources" />
 
       <main className="pt-16 sm:pt-20">

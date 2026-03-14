@@ -48,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f4fafd]">
       <Header currentPage="Contact" />
 
       {/* Main Content */}

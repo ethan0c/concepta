@@ -44,7 +44,7 @@ const solutions = [
 
 export default function Solutions() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f4fafd]">
       <Header currentPage="Solutions" />
 
       <main className="pt-16 sm:pt-20">

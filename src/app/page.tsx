@@ -6,7 +6,7 @@ import { HeroSection, CoreServicesSection, WhoWeServeSection, WhyChooseUsSection
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f4fafd]">
       <Header currentPage="Home" />
 
       <main className="pt-16 sm:pt-20">

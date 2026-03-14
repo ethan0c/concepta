@@ -9,7 +9,7 @@ import { Footer, BottomFooter } from "@/components/layout";
 
 export default function SecurityStrategy() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#f4fafd]">
       <Header currentPage="Services" />
 
       {/* Main Content */}

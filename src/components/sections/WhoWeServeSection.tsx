@@ -10,7 +10,7 @@ const audiences = [
 
 export default function WhoWeServeSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4f4f4]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4fafd]">
       <div className="page-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

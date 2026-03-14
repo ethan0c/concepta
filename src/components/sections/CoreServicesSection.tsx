@@ -27,7 +27,7 @@ const pillars: Pillar[] = [
 
 export default function CoreServicesSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#F5F7FA]">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4fafd]">
       <div className="page-container">
         {/* Section Header */}
         <motion.h2

@@ -11,7 +11,7 @@ const reasons = [
 
 export default function WhyChooseUsSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#f4fafd]">
       <div className="page-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

@@ -11,10 +11,12 @@ export default function Home() {
 
       <main className="pt-16 sm:pt-20">
         <HeroSection />
-        <CoreServicesSection />
-        <WhoWeServeSection />
-        <WhyChooseUsSection />
-        <ClosingCTASection />
+        <div className="bg-[#f4fafd]">
+          <CoreServicesSection />
+          <WhoWeServeSection />
+          <WhyChooseUsSection />
+          <ClosingCTASection />
+        </div>
         <Footer />
         <BottomFooter />
       </main>

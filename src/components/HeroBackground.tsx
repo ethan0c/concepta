@@ -17,7 +17,7 @@ export default function HeroBackground() {
     <div ref={ref} className="absolute inset-0 pointer-events-none overflow-hidden">
       {/* Layer 1 — deep dark-blue gradient base */}
       <motion.div
-        className="absolute inset-0 will-change-transform"
+        className="hero-bg hero-bg-base absolute inset-0 will-change-transform"
         style={{ y: baseY }}
       >
         <Image
@@ -33,15 +33,15 @@ export default function HeroBackground() {
 
       {/* Layer 2 — subtle wave highlight, screen blend */}
       <motion.div
-        className="absolute inset-0 will-change-transform"
-        style={{ y: waveY, opacity: 0.65, mixBlendMode: "screen" }}
+        className="hero-bg hero-bg-wave absolute inset-0 will-change-transform"
+        style={{ y: waveY, mixBlendMode: "screen" }}
       >
         <Image
           src="/assets/Subtle parallax.jpg"
           alt=""
           fill
           sizes="100vw"
-          className="object-cover object-center scale-110"
+          className="object-cover object-center scale-110 opacity-[0.65]"
           aria-hidden="true"
         />
       </motion.div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Phone24Regular, Mail24Regular, Location24Regular, Clock24Regular, CheckmarkCircle24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from '@/components/layout'
-import HeroBackground from '@/components/HeroBackground'
+import InternalHeroBackground from '@/components/InternalHeroBackground'
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -48,24 +48,20 @@ export default function Contact() {
 
   return (
     <PageShell currentPage="Contact" headerTheme="light">
-        <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
-          <HeroBackground />
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
-          />
+        <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "#EEF2F9" }}>
+          <InternalHeroBackground />
           <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <div className="max-w-[680px]">
-              <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+              <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em] text-[var(--brand-cyan)]">
                 Contact Us
               </p>
-              <h1 className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+              <h1 className="hero-animate delay-1 mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[var(--brand-navy)]">
                 Contact Concepta Innovation Services
               </h1>
               <p className="hero-animate delay-2 hero-body mt-6 text-base sm:text-lg font-medium leading-relaxed">
                 Let&apos;s talk about secure, governed, and modern IT solutions.
               </p>
-              <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+              <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
                 Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
               </p>
             </div>

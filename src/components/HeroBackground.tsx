@@ -45,7 +45,6 @@ export default function HeroBackground() {
           aria-hidden="true"
         />
       </motion.div>
-
     </div>
   );
 }

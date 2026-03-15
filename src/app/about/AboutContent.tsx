@@ -3,26 +3,22 @@
 import { motion } from "framer-motion";
 import { Trophy24Regular, People24Regular, Target24Regular, Globe24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
-import HeroBackground from "@/components/HeroBackground";
+import InternalHeroBackground from "@/components/InternalHeroBackground";
 
 export default function AboutContent() {
   return (
     <PageShell currentPage="About" headerTheme="light">
-      <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
-        <HeroBackground />
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
-        />
+      <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "#EEF2F9" }}>
+        <InternalHeroBackground />
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="max-w-[680px]">
-            <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+            <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em] text-[var(--brand-cyan)]">
               About Concepta Innovation Services
             </p>
-            <h1 className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+            <h1 className="hero-animate delay-1 mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[var(--brand-navy)]">
               Mission-Aligned IT for Government &amp; Industry
             </h1>
-            <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+            <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
               We deliver intelligent automation, secure infrastructure, and responsive support for organizations operating in complex, regulated environments.
             </p>
           </div>

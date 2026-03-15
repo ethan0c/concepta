@@ -122,7 +122,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   className={`relative px-3.5 py-2 text-sm transition-colors ${
                     isCurrentPageActive(item.name, item.href)
                       ? `${headerTextClass} font-semibold`
-                      : `${headerSubtleTextClass} font-semibold hover:text-sky-500`
+                      : `${headerSubtleTextClass} font-semibold hover:text-[var(--brand-cyan)]`
                   }`}
                 >
                   {item.name}
@@ -216,8 +216,8 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`flex items-center justify-between w-full py-3 px-4 text-[15px] transition-all duration-150 ${
                     isCurrentPageActive(item.name, item.href)
-                      ? "text-[var(--color-primary)] bg-blue-50 font-medium"
-                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                      ? "text-[var(--brand-cyan)] bg-blue-50 font-medium"
+                      : "text-gray-700 hover:text-[var(--brand-cyan)] hover:bg-gray-50"
                   }`}
                 >
                   {item.name}
@@ -235,14 +235,14 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
               <Link 
                 href="/services/security-strategy"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2.5 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 text-sm transition-colors"
+                className="block py-2.5 px-4 text-gray-600 hover:text-[var(--brand-cyan)] hover:bg-gray-50 text-sm transition-colors"
               >
                 Security Strategy
               </Link>
               <Link 
                 href="/services/it-support"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="block py-2.5 px-4 text-gray-600 hover:text-gray-900 hover:bg-gray-50 text-sm transition-colors"
+                className="block py-2.5 px-4 text-gray-600 hover:text-[var(--brand-cyan)] hover:bg-gray-50 text-sm transition-colors"
               >
                 IT Support
               </Link>
@@ -252,8 +252,8 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
           {/* Sidebar Footer */}
           <div className="p-4 border-t border-gray-100 space-y-3">
             <div className="text-xs text-gray-500 space-y-1">
-              <a href="tel:+18775941944" className="block hover:text-gray-700">(877) 594-1944</a>
-              <a href="mailto:support@conceptainnovation.com" className="block hover:text-gray-700">support@conceptainnovation.com</a>
+              <a href="tel:+18775941944" className="block hover:text-[var(--brand-cyan)]">(877) 594-1944</a>
+              <a href="mailto:support@conceptainnovation.com" className="block hover:text-[var(--brand-cyan)]">support@conceptainnovation.com</a>
             </div>
             <Link 
               href="/contact"

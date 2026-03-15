@@ -143,11 +143,19 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             <div className="flex items-center gap-3">
               <a 
                 href="tel:+18775941944"
-                className={`hidden xl:flex items-center text-xs transition-colors ${headerSubtleTextClass} ${
-                  theme === "light" && !scrolled ? "hover:text-[var(--color-primary-hover)]" : "hover:text-[var(--color-primary-hover)]"
+                aria-label="Call us at (877) 594-1944"
+                className={`concepta-button hidden lg:inline-flex items-center gap-2 px-4 sm:px-5 py-2 text-sm font-medium border border-[var(--color-primary)] bg-white transition-colors ${headerSubtleTextClass} ${
+                  theme === "light" && !scrolled
+                    ? "hover:text-[var(--color-primary-hover)] hover:bg-blue-50"
+                    : "hover:text-[var(--color-primary-hover)] hover:bg-blue-50"
                 }`}
               >
-                (877) 594-1944
+                <svg className="w-3.5 h-3.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d="M22 16.92V20a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3.09a2 2 0 0 1 2 1.72c.12.9.33 1.78.62 2.62a2 2 0 0 1-.45 2.11L8.07 9.73a16 16 0 0 0 6.2 6.2l1.28-1.3a2 2 0 0 1 2.11-.45c.84.29 1.72.5 2.62.62A2 2 0 0 1 22 16.92Z" />
+                </svg>
+                <span className="hidden xl:inline">Call us</span>
+                <span className="xl:hidden">Call</span>
+                <span className="hidden 2xl:inline">(877) 594-1944</span>
               </a>
               <Link 
                 href="/contact"

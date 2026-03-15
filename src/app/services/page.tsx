@@ -353,7 +353,8 @@ export default function Services() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center rounded-[8px] bg-[var(--color-link)] px-8 py-4 text-[18px] font-semibold text-[var(--white)] transition-colors duration-200 hover:bg-[var(--color-link-hover)]"
+              className="inline-flex items-center justify-center rounded-[8px] bg-[var(--brand-blue)] px-8 py-4 text-[18px] font-semibold text-[var(--white)] hover:bg-[var(--brand-blue-light)]"
+              style={{ transition: "0.25s ease" }}
             >
               Talk to an Expert
               <ArrowRight24Regular className="ml-2 h-5 w-5" />

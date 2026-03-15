@@ -1,8 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import Link from 'next/link'
-import { ShieldCheckmark24Regular, BrainCircuit24Regular, CloudArrowUp24Regular, LockClosed24Regular, Document24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
+import { ShieldCheckmark24Regular, BrainCircuit24Regular, CloudArrowUp24Regular, LockClosed24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from '@/components/layout'
 import { InternalHeroSection } from '@/components/sections'
 
@@ -55,6 +56,59 @@ const caseStudies = [
     title: "US LBM: Centralizing IT with Microsoft Security",
     description: "Building supplier US LBM centralized IT across multiple acquisitions by adopting Microsoft Sentinel and Microsoft 365 Defender for a complete SIEM and extended detection and response solution.",
     result: "Better than benchmark security score with unified XDR and SIEM",
+  },
+]
+
+const frameworks = [
+  {
+    name: 'NIST RMF',
+    desc: 'Risk Management Framework',
+    logo: '/assets/frameworks/nist-rmf-graphic.png',
+    logoAlt: 'NIST RMF graphic',
+    href: 'https://csrc.nist.gov/projects/risk-management',
+  },
+  {
+    name: 'NIST 800-171',
+    desc: 'Protecting Controlled Unclassified Information',
+    logo: '/assets/frameworks/171r3.svg',
+    logoAlt: 'NIST SP 800-171 Revision 3 logo',
+    href: 'https://www.device42.com/compliance-standards/nist-800-171-compliance-checklist/',
+  },
+  {
+    name: 'FISMA',
+    desc: 'Federal Information Security Modernization Act',
+    logo: '/assets/frameworks/dhs-seal.png',
+    logoAlt: 'U.S. Department of Homeland Security seal',
+  },
+  {
+    name: 'HIPAA',
+    desc: 'Health Insurance Portability & Accountability',
+    logo: '/assets/frameworks/hhs-seal.png',
+    logoAlt: 'U.S. Department of Health and Human Services seal',
+  },
+  {
+    name: 'NIST CSF',
+    desc: 'Cybersecurity Framework',
+    logo: '/assets/frameworks/nist-mark.png',
+    logoAlt: 'National Institute of Standards and Technology logo',
+  },
+  {
+    name: 'Zero Trust',
+    desc: 'NIST 800-207 Architecture',
+    logo: '/assets/frameworks/nist-mark.png',
+    logoAlt: 'National Institute of Standards and Technology logo',
+  },
+  {
+    name: 'CMMC',
+    desc: 'Cybersecurity Maturity Model Certification',
+    logo: '/assets/frameworks/dod-seal.png',
+    logoAlt: 'U.S. Department of Defense seal',
+  },
+  {
+    name: 'FedRAMP',
+    desc: 'Federal Risk & Authorization Management',
+    logo: '/assets/frameworks/fedramp-logo-inverse.svg',
+    logoAlt: 'FedRAMP logo',
   },
 ]
 
@@ -155,16 +209,7 @@ export default function Resources() {
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {[
-                { name: "NIST RMF", desc: "Risk Management Framework" },
-                { name: "NIST 800-171", desc: "Protecting Controlled Unclassified Information" },
-                { name: "FISMA", desc: "Federal Information Security Modernization Act" },
-                { name: "HIPAA", desc: "Health Insurance Portability & Accountability" },
-                { name: "NIST CSF", desc: "Cybersecurity Framework" },
-                { name: "Zero Trust", desc: "NIST 800-207 Architecture" },
-                { name: "CMMC", desc: "Cybersecurity Maturity Model Certification" },
-                { name: "FedRAMP", desc: "Federal Risk & Authorization Management" },
-              ].map((framework, index) => (
+              {frameworks.map((framework, index) => (
                 <motion.div
                   key={framework.name}
                   initial={{ opacity: 0, y: 20 }}
@@ -173,8 +218,44 @@ export default function Resources() {
                   viewport={{ once: true }}
                   className="concepta-card concepta-card-compact"
                 >
-                  <Document24Regular className="concepta-page-icon mb-3" />
-                  <h3 className="text-base font-semibold text-gray-900 mb-1">{framework.name}</h3>
+                  {framework.href ? (
+                    <a
+                      href={framework.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block mb-4"
+                      aria-label={`${framework.name} reference`}
+                    >
+                      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-100">
+                        <Image
+                          src={framework.logo}
+                          alt={framework.logoAlt}
+                          width={64}
+                          height={64}
+                          className="h-10 w-10 object-contain grayscale opacity-80"
+                        />
+                      </div>
+                    </a>
+                  ) : (
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-100">
+                      <Image
+                        src={framework.logo}
+                        alt={framework.logoAlt}
+                        width={64}
+                        height={64}
+                        className="h-10 w-10 object-contain grayscale opacity-80"
+                      />
+                    </div>
+                  )}
+                  <h3 className="text-base font-semibold text-gray-900 mb-1">
+                    {framework.href ? (
+                      <a href={framework.href} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary)] transition-colors">
+                        {framework.name}
+                      </a>
+                    ) : (
+                      framework.name
+                    )}
+                  </h3>
                   <p className="text-xs text-gray-500">{framework.desc}</p>
                 </motion.div>
               ))}

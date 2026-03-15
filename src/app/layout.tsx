@@ -22,11 +22,6 @@ export const metadata: Metadata = {
   creator: "Concepta Innovation Services",
   publisher: "Concepta Innovation Services",
   robots: "index, follow",
-  icons: {
-    icon: '/logo2.png',
-    shortcut: '/logo2.png',
-    apple: '/logo2.png',
-  },
   openGraph: {
     title: "Concepta Innovation Services | Microsoft Azure AI Partner",
     description: "Comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience.",

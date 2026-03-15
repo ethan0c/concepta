@@ -106,9 +106,9 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                 <Image
                   src="/logo.png"
                   alt="Concepta Innovation Services"
-                  width={160}
-                  height={56}
-                  className="h-12 sm:h-14 w-auto"
+                  width={1989}
+                  height={825}
+                  className="h-14 sm:h-16 w-auto"
                 />
               </Link>
             </div>

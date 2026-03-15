@@ -3,8 +3,8 @@
 export default function InternalHeroBackground() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      {/* Base: cool blue-tinted off-white — not dead white */}
-      <div className="absolute inset-0" style={{ background: "#F2FAFF" }} />
+      {/* Base: lightly cyan-tinted off-white */}
+      <div className="absolute inset-0" style={{ background: "#F0FBFF" }} />
 
       {/* Strong blue gradient bloom — top right */}
       <div
@@ -20,7 +20,7 @@ export default function InternalHeroBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 50% 60% at -5% 110%, rgba(56,189,248,0.10) 0%, transparent 60%)",
+            "radial-gradient(ellipse 50% 60% at -5% 110%, rgba(34,211,238,0.1) 0%, transparent 62%)",
         }}
       />
 
@@ -32,18 +32,18 @@ export default function InternalHeroBackground() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="700" cy="0" r="200" stroke="rgba(14,165,233,0.18)" strokeWidth="1.5" fill="none" />
-        <circle cx="700" cy="0" r="300" stroke="rgba(14,165,233,0.14)" strokeWidth="1.5" fill="none" />
-        <circle cx="700" cy="0" r="420" stroke="rgba(14,165,233,0.11)" strokeWidth="1" fill="none" />
-        <circle cx="700" cy="0" r="560" stroke="rgba(14,165,233,0.08)" strokeWidth="1" fill="none" />
-        <circle cx="700" cy="0" r="680" stroke="rgba(14,165,233,0.06)" strokeWidth="1" fill="none" />
+        <circle cx="700" cy="0" r="200" stroke="rgba(6,182,212,0.2)" strokeWidth="1.5" fill="none" />
+        <circle cx="700" cy="0" r="300" stroke="rgba(6,182,212,0.15)" strokeWidth="1.5" fill="none" />
+        <circle cx="700" cy="0" r="420" stroke="rgba(6,182,212,0.11)" strokeWidth="1" fill="none" />
+        <circle cx="700" cy="0" r="560" stroke="rgba(6,182,212,0.08)" strokeWidth="1" fill="none" />
+        <circle cx="700" cy="0" r="680" stroke="rgba(6,182,212,0.06)" strokeWidth="1" fill="none" />
       </svg>
 
       {/* Dot grid — spans full top-right half, not just corner */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(14,165,233,0.24) 1.5px, transparent 1.5px)",
+          backgroundImage: "radial-gradient(circle, rgba(6,182,212,0.24) 1.5px, transparent 1.5px)",
           backgroundSize: "28px 28px",
           maskImage:
             "radial-gradient(ellipse 65% 85% at 100% 0%, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 58%, transparent 88%)",

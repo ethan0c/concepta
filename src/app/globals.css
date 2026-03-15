@@ -347,12 +347,12 @@ body {
 }
 
 .concepta-inline-link {
-  color: var(--color-link);
+  color: var(--brand-cyan);
   transition: color 0.2s ease-in-out;
 }
 
 .concepta-inline-link:hover {
-  color: var(--color-link-hover);
+  color: var(--brand-cyan);
 }
 
 .concepta-icon-tile {

@@ -79,7 +79,7 @@ export default function Solutions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="concepta-card concepta-card-compact concepta-card-interactive group"
+                  className="concepta-card concepta-card-compact concepta-card-interactive group flex flex-col"
                 >
                   <solution.icon className="concepta-card-icon mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -93,10 +93,10 @@ export default function Solutions() {
                   </p>
                   <Link
                     href={solution.href}
-                    className="concepta-inline-link inline-flex items-center text-sm font-medium group-hover:underline"
+                    className="concepta-inline-link mt-auto inline-flex items-center gap-2 text-sm font-medium group-hover:underline"
                   >
                     Learn more
-                    <ArrowRight24Regular className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                    <ArrowRight24Regular className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </motion.div>
               ))}

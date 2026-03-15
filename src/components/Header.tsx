@@ -121,7 +121,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   href={item.href}
                   className={`relative px-3.5 py-2 text-sm transition-colors ${
                     isCurrentPageActive(item.name, item.href)
-                      ? `${headerTextClass} font-semibold`
+                      ? `text-[var(--color-link)] font-semibold`
                       : `${headerSubtleTextClass} font-semibold hover:text-[var(--brand-cyan)]`
                   }`}
                 >
@@ -129,7 +129,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   {isCurrentPageActive(item.name, item.href) && (
                     <span
                       className={`absolute bottom-0 left-3.5 right-3.5 h-[2px] rounded-full ${
-                        "bg-[var(--color-primary)]"
+                        "bg-[var(--color-link)]"
                       }`}
                     />
                   )}

@@ -7,7 +7,7 @@ A modern, responsive Next.js website for **Concepta Innovation Systems**, a Micr
 - 🔒 **Modern Design**: Clean, professional corporate website with deep blue (#0B4BBB) branding
 - 📱 **Responsive**: Mobile-first design that works perfectly on all devices
 - ⚡ **Fast**: Built with Next.js 15 and optimized for performance
-- 🎨 **Animations**: Smooth scroll animations using Framer Motion and a custom SVG home hero background
+- 🎨 **Animations**: Smooth scroll animations using Framer Motion with a static branded home hero visual
 - 🔍 **Accessible**: Clean, semantic HTML structure with proper accessibility
 - 🎯 **SEO Ready**: Optimized for search engines
 
@@ -48,15 +48,11 @@ src/
 ## Sections
 
 - **Header**: Logo, navigation, search, contact info, CTA button
-- **Hero**: Main headline and company description with animated SVG gradient + tessellation background
+- **Hero**: Main headline and company description with static branded visual
 - **Solutions**: Core service offerings (Security, AI, Cloud)
 - **Professional Solutions**: Detailed service grid
 - **News & Events**: Latest articles and insights
 - **Footer**: Contact information, newsletter signup, legal links
-
-## Source Attribution
-
-- Home hero animation implementation in `src/components/HeroBackground.tsx` is adapted from this CodePen source: https://codepen.io/jhnsnc/pen/Mprdaa
 
 ## Customization
 

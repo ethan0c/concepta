@@ -536,22 +536,6 @@ a.concepta-card {
   to { opacity: 1; }
 }
 
-/* ── Home hero SVG background ── */
-.hero-demo-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.hero-demo-triangle-group {
-  mix-blend-mode: lighten;
-}
-
-.hero-demo-triangle {
-  stroke: none;
-  fill: #ffffff;
-}
-
 /* Smooth transitions */
 button, a, input {
   transition: all 0.2s ease-in-out;

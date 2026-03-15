@@ -248,7 +248,7 @@ export default function Services() {
                 className="concepta-card concepta-card-compact concepta-card-interactive group"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center text-[var(--color-primary)] transition-colors duration-200 group-hover:text-[var(--color-link)]">
+                  <div className="flex h-12 w-12 items-center justify-center text-[var(--color-link)] transition-colors duration-200 group-hover:text-[var(--color-link-hover)]">
                     <service.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 transition-colors duration-200 group-hover:text-[var(--color-link)]">

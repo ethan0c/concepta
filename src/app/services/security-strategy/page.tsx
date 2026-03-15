@@ -60,7 +60,7 @@ export default function SecurityStrategy() {
                 </div>
 
                 <div className="text-center">
-                  <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6" />
+                  <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
                   <h4 className="text-xl font-semibold text-gray-900 mb-4">
                     Microsoft Azure & Security Partnership
                   </h4>
@@ -457,7 +457,7 @@ export default function SecurityStrategy() {
                 viewport={{ once: true }}
                 className="concepta-card text-center"
               >
-                <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6" />
+                <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
                 <h3 className="text-xl text-gray-900 mb-4">
                   Security Assessment
                 </h3>
@@ -480,7 +480,7 @@ export default function SecurityStrategy() {
                 viewport={{ once: true }}
                 className="concepta-card text-center"
               >
-                <LockClosedIcon className="concepta-page-icon mx-auto mb-6" />
+                <LockClosedIcon className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
                 <h3 className="text-xl text-gray-900 mb-4">
                   Zero Trust Implementation
                 </h3>
@@ -503,7 +503,7 @@ export default function SecurityStrategy() {
                 viewport={{ once: true }}
                 className="concepta-card text-center"
               >
-                <Eye24Regular className="concepta-page-icon mx-auto mb-6" />
+                <Eye24Regular className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
                 <h3 className="text-xl text-gray-900 mb-4">24/7 Monitoring</h3>
                 <p className="text-gray-600 mb-6">
                   Continuous security monitoring and threat detection with rapid

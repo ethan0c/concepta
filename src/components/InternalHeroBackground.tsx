@@ -3,8 +3,8 @@
 export default function InternalHeroBackground() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      {/* Base: lightly cyan-tinted off-white */}
-      <div className="absolute inset-0" style={{ background: "#F0FBFF" }} />
+      {/* Base matches What We Do section background */}
+      <div className="absolute inset-0" style={{ background: "var(--color-page-bg)" }} />
 
       {/* Strong blue gradient bloom — top right */}
       <div

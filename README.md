@@ -7,7 +7,9 @@ A modern, responsive Next.js website for **Concepta Innovation Systems**, a Micr
 - 🔒 **Modern Design**: Clean, professional corporate website with deep blue (#0B4BBB) branding
 - 📱 **Responsive**: Mobile-first design that works perfectly on all devices
 - ⚡ **Fast**: Built with Next.js 15 and optimized for performance
-- 🎨 **Animations**: Smooth scroll animations using Framer Motion with a static branded home hero visual
+- 🎨 **Modern UI Motion**: Framer Motion transitions with static branded home hero imagery
+- 🧭 **Unified Footer CTA**: Shared bottom CTA merged into the footer and shown site-wide
+- 📚 **Content-Rich Pages**: Dedicated Solutions, Services, Resources, About, Contact, Privacy, and Terms pages
 - 🔍 **Accessible**: Clean, semantic HTML structure with proper accessibility
 - 🎯 **SEO Ready**: Optimized for search engines
 
@@ -17,7 +19,7 @@ A modern, responsive Next.js website for **Concepta Innovation Systems**, a Micr
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
-- **Icons**: Lucide React
+- **Icons**: Fluent UI React Icons + Lucide React
 - **Deployment**: Ready for Vercel/Azure
 
 ## Getting Started
@@ -34,25 +36,42 @@ npm run dev
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Scripts
+
+- `npm run dev` - Start local dev server
+- `npm run build` - Create production build
+- `npm run start` - Run production server
+- `npm run lint` - Run Next.js lint checks
+- `npm run lint:colors` - Validate color token usage
+
 ## Project Structure
 
 ```
 src/
 ├── app/
-│   ├── layout.tsx      # Root layout with metadata
-│   ├── page.tsx        # Main homepage with all sections
-│   └── globals.css     # Global styles
-└── components/         # Reusable components (future expansion)
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── about/
+│   ├── contact/
+│   ├── resources/
+│   ├── services/
+│   ├── solutions/
+│   ├── privacy/
+│   └── terms/
+└── components/
+	├── layout/
+	└── sections/
 ```
 
 ## Sections
 
 - **Header**: Logo, navigation, search, contact info, CTA button
 - **Hero**: Main headline and company description with static branded visual
-- **Solutions**: Core service offerings (Security, AI, Cloud)
-- **Professional Solutions**: Detailed service grid
-- **News & Events**: Latest articles and insights
-- **Footer**: Contact information, newsletter signup, legal links
+- **Solutions**: Core capability and offering overviews
+- **Services**: Detailed cybersecurity, IT support, and architecture services
+- **Resources**: Insights, frameworks, case studies, and curated references
+- **Footer**: Site-wide CTA, contact information, social links, and legal links
 
 ## Customization
 
@@ -74,6 +93,10 @@ This project is ready to deploy on:
 For questions about this website, contact:
 - Email: support@conceptainnovation.com
 - Phone: (877)-594-1944
+
+Made and developed by Ocelabs.tech
+- Email: ocelabs.tech@gmail.com
+- Phone: 717-578-1388
 
 ---
 

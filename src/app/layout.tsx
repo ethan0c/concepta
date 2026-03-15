@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Concepta Innovation Services | Microsoft Azure AI Partner",
   description: "Concepta Innovation Services is an information technology and cybersecurity firm providing comprehensive IT and Cybersecurity Solutions through innovation, security, and resilience. Microsoft Azure AI Partner specializing in government and enterprise solutions.",
   icons: {
-    icon: "/icon.png",
+    icon: "/logo-small.png",
   },
   keywords: "cybersecurity, IT solutions, Microsoft Azure, AI partner, government technology, enterprise security, cloud migration, cybersecurity consulting",
   authors: [{ name: "Concepta Innovation Services" }],

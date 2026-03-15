@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
 interface FooterLink {
@@ -29,15 +28,6 @@ export default function Footer({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           {/* Company Info */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <Image
-                src="/logo2.png"
-                alt="Concepta Innovation"
-                width={120}
-                height={40}
-                className="h-10 w-auto"
-              />
-            </div>
             <p className="text-sm font-semibold text-white mb-1">Concepta Innovation Services, LLC</p>
             <p className="text-xs text-gray-400 leading-relaxed mb-2">
               1451 Rockville Pike, Suite 250<br />

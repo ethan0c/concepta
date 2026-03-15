@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Server24Regular, CloudArrowUp24Regular, ShieldCheckmark24Regular, Flash24Regular } from "@fluentui/react-icons";
-import Link from "next/link";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 

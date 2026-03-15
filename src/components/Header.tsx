@@ -85,7 +85,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
         style={{ backgroundColor: getHeaderBackgroundColor() }}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-[72px] lg:h-20">
+          <div className="flex justify-between lg:justify-start items-center h-16 md:h-[72px] lg:h-20 lg:gap-6">
             {/* Mobile Menu Button */}
             <button
               className={`lg:hidden p-2 -ml-2 transition-colors ${headerTextClass} ${
@@ -106,15 +106,15 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                 <Image
                   src="/logo.png"
                   alt="Concepta Innovation Services"
-                  width={1989}
-                  height={825}
-                  className="h-14 sm:h-16 w-auto"
+                  width={1280}
+                  height={1280}
+                  className="h-[53px] sm:h-[57px] lg:h-[63px] w-[112px] sm:w-[126px] lg:w-[140px] object-cover object-center"
                 />
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 flex-1 justify-center">
+            <nav className="hidden lg:flex items-center gap-1">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
@@ -138,7 +138,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             </nav>
 
             {/* Right Side */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 shrink-0 lg:ml-auto">
               <a 
                 href="tel:+18775941944"
                 aria-label="Call us at (877) 594-1944"

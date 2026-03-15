@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";

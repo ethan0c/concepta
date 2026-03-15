@@ -52,11 +52,6 @@ export default function InternalHeroBackground() {
         }}
       />
 
-      {/* Bottom border fade into next section */}
-      <div
-        className="absolute bottom-0 left-0 right-0 h-16"
-        style={{ background: "linear-gradient(to bottom, transparent, rgba(186,230,253,0.65))" }}
-      />
     </div>
   );
 }

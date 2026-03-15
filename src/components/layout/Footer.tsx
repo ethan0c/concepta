@@ -23,7 +23,7 @@ export default function Footer({
   ],
 }: FooterProps) {
   return (
-    <footer className="bg-[var(--color-hero-bg)] text-white">
+    <footer className="bg-[var(--color-primary)] text-white">
       <div className="page-container py-12 sm:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           {/* Company Info */}

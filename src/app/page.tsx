@@ -1,7 +1,7 @@
 "use client";
 
 import { PageShell } from "@/components/layout";
-import { HeroSection, CoreServicesSection, WhoWeServeSection, PartnerNetworkSection, WhyChooseUsSection, ClosingCTASection } from "@/components/sections";
+import { HeroSection, CoreServicesSection, WhoWeServeSection, PartnerNetworkSection, WhyChooseUsSection } from "@/components/sections";
 
 export default function Home() {
   return (
@@ -12,7 +12,6 @@ export default function Home() {
         <WhoWeServeSection />
         <PartnerNetworkSection />
         <WhyChooseUsSection />
-        <ClosingCTASection />
       </div>
     </PageShell>
   );

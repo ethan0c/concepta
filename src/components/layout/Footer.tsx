@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowRight24Regular } from "@fluentui/react-icons";
 
 interface FooterLink {
   label: string;
@@ -24,6 +25,26 @@ export default function Footer({
 }: FooterProps) {
   return (
     <footer className="bg-[var(--color-primary)] text-white">
+      <section className="border-b border-white/10">
+        <div className="page-container py-16 sm:py-20 lg:py-24">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
+              Ready to modernize your regulated operations?
+            </h2>
+            <p className="text-base sm:text-lg text-blue-100 leading-relaxed mb-9 sm:mb-10">
+              Partner with a team that delivers secure, compliant, and mission-critical technology solutions.
+            </p>
+            <Link
+              href="/contact"
+              className="concepta-button inline-flex items-center justify-center px-8 py-4 bg-white text-[18px] text-[var(--color-link)] font-semibold hover:bg-blue-50 hover:text-[var(--color-link-hover)] transition-colors"
+            >
+              Talk to an Expert
+              <ArrowRight24Regular className="w-4 h-4 ml-2 shrink-0" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <div className="page-container py-12 sm:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-14">
           {/* Company Info */}

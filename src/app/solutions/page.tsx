@@ -88,12 +88,12 @@ export default function Solutions() {
                   <p className="text-sm font-medium text-[var(--color-primary)] mb-3">
                     {solution.tagline}
                   </p>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-6">
+                  <p className="text-sm text-gray-600 leading-relaxed mb-7">
                     {solution.description}
                   </p>
                   <Link
                     href={solution.href}
-                    className="concepta-inline-link mt-auto inline-flex items-center gap-2 text-sm font-medium group-hover:underline"
+                    className="concepta-inline-link mt-auto inline-flex items-center gap-2 font-medium group-hover:underline"
                   >
                     Learn more
                     <ArrowRight24Regular className="w-4 h-4 transition-transform group-hover:translate-x-1" />

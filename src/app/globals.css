@@ -308,11 +308,14 @@ body {
 }
 
 .concepta-card {
-  display: block;
   background: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
   padding: 1.5rem;
   border-radius: var(--radius-card);
+}
+
+a.concepta-card {
+  display: block;
 }
 
 .concepta-button {
@@ -347,7 +350,7 @@ body {
 }
 
 .concepta-inline-link {
-  color: var(--brand-cyan);
+  color: var(--color-primary);
   transition: color 0.2s ease-in-out;
 }
 
@@ -418,18 +421,13 @@ body {
 
 /* Card-context icon: 40px, used inside feature/content cards on internal pages */
 .concepta-card-icon {
-  color: var(--color-icon-navy);
+  color: var(--brand-cyan);
   width: 2.5rem;
   height: 2.5rem;
   stroke-width: 2px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: color 0.2s ease-in-out;
   flex-shrink: 0;
-}
-
-.concepta-card:hover .concepta-card-icon {
-  color: var(--color-icon-navy-hover);
 }
 
 .concepta-icon-tile-sm > svg {
@@ -448,29 +446,21 @@ body {
 
 .capability-icon,
 .sector-icon {
-  color: var(--color-icon-navy);
+  color: var(--brand-cyan);
   width: 48px;
   height: 48px;
   stroke-width: 2px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: color 0.2s ease-in-out;
 }
 
 .why-icon {
-  color: var(--color-icon-navy);
+  color: var(--brand-cyan);
   width: 48px;
   height: 48px;
   stroke-width: 2px;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: color 0.2s ease-in-out;
-}
-
-.concepta-card:hover .capability-icon,
-.concepta-card:hover .sector-icon,
-.concepta-card:hover .why-icon {
-  color: var(--color-icon-navy-hover);
 }
 
 @media (min-width: 640px) {

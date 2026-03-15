@@ -49,9 +49,12 @@ export default function HeroSection() {
 
               <Link
                 href="/solutions"
-                className="hero-cta inline-flex items-center justify-center border border-white bg-white text-gray-900 text-sm hover:bg-gray-100 hover:border-gray-100"
+                className="hero-cta inline-flex items-center justify-center border border-[var(--color-primary)] bg-white text-[var(--color-primary)] text-sm hover:bg-blue-50 hover:text-[var(--color-primary-hover)]"
               >
                 Explore Our Capabilities
+                <svg className="w-4 h-4 ml-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
               </Link>
             </div>
 

@@ -1,263 +1,366 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular } from "@fluentui/react-icons";
+import {
+  BrainCircuit24Regular,
+  CloudArrowUp24Regular,
+  Code24Regular,
+  DataBarVertical24Regular,
+  Headset24Regular,
+  ShieldCheckmark24Regular,
+} from "@fluentui/react-icons";
+import { ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
-import { InternalHeroSection } from "@/components/sections";
+import HeroBackground from "@/components/HeroBackground";
+
+interface ServiceItem {
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: React.ComponentType<{ className?: string }>;
+}
+
+interface TechCategory {
+  title: string;
+  items: string[];
+}
+
+const services: ServiceItem[] = [
+  {
+    title: "Artificial Intelligence & AI Governance",
+    description:
+      "Responsible AI solutions built for governance, compliance, and scale. Concepta delivers AI-driven capabilities that enhance operational efficiency while maintaining strong governance, ethics, and regulatory alignment.",
+    bullets: [
+      "AI-enabled workflows",
+      "Intelligent automation",
+      "Decision-support systems",
+      "Governance & compliance alignment",
+    ],
+    icon: BrainCircuit24Regular,
+  },
+  {
+    title: "Cybersecurity & Zero Trust Architecture",
+    description:
+      "Security strategies that protect mission-critical systems and data. Our cybersecurity services are grounded in Zero Trust principles, helping organizations reduce risk, strengthen resilience, and maintain compliance.",
+    bullets: [
+      "Zero Trust implementation",
+      "Continuous monitoring",
+      "Identity & endpoint protection",
+      "Compliance & risk alignment",
+    ],
+    icon: ShieldCheckmark24Regular,
+  },
+  {
+    title: "Application & Platform Support",
+    description:
+      "Reliable application and platform support for continuous operations. We ensure system availability, performance, and security across enterprise and government environments.",
+    bullets: [
+      "System maintenance & optimization",
+      "Platform modernization",
+      "Data integration",
+      "Operational support",
+    ],
+    icon: Code24Regular,
+  },
+  {
+    title: "Solution Architecture & Cloud Enablement",
+    description:
+      "Architecting secure, scalable solutions for modern environments. Concepta designs and supports solution architectures that integrate cloud, data, and security technologies to meet mission and business needs.",
+    bullets: [
+      "Cloud architecture & design",
+      "Data & security integration",
+      "Governance & compliance alignment",
+      "Long-term sustainability planning",
+    ],
+    icon: CloudArrowUp24Regular,
+  },
+  {
+    title: "Service Desk & IT Operations Support",
+    description:
+      "Responsive IT support that keeps organizations running. Our service desk and IT operations support are designed for reliability, user experience, and operational continuity across hybrid, onsite, and remote environments.",
+    bullets: [
+      "24/7 responsive support",
+      "Proactive monitoring",
+      "Issue resolution",
+      "Operational continuity",
+    ],
+    icon: Headset24Regular,
+  },
+  {
+    title: "Data Management & Analytics",
+    description:
+      "Secure data solutions for informed decision-making. We provide comprehensive data management services including secure storage, backup, analytics, and governance for regulated environments.",
+    bullets: [
+      "Data backup & recovery",
+      "Analytics & reporting",
+      "Data governance",
+      "Compliance management",
+    ],
+    icon: DataBarVertical24Regular,
+  },
+];
+
+const techCategories: TechCategory[] = [
+  {
+    title: "Cloud Platforms",
+    items: ["Microsoft Azure", "Amazon Web Services (AWS)", "Google Cloud Platform (GCP)"],
+  },
+  {
+    title: "Security & Zero Trust",
+    items: [
+      "Microsoft Sentinel (SIEM/SOAR)",
+      "Microsoft Defender 365",
+      "Microsoft Defender for Cloud",
+      "Microsoft Defender for Endpoint",
+      "Microsoft Entra ID (Azure AD)",
+      "Microsoft Entra Permissions Management",
+      "Microsoft Intune",
+      "Microsoft Purview",
+      "Azure Security Center",
+      "Azure Firewall",
+      "Azure DDoS Protection",
+      "Azure Key Vault",
+      "Azure Information Protection",
+      "Azure Front Door",
+      "Azure Web Application Firewall (WAF)",
+      "Azure API Management",
+      "Azure Monitor",
+    ],
+  },
+  {
+    title: "AI, Automation & Data",
+    items: [
+      "Azure OpenAI Service",
+      "Azure Machine Learning",
+      "Python (AI/ML frameworks)",
+      "Power BI",
+      "Databricks",
+      "Apache Spark",
+      "Azure Data Factory",
+      "Azure Synapse Analytics",
+    ],
+  },
+  {
+    title: "Application Development",
+    items: [
+      ".NET Core",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Python",
+      "REST & GraphQL APIs",
+      "Docker",
+      "Kubernetes / AKS",
+    ],
+  },
+  {
+    title: "Databases & Storage",
+    items: [
+      "Microsoft SQL Server",
+      "Azure Cosmos DB",
+      "PostgreSQL",
+      "Azure SQL",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage",
+    ],
+  },
+  {
+    title: "DevOps & Automation",
+    items: [
+      "GitHub & GitHub Actions",
+      "Azure DevOps",
+      "Terraform",
+      "Bicep",
+      "CI/CD pipelines",
+      "Infrastructure as Code (IaC)",
+    ],
+  },
+];
 
 export default function Services() {
   return (
     <PageShell currentPage="Services" headerTheme="light">
-        <InternalHeroSection
-          label="Modern IT services designed for secure, regulated environments"
-          title="Professional IT Services"
-          description="Concepta Innovation Services delivers AI-enabled, security-first, and mission-aligned IT services that help government agencies and commercial organizations modernize responsibly and operate with confidence."
-          sectionClassName="py-12 sm:py-14 lg:py-16"
+      <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
+        <HeroBackground />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
         />
 
-        {/* Services Grid */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
-          <div className="page-container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-3">Our Core Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                AI-enabled, security-first solutions for government and enterprise
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* AI & AI Governance */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-compact"
-              >
-                <BrainCircuit24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Artificial Intelligence & AI Governance
-                </h3>
-                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
-                  Responsible AI solutions built for governance, compliance, and scale.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Concepta provides AI-driven solutions that enhance operational efficiency while maintaining strong governance, ethics, and compliance.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• AI-enabled workflows</li>
-                  <li>• Intelligent automation</li>
-                  <li>• Decision-support capabilities</li>
-                  <li>• Regulatory compliance alignment</li>
-                </ul>
-              </motion.div>
-
-              {/* Cybersecurity & Zero Trust */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-compact"
-              >
-                <ShieldCheckmark24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Cybersecurity & Zero Trust Architecture
-                </h3>
-                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
-                  Security strategies that protect mission-critical systems and data.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Zero Trust implementation</li>
-                  <li>• Continuous monitoring</li>
-                  <li>• Compliance alignment</li>
-                  <li>• Identity & endpoint protection</li>
-                </ul>
-              </motion.div>
-
-              {/* Application & Platform Support */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-compact"
-              >
-                <Code24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Application & Platform Support
-                </h3>
-                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
-                  Reliable application and platform support for continuous operations.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Application and platform support services ensuring system availability, performance, and security for enterprise and government systems.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• System maintenance</li>
-                  <li>• Platform modernization</li>
-                  <li>• Data integration</li>
-                  <li>• Operational support</li>
-                </ul>
-              </motion.div>
-
-              {/* Solution Architecture & Cloud */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-compact"
-              >
-                <CloudArrowUp24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Solution Architecture & Cloud Enablement
-                </h3>
-                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
-                  Architecting secure, scalable solutions for modern environments.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Concepta designs and supports solution architectures that integrate cloud, data, and security technologies to meet mission and business needs.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Cloud architecture design</li>
-                  <li>• Data & security integration</li>
-                  <li>• Governance alignment</li>
-                  <li>• Long-term sustainability</li>
-                </ul>
-              </motion.div>
-
-              {/* Service Desk & IT Operations */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-compact"
-              >
-                <Headset24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Service Desk & IT Operations Support
-                </h3>
-                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
-                  Responsive IT support that keeps organizations running.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Service desk and IT operations support designed for reliability and user experience across hybrid, onsite, and remote environments.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• 24/7 responsive support</li>
-                  <li>• Proactive monitoring</li>
-                  <li>• Issue resolution</li>
-                  <li>• Operational continuity</li>
-                </ul>
-              </motion.div>
-
-              {/* Data Management */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-compact"
-              >
-                <DataBarVertical24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  Data Management & Analytics
-                </h3>
-                <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
-                  Secure data solutions for informed decision-making.
-                </p>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6">
-                  Comprehensive data management including secure storage, backup, analytics, and governance for regulated environments.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Data backup & recovery</li>
-                  <li>• Analytics & reporting</li>
-                  <li>• Data governance</li>
-                  <li>• Compliance management</li>
-                </ul>
-              </motion.div>
-            </div>
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[680px]">
+            <h1
+              className="hero-animate delay-1 hero-title text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight"
+            >
+              Modern IT services built for secure, regulated, and mission-critical environments
+            </h1>
+            <p className="hero-animate delay-2 hero-body mt-6 text-base sm:text-lg font-medium leading-relaxed">
+              AI-enabled. Security-first. Mission-aligned.
+            </p>
+            <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+              Concepta Innovation Services delivers modern IT solutions designed for government agencies and enterprise organizations that require strong governance, responsible AI, and operational resilience. We help teams modernize confidently while maintaining compliance, security, and mission continuity.
+            </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Technology Stack Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white">
-          <div className="page-container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
-                Our Technology Stack
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Leveraging industry-leading technologies and platforms to deliver exceptional results
-              </p>
-            </div>
+      <section className="bg-[var(--color-surface-subtle)] py-24">
+        <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
+          >
+            Our Core Services
+          </motion.h2>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <motion.div
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-600 max-w-[680px]"
+          >
+            AI-enabled, security-first solutions for government and enterprise.
+          </motion.p>
+
+          <div className="mt-14 grid grid-cols-1 gap-x-12 gap-y-12 lg:grid-cols-2">
+            {services.map((service, index) => (
+              <motion.article
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.45, delay: 0.08 * (index + 1) }}
                 viewport={{ once: true }}
-                className="concepta-card concepta-card-subtle concepta-card-compact"
+                className="concepta-card concepta-card-compact concepta-card-interactive group"
               >
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Cloud Platforms</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Microsoft Azure</li>
-                  <li>• AWS</li>
-                  <li>• Google Cloud</li>
+                <div className="flex items-center gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center text-[var(--color-primary)] transition-colors duration-200 group-hover:text-[var(--color-link)]">
+                    <service.icon className="h-8 w-8" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 transition-colors duration-200 group-hover:text-[var(--color-link)]">
+                    {service.title}
+                  </h3>
+                </div>
+
+                <p className="mt-3 text-base text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+
+                <ul className="mt-4 space-y-2">
+                  {service.bullets.map((bullet) => (
+                    <li
+                      key={bullet}
+                      className="text-sm text-gray-600 leading-relaxed"
+                    >
+                      • {bullet}
+                    </li>
+                  ))}
                 </ul>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-subtle concepta-card-compact"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Security Tools</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• Microsoft Sentinel</li>
-                  <li>• Azure Security Center</li>
-                  <li>• Defender 365</li>
-                </ul>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-subtle concepta-card-compact"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Development</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• .NET Core</li>
-                  <li>• React & Next.js</li>
-                  <li>• Python & AI/ML</li>
-                </ul>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="concepta-card concepta-card-subtle concepta-card-compact"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Databases</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>• SQL Server</li>
-                  <li>• Azure Cosmos DB</li>
-                  <li>• PostgreSQL</li>
-                </ul>
-              </motion.div>
-            </div>
+              </motion.article>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
+      <section className="bg-[var(--color-surface-muted)] py-24">
+        <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
+          >
+            Our Technology Stack
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-600 max-w-[680px]"
+          >
+            Modern, secure, and enterprise-ready technologies that power our solutions.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            viewport={{ once: true }}
+            className="mt-5 max-w-[980px] text-base text-gray-600 leading-relaxed"
+          >
+            Concepta leverages a curated ecosystem of industry-leading platforms, security tools, and development frameworks to deliver secure, scalable, and mission-aligned IT services. Our technology stack reflects our commitment to responsible AI, Zero Trust security, and cloud-native modernization.
+          </motion.p>
+
+          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {techCategories.map((category, index) => (
+              <motion.article
+                key={category.title}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.06 * (index + 1) }}
+                viewport={{ once: true }}
+                className="concepta-card concepta-card-subtle concepta-card-compact"
+              >
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                  {category.title}
+                </h3>
+                <ul className="space-y-2">
+                  {category.items.map((item) => (
+                    <li key={item} className="text-sm text-gray-600 leading-relaxed">
+                      • {item}
+                    </li>
+                  ))}
+                </ul>
+              </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[var(--color-surface)] py-24">
+        <div className="mx-auto w-full max-w-[1200px] px-4 text-center sm:px-6 lg:px-8">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl font-semibold text-gray-900"
+          >
+            Ready to modernize mission-critical operations?
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="mx-auto mt-4 max-w-[680px] text-lg text-gray-600 leading-relaxed"
+          >
+            Partner with Concepta to deliver secure, compliant, and resilient IT services aligned to your mission.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mt-10"
+          >
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-[8px] bg-[var(--color-link)] px-8 py-4 text-[18px] font-semibold text-[var(--white)] transition-colors duration-200 hover:bg-[var(--color-link-hover)]"
+            >
+              Talk to an Expert
+              <ArrowRight24Regular className="ml-2 h-5 w-5" />
+            </Link>
+          </motion.div>
+        </div>
+      </section>
     </PageShell>
   );
 }

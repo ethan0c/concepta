@@ -83,7 +83,7 @@ export default function Solutions() {
                   </p>
                   <Link
                     href={solution.href}
-                    className="inline-flex items-center text-sm text-[var(--color-primary)] font-medium group-hover:underline"
+                    className="concepta-inline-link inline-flex items-center text-sm font-medium group-hover:underline"
                   >
                     Learn more
                     <ArrowRight24Regular className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />

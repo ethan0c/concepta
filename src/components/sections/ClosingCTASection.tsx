@@ -23,7 +23,7 @@ export default function ClosingCTASection() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center px-7 py-4 bg-white text-[var(--color-primary)] text-sm font-semibold hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-7 py-4 bg-white text-[var(--color-link)] text-sm font-semibold hover:bg-blue-50 hover:text-[var(--color-link-hover)] transition-colors"
           >
             Talk to an Expert
             <ArrowRight24Regular className="w-4 h-4 ml-2 shrink-0" />

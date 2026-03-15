@@ -111,7 +111,7 @@ export default function CoreServicesSection() {
 
               <Link
                 href={pillar.href}
-                className="mt-auto text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] font-medium inline-flex items-center gap-2 group"
+                className="concepta-inline-link mt-auto font-medium inline-flex items-center gap-2 group"
               >
                 Learn more
                 <ArrowRight24Regular className="w-4 h-4 transition-transform group-hover:translate-x-1" />

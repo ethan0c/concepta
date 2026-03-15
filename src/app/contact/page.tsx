@@ -286,7 +286,7 @@ export default function Contact() {
                 <div className="mt-6 pt-6 border-t border-gray-200 text-center">
                   <p className="text-sm text-gray-600">
                     Prefer to schedule a call?{' '}
-                    <a href="tel:+18775941944" className="text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors">
+                    <a href="tel:+18775941944" className="concepta-inline-link transition-colors">
                       Call (877) 594-1944
                     </a>
                   </p>

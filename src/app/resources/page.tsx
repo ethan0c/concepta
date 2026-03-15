@@ -100,7 +100,7 @@ export default function Resources() {
                   </ul>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center text-sm text-[var(--color-primary)] font-medium hover:underline"
+                    className="concepta-inline-link inline-flex items-center text-sm font-medium hover:underline"
                   >
                     Discuss with our team
                     <ArrowRight24Regular className="w-4 h-4 ml-1" />

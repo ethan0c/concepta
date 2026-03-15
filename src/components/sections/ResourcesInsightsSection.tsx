@@ -94,7 +94,7 @@ export default function ResourcesInsightsSection() {
                 <p className="text-sm text-gray-500 leading-relaxed mb-4">
                   {item.description}
                 </p>
-                <span className="inline-flex items-center text-sm font-medium text-[var(--color-primary)] group-hover:translate-x-1 transition-transform">
+                <span className="concepta-inline-link inline-flex items-center text-sm font-medium group-hover:translate-x-1 transition-transform">
                   Learn more
                   <svg
                     className="w-4 h-4 ml-1"

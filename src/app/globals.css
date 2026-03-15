@@ -11,6 +11,8 @@
   --color-surface-muted-hover: #e8e8e8;
   --color-primary: #0A1A2F;
   --color-primary-hover: #132947;
+  --color-link: #0B4BBB;
+  --color-link-hover: #083a92;
   --color-primary-dark: #000000;
   --color-icon-navy: #0A1A2F;
   --color-icon-navy-hover: #1E3A8A;
@@ -193,6 +195,15 @@ body {
   background: var(--color-primary);
   border-color: var(--color-primary);
   color: #ffffff;
+}
+
+.concepta-inline-link {
+  color: var(--color-link);
+  transition: color 0.2s ease-in-out;
+}
+
+.concepta-inline-link:hover {
+  color: var(--color-link-hover);
 }
 
 .concepta-icon-tile {

@@ -79,7 +79,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
   return (
     <>
       <header
-        className={`fixed w-full z-50 border-b border-[var(--color-border-subtle)] transition-all duration-300 ${
+        className={`fixed w-full z-50 border-b border-[rgba(11,75,187,0.42)] transition-all duration-300 ${
           scrolled ? "shadow-lg" : ""
         }`}
         style={{ backgroundColor: getHeaderBackgroundColor() }}
@@ -121,8 +121,8 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                   href={item.href}
                   className={`relative px-3.5 py-2 text-sm transition-colors ${
                     isCurrentPageActive(item.name, item.href)
-                      ? `${headerTextClass} font-medium`
-                      : `${headerSubtleTextClass} font-normal ${
+                      ? `${headerTextClass} font-semibold`
+                      : `${headerSubtleTextClass} font-semibold ${
                           theme === "light" && !scrolled ? "hover:text-[var(--color-primary-hover)] hover:bg-blue-900/5" : "hover:text-[var(--color-primary-hover)] hover:bg-blue-900/5"
                         }`
                   }`}

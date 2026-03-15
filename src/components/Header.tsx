@@ -79,13 +79,13 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
   return (
     <>
       <header
-        className={`fixed w-full z-50 border-b border-[rgba(11,75,187,0.42)] transition-all duration-300 ${
+        className={`fixed w-full z-50 border-b border-[var(--color-header-divider)] transition-all duration-300 ${
           scrolled ? "shadow-lg" : ""
         }`}
         style={{ backgroundColor: getHeaderBackgroundColor() }}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 sm:h-20">
+          <div className="flex justify-between items-center h-16 md:h-[72px] lg:h-20">
             {/* Mobile Menu Button */}
             <button
               className={`lg:hidden p-2 -ml-2 transition-colors ${headerTextClass} ${

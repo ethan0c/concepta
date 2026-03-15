@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { Phone24Regular, Mail24Regular, Location24Regular, Clock24Regular, CheckmarkCircle24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from '@/components/layout'
-import { InternalHeroSection } from '@/components/sections'
+import HeroBackground from '@/components/HeroBackground'
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
@@ -48,29 +48,29 @@ export default function Contact() {
 
   return (
     <PageShell currentPage="Contact" headerTheme="light">
-        <InternalHeroSection
-          label="Contact Us"
-          title="Contact Concepta Innovation Services"
-          titleClassName="hero-title text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight mb-4"
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="hero-body text-xl sm:text-2xl leading-snug max-w-xl mb-4 font-light"
-          >
-            Let&apos;s talk about secure, governed, and modern IT solutions.
-          </motion.p>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="hero-body-muted text-base sm:text-lg leading-relaxed max-w-xl"
-          >
-            Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
-          </motion.p>
-        </InternalHeroSection>
+        <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
+          <HeroBackground />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
+          />
+          <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[680px]">
+              <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+                Contact Us
+              </p>
+              <h1 className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+                Contact Concepta Innovation Services
+              </h1>
+              <p className="hero-animate delay-2 hero-body mt-6 text-base sm:text-lg font-medium leading-relaxed">
+                Let&apos;s talk about secure, governed, and modern IT solutions.
+              </p>
+              <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+                Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Contact Information & Form */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">

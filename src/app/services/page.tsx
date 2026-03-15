@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
 import {
   BrainCircuit24Regular,
@@ -10,7 +9,6 @@ import {
   Headset24Regular,
   ShieldCheckmark24Regular,
 } from "@fluentui/react-icons";
-import { ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import HeroBackground from "@/components/HeroBackground";
 
@@ -30,47 +28,53 @@ const services: ServiceItem[] = [
   {
     title: "Artificial Intelligence & AI Governance",
     description:
-      "Responsible AI solutions built for governance, compliance, and scale. Concepta delivers AI-driven capabilities that enhance operational efficiency while maintaining strong governance, ethics, and regulatory alignment.",
+      "Responsible AI solutions built for governance, compliance, and scale. Concepta delivers AI-driven capabilities that enhance operational efficiency while maintaining strong governance, ethics, and regulatory alignment. Our approach supports both Microsoft-based AI ecosystems and broader enterprise AI environments.",
     bullets: [
       "AI-enabled workflows",
       "Intelligent automation",
       "Decision-support systems",
       "Governance & compliance alignment",
+      "Azure OpenAI and multi-model integration",
+      "AI risk management and lifecycle governance",
     ],
     icon: BrainCircuit24Regular,
   },
   {
     title: "Cybersecurity & Zero Trust Architecture",
     description:
-      "Security strategies that protect mission-critical systems and data. Our cybersecurity services are grounded in Zero Trust principles, helping organizations reduce risk, strengthen resilience, and maintain compliance.",
+      "Security strategies that protect mission-critical systems and data across hybrid and multi-cloud environments. Our cybersecurity services apply Zero Trust principles to safeguard identities, endpoints, networks, applications, and data. While Microsoft Security is a core part of our approach, we also integrate leading security platforms across identity, endpoint, network, and cloud to support diverse and regulated environments.",
     bullets: [
-      "Zero Trust implementation",
-      "Continuous monitoring",
-      "Identity & endpoint protection",
-      "Compliance & risk alignment",
+      "Identity & access management (Microsoft Entra ID, Okta, Ping)",
+      "Endpoint protection & XDR (Microsoft Defender, CrowdStrike, SentinelOne)",
+      "Network segmentation & monitoring (Azure Firewall, Palo Alto, Cisco, Fortinet)",
+      "SIEM & threat detection (Microsoft Sentinel, Splunk)",
+      "Cloud security posture management (Defender for Cloud, Prisma Cloud, AWS Security Hub)",
+      "Zero Trust strategy & implementation aligned to NIST 800-207",
     ],
     icon: ShieldCheckmark24Regular,
   },
   {
     title: "Application & Platform Support",
     description:
-      "Reliable application and platform support for continuous operations. We ensure system availability, performance, and security across enterprise and government environments.",
+      "Reliable application and platform support for continuous operations. We ensure system availability, performance, and security across enterprise and government environments. Our teams support Microsoft-based platforms as well as hybrid and legacy systems that require modernization.",
     bullets: [
       "System maintenance & optimization",
       "Platform modernization",
       "Data integration",
       "Operational support",
+      "Application lifecycle management",
     ],
     icon: Code24Regular,
   },
   {
     title: "Solution Architecture & Cloud Enablement",
     description:
-      "Architecting secure, scalable solutions for modern environments. Concepta designs and supports solution architectures that integrate cloud, data, and security technologies to meet mission and business needs.",
+      "Architecting secure, scalable solutions for modern environments. Concepta designs and supports solution architectures that integrate cloud, data, and security technologies to meet mission and business needs. We specialize in Microsoft Azure but also support AWS, Google Cloud, and hybrid environments.",
     bullets: [
       "Cloud architecture & design",
       "Data & security integration",
       "Governance & compliance alignment",
+      "Hybrid and multi-cloud enablement",
       "Long-term sustainability planning",
     ],
     icon: CloudArrowUp24Regular,
@@ -84,18 +88,20 @@ const services: ServiceItem[] = [
       "Proactive monitoring",
       "Issue resolution",
       "Operational continuity",
+      "User experience optimization",
     ],
     icon: Headset24Regular,
   },
   {
     title: "Data Management & Analytics",
     description:
-      "Secure data solutions for informed decision-making. We provide comprehensive data management services including secure storage, backup, analytics, and governance for regulated environments.",
+      "Secure data solutions for informed decision-making. We provide comprehensive data management services including secure storage, backup, analytics, and governance for regulated environments. Our solutions support Microsoft data platforms as well as multi-cloud and open-source data ecosystems.",
     bullets: [
       "Data backup & recovery",
       "Analytics & reporting",
       "Data governance",
       "Compliance management",
+      "Data integration across Azure, AWS, and hybrid systems",
     ],
     icon: DataBarVertical24Regular,
   },
@@ -126,6 +132,10 @@ const techCategories: TechCategory[] = [
       "Azure Web Application Firewall (WAF)",
       "Azure API Management",
       "Azure Monitor",
+      "CrowdStrike Falcon",
+      "Palo Alto Prisma Cloud",
+      "Cisco Secure Firewall",
+      "Splunk Enterprise Security",
     ],
   },
   {
@@ -163,6 +173,7 @@ const techCategories: TechCategory[] = [
       "Azure SQL",
       "Azure Blob Storage",
       "Azure Data Lake Storage",
+      "AWS RDS",
     ],
   },
   {
@@ -190,8 +201,11 @@ export default function Services() {
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
           <div className="max-w-[680px]">
+            <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+              Services
+            </p>
             <h1
-              className="hero-animate delay-1 hero-title text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight"
+              className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight"
             >
               Modern IT services built for secure, regulated, and mission-critical environments
             </h1>
@@ -321,45 +335,6 @@ export default function Services() {
               </motion.article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-[var(--color-surface)] py-24">
-        <div className="mx-auto w-full max-w-[1200px] px-4 text-center sm:px-6 lg:px-8">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-semibold text-gray-900"
-          >
-            Ready to modernize mission-critical operations?
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="mx-auto mt-4 max-w-[680px] text-lg text-gray-600 leading-relaxed"
-          >
-            Partner with Concepta to deliver secure, compliant, and resilient IT services aligned to your mission.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="mt-10"
-          >
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-[8px] bg-[var(--brand-blue)] px-8 py-4 text-[18px] font-semibold text-[var(--white)] hover:bg-[var(--brand-blue-light)]"
-              style={{ transition: "0.25s ease" }}
-            >
-              Talk to an Expert
-              <ArrowRight24Regular className="ml-2 h-5 w-5" />
-            </Link>
-          </motion.div>
         </div>
       </section>
     </PageShell>

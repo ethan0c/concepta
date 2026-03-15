@@ -3,16 +3,31 @@
 import { motion } from "framer-motion";
 import { Trophy24Regular, People24Regular, Target24Regular, Globe24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
-import { InternalHeroSection } from "@/components/sections";
+import HeroBackground from "@/components/HeroBackground";
 
 export default function AboutContent() {
   return (
     <PageShell currentPage="About" headerTheme="light">
-        <InternalHeroSection
-          label="About Concepta Innovation Services"
-          title="Mission-Aligned IT for Government & Industry"
-          description="We deliver intelligent automation, secure infrastructure, and responsive support for organizations operating in complex, regulated environments."
+      <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
+        <HeroBackground />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
         />
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[680px]">
+            <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+              About Concepta Innovation Services
+            </p>
+            <h1 className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+              Mission-Aligned IT for Government &amp; Industry
+            </h1>
+            <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+              We deliver intelligent automation, secure infrastructure, and responsive support for organizations operating in complex, regulated environments.
+            </p>
+          </div>
+        </div>
+      </section>
 
         {/* Company Overview */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">

@@ -4,8 +4,8 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ShieldCheckmark24Regular, BrainCircuit24Regular, CloudArrowUp24Regular, LockClosed24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
+import HeroBackground from '@/components/HeroBackground'
 import { PageShell } from '@/components/layout'
-import { InternalHeroSection } from '@/components/sections'
 
 const topics = [
   {
@@ -115,11 +115,26 @@ const frameworks = [
 export default function Resources() {
   return (
     <PageShell currentPage="Resources" headerTheme="light">
-        <InternalHeroSection
-          label="Knowledge Center"
-          title="Resources & Insights"
-          description="Insights, strategies, and real-world outcomes across cybersecurity, AI, cloud, and compliance, drawn from our work with government and enterprise clients."
+      <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
+        <HeroBackground />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
         />
+        <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[680px]">
+            <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+              Knowledge Center
+            </p>
+            <h1 className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+              Resources & Insights
+            </h1>
+            <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+              Insights, strategies, and real-world outcomes across cybersecurity, AI, cloud, and compliance, drawn from our work with government and enterprise clients.
+            </p>
+          </div>
+        </div>
+      </section>
 
         {/* Topic Areas */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">

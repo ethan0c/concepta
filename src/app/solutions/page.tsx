@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { BrainCircuit24Regular, ShieldCheckmark24Regular, CloudArrowUp24Regular, Stack24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import Link from "next/link";
 import { PageShell } from "@/components/layout";
-import { InternalHeroSection } from "@/components/sections";
+import HeroBackground from "@/components/HeroBackground";
 
 const solutions = [
   {
@@ -44,16 +44,26 @@ const solutions = [
 export default function Solutions() {
   return (
     <PageShell currentPage="Solutions" headerTheme="light">
-        <InternalHeroSection
-          label="Technology Solutions for Regulated Environments"
-          title="Technology solutions built for secure, governed, and mission-critical environments"
-          description="Solutions designed to support secure, governed, and scalable operations."
-          sectionClassName="py-12 sm:py-14 lg:py-16"
-        >
-          <p className="hero-body-muted text-base sm:text-lg leading-relaxed max-w-3xl mt-5">
-            Concepta delivers integrated AI, cybersecurity, cloud, and enterprise solutions that strengthen governance, reduce risk, and support secure, scalable operations across government and regulated industries.
-          </p>
-        </InternalHeroSection>
+        <section className="relative overflow-hidden bg-[var(--brand-navy)] pt-[160px] pb-[140px]">
+          <HeroBackground />
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[5] bg-[linear-gradient(to_bottom,rgba(10,26,47,0.0)_0%,rgba(10,26,47,0.65)_100%)]"
+          />
+          <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
+            <div className="max-w-[680px]">
+              <p className="hero-animate hero-label text-sm font-medium uppercase tracking-[0.24em]">
+                Technology Solutions for Regulated Environments
+              </p>
+              <h1 className="hero-animate delay-1 hero-title mt-5 text-3xl sm:text-4xl lg:text-5xl font-normal leading-tight">
+                Technology solutions built for secure, governed, and mission-critical environments
+              </h1>
+              <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[rgba(255,255,255,0.9)]">
+                Concepta delivers integrated AI, cybersecurity, cloud, and enterprise solutions that strengthen governance, reduce risk, and support secure, scalable operations across government and regulated industries.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Solutions Grid */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">

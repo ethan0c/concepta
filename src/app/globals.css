@@ -1,25 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f4fafd;
-  --foreground: #161616;
-  --color-page-bg: #f4fafd;
-  --color-surface: #ffffff;
+  /* ── Brand Core ─────────────────────────────────────── */
+  --brand-navy: #0A1A2F;
+  --brand-navy-alt: #162035;
+  --brand-blue: #1E3A8A;
+  --brand-blue-light: #3B82F6;
+  --brand-blue-hover: #2563EB;
+
+  /* ── Neutrals ───────────────────────────────────────── */
+  --white: #FFFFFF;
+  --gray-50: #F0F2F5;
+  --gray-100: #F5F7FA;
+  --gray-300: #E5E7EB;
+  --gray-600: #4B5563;
+  --gray-900: #111827;
+
+  /* ── Status Colors ──────────────────────────────────── */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+
+  /* ── Semantic Tokens (mapped to brand variables) ─────── */
+  --background: var(--gray-100);
+  --foreground: var(--brand-navy);
+  --color-page-bg: var(--gray-100);
+  --color-surface: var(--white);
   --color-surface-rgb: 255 255 255;
-  --color-surface-subtle: #f5f7fa;
-  --color-surface-muted: #f4f4f4;
-  --color-surface-muted-hover: #e8e8e8;
-  --color-primary: #0B4BBB;
-  --color-primary-hover: #0a3d9c;
-  --color-primary-dark: #082E84;
-  --color-header-bg: #0B4BBB;
-  --color-header-bg-rgb: 11 75 187;
-  --color-border-subtle: rgba(11, 75, 187, 0.14);
-  --color-border-strong: rgba(11, 75, 187, 0.24);
-  --color-hero-bg: #161616;
-  --color-dark: #161616;
-  --color-dark-alt: #262626;
-  --color-border-dark: #393939;
+  --color-surface-subtle: var(--gray-100);
+  --color-surface-muted: var(--gray-50);
+  --color-surface-muted-hover: var(--gray-300);
+  --color-primary: var(--brand-blue-light);
+  --color-primary-hover: var(--brand-blue-hover);
+  --color-primary-dark: var(--brand-blue);
+  --color-header-bg: var(--brand-navy);
+  --color-header-bg-rgb: 10 26 47;
+  --color-border-subtle: rgba(59, 130, 246, 0.14);
+  --color-border-strong: rgba(59, 130, 246, 0.28);
+  --color-hero-bg: var(--brand-navy);
+  --color-dark: var(--brand-navy);
+  --color-dark-alt: var(--brand-navy-alt);
+  --color-border-dark: rgba(30, 58, 138, 0.4);
 }
 
 /* Typography Tokens */
@@ -180,7 +201,7 @@ body {
   width: 3rem;
   height: 3rem;
   flex-shrink: 0;
-  background: #eff6ff;
+  background: rgba(59, 130, 246, 0.08);
   color: var(--color-primary);
 }
 
@@ -299,14 +320,14 @@ input:focus-visible {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--gray-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
+  background: var(--gray-300);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
+  background: var(--gray-600);
 }

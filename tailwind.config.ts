@@ -34,17 +34,34 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        'concepta-blue': '#0B4BBB',
+        'concepta-blue': 'var(--brand-blue-light)',
+        brand: {
+          navy: 'var(--brand-navy)',
+          blue: 'var(--brand-blue)',
+          'blue-light': 'var(--brand-blue-light)',
+        },
+        gray: {
+          50: 'var(--gray-50)',
+          100: 'var(--gray-100)',
+          300: 'var(--gray-300)',
+          600: 'var(--gray-600)',
+          900: 'var(--gray-900)',
+        },
+        status: {
+          success: 'var(--success)',
+          warning: 'var(--warning)',
+          error: 'var(--error)',
+        },
         primary: {
-          blue: '#0B4BBB',
+          blue: 'var(--brand-blue)',
           cyan: '#00B5E2',
         },
         secondary: {
           gray: {
-            50: '#F9FAFB',
-            100: '#F3F4F6', 
-            600: '#4B5563',
-            900: '#111827',
+            50: 'var(--gray-50)',
+            100: 'var(--gray-100)',
+            600: 'var(--gray-600)',
+            900: 'var(--gray-900)',
           }
         }
       },

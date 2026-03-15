@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
-import { Phone24Regular, Mail24Regular, Location24Regular, Clock24Regular, Send24Regular, CheckmarkCircle24Regular } from "@fluentui/react-icons";
+import { Phone24Regular, Mail24Regular, Location24Regular, Clock24Regular, CheckmarkCircle24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from '@/components/layout'
 import { InternalHeroSection } from '@/components/sections'
 
@@ -93,9 +93,7 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
-                    <div className="concepta-icon-tile flex-shrink-0">
-                      <Phone24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                    </div>
+                    <Phone24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
                       <p className="text-gray-600">(877)-594-1944</p>
@@ -104,9 +102,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="concepta-icon-tile flex-shrink-0">
-                      <Mail24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                    </div>
+                    <Mail24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Email</h3>
                       <p className="text-gray-600">support@conceptainnovation.com</p>
@@ -115,9 +111,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="concepta-icon-tile flex-shrink-0">
-                      <Location24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                    </div>
+                    <Location24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
                       <p className="text-gray-600">
@@ -128,9 +122,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <div className="concepta-icon-tile flex-shrink-0">
-                      <Clock24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                    </div>
+                    <Clock24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Business Hours</h3>
                       <p className="text-gray-600">
@@ -146,8 +138,9 @@ export default function Contact() {
                   <p className="text-gray-600 mb-4">
                     Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
                   </p>
-                  <a href="tel:+18775941944" className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white text-sm font-medium transition-colors">
+                  <a href="tel:+18775941944" className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#1E3A8A] hover:bg-[#1e40af] text-white text-sm font-medium transition-colors">
                     Call (877)-594-1944
+                    <ArrowRight24Regular className="w-4 h-4 shrink-0" />
                   </a>
                 </div>
               </motion.div>
@@ -164,7 +157,7 @@ export default function Contact() {
 
                 {status === 'success' && (
                   <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 text-green-800 text-sm mb-6">
-                    <CheckmarkCircle24Regular className="w-5 h-5 flex-shrink-0" />
+                    <CheckmarkCircle24Regular className="concepta-page-icon-sm flex-shrink-0" />
                     <span>Thank you! Your message has been sent. We&apos;ll be in touch soon.</span>
                   </div>
                 )}
@@ -283,10 +276,10 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white py-3 px-6 transition-colors flex items-center justify-center space-x-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 px-6 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <Send24Regular className="w-4 h-4" />
                     <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
+                    <ArrowRight24Regular className="w-4 h-4 shrink-0" />
                   </button>
                 </form>
 

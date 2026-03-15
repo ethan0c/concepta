@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Server24Regular, CloudArrowUp24Regular, ShieldCheckmark24Regular, Flash24Regular } from "@fluentui/react-icons";
+import { Server24Regular, CloudArrowUp24Regular, ShieldCheckmark24Regular, Flash24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import Link from "next/link";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
@@ -38,9 +38,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <Server24Regular className="w-6 h-6 text-white" />
-                  </div>
+                  <Server24Regular className="concepta-page-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Desktop Services
                   </h3>
@@ -70,9 +68,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <ShieldCheckmark24Regular className="w-6 h-6 text-white" />
-                  </div>
+                  <ShieldCheckmark24Regular className="concepta-page-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Cybersecurity Services
                   </h3>
@@ -108,9 +104,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <CloudArrowUp24Regular className="w-6 h-6 text-white" />
-                  </div>
+                  <CloudArrowUp24Regular className="concepta-page-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Backup & Disaster Recovery
                   </h3>
@@ -140,9 +134,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <div className="concepta-icon-tile concepta-icon-tile-strong mr-4">
-                    <Flash24Regular className="w-6 h-6 text-white" />
-                  </div>
+                  <Flash24Regular className="concepta-page-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Network Services
                   </h3>
@@ -163,35 +155,6 @@ export default function ITSupport() {
                 </ul>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="max-w-3xl"
-            >
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-                Ready to modernize securely?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                Contact Us
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
           </div>
         </section>
 

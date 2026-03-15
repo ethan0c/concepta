@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Shield, Lock, Eye } from "lucide-react";
+import { ShieldCheckmark24Regular, LockClosed24Regular as LockClosedIcon, Eye24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
@@ -60,17 +60,16 @@ export default function SecurityStrategy() {
                 </div>
 
                 <div className="text-center">
-                  <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
-                    <Shield className="w-12 h-12 text-white" />
-                  </div>
+                  <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6" />
                   <h4 className="text-xl font-semibold text-gray-900 mb-4">
                     Microsoft Azure & Security Partnership
                   </h4>
                   <p className="text-gray-600 mb-6">
                     Leveraging Microsoft&apos;s comprehensive security solutions to protect against ransomware and cyber threats.
                   </p>
-                  <Link href="/contact" className="inline-block bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white px-6 py-3 font-medium transition-colors">
+                  <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-6 py-3 font-medium transition-colors">
                     Get in Touch
+                    <ArrowRight24Regular className="w-4 h-4 shrink-0" />
                   </Link>
                 </div>
               </div>
@@ -458,9 +457,7 @@ export default function SecurityStrategy() {
                 viewport={{ once: true }}
                 className="concepta-card text-center"
               >
-                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
+                <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6" />
                 <h3 className="text-xl text-gray-900 mb-4">
                   Security Assessment
                 </h3>
@@ -483,9 +480,7 @@ export default function SecurityStrategy() {
                 viewport={{ once: true }}
                 className="concepta-card text-center"
               >
-                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
-                  <Lock className="w-8 h-8 text-white" />
-                </div>
+                <LockClosedIcon className="concepta-page-icon mx-auto mb-6" />
                 <h3 className="text-xl text-gray-900 mb-4">
                   Zero Trust Implementation
                 </h3>
@@ -508,9 +503,7 @@ export default function SecurityStrategy() {
                 viewport={{ once: true }}
                 className="concepta-card text-center"
               >
-                <div className="concepta-icon-tile concepta-icon-tile-strong concepta-icon-tile-lg mx-auto mb-6">
-                  <Eye className="w-8 h-8 text-white" />
-                </div>
+                <Eye24Regular className="concepta-page-icon mx-auto mb-6" />
                 <h3 className="text-xl text-gray-900 mb-4">24/7 Monitoring</h3>
                 <p className="text-gray-600 mb-6">
                   Continuous security monitoring and threat detection with rapid
@@ -524,35 +517,6 @@ export default function SecurityStrategy() {
                 </Link>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="max-w-3xl"
-            >
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-                Ready to modernize securely?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                Contact Us
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
           </div>
         </section>
 

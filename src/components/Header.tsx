@@ -256,7 +256,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             <Link 
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] text-white py-3 text-center text-sm font-medium transition-colors"
+              className="block w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 text-center text-sm font-medium transition-colors"
             >
               Get Started
             </Link>

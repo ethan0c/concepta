@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular } from "@fluentui/react-icons";
+import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
@@ -35,9 +35,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <BrainCircuit24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <BrainCircuit24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Artificial Intelligence & AI Governance
                 </h3>
@@ -63,9 +61,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <ShieldCheckmark24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <ShieldCheckmark24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Cybersecurity & Zero Trust Architecture
                 </h3>
@@ -91,9 +87,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <Code24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <Code24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Application & Platform Support
                 </h3>
@@ -119,9 +113,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <CloudArrowUp24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <CloudArrowUp24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Solution Architecture & Cloud Enablement
                 </h3>
@@ -147,9 +139,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <Headset24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <Headset24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Service Desk & IT Operations Support
                 </h3>
@@ -175,9 +165,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <DataBarVertical24Regular className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <DataBarVertical24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Data Management & Analytics
                 </h3>
@@ -268,35 +256,6 @@ export default function Services() {
                 </ul>
               </motion.div>
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="max-w-3xl"
-            >
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-                Ready to modernize securely?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                Contact Us
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
           </div>
         </section>
 

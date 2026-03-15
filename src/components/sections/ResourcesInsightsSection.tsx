@@ -84,9 +84,7 @@ export default function ResourcesInsightsSection() {
                 href={item.href}
                 className="concepta-card concepta-card-subtle concepta-card-interactive group h-full"
               >
-                <div className="concepta-icon-tile mb-5">
-                  <item.icon className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <item.icon className="concepta-page-icon mb-5" />
                 <span className="text-xs font-medium text-[var(--color-primary)] uppercase tracking-wider">
                   {item.category}
                 </span>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Award, Users, Target, Globe } from "lucide-react";
+import { Trophy24Regular, People24Regular, Target24Regular, Globe24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
@@ -75,9 +75,7 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <Award className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <Trophy24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Certified Excellence
                 </h3>
@@ -94,9 +92,7 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <Users className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <People24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
                 <p className="text-gray-600">
                   Seasoned professionals with deep expertise in cybersecurity,
@@ -111,9 +107,7 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <Target className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <Target24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
                 <p className="text-gray-600">
                   Track record of successful implementations with measurable
@@ -128,9 +122,7 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="concepta-card"
               >
-                <div className="concepta-icon-tile mb-6">
-                  <Globe className="w-6 h-6 text-[var(--color-primary)]" />
-                </div>
+                <Globe24Regular className="concepta-page-icon mb-6" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Reach</h3>
                 <p className="text-gray-600">
                   Serving clients worldwide with 24/7 support and localized
@@ -141,36 +133,6 @@ export default function AboutContent() {
           </div>
         </section>
 
-
-
-        {/* Call to Action */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="max-w-3xl"
-            >
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-                Ready to modernize securely?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                Contact Us
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
-          </div>
-        </section>
 
     </PageShell>
   );

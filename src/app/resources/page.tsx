@@ -8,28 +8,28 @@ import { InternalHeroSection } from '@/components/sections'
 
 const topics = [
   {
-    icon: Shield,
+    icon: ShieldCheckmark24Regular,
     category: "Cybersecurity",
     title: "Zero Trust Architecture & Implementation",
     description: "Concepta implements end-to-end Zero Trust frameworks across identity services, endpoints, devices, data, network, and infrastructure. We help organizations verify explicitly, enforce least-privilege access, and assume breach to reduce their attack surface.",
     points: ["Identity & access management", "Endpoint protection & compliance", "Network segmentation & monitoring", "NIST 800-207 alignment"],
   },
   {
-    icon: Brain,
+    icon: BrainCircuit24Regular,
     category: "Artificial Intelligence",
     title: "AI-Powered Solutions & Governance",
     description: "Our AI solutions integrate Microsoft Azure AI and Copilot for Microsoft 365 to enhance productivity, automate workflows, and support decision-making—while maintaining governance, ethics, and regulatory compliance.",
     points: ["Microsoft Copilot deployment & readiness", "Intelligent automation & workflow optimization", "AI governance & ethical frameworks", "Azure OpenAI integration"],
   },
   {
-    icon: Cloud,
+    icon: CloudArrowUp24Regular,
     category: "Cloud & Infrastructure",
     title: "Cloud Migration & Modernization",
     description: "Concepta provides comprehensive cloud architecture solutions to help organizations migrate applications, modernize infrastructure, and build resilient hybrid environments aligned with security and compliance requirements.",
     points: ["Azure cloud architecture & migration", "Hybrid cloud & multi-cloud strategy", "Disaster recovery & backup solutions", "Secure configuration management"],
   },
   {
-    icon: Lock,
+    icon: LockClosed24Regular,
     category: "Compliance & Risk",
     title: "Enterprise Risk Management & Compliance",
     description: "We help organizations meet compliance obligations including HIPAA, FISMA, NIST RMF, NIST 800-171, and CMMC through comprehensive security assessments, authority to operate documentation, and continuous monitoring.",
@@ -88,9 +88,7 @@ export default function Resources() {
                   className="concepta-card"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="concepta-icon-tile">
-                      <topic.icon className="w-6 h-6 text-[var(--color-primary)]" />
-                    </div>
+                    <topic.icon className="concepta-page-icon" />
                     <span className="text-xs text-[var(--color-primary)] font-medium uppercase tracking-wider">{topic.category}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{topic.title}</h3>
@@ -105,7 +103,7 @@ export default function Resources() {
                     className="inline-flex items-center text-sm text-[var(--color-primary)] font-medium hover:underline"
                   >
                     Discuss with our team
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                    <ArrowRight24Regular className="w-4 h-4 ml-1" />
                   </Link>
                 </motion.div>
               ))}
@@ -175,43 +173,12 @@ export default function Resources() {
                   viewport={{ once: true }}
                   className="concepta-card concepta-card-compact"
                 >
-                  <div className="concepta-icon-tile concepta-icon-tile-sm mb-3">
-                    <FileText className="w-5 h-5 text-[var(--color-primary)]" />
-                  </div>
+                  <Document24Regular className="concepta-page-icon mb-3" />
                   <h3 className="text-base font-semibold text-gray-900 mb-1">{framework.name}</h3>
                   <p className="text-xs text-gray-500">{framework.desc}</p>
                 </motion.div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-hero-bg)]">
-          <div className="page-container">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="max-w-3xl"
-            >
-              <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-                Ready to modernize securely?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-400 leading-relaxed mb-8">
-                Talk to Concepta about AI, cybersecurity, and IT services designed for regulated environments.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-7 py-4 bg-[var(--color-primary)] text-white text-sm font-medium hover:bg-[var(--color-primary-hover)] transition-colors"
-              >
-                Contact Us
-                <svg className="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </motion.div>
           </div>
         </section>
 

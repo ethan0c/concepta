@@ -94,17 +94,7 @@ export default function Footer({
               Talk to an Expert
             </Link>
 
-            {/* Newsletter */}
-            <div className="flex gap-0">
-              <input
-                type="email"
-                placeholder="Email address"
-                className="flex-1 min-w-0 px-3 py-2 bg-[var(--color-dark-alt)] border border-[var(--color-border-dark)] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[var(--color-primary)]"
-              />
-              <button className="concepta-button bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
-                Subscribe
-              </button>
-            </div>
+
           </div>
         </div>
 

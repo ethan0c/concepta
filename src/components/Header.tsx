@@ -104,7 +104,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
                 className="hover:opacity-80 transition-opacity flex items-center"
               >
                 <Image
-                  src="/logo.png"
+                  src="/logo-new.png"
                   alt="Concepta Innovation Services"
                   width={1280}
                   height={1280}

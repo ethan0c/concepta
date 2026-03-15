@@ -85,7 +85,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
         style={{ backgroundColor: getHeaderBackgroundColor() }}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between lg:justify-start items-center h-16 md:h-[72px] lg:h-20 lg:gap-6">
+          <div className="flex justify-between lg:justify-start items-center h-16 md:h-[72px] lg:h-20 lg:gap-10">
             {/* Mobile Menu Button */}
             <button
               className={`lg:hidden p-2 -ml-2 transition-colors ${headerTextClass} ${
@@ -114,7 +114,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-2">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}

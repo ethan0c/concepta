@@ -12,7 +12,7 @@ const solutions = [
     title: "Artificial Intelligence Solutions",
     tagline: "AI solutions that enhance operations while maintaining governance and trust.",
     description:
-      "Concepta delivers AI-enabled solutions that support intelligent automation, decision support, and workflow optimization—while ensuring alignment with governance, ethics, and compliance requirements.",
+      "Concepta delivers AI-enabled capabilities that support intelligent automation, decision support, and workflow optimization—while ensuring alignment with governance, ethics, and regulatory requirements.",
     href: "/services",
   },
   {
@@ -46,10 +46,14 @@ export default function Solutions() {
     <PageShell currentPage="Solutions" headerTheme="light">
         <InternalHeroSection
           label="Technology Solutions for Regulated Environments"
-          title="Solutions designed to support secure, governed, and scalable operations."
-          description="Integrated technology solutions combining AI, cybersecurity, cloud, and enterprise technologies to support governance, risk management, and secure operations."
+          title="Technology solutions built for secure, governed, and mission-critical environments"
+          description="Solutions designed to support secure, governed, and scalable operations."
           sectionClassName="py-12 sm:py-14 lg:py-16"
-        />
+        >
+          <p className="hero-body-muted text-base sm:text-lg leading-relaxed max-w-3xl mt-5">
+            Concepta delivers integrated AI, cybersecurity, cloud, and enterprise solutions that strengthen governance, reduce risk, and support secure, scalable operations across government and regulated industries.
+          </p>
+        </InternalHeroSection>
 
         {/* Solutions Grid */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
@@ -57,7 +61,7 @@ export default function Solutions() {
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Our Solutions</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Integrated solutions supporting governance, security, and modern operations across regulated environments.
+                Solutions designed to help regulated organizations modernize securely, operate with confidence, and maintain strong governance across mission-critical environments.
               </p>
             </div>
 

@@ -208,7 +208,7 @@ export default function Resources() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-8 sm:gap-x-14">
               {frameworks.map((framework, index) => (
                 <motion.div
                   key={framework.name}
@@ -216,38 +216,36 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className="concepta-card concepta-card-compact"
+                  className="flex flex-col items-center text-center"
                 >
                   {framework.href ? (
                     <a
                       href={framework.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mb-4"
+                      className="inline-block"
                       aria-label={`${framework.name} reference`}
+                      title={framework.desc}
                     >
-                      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-100">
-                        <Image
-                          src={framework.logo}
-                          alt={framework.logoAlt}
-                          width={64}
-                          height={64}
-                          className="h-10 w-10 object-contain grayscale opacity-80"
-                        />
-                      </div>
-                    </a>
-                  ) : (
-                    <div className="mb-4 flex h-16 w-16 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-100">
                       <Image
                         src={framework.logo}
                         alt={framework.logoAlt}
-                        width={64}
-                        height={64}
-                        className="h-10 w-10 object-contain grayscale opacity-80"
+                        width={160}
+                        height={56}
+                        className="h-12 w-auto max-w-[160px] object-contain grayscale opacity-80"
                       />
-                    </div>
+                    </a>
+                  ) : (
+                    <Image
+                      src={framework.logo}
+                      alt={framework.logoAlt}
+                      width={160}
+                      height={56}
+                      className="h-12 w-auto max-w-[160px] object-contain grayscale opacity-80"
+                      title={framework.desc}
+                    />
                   )}
-                  <h3 className="text-base font-semibold text-gray-900 mb-1">
+                  <h3 className="mt-2 text-xs font-medium uppercase tracking-wide text-gray-500">
                     {framework.href ? (
                       <a href={framework.href} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary)] transition-colors">
                         {framework.name}
@@ -256,7 +254,6 @@ export default function Resources() {
                       framework.name
                     )}
                   </h3>
-                  <p className="text-xs text-gray-500">{framework.desc}</p>
                 </motion.div>
               ))}
             </div>

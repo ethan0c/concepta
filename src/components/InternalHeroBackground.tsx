@@ -11,7 +11,7 @@ export default function InternalHeroBackground() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 90% at 105% -10%, rgba(59,130,246,0.22) 0%, rgba(30,58,138,0.10) 45%, transparent 70%)",
+            "radial-gradient(ellipse 70% 90% at 105% -10%, rgba(59,130,246,0.30) 0%, rgba(30,58,138,0.14) 50%, transparent 78%)",
         }}
       />
 
@@ -32,23 +32,23 @@ export default function InternalHeroBackground() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="700" cy="0" r="200" stroke="rgba(30,58,138,0.10)" strokeWidth="1.5" fill="none" />
-        <circle cx="700" cy="0" r="300" stroke="rgba(30,58,138,0.08)" strokeWidth="1.5" fill="none" />
-        <circle cx="700" cy="0" r="420" stroke="rgba(59,130,246,0.07)" strokeWidth="1" fill="none" />
-        <circle cx="700" cy="0" r="560" stroke="rgba(59,130,246,0.05)" strokeWidth="1" fill="none" />
-        <circle cx="700" cy="0" r="680" stroke="rgba(59,130,246,0.03)" strokeWidth="1" fill="none" />
+        <circle cx="700" cy="0" r="200" stroke="rgba(1,35,157,0.16)" strokeWidth="1.5" fill="none" />
+        <circle cx="700" cy="0" r="300" stroke="rgba(1,35,157,0.13)" strokeWidth="1.5" fill="none" />
+        <circle cx="700" cy="0" r="420" stroke="rgba(1,35,157,0.10)" strokeWidth="1" fill="none" />
+        <circle cx="700" cy="0" r="560" stroke="rgba(1,35,157,0.08)" strokeWidth="1" fill="none" />
+        <circle cx="700" cy="0" r="680" stroke="rgba(1,35,157,0.06)" strokeWidth="1" fill="none" />
       </svg>
 
       {/* Dot grid — spans full top-right half, not just corner */}
       <div
         className="absolute inset-0"
         style={{
-          backgroundImage: "radial-gradient(circle, rgba(30,58,138,0.18) 1.5px, transparent 1.5px)",
+          backgroundImage: "radial-gradient(circle, rgba(30,58,138,0.26) 1.5px, transparent 1.5px)",
           backgroundSize: "28px 28px",
           maskImage:
-            "radial-gradient(ellipse 65% 85% at 100% 0%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 80%)",
+            "radial-gradient(ellipse 65% 85% at 100% 0%, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 58%, transparent 88%)",
           WebkitMaskImage:
-            "radial-gradient(ellipse 65% 85% at 100% 0%, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, transparent 80%)",
+            "radial-gradient(ellipse 65% 85% at 100% 0%, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 58%, transparent 88%)",
         }}
       />
 

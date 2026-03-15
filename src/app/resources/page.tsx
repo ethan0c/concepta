@@ -208,6 +208,7 @@ export default function Resources() {
             <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
               Insights, strategies, and real‑world outcomes across cybersecurity, AI, cloud, and compliance—designed for organizations operating in secure, regulated, and mission‑critical environments.
             </p>
+            <div className="hero-animate delay-3 mt-8 h-1 w-28 bg-[var(--color-link)]" />
           </div>
         </div>
       </section>
@@ -216,7 +217,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Areas of Expertise</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Areas of Expertise</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Deep domain knowledge across the capabilities that matter most to regulated organizations.
               </p>
@@ -230,17 +231,20 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="concepta-card concepta-card-compact"
+                  className="concepta-card concepta-card-compact border-l-4 border-l-[var(--color-link)] bg-[linear-gradient(145deg,#ffffff_0%,#f4f8ff_100%)]"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <topic.icon className="concepta-card-icon" />
-                    <span className="text-xs text-[var(--color-primary)] font-medium uppercase tracking-wider">{topic.category}</span>
+                    <topic.icon className="concepta-card-icon text-[var(--color-link)]" />
+                    <span className="text-xs text-[var(--color-link)] bg-blue-50 px-2.5 py-1 font-semibold uppercase tracking-wider">{topic.category}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{topic.title}</h3>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed">{topic.description}</p>
                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
                     {topic.points.map((point) => (
-                      <li key={point}>• {point}</li>
+                      <li key={point} className="flex items-start gap-2">
+                        <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-[var(--color-link)] shrink-0" />
+                        <span>{point}</span>
+                      </li>
                     ))}
                   </ul>
                   <Link
@@ -260,7 +264,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Client Outcomes</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Client Outcomes</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Real results from organizations that partnered with Concepta and Microsoft to strengthen security and modernize operations.
               </p>
@@ -274,13 +278,13 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="concepta-card concepta-card-subtle"
+                  className="concepta-card concepta-card-subtle border-t-4 border-t-[var(--color-link)]"
                 >
-                  <span className="text-xs text-[var(--color-primary)] bg-blue-50 px-2 py-1 font-medium uppercase">{study.category}</span>
+                  <span className="text-xs text-[var(--color-link)] bg-blue-100 px-2.5 py-1 font-semibold uppercase">{study.category}</span>
                   <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-3">{study.title}</h3>
                   <p className="text-gray-600 text-sm mb-6 leading-relaxed">{study.description}</p>
                   <div className="concepta-card concepta-card-tight bg-white">
-                    <p className="text-sm text-gray-500 mb-1">Result</p>
+                    <p className="text-sm text-[var(--color-link)] mb-1">Result</p>
                     <p className="text-sm text-gray-900 font-medium">{study.result}</p>
                   </div>
                 </motion.div>
@@ -293,7 +297,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Microsoft AI & Security Insights</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Microsoft AI & Security Insights</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Authoritative Microsoft resources that support AI governance, agentic AI adoption, and modern cybersecurity practices in regulated environments.
               </p>
@@ -302,7 +306,7 @@ export default function Resources() {
             <div className="space-y-12">
               {msInsights.map((group) => (
                 <div key={group.subsection}>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200">{group.subsection}</h3>
+                  <h3 className="text-xl font-semibold text-[var(--color-primary)] mb-6 pb-3 border-b border-blue-200">{group.subsection}</h3>
                   <div className="grid md:grid-cols-2 gap-6">
                     {group.items.map((item, index) => (
                       <motion.div
@@ -311,7 +315,7 @@ export default function Resources() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="concepta-card concepta-card-compact"
+                        className="concepta-card concepta-card-compact border-l-4 border-l-blue-200"
                       >
                         <h4 className="text-base font-semibold text-gray-900 mb-2">{item.title}</h4>
                         <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
@@ -328,7 +332,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Multi-Cloud & Industry Resources</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Multi-Cloud & Industry Resources</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Curated resources from AWS, Google Cloud, NIST, CISA, and other trusted organizations to support secure, compliant modernization.
               </p>
@@ -342,12 +346,15 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
                   viewport={{ once: true }}
-                  className="concepta-card concepta-card-compact"
+                  className="concepta-card concepta-card-compact border-l-4 border-l-[var(--color-link)]"
                 >
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{group.category}</h3>
+                  <h3 className="text-lg font-semibold text-[var(--color-primary)] mb-4">{group.category}</h3>
                   <ul className="space-y-2">
                     {group.items.map((item) => (
-                      <li key={item} className="text-sm text-gray-600">&bull; {item}</li>
+                      <li key={item} className="text-sm text-gray-600 flex items-start gap-2">
+                        <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-[var(--color-link)] shrink-0" />
+                        <span>{item}</span>
+                      </li>
                     ))}
                   </ul>
                 </motion.div>
@@ -360,7 +367,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Frameworks & Standards</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Frameworks & Standards</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Our solutions align with leading industry frameworks and regulatory requirements.
               </p>
@@ -381,7 +388,7 @@ export default function Resources() {
                       href={framework.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block"
+                      className="inline-block rounded-md p-1 transition-transform duration-200 hover:-translate-y-0.5"
                       aria-label={`${framework.name} reference`}
                       title={framework.desc}
                     >
@@ -390,7 +397,7 @@ export default function Resources() {
                         alt={framework.logoAlt}
                         width={160}
                         height={56}
-                        className="h-12 w-auto max-w-[160px] object-contain grayscale opacity-80"
+                        className="h-12 w-auto max-w-[160px] object-contain"
                       />
                     </a>
                   ) : (
@@ -399,13 +406,13 @@ export default function Resources() {
                       alt={framework.logoAlt}
                       width={160}
                       height={56}
-                      className="h-12 w-auto max-w-[160px] object-contain grayscale opacity-80"
+                      className="h-12 w-auto max-w-[160px] object-contain"
                       title={framework.desc}
                     />
                   )}
                   <h3 className="mt-2 text-xs font-medium uppercase tracking-wide text-gray-500">
                     {framework.href ? (
-                      <a href={framework.href} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-primary)] transition-colors">
+                      <a href={framework.href} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--color-link)] transition-colors">
                         {framework.name}
                       </a>
                     ) : (

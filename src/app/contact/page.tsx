@@ -138,7 +138,7 @@ export default function Contact() {
                   <p className="text-gray-600 mb-4">
                     Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
                   </p>
-                  <a href="tel:+18775941944" className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#1E3A8A] hover:bg-[#1e40af] text-white text-sm font-medium transition-colors">
+                  <a href="tel:+18775941944" className="concepta-button inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#1E3A8A] hover:bg-[#1e40af] text-white text-sm font-medium transition-colors">
                     Call (877)-594-1944
                     <ArrowRight24Regular className="w-4 h-4 shrink-0" />
                   </a>
@@ -276,7 +276,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 px-6 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="concepta-button w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 px-6 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
                     <ArrowRight24Regular className="w-4 h-4 shrink-0" />

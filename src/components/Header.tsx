@@ -151,7 +151,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
               </a>
               <Link 
                 href="/contact"
-                className="bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
+                className="concepta-button bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>
@@ -252,7 +252,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             <Link 
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="block w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 text-center text-sm font-medium transition-colors"
+              className="concepta-button block w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 text-center text-sm font-medium transition-colors"
             >
               Get Started
             </Link>

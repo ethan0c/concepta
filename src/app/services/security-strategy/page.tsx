@@ -67,7 +67,7 @@ export default function SecurityStrategy() {
                   <p className="text-gray-600 mb-6">
                     Leveraging Microsoft&apos;s comprehensive security solutions to protect against ransomware and cyber threats.
                   </p>
-                  <Link href="/contact" className="inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-6 py-3 font-medium transition-colors">
+                  <Link href="/contact" className="concepta-button inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-6 py-3 font-medium transition-colors">
                     Get in Touch
                     <ArrowRight24Regular className="w-4 h-4 shrink-0" />
                   </Link>
@@ -233,7 +233,7 @@ export default function SecurityStrategy() {
                   integrated XDR and SIEM solution.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/contact" className="inline-block bg-white text-[var(--color-primary)] px-8 py-3 font-medium hover:bg-gray-100 transition-colors">
+                  <Link href="/contact" className="concepta-button inline-block bg-white text-[var(--color-primary)] px-8 py-3 font-medium hover:bg-gray-100 transition-colors">
                     Contact Us Today
                   </Link>
                 </div>
@@ -344,7 +344,7 @@ export default function SecurityStrategy() {
                     Let Concepta Innovation Services help you design, deploy, and optimize AI-powered workflows that drive results.
                   </p>
                 </div>
-                <Link href="/contact" className="inline-block bg-white text-[var(--color-primary)] hover:bg-gray-100 px-6 py-3 font-medium transition-colors">
+                <Link href="/contact" className="concepta-button inline-block bg-white text-[var(--color-primary)] hover:bg-gray-100 px-6 py-3 font-medium transition-colors">
                   Schedule a Consultation
                 </Link>
               </div>

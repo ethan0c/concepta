@@ -89,7 +89,7 @@ export default function Footer({
 
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-4 py-2.5 mb-5 bg-white text-[var(--color-primary)] text-xs font-semibold hover:bg-blue-50 transition-colors"
+              className="concepta-button inline-flex items-center justify-center px-4 py-2.5 mb-5 bg-white text-[var(--color-primary)] text-xs font-semibold hover:bg-blue-50 transition-colors"
             >
               Talk to an Expert
             </Link>
@@ -101,7 +101,7 @@ export default function Footer({
                 placeholder="Email address"
                 className="flex-1 min-w-0 px-3 py-2 bg-[var(--color-dark-alt)] border border-[var(--color-border-dark)] text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[var(--color-primary)]"
               />
-              <button className="bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
+              <button className="concepta-button bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-3 py-2 text-xs font-medium whitespace-nowrap transition-colors">
                 Subscribe
               </button>
             </div>

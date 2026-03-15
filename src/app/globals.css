@@ -28,6 +28,24 @@
   --color-dark: #161616;
   --color-dark-alt: #262626;
   --color-border-dark: #393939;
+  --radius-card: 8px;
+  --radius-button: 8px;
+
+  /* Brand Core */
+  --brand-navy: #0A1A2F;
+  --brand-blue: #1E3A8A;
+  --brand-blue-light: #3B82F6;
+
+  /* Neutrals */
+  --white: #FFFFFF;
+  --gray-100: #F5F7FA;
+  --gray-300: #E5E7EB;
+  --gray-600: #4B5563;
+
+  /* Status Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
 }
 
 /* Typography Tokens */
@@ -155,6 +173,130 @@ body {
   color: var(--color-hero-label);
 }
 
+.hero {
+  position: relative;
+  padding: 140px 0 120px;
+  background: var(--color-hero-bg);
+  overflow: hidden;
+  transition: opacity 0.4s ease-out;
+}
+
+.hero.scrolled {
+  opacity: 0.45;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero-headline {
+  font-size: clamp(56px, 5.2vw, 64px);
+  line-height: 1.08;
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.hero-subheadline {
+  font-size: clamp(20px, 2vw, 22px);
+  line-height: 1.4;
+  max-width: 600px;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-1px);
+}
+
+.hero-animate {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeIn 1.2s ease-out forwards;
+}
+
+@keyframes heroFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.74s;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding: 100px 0 80px;
+  }
+
+  .hero-headline {
+    font-size: clamp(36px, 10vw, 40px);
+    line-height: 1.1;
+  }
+
+  .hero-subheadline {
+    font-size: 18px;
+  }
+
+  .hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .hero-cta,
+  .hero-animate {
+    transition: none;
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
 /* Responsive container with proper padding */
 .page-container {
   max-width: 1280px;
@@ -168,6 +310,11 @@ body {
   background: var(--color-surface);
   border: 1px solid var(--color-border-subtle);
   padding: 1.5rem;
+  border-radius: var(--radius-card);
+}
+
+.concepta-button {
+  border-radius: var(--radius-button);
 }
 
 .concepta-card-subtle {

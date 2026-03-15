@@ -69,9 +69,9 @@ export default function Solutions() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="concepta-card concepta-card-interactive group"
+                  className="concepta-card concepta-card-compact concepta-card-interactive group"
                 >
-                  <solution.icon className="concepta-page-icon mb-6" />
+                  <solution.icon className="concepta-card-icon mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {solution.title}
                   </h3>

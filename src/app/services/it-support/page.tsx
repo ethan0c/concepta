@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Server24Regular, CloudArrowUp24Regular, ShieldCheckmark24Regular, Flash24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
+import { Server24Regular, CloudArrowUp24Regular, ShieldCheckmark24Regular, Flash24Regular } from "@fluentui/react-icons";
 import Link from "next/link";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
@@ -38,7 +38,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <Server24Regular className="concepta-page-icon mr-4" />
+                  <Server24Regular className="concepta-card-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Desktop Services
                   </h3>
@@ -68,7 +68,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <ShieldCheckmark24Regular className="concepta-page-icon mr-4" />
+                  <ShieldCheckmark24Regular className="concepta-card-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Cybersecurity Services
                   </h3>
@@ -104,7 +104,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <CloudArrowUp24Regular className="concepta-page-icon mr-4" />
+                  <CloudArrowUp24Regular className="concepta-card-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Backup & Disaster Recovery
                   </h3>
@@ -134,7 +134,7 @@ export default function ITSupport() {
                 className="concepta-card concepta-card-compact"
               >
                 <div className="flex items-center mb-6">
-                  <Flash24Regular className="concepta-page-icon mr-4" />
+                  <Flash24Regular className="concepta-card-icon mr-4" />
                   <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
                     Managed Network Services
                   </h3>

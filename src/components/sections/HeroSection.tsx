@@ -25,7 +25,7 @@ export default function HeroSection() {
 
             {/* H1 */}
             <motion.h1
-              className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-bold leading-[1.1] tracking-tight mb-6 sm:mb-8"
+              className="hero-title text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem] font-semibold leading-[1.1] tracking-tight mb-6 sm:mb-8"
               variants={fadeUp}
               initial="hidden"
               animate="show"

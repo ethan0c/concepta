@@ -256,6 +256,22 @@ body {
   color: #ffffff;
 }
 
+/* Card-context icon: 40px, used inside feature/content cards on internal pages */
+.concepta-card-icon {
+  color: var(--color-icon-navy);
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: color 0.2s ease-in-out;
+  flex-shrink: 0;
+}
+
+.concepta-card:hover .concepta-card-icon {
+  color: var(--color-icon-navy-hover);
+}
+
 .concepta-icon-tile-sm > svg {
   width: 1.25rem;
   height: 1.25rem;

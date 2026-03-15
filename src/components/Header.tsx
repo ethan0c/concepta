@@ -67,14 +67,10 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
 
   const getHeaderBackgroundColor = (): string => {
     if (theme === "light") {
-      return scrolled ? "rgb(var(--color-surface-rgb) / 0.95)" : "var(--color-surface)";
+      return "var(--color-surface)";
     }
 
-    if (theme === "transparent") {
-      return scrolled ? "rgb(var(--color-header-bg-rgb) / 0.95)" : "transparent";
-    }
-
-    return scrolled ? "rgb(var(--color-header-bg-rgb) / 0.95)" : "var(--color-header-bg)";
+    return "var(--color-header-bg)";
   };
 
   const headerTextClass = "text-black";
@@ -84,7 +80,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
     <>
       <header
         className={`fixed w-full z-50 border-b border-[var(--color-border-subtle)] transition-all duration-300 ${
-          scrolled ? "backdrop-blur-md shadow-lg" : ""
+          scrolled ? "shadow-lg" : ""
         }`}
         style={{ backgroundColor: getHeaderBackgroundColor() }}
       >

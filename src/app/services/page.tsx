@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
+import { ShieldCheckmark24Regular, CloudArrowUp24Regular, BrainCircuit24Regular, Headset24Regular, Code24Regular, DataBarVertical24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
@@ -33,16 +33,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <BrainCircuit24Regular className="concepta-page-icon mb-6" />
+                <BrainCircuit24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Artificial Intelligence & AI Governance
                 </h3>
                 <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Responsible AI solutions built for governance, compliance, and scale.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Concepta provides AI-driven solutions that enhance operational efficiency while maintaining strong governance, ethics, and compliance.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -59,16 +59,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <ShieldCheckmark24Regular className="concepta-page-icon mb-6" />
+                <ShieldCheckmark24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Cybersecurity & Zero Trust Architecture
                 </h3>
                 <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Security strategies that protect mission-critical systems and data.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Modern cybersecurity services grounded in Zero Trust principles, helping organizations reduce risk and strengthen resilience.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -85,16 +85,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <Code24Regular className="concepta-page-icon mb-6" />
+                <Code24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Application & Platform Support
                 </h3>
                 <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Reliable application and platform support for continuous operations.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Application and platform support services ensuring system availability, performance, and security for enterprise and government systems.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -111,16 +111,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <CloudArrowUp24Regular className="concepta-page-icon mb-6" />
+                <CloudArrowUp24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Solution Architecture & Cloud Enablement
                 </h3>
                 <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Architecting secure, scalable solutions for modern environments.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Concepta designs and supports solution architectures that integrate cloud, data, and security technologies to meet mission and business needs.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -137,16 +137,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <Headset24Regular className="concepta-page-icon mb-6" />
+                <Headset24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Service Desk & IT Operations Support
                 </h3>
                 <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Responsive IT support that keeps organizations running.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Service desk and IT operations support designed for reliability and user experience across hybrid, onsite, and remote environments.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
@@ -163,16 +163,16 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <DataBarVertical24Regular className="concepta-page-icon mb-6" />
+                <DataBarVertical24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   Data Management & Analytics
                 </h3>
                 <p className="text-sm text-[var(--color-primary)] font-medium mb-4">
                   Secure data solutions for informed decision-making.
                 </p>
-                <p className="text-gray-600 mb-6">
+                <p className="text-sm text-gray-600 leading-relaxed mb-6">
                   Comprehensive data management including secure storage, backup, analytics, and governance for regulated environments.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">

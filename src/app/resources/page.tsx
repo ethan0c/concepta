@@ -85,10 +85,10 @@ export default function Resources() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="concepta-card"
+                  className="concepta-card concepta-card-compact"
                 >
                   <div className="flex items-center gap-3 mb-4">
-                    <topic.icon className="concepta-page-icon" />
+                    <topic.icon className="concepta-card-icon" />
                     <span className="text-xs text-[var(--color-primary)] font-medium uppercase tracking-wider">{topic.category}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{topic.title}</h3>

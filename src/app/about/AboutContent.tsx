@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Trophy24Regular, People24Regular, Target24Regular, Globe24Regular, ArrowRight24Regular } from "@fluentui/react-icons";
+import { Trophy24Regular, People24Regular, Target24Regular, Globe24Regular } from "@fluentui/react-icons";
 import { PageShell } from "@/components/layout";
 import { InternalHeroSection } from "@/components/sections";
 
@@ -73,13 +73,13 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <Trophy24Regular className="concepta-page-icon mb-6" />
+                <Trophy24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">
                   Certified Excellence
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Microsoft Azure AI Partner with ISO 27001 and SOC 2 Type II
                   certifications ensuring highest standards.
                 </p>
@@ -90,11 +90,11 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <People24Regular className="concepta-page-icon mb-6" />
+                <People24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
-                <p className="text-gray-600">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Seasoned professionals with deep expertise in cybersecurity,
                   AI, and enterprise technology solutions.
                 </p>
@@ -105,11 +105,11 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <Target24Regular className="concepta-page-icon mb-6" />
+                <Target24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
-                <p className="text-gray-600">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Track record of successful implementations with measurable
                   outcomes and customer satisfaction.
                 </p>
@@ -120,11 +120,11 @@ export default function AboutContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="concepta-card"
+                className="concepta-card concepta-card-compact"
               >
-                <Globe24Regular className="concepta-page-icon mb-6" />
+                <Globe24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Reach</h3>
-                <p className="text-gray-600">
+                <p className="text-sm text-gray-600 leading-relaxed">
                   Serving clients worldwide with 24/7 support and localized
                   expertise across multiple industries.
                 </p>

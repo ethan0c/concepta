@@ -12,21 +12,21 @@ const topics = [
     icon: ShieldCheckmark24Regular,
     category: "Cybersecurity",
     title: "Zero Trust Architecture & Implementation",
-    description: "Concepta implements end-to-end Zero Trust frameworks across identity services, endpoints, devices, data, network, and infrastructure. We help organizations verify explicitly, enforce least-privilege access, and assume breach to reduce their attack surface.",
+    description: "Concepta implements end-to-end Zero Trust frameworks across identity, endpoints, devices, data, networks, and infrastructure. Our approach helps organizations verify explicitly, enforce least-privilege access, and assume breach to reduce their attack surface.",
     points: ["Identity & access management", "Endpoint protection & compliance", "Network segmentation & monitoring", "NIST 800-207 alignment"],
   },
   {
     icon: BrainCircuit24Regular,
     category: "Artificial Intelligence",
-    title: "AI-Powered Solutions & Governance",
-    description: "Our AI solutions integrate Microsoft Azure AI and Copilot for Microsoft 365 to enhance productivity, automate workflows, and support decision-making—while maintaining governance, ethics, and regulatory compliance.",
-    points: ["Microsoft Copilot deployment & readiness", "Intelligent automation & workflow optimization", "AI governance & ethical frameworks", "Azure OpenAI integration"],
+    title: "AI-Powered Solutions, Agentic AI, & Governance",
+    description: "Our AI solutions integrate Microsoft Azure AI, Azure OpenAI, and Copilot for Microsoft 365 to enhance productivity, automate workflows, and support decision-making—while maintaining governance, ethics, and regulatory compliance. We also help organizations adopt agentic AI systems with the guardrails required for regulated environments.",
+    points: ["Microsoft Copilot deployment & readiness", "Intelligent automation & workflow optimization", "AI governance & ethical frameworks", "Azure OpenAI integration", "Agentic AI lifecycle governance", "Multi-agent system architecture"],
   },
   {
     icon: CloudArrowUp24Regular,
     category: "Cloud & Infrastructure",
     title: "Cloud Migration & Modernization",
-    description: "Concepta provides comprehensive cloud architecture solutions to help organizations migrate applications, modernize infrastructure, and build resilient hybrid environments aligned with security and compliance requirements.",
+    description: "Concepta provides secure cloud architecture solutions to help organizations migrate applications, modernize infrastructure, and build resilient hybrid environments aligned with compliance and Zero Trust principles.",
     points: ["Azure cloud architecture & migration", "Hybrid cloud & multi-cloud strategy", "Disaster recovery & backup solutions", "Secure configuration management"],
   },
   {
@@ -49,13 +49,13 @@ const caseStudies = [
     category: "Cloud Transformation",
     title: "Georgia Banking Company: Cloud Adoption with Microsoft Security",
     description: "A growing bank completed its cloud transformation within 13 months and gained scalable security by replacing disconnected products with integrated Microsoft Security solutions.",
-    result: "13-month cloud transformation with scalable, integrated security",
+    result: "13-month cloud transformation with unified, scalable security",
   },
   {
     category: "Enterprise Security",
     title: "US LBM: Centralizing IT with Microsoft Security",
     description: "Building supplier US LBM centralized IT across multiple acquisitions by adopting Microsoft Sentinel and Microsoft 365 Defender for a complete SIEM and extended detection and response solution.",
-    result: "Better than benchmark security score with unified XDR and SIEM",
+    result: "Above-benchmark security score with unified XDR and SIEM",
   },
 ]
 
@@ -112,6 +112,86 @@ const frameworks = [
   },
 ]
 
+const msInsights = [
+  {
+    subsection: "Agentic AI & AI Governance",
+    items: [
+      {
+        title: 'Microsoft "Customer Zero" – Enterprise Agentic AI Adoption',
+        description: "How Microsoft deployed agentic AI internally to automate workflows, improve decision-making, and govern multi-agent systems at scale.",
+      },
+      {
+        title: "Microsoft AI Infrastructure Governance Strategy",
+        description: "Microsoft's internal governance model for responsible AI, covering safeguards, accountability, and risk management.",
+      },
+      {
+        title: "Microsoft Multi-Agent Governance Reference Architecture",
+        description: "A blueprint for governing agentic AI systems, including identity, access, data boundaries, and lifecycle controls.",
+      },
+      {
+        title: "Microsoft AI Agent Governance Toolkit",
+        description: "Open-source toolkit for enforcing policy, sandboxing, and guardrails for autonomous AI agents.",
+      },
+    ],
+  },
+  {
+    subsection: "Cybersecurity & Threat Intelligence",
+    items: [
+      {
+        title: "Microsoft Cyber Pulse (Latest Edition)",
+        description: "Microsoft’s flagship threat intelligence report covering identity-based attacks, nation-state threats, ransomware trends, cloud vulnerabilities, and AI-enabled cyber threats.",
+      },
+      {
+        title: "Microsoft Zero Trust Guidance for Regulated Industries",
+        description: "Best practices for implementing Zero Trust across hybrid and multi-cloud environments.",
+      },
+    ],
+  },
+]
+
+const industryResources = [
+  {
+    category: "Cloud & Infrastructure",
+    items: [
+      "Microsoft Cloud Adoption Framework",
+      "Azure Well-Architected Framework",
+      "AWS Well-Architected Framework",
+      "AWS Security Reference Architecture",
+      "Google Cloud Security Foundations Guide",
+      "VMware Hybrid Cloud Security Architecture",
+    ],
+  },
+  {
+    category: "AI Governance & Responsible AI",
+    items: [
+      "NIST AI Risk Management Framework (AI RMF)",
+      "ISO/IEC 42001 AI Management System Standard",
+      "OECD AI Principles",
+      "CISA/NSA AI Security Guidelines",
+    ],
+  },
+  {
+    category: "Cybersecurity & Zero Trust",
+    items: [
+      "NIST Zero Trust Architecture (SP 800-207)",
+      "CISA Zero Trust Maturity Model",
+      "MITRE ATT&CK Framework",
+      "CIS Benchmarks (Windows, Linux, cloud, network devices)",
+    ],
+  },
+  {
+    category: "Compliance & Risk Management",
+    items: [
+      "FedRAMP Security Controls Baseline",
+      "NIST Risk Management Framework (SP 800-37)",
+      "NIST SP 800-171 Rev 3",
+      "CMMC 2.0 Assessment Guide",
+      "HIPAA Security Rule Toolkit",
+      "Microsoft Compliance Offerings (Azure, M365, Dynamics)",
+    ],
+  },
+]
+
 export default function Resources() {
   return (
     <PageShell currentPage="Resources" headerTheme="light">
@@ -126,7 +206,7 @@ export default function Resources() {
               Resources & Insights
             </h1>
             <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
-              Insights, strategies, and real-world outcomes across cybersecurity, AI, cloud, and compliance, drawn from our work with government and enterprise clients.
+              Insights, strategies, and real‑world outcomes across cybersecurity, AI, cloud, and compliance—designed for organizations operating in secure, regulated, and mission‑critical environments.
             </p>
           </div>
         </div>
@@ -203,6 +283,73 @@ export default function Resources() {
                     <p className="text-sm text-gray-500 mb-1">Result</p>
                     <p className="text-sm text-gray-900 font-medium">{study.result}</p>
                   </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Microsoft AI & Security Insights */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
+          <div className="page-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Microsoft AI & Security Insights</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Authoritative Microsoft resources that support AI governance, agentic AI adoption, and modern cybersecurity practices in regulated environments.
+              </p>
+            </div>
+
+            <div className="space-y-12">
+              {msInsights.map((group) => (
+                <div key={group.subsection}>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-6 pb-3 border-b border-gray-200">{group.subsection}</h3>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {group.items.map((item, index) => (
+                      <motion.div
+                        key={item.title}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="concepta-card concepta-card-compact"
+                      >
+                        <h4 className="text-base font-semibold text-gray-900 mb-2">{item.title}</h4>
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Multi-Cloud & Industry Resources */}
+        <section className="py-16 sm:py-20 lg:py-24 bg-white">
+          <div className="page-container">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Multi-Cloud & Industry Resources</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Curated resources from AWS, Google Cloud, NIST, CISA, and other trusted organizations to support secure, compliant modernization.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {industryResources.map((group, groupIndex) => (
+                <motion.div
+                  key={group.category}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
+                  viewport={{ once: true }}
+                  className="concepta-card concepta-card-compact"
+                >
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">{group.category}</h3>
+                  <ul className="space-y-2">
+                    {group.items.map((item) => (
+                      <li key={item} className="text-sm text-gray-600">&bull; {item}</li>
+                    ))}
+                  </ul>
                 </motion.div>
               ))}
             </div>

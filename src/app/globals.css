@@ -178,7 +178,7 @@ body {
 
 .hero {
   position: relative;
-  padding: 140px 0 120px;
+  padding: 120px 0 80px;
   background: var(--color-hero-bg);
   overflow: hidden;
   transition: opacity 0.4s ease-out;

@@ -192,7 +192,7 @@ const techCategories: TechCategory[] = [
 export default function Services() {
   return (
     <PageShell currentPage="Services" headerTheme="light">
-      <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "#EEF2F9" }}>
+      <section className="relative overflow-hidden pt-[120px] pb-12 sm:pb-14" style={{ background: "#EEF2F9" }}>
         <InternalHeroBackground />
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">

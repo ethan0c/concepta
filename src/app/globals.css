@@ -67,31 +67,8 @@
 :root {
   --font-cisco: 'Inter', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
   --mds-font-size-base: 16px;
-  --mds-font-size-small: 12px;
-  --mds-font-size-midsize: 14px;
-  --mds-font-size-large: 16px;
-  --mds-font-size-h6: 18px;
-  --mds-font-size-h5: 20px;
-  --mds-font-size-h4: 28px;
-  --mds-font-size-h3: 32px;
-  --mds-font-size-h2: 36px;
-  --mds-font-size-h1: 40px;
-  --mds-font-size-headline: 48px;
-  --mds-line-height-small: 16px;
-  --mds-line-height-midsize: 20px;
   --mds-line-height-large: 24px;
-  --mds-line-height-h6: 26px;
-  --mds-line-height-h5: 28px;
-  --mds-line-height-h4: 36px;
-  --mds-line-height-h3: 40px;
-  --mds-line-height-h2: 44px;
-  --mds-line-height-h1: 48px;
-  --mds-line-height-headline: 56px;
-  --mds-font-weight-light: 300;
   --mds-font-weight-regular: 400;
-  --mds-font-weight-medium: 500;
-  --mds-font-weight-semibold: 600;
-  --mds-font-weight-bold: 700;
 }
 
 html {

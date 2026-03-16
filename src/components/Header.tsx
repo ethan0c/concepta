@@ -157,7 +157,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
               </a>
               <Link 
                 href="/contact"
-                className="concepta-button bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
+                className="concepta-button bg-[var(--brand-navy)] hover:bg-[var(--color-link-hover)] text-white px-4 sm:px-5 py-2 text-sm font-medium transition-colors"
               >
                 <span className="hidden sm:inline">Get a Quote</span>
                 <span className="sm:hidden text-xs">Quote</span>

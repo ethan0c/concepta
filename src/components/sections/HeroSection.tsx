@@ -20,7 +20,7 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
               <Link
                 href="/contact"
-                className="hero-cta inline-flex items-center justify-center bg-[#1E3A8A] text-white text-sm hover:bg-[#1e40af]"
+                className="hero-cta inline-flex items-center justify-center bg-[var(--brand-navy)] text-white text-sm hover:bg-[var(--color-link-hover)]"
               >
                 Talk to an Expert
                 <svg className="w-4 h-4 ml-2 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

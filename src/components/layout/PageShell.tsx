@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import Footer from "./Footer";
-import BottomFooter from "./BottomFooter";
 
 interface PageShellProps {
   children: React.ReactNode;
@@ -22,7 +21,6 @@ export default function PageShell({
       <Header currentPage={currentPage} theme={headerTheme} />
       <main className={mainClassName}>{children}</main>
       <Footer />
-      <BottomFooter />
     </div>
   );
 }

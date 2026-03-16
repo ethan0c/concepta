@@ -10,11 +10,11 @@ export default function HeroSection() {
         <div className="hero-inner min-h-[56vh] sm:min-h-[60vh] lg:min-h-[64vh] flex items-center">
           <div>
             <h1 className="hero-title hero-headline font-semibold tracking-tight">
-              Secure, modern technology for complex, regulated environments.
+              Modern IT solutions for secure, regulated, and mission-critical environments
             </h1>
 
             <p className="hero-body hero-subheadline leading-relaxed font-light">
-              AI, cybersecurity, and modern IT services built for rigorous governance and compliance-driven operations.
+              AI-enabled. Security-first. Mission-aligned.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">

@@ -16,10 +16,10 @@ export default function AboutContent() {
               About Concepta Innovation Services
             </p>
             <h1 className="hero-animate delay-1 mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[var(--brand-navy)]">
-              Mission-Aligned IT for Government &amp; Industry
+              Mission-aligned IT for secure, regulated, and mission-critical environments
             </h1>
             <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
-              We deliver intelligent automation, secure infrastructure, and responsive support for organizations operating in complex, regulated environments.
+              We deliver AI-enabled automation, secure infrastructure, and responsive IT support for organizations operating in complex, regulated environments. Our mission is to help government agencies and enterprise organizations modernize responsibly, operate securely, and perform at scale.
             </p>
           </div>
         </div>
@@ -36,25 +36,25 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="max-w-4xl mx-auto"
               >
-                <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-6">About Us</h2>
-                <h3 className="text-xl sm:text-2xl text-gray-800 mb-4 font-medium">
-                  Empowering Innovation Across Federal and Commercial Sectors with AI, Cybersecurity, and Professional IT Support Services.
+                <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-6">Who We Are</h2>
+                <h3 className="text-xl sm:text-2xl text-[var(--color-primary)] mb-4 font-medium">
+                  Empowering government and industry with secure, intelligent, and mission-ready technology solutions
                 </h3>
                 <p className="text-base text-gray-600 mb-6 leading-relaxed">
-                  At Concepta Innovation Services, we deliver intelligent automation, secure infrastructure, and mission-aligned IT support for government agencies and commercial enterprises. Our services are designed to help organizations modernize responsibly, operate securely, and perform at scale in complex, regulated environments.
+                  Concepta Innovation Services provides AI, cybersecurity, cloud, and professional IT services designed for organizations that require strong governance, compliance, and operational resilience. We combine deep technical expertise with a mission-aligned approach to help clients modernize confidently and maintain continuity across hybrid and regulated environments.
                 </p>
                 <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                  Our professional capabilities span AI-driven workflows, AI governance, ethics, and compliance, application and platform support, solution architecture, Zero Trust cybersecurity frameworks, and responsive service desk operations. Together, these services enhance operational performance, strengthen compliance, and elevate the end-user experience across industries.
+                  Our capabilities span AI-driven workflows, AI governance and ethics, Zero Trust cybersecurity frameworks, application and platform support, solution architecture, and responsive service desk operations. Together, these services strengthen security, enhance operational performance, and elevate the end-user experience.
                 </p>
                 <div className="concepta-card concepta-card-subtle">
                   <h3 className="text-xl font-medium text-gray-900 mb-4">
-                    Our Tagline
+                    Our Identity
                   </h3>
                   <p className="text-xl text-[var(--color-primary)] font-medium mb-3">
-                    Smarter Solutions. Secure Infrastructure. Seamless Support.
+                    Smarter solutions. Secure infrastructure. Seamless support.
                   </p>
                   <p className="text-base text-gray-700">
-                    AI, Cybersecurity, and Professional IT Services for Government and Industry.
+                    We believe modern IT must be intelligent, secure, and mission-aligned. Our approach integrates responsible AI, Zero Trust security, and enterprise-grade support to help organizations achieve measurable outcomes with confidence.
                   </p>
                 </div>
                 
@@ -72,8 +72,7 @@ export default function AboutContent() {
                 What Sets Us Apart
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our unique combination of expertise, partnerships, and proven
-                methodologies delivers exceptional value.
+                Our unique combination of certifications, expertise, proven outcomes, and mission-aligned delivery enables organizations to modernize with confidence.
               </p>
             </div>
 
@@ -90,8 +89,7 @@ export default function AboutContent() {
                   Certified Excellence
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Microsoft Azure AI Partner with ISO 27001 and SOC 2 Type II
-                  certifications ensuring highest standards.
+                  We maintain industry-recognized certifications including Microsoft Azure AI Partner status, ISO 27001, and CMMC to ensure our solutions meet the highest standards of security, governance, and operational integrity.
                 </p>
               </motion.div>
 
@@ -105,8 +103,7 @@ export default function AboutContent() {
                 <People24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Seasoned professionals with deep expertise in cybersecurity,
-                  AI, and enterprise technology solutions.
+                  Our team includes seasoned professionals with deep expertise in cybersecurity, AI, cloud architecture, and enterprise technology. We bring decades of experience supporting government agencies and regulated industries.
                 </p>
               </motion.div>
 
@@ -120,8 +117,7 @@ export default function AboutContent() {
                 <Target24Regular className="concepta-card-icon mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Track record of successful implementations with measurable
-                  outcomes and customer satisfaction.
+                  We deliver measurable outcomes through secure modernization, AI-enabled automation, and Zero Trust security implementations. Our track record includes successful transformations across federal, state, and commercial sectors.
                 </p>
               </motion.div>
 
@@ -133,16 +129,14 @@ export default function AboutContent() {
                 className="concepta-card concepta-card-compact"
               >
                 <Globe24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Global Reach</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Mission-Aligned Delivery</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  Serving clients worldwide with 24/7 support and localized
-                  expertise across multiple industries.
+                  We understand the operational, compliance, and security requirements of regulated environments. Our methodologies ensure alignment with mission needs, governance frameworks, and regulatory standards.
                 </p>
               </motion.div>
             </div>
           </div>
         </section>
-
 
     </PageShell>
   );

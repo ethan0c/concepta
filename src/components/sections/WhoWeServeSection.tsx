@@ -85,7 +85,7 @@ export default function WhoWeServeSection() {
               <div className="flex items-start gap-4">
                 <sector.icon className="sector-icon mt-1 shrink-0" />
                 <div>
-                  <h3 className="text-lg sm:text-xl text-gray-900 font-medium mb-2">
+                  <h3 className="text-lg sm:text-xl concepta-heading-h3 font-medium mb-2">
                     {sector.title}
                   </h3>
                   <p className="text-sm sm:text-base text-gray-600 leading-relaxed">

@@ -47,7 +47,7 @@ export default function AboutContent() {
                   Our capabilities span AI-driven workflows, AI governance and ethics, Zero Trust cybersecurity frameworks, application and platform support, solution architecture, and responsive service desk operations. Together, these services strengthen security, enhance operational performance, and elevate the end-user experience.
                 </p>
                 <div className="concepta-card concepta-card-subtle">
-                  <h3 className="text-xl font-medium text-gray-900 mb-4">
+                  <h3 className="text-xl font-medium concepta-heading-h3 mb-4">
                     Our Identity
                   </h3>
                   <p className="text-xl text-[var(--color-primary)] font-medium mb-3">
@@ -85,7 +85,7 @@ export default function AboutContent() {
                 className="concepta-card concepta-card-compact"
               >
                 <Trophy24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-xl font-semibold concepta-heading-h3 mb-4">
                   Certified Excellence
                 </h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
@@ -101,7 +101,7 @@ export default function AboutContent() {
                 className="concepta-card concepta-card-compact"
               >
                 <People24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Team</h3>
+                <h3 className="text-xl font-semibold concepta-heading-h3 mb-4">Expert Team</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   Our team includes seasoned professionals with deep expertise in cybersecurity, AI, cloud architecture, and enterprise technology. We bring decades of experience supporting government agencies and regulated industries.
                 </p>
@@ -115,7 +115,7 @@ export default function AboutContent() {
                 className="concepta-card concepta-card-compact"
               >
                 <Target24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Proven Results</h3>
+                <h3 className="text-xl font-semibold concepta-heading-h3 mb-4">Proven Results</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   We deliver measurable outcomes through secure modernization, AI-enabled automation, and Zero Trust security implementations. Our track record includes successful transformations across federal, state, and commercial sectors.
                 </p>
@@ -129,7 +129,7 @@ export default function AboutContent() {
                 className="concepta-card concepta-card-compact"
               >
                 <Globe24Regular className="concepta-card-icon mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Mission-Aligned Delivery</h3>
+                <h3 className="text-xl font-semibold concepta-heading-h3 mb-4">Mission-Aligned Delivery</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   We understand the operational, compliance, and security requirements of regulated environments. Our methodologies ensure alignment with mission needs, governance frameworks, and regulatory standards.
                 </p>

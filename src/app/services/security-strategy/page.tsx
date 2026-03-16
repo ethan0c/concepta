@@ -30,7 +30,7 @@ export default function SecurityStrategy() {
             <div className="concepta-card concepta-card-subtle mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h3 className="text-3xl font-medium text-gray-900 mb-4">
+                  <h3 className="text-3xl font-medium concepta-heading-h3 mb-4">
                     G&J Pepsi Reflect on Overcoming a Ransomware Attack
                   </h3>
                   <p className="text-[var(--color-primary)] font-medium text-lg mb-6">
@@ -61,13 +61,13 @@ export default function SecurityStrategy() {
 
                 <div className="text-center">
                   <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">
+                  <h4 className="text-xl font-semibold concepta-heading-h4 mb-4">
                     Microsoft Azure & Security Partnership
                   </h4>
                   <p className="text-gray-600 mb-6">
                     Leveraging Microsoft&apos;s comprehensive security solutions to protect against ransomware and cyber threats.
                   </p>
-                  <Link href="/contact" className="concepta-button inline-flex items-center gap-2 bg-[#1E3A8A] hover:bg-[#1e40af] text-white px-6 py-3 font-medium transition-colors">
+                  <Link href="/contact" className="concepta-button inline-flex items-center gap-2 bg-[var(--brand-navy)] hover:bg-[var(--color-link-hover)] text-white px-6 py-3 font-medium transition-colors">
                     Get in Touch
                     <ArrowRight24Regular className="w-4 h-4 shrink-0" />
                   </Link>
@@ -97,7 +97,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   MICROSOFT PARTNER
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                <h3 className="text-xl font-medium concepta-heading-h3 mb-4">
                   Microsoft Digital Defense Report
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -140,7 +140,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   ZERO TRUST
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                <h3 className="text-xl font-medium concepta-heading-h3 mb-4">
                   How to Use Zero Trust to Defend Against Cyberattacks
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -182,7 +182,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   CASE STUDY
                 </div>
-                <h3 className="text-xl font-medium text-gray-900 mb-4">
+                <h3 className="text-xl font-medium concepta-heading-h3 mb-4">
                   US LBM Remodels its Cybersecurity by Centralizing IT with
                   Microsoft Security
                 </h3>
@@ -261,7 +261,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   GENERATIVE AI AT WORK
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold concepta-heading-h3 mb-4">
                   Insights from Copilot Early Users
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
@@ -284,7 +284,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   COPILOT FOR M365
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold concepta-heading-h3 mb-4">
                   Day in the Life of an Executive
                 </h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
@@ -307,7 +307,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   ONBOARDING GUIDE
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold concepta-heading-h3 mb-4">
                   How to Onboard Copilot, Your Everyday Work Companion
                 </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
@@ -371,7 +371,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   CLOUD TRANSFORMATION
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold concepta-heading-h3 mb-4">
                   Bank Boosts Growth with Cloud Adoption and Microsoft Security
                 </h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
@@ -408,7 +408,7 @@ export default function SecurityStrategy() {
                   <div className="w-2 h-2 bg-[var(--color-primary)] mr-2"></div>
                   MULTICLOUD SECURITY
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-2xl font-semibold concepta-heading-h3 mb-4">
                   Data Protection Across Your Multicloud Estate
                 </h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
@@ -458,7 +458,7 @@ export default function SecurityStrategy() {
                 className="concepta-card text-center"
               >
                 <ShieldCheckmark24Regular className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
-                <h3 className="text-xl text-gray-900 mb-4">
+                <h3 className="text-xl concepta-heading-h3 mb-4">
                   Security Assessment
                 </h3>
                 <p className="text-gray-600 mb-6">
@@ -481,7 +481,7 @@ export default function SecurityStrategy() {
                 className="concepta-card text-center"
               >
                 <LockClosedIcon className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
-                <h3 className="text-xl text-gray-900 mb-4">
+                <h3 className="text-xl concepta-heading-h3 mb-4">
                   Zero Trust Implementation
                 </h3>
                 <p className="text-gray-600 mb-6">
@@ -504,7 +504,7 @@ export default function SecurityStrategy() {
                 className="concepta-card text-center"
               >
                 <Eye24Regular className="concepta-page-icon mx-auto mb-6 text-[var(--color-link)]" />
-                <h3 className="text-xl text-gray-900 mb-4">24/7 Monitoring</h3>
+                <h3 className="text-xl concepta-heading-h3 mb-4">24/7 Monitoring</h3>
                 <p className="text-gray-600 mb-6">
                   Continuous security monitoring and threat detection with rapid
                   response capabilities to protect your business.

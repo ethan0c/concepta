@@ -251,7 +251,7 @@ export default function Services() {
                   <div className="flex h-12 w-12 items-center justify-center text-[var(--color-link)] transition-colors duration-200 group-hover:text-[var(--color-link-hover)]">
                     <service.icon className="h-8 w-8" aria-hidden="true" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 transition-colors duration-200 group-hover:text-[var(--color-link)]">
+                  <h3 className="text-xl sm:text-2xl font-semibold concepta-heading-h3 transition-colors duration-200 group-hover:text-[var(--color-link)]">
                     {service.title}
                   </h3>
                 </div>
@@ -318,7 +318,7 @@ export default function Services() {
                 viewport={{ once: true }}
                 className="concepta-card concepta-card-subtle concepta-card-compact"
               >
-                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                <h3 className="mb-3 text-lg font-semibold concepta-heading-h3">
                   {category.title}
                 </h3>
                 <ul className="space-y-2">

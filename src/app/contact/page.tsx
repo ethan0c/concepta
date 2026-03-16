@@ -91,7 +91,7 @@ export default function Contact() {
                   <div className="flex items-start space-x-4">
                     <Phone24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
+                      <h3 className="text-lg concepta-heading-h3 mb-1">Phone</h3>
                       <p className="text-gray-600">(877) 594-1944</p>
                       <p className="text-sm text-gray-500">Monday-Friday, 8:00 AM - 6:00 PM EST</p>
                     </div>
@@ -100,7 +100,7 @@ export default function Contact() {
                   <div className="flex items-start space-x-4">
                     <Mail24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg text-gray-900 mb-1">Email</h3>
+                      <h3 className="text-lg concepta-heading-h3 mb-1">Email</h3>
                       <p className="text-gray-600">support@conceptainnovation.com</p>
                       <p className="text-sm text-gray-500">We respond within 24 hours</p>
                     </div>
@@ -109,7 +109,7 @@ export default function Contact() {
                   <div className="flex items-start space-x-4">
                     <Location24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg text-gray-900 mb-1">Headquarters</h3>
+                      <h3 className="text-lg concepta-heading-h3 mb-1">Headquarters</h3>
                       <p className="text-gray-600">
                         1451 Rockville Pike, Suite 250<br />
                         Rockville, MD 20852
@@ -120,7 +120,7 @@ export default function Contact() {
                   <div className="flex items-start space-x-4">
                     <Clock24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
-                      <h3 className="text-lg text-gray-900 mb-1">Business Hours</h3>
+                      <h3 className="text-lg concepta-heading-h3 mb-1">Business Hours</h3>
                       <p className="text-gray-600">
                         Monday-Friday: 8:00 AM - 6:00 PM EST<br />
                         Weekend: Emergency support available

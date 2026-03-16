@@ -82,7 +82,7 @@ export default function Solutions() {
                   className="concepta-card concepta-card-compact concepta-card-interactive group flex flex-col"
                 >
                   <solution.icon className="concepta-card-icon mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold concepta-heading-h3 mb-2">
                     {solution.title}
                   </h3>
                   <p className="text-sm font-medium text-[var(--color-primary)] mb-3">

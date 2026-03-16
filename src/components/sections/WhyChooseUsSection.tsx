@@ -90,7 +90,7 @@ export default function WhyChooseUsSection() {
               className="concepta-card concepta-card-compact"
             >
               <pillar.icon className="why-icon" aria-hidden="true" />
-              <h3 className="mt-4 text-xl sm:text-2xl font-semibold text-gray-900 tracking-tight">
+              <h3 className="mt-4 text-xl sm:text-2xl font-semibold concepta-heading-h3 tracking-tight">
                 {pillar.title}
               </h3>
               <p className="mt-2 text-base sm:text-lg leading-relaxed text-gray-700">

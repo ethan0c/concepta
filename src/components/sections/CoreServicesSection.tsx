@@ -101,7 +101,7 @@ export default function CoreServicesSection() {
             >
               <pillar.icon className="capability-icon mb-4" />
 
-              <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
+              <h3 className="text-xl sm:text-2xl font-semibold concepta-heading-h3 mb-2">
                 {pillar.title}
               </h3>
 

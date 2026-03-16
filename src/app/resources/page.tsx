@@ -236,7 +236,7 @@ export default function Resources() {
                     <topic.icon className="concepta-card-icon text-[var(--color-link)]" />
                     <span className="text-xs text-[var(--color-link)] bg-blue-50 px-2.5 py-1 font-semibold uppercase tracking-wider">{topic.category}</span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{topic.title}</h3>
+                  <h3 className="text-xl font-semibold concepta-heading-h3 mb-3">{topic.title}</h3>
                   <p className="text-gray-600 mb-6 text-sm leading-relaxed">{topic.description}</p>
                   <ul className="space-y-2 text-sm text-gray-600 mb-6">
                     {topic.points.map((point) => (
@@ -280,7 +280,7 @@ export default function Resources() {
                   className="concepta-card concepta-card-subtle border-t-4 border-t-[var(--color-link)]"
                 >
                   <span className="text-xs text-[var(--color-link)] bg-blue-100 px-2.5 py-1 font-semibold uppercase">{study.category}</span>
-                  <h3 className="text-lg font-semibold text-gray-900 mt-4 mb-3">{study.title}</h3>
+                  <h3 className="text-lg font-semibold concepta-heading-h3 mt-4 mb-3">{study.title}</h3>
                   <p className="text-gray-600 text-sm mb-6 leading-relaxed">{study.description}</p>
                   <div className="concepta-card concepta-card-tight bg-white">
                     <p className="text-sm text-[var(--color-link)] mb-1">Result</p>
@@ -316,7 +316,7 @@ export default function Resources() {
                         viewport={{ once: true }}
                         className="concepta-card concepta-card-compact border-l-4 border-l-blue-200"
                       >
-                        <h4 className="text-base font-semibold text-gray-900 mb-2">{item.title}</h4>
+                        <h4 className="text-base font-semibold concepta-heading-h4 mb-2">{item.title}</h4>
                         <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
                       </motion.div>
                     ))}

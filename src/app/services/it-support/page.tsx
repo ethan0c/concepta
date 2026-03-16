@@ -38,7 +38,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <Server24Regular className="concepta-card-icon mr-4 text-[var(--color-link)]" />
-                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold concepta-heading-h3">
                     Managed Desktop Services
                   </h3>
                 </div>
@@ -68,7 +68,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <ShieldCheckmark24Regular className="concepta-card-icon mr-4 text-[var(--color-link)]" />
-                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold concepta-heading-h3">
                     Cybersecurity Services
                   </h3>
                 </div>
@@ -104,7 +104,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <CloudArrowUp24Regular className="concepta-card-icon mr-4 text-[var(--color-link)]" />
-                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold concepta-heading-h3">
                     Backup & Disaster Recovery
                   </h3>
                 </div>
@@ -134,7 +134,7 @@ export default function ITSupport() {
               >
                 <div className="flex items-center mb-6">
                   <Flash24Regular className="concepta-card-icon mr-4 text-[var(--color-link)]" />
-                  <h3 className="text-xl sm:text-2xl font-semibold text-gray-900">
+                  <h3 className="text-xl sm:text-2xl font-semibold concepta-heading-h3">
                     Managed Network Services
                   </h3>
                 </div>

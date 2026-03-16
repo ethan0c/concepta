@@ -62,7 +62,7 @@ export default function Contact() {
                 Let&apos;s talk about secure, governed, and modern IT solutions.
               </p>
               <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
-                Whether you are exploring AI-enabled solutions, cybersecurity services, application and platform support, or broader IT modernization and operational initiatives, Concepta Innovation Services is ready to engage.
+                Whether you&apos;re exploring AI-enabled automation, cybersecurity and Zero Trust, application and platform support, or broader IT modernization initiatives, our team is ready to help.
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function Contact() {
                 <div>
                   <h2 className="text-3xl text-gray-900 mb-6">Contact Information</h2>
                   <p className="text-lg text-gray-600 mb-8">
-                    Reach out to start a conversation about how Concepta can support your organization&apos;s technology and modernization goals.
+                    Reach out to discuss how Concepta can support your mission and technology goals.
                   </p>
                 </div>
 
@@ -92,8 +92,8 @@ export default function Contact() {
                     <Phone24Regular className="concepta-page-icon flex-shrink-0" />
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Phone</h3>
-                      <p className="text-gray-600">(877)-594-1944</p>
-                      <p className="text-sm text-gray-500">Monday – Friday, 8:00 AM – 6:00 PM EST</p>
+                      <p className="text-gray-600">(877) 594-1944</p>
+                      <p className="text-sm text-gray-500">Monday-Friday, 8:00 AM - 6:00 PM EST</p>
                     </div>
                   </div>
 
@@ -122,22 +122,11 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg text-gray-900 mb-1">Business Hours</h3>
                       <p className="text-gray-600">
-                        Monday - Friday: 8:00 AM - 6:00 PM EST<br />
+                        Monday-Friday: 8:00 AM - 6:00 PM EST<br />
                         Weekend: Emergency support available
                       </p>
                     </div>
                   </div>
-                </div>
-
-                <div className="concepta-card concepta-card-compact bg-white">
-                  <h3 className="text-lg text-gray-900 mb-3">Ready to Connect?</h3>
-                  <p className="text-gray-600 mb-4">
-                    Our team is available to discuss your IT, cybersecurity, AI, or modernization needs. Reach out and we will be in touch promptly.
-                  </p>
-                  <a href="tel:+18775941944" className="concepta-button inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-[#1E3A8A] hover:bg-[#1e40af] text-white text-sm font-medium transition-colors">
-                    Call (877)-594-1944
-                    <ArrowRight24Regular className="w-4 h-4 shrink-0" />
-                  </a>
                 </div>
               </motion.div>
 
@@ -261,6 +250,8 @@ export default function Contact() {
                     <input
                       type="checkbox"
                       id="consent"
+                      name="consent"
+                      value="agreed"
                       required
                       className="mt-1 w-4 h-4 text-[var(--color-primary)] border-gray-300 focus:ring-[var(--color-primary)]"
                     />
@@ -283,7 +274,7 @@ export default function Contact() {
                   <p className="text-sm text-gray-600">
                     Prefer to schedule a call?{' '}
                     <a href="tel:+18775941944" className="concepta-inline-link transition-colors">
-                      Call (877) 594-1944
+                      Call us directly at (877) 594-1944
                     </a>
                   </p>
                 </div>

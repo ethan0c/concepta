@@ -161,7 +161,7 @@ body {
 }
 
 .hero-title {
-  color: var(--color-hero-title);
+  color: var(--brand-navy);
 }
 
 .hero-body {

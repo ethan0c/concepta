@@ -28,7 +28,7 @@ export default function AboutContent() {
         {/* Company Overview */}
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
-            <div className="text-center mb-12">
+            <div className="mb-12">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}

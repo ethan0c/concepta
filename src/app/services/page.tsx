@@ -192,7 +192,7 @@ const techCategories: TechCategory[] = [
 export default function Services() {
   return (
     <PageShell currentPage="Services" headerTheme="light">
-      <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "#EEF2F9" }}>
+      <section className="relative overflow-hidden pt-[124px] pb-12 sm:pb-14" style={{ background: "#EEF2F9" }}>
         <InternalHeroBackground />
 
         <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
@@ -201,14 +201,14 @@ export default function Services() {
               Services
             </p>
             <h1
-              className="hero-animate delay-1 mt-5 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight text-[var(--brand-navy)]"
+              className="hero-animate delay-1 mt-4 text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight text-[var(--brand-navy)]"
             >
               Modern IT services built for secure, regulated, and mission-critical environments
             </h1>
             <p className="hero-animate delay-2 hero-body mt-6 text-base sm:text-lg font-medium leading-relaxed">
               AI-enabled. Security-first. Mission-aligned.
             </p>
-            <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
+            <p className="hero-animate delay-3 mt-6 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
               Concepta Innovation Services delivers modern IT solutions designed for government agencies and enterprise organizations that require strong governance, responsible AI, and operational resilience. We help teams modernize confidently while maintaining compliance, security, and mission continuity.
             </p>
           </div>

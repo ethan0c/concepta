@@ -7,7 +7,7 @@ export default function HeroSection() {
       <HeroBackground />
 
       <div className="hero-content max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="hero-inner min-h-[44vh] sm:min-h-[46vh] lg:min-h-[50vh] flex items-center">
+        <div className="hero-inner flex items-center">
           <div>
             <h1 className="hero-title hero-headline font-semibold tracking-tight">
               Modern IT solutions for secure, regulated, and mission-critical environments

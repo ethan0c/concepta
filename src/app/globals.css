@@ -363,6 +363,33 @@ a.concepta-card {
   color: var(--brand-navy);
 }
 
+.concepta-heading-h3 {
+  color: var(--color-primary);
+}
+
+.concepta-heading-h4 {
+  color: var(--color-primary);
+}
+
+.concepta-logo-full {
+  opacity: 1;
+}
+
+.concepta-logo-muted {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.concepta-logo-muted:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+.concepta-logo-fallback {
+  color: var(--color-hero-label);
+}
+
 .concepta-icon-tile {
   display: flex;
   align-items: center;

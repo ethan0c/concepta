@@ -65,16 +65,13 @@ function PartnerLogo({ partner }: { partner: Partner }) {
     height: partner.displayHeight,
     width: "auto",
     display: "block",
-    filter: partner.fullColor ? "none" : "grayscale(100%)",
-    opacity: partner.fullColor ? 1 : 0.55,
-    transition: "filter 0.25s ease, opacity 0.25s ease",
   };
 
   if (errored) {
     // Text fallback: clean, legible brandname until asset file is added
     return (
       <span
-        className="font-semibold tracking-tight text-gray-400 select-none"
+        className="font-semibold tracking-tight concepta-logo-fallback select-none"
         style={{ fontSize: Math.round(partner.displayHeight * 0.38) }}
       >
         {partner.name}
@@ -90,8 +87,8 @@ function PartnerLogo({ partner }: { partner: Partner }) {
       style={imgStyle}
       className={
         partner.fullColor
-          ? ""
-          : "hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+          ? "concepta-logo-full"
+          : "concepta-logo-muted"
       }
       onError={() => setErrored(true)}
     />

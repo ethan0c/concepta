@@ -55,7 +55,7 @@ export default function ResourcesInsightsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4"
           >
             What We Deliver
           </motion.h2>
@@ -88,7 +88,7 @@ export default function ResourcesInsightsSection() {
                 <span className="text-xs font-medium text-[var(--color-primary)] uppercase tracking-wider">
                   {item.category}
                 </span>
-                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mt-2 mb-3 group-hover:text-[var(--color-primary)] transition-colors leading-snug">
+                <h3 className="text-lg sm:text-xl font-semibold concepta-heading-h3 mt-2 mb-3 group-hover:text-[var(--color-primary)] transition-colors leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-4">
@@ -137,7 +137,7 @@ export default function ResourcesInsightsSection() {
                     alt={partner.alt}
                     width={80}
                     height={40}
-                    className="max-h-7 sm:max-h-9 w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                    className="max-h-7 sm:max-h-9 w-auto concepta-logo-muted"
                   />
                 </div>
               ))}

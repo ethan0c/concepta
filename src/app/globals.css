@@ -275,6 +275,26 @@ a.concepta-card {
   color: var(--brand-navy);
 }
 
+.what-we-do-section {
+  background-color: #f7f9fc;
+  padding-top: 3.5rem;
+  padding-bottom: 4.5rem;
+}
+
+@media (min-width: 640px) {
+  .what-we-do-section {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .what-we-do-section {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
+  }
+}
+
 .concepta-heading-h3 {
   color: var(--color-primary);
 }

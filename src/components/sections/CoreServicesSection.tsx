@@ -66,7 +66,7 @@ const pillars: Pillar[] = [
 
 export default function CoreServicesSection() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-page-bg)]">
+    <section className="what-we-do-section">
       <div className="page-container">
         {/* Section Header */}
         <motion.h2

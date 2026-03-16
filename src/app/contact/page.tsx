@@ -48,7 +48,7 @@ export default function Contact() {
 
   return (
     <PageShell currentPage="Contact" headerTheme="light">
-        <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "#EEF2F9" }}>
+        <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "var(--color-section-bg-alt)" }}>
           <InternalHeroBackground />
           <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <div className="max-w-[680px]">
@@ -263,7 +263,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="concepta-button w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 px-6 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="concepta-button w-full bg-[var(--color-btn-primary)] hover:bg-[var(--color-btn-primary-hover)] text-white py-3 px-6 transition-colors flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     <span>{status === 'submitting' ? 'Sending...' : 'Send Message'}</span>
                     <ArrowRight24Regular className="w-4 h-4 shrink-0" />

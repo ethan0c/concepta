@@ -6,7 +6,7 @@ import { ArrowRight24Regular } from "@fluentui/react-icons";
 
 export default function ClosingCTASection() {
   return (
-    <section className="py-20 sm:py-24 lg:py-28 bg-[#0A1A2F]">
+    <section className="py-20 sm:py-24 lg:py-28 bg-[var(--color-primary)]">
       <div className="page-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

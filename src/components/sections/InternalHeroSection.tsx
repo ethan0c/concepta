@@ -23,7 +23,7 @@ export default function InternalHeroSection({
   children,
 }: InternalHeroSectionProps) {
   return (
-    <section className={`relative overflow-hidden ${sectionClassName}`} style={{ background: "#EEF2F9" }}>
+    <section className={`relative overflow-hidden ${sectionClassName}`} style={{ background: "var(--color-section-bg-alt)" }}>
       <InternalHeroBackground />
       <div className="page-container relative z-10">
         <div className="max-w-3xl">

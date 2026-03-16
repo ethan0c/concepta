@@ -44,7 +44,7 @@ const solutions = [
 export default function Solutions() {
   return (
     <PageShell currentPage="Solutions" headerTheme="light">
-        <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "#EEF2F9" }}>
+        <section className="relative overflow-hidden pt-[140px] pb-16 sm:pb-20" style={{ background: "var(--color-section-bg-alt)" }}>
           <InternalHeroBackground />
           <div className="relative z-10 mx-auto w-full max-w-[1200px] px-4 sm:px-6 lg:px-8">
             <div className="max-w-[680px]">

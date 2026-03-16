@@ -258,7 +258,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             <Link 
               href="/contact"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="concepta-button block w-full bg-[#1E3A8A] hover:bg-[#1e40af] text-white py-3 text-center text-sm font-medium transition-colors"
+              className="concepta-button block w-full bg-[var(--color-btn-primary)] hover:bg-[var(--color-btn-primary-hover)] text-white py-3 text-center text-sm font-medium transition-colors"
             >
               Get Started
             </Link>

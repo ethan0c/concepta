@@ -85,7 +85,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
         style={{ backgroundColor: getHeaderBackgroundColor() }}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between lg:justify-start items-center h-16 md:h-[72px] lg:h-20 lg:gap-10">
+          <div className="flex justify-between items-center h-16 md:h-[72px] lg:h-20 lg:grid lg:grid-cols-3 lg:gap-6">
             {/* Mobile Menu Button */}
             <button
               className={`lg:hidden p-2 -ml-2 transition-colors ${headerTextClass} ${
@@ -98,7 +98,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             </button>
 
             {/* Logo */}
-            <div className="flex items-center flex-1 lg:flex-none justify-center lg:justify-start">
+            <div className="flex items-center flex-1 lg:flex-none justify-center lg:justify-self-start lg:justify-start">
               <Link
                 href="/"
                 className="hover:opacity-80 transition-opacity flex items-center"
@@ -114,7 +114,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-2">
+            <nav className="hidden lg:flex items-center justify-center gap-2 lg:justify-self-center">
               {navigationItems.map((item) => (
                 <Link
                   key={item.name}
@@ -138,7 +138,7 @@ export default function Header({ currentPage, theme = "default" }: HeaderProps) 
             </nav>
 
             {/* Right Side */}
-            <div className="flex items-center gap-3 shrink-0 lg:ml-auto">
+            <div className="flex items-center gap-3 shrink-0 lg:justify-self-end">
               <a 
                 href="tel:+18775941944"
                 aria-label="Call us at (877) 594-1944"

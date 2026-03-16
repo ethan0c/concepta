@@ -208,7 +208,6 @@ export default function Resources() {
             <p className="hero-animate delay-3 mt-8 text-base sm:text-lg leading-relaxed text-[var(--color-hero-body-muted)]">
               Insights, strategies, and real‑world outcomes across cybersecurity, AI, cloud, and compliance—designed for organizations operating in secure, regulated, and mission‑critical environments.
             </p>
-            <div className="hero-animate delay-3 mt-8 h-1 w-28 bg-[var(--color-link)]" />
           </div>
         </div>
       </section>
@@ -217,7 +216,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Areas of Expertise</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">Areas of Expertise</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Deep domain knowledge across the capabilities that matter most to regulated organizations.
               </p>
@@ -264,7 +263,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Client Outcomes</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">Client Outcomes</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Real results from organizations that partnered with Concepta and Microsoft to strengthen security and modernize operations.
               </p>
@@ -297,7 +296,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Microsoft AI & Security Insights</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">Microsoft AI & Security Insights</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Authoritative Microsoft resources that support AI governance, agentic AI adoption, and modern cybersecurity practices in regulated environments.
               </p>
@@ -332,7 +331,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Multi-Cloud & Industry Resources</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">Multi-Cloud & Industry Resources</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Curated resources from AWS, Google Cloud, NIST, CISA, and other trusted organizations to support secure, compliant modernization.
               </p>
@@ -367,7 +366,7 @@ export default function Resources() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-4">Frameworks & Standards</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">Frameworks & Standards</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Our solutions align with leading industry frameworks and regulatory requirements.
               </p>

@@ -222,7 +222,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4"
           >
             Our Core Services
           </motion.h2>
@@ -283,7 +283,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
+            className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4"
           >
             Our Technology Stack
           </motion.h2>

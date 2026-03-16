@@ -64,7 +64,7 @@ export default function WhyChooseUsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-10 sm:mb-12"
+          className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-10 sm:mb-12"
         >
           Why Concepta
         </motion.h2>

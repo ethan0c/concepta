@@ -24,7 +24,7 @@ export default function TermsAndConditions() {
                 </p>
 
                 <div>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">User Conduct</h2>
+                  <h2 className="text-2xl font-semibold concepta-section-heading mb-4">User Conduct</h2>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     In using Concepta Innovation Services Website, you agree that you will not:
                   </p>
@@ -39,7 +39,7 @@ export default function TermsAndConditions() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Concepta Disclaimer Statement</h2>
+                  <h2 className="text-2xl font-semibold concepta-section-heading mb-4">Concepta Disclaimer Statement</h2>
                   <p className="text-gray-700 leading-relaxed mb-4">
                     Any mention of commercial products within Concepta Innovation Services web pages is for information only; it does not imply recommendation or endorsement by Concepta Innovation Services.
                   </p>
@@ -55,7 +55,7 @@ export default function TermsAndConditions() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-semibold text-gray-900 mb-4">Changes</h2>
+                  <h2 className="text-2xl font-semibold concepta-section-heading mb-4">Changes</h2>
                   <p className="text-gray-700 leading-relaxed">
                     We may change these terms from time to time. Please review these terms periodically for any updates or changes. Your continued use of our Website following the posting of any updates or changes to these terms constitutes your acceptance of such changes. If you object to any provision of these terms or any subsequent modifications to these terms, your only recourse is to immediately terminate use of the Website.
                   </p>

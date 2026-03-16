@@ -36,7 +36,7 @@ export default function AboutContent() {
                 viewport={{ once: true }}
                 className="max-w-4xl mx-auto"
               >
-                <h2 className="text-3xl sm:text-4xl font-semibold text-[var(--color-primary)] mb-6">Who We Are</h2>
+                <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-6">Who We Are</h2>
                 <h3 className="text-xl sm:text-2xl text-[var(--color-primary)] mb-4 font-medium">
                   Empowering government and industry with secure, intelligent, and mission-ready technology solutions
                 </h3>
@@ -68,7 +68,7 @@ export default function AboutContent() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">
                 What Sets Us Apart
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">

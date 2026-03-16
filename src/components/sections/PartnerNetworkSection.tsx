@@ -109,7 +109,7 @@ export default function PartnerNetworkSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl font-semibold text-black mb-4"
+            className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4"
           >
             Our Partner Network
           </motion.h2>

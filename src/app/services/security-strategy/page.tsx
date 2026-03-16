@@ -22,7 +22,7 @@ export default function SecurityStrategy() {
               <div className="inline-block bg-[var(--color-primary)] text-white px-4 py-1 text-sm font-medium mb-4">
                 FEATURED CASE STUDY
               </div>
-              <h2 className="text-4xl text-gray-900 mb-6">
+              <h2 className="text-4xl concepta-section-heading mb-6">
                 Featured Success Story
               </h2>
             </div>
@@ -76,7 +76,7 @@ export default function SecurityStrategy() {
             </div>
 
             <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-6">
+              <h2 className="text-4xl concepta-section-heading mb-6">
                 Cybersecurity Insights & Resources
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -246,7 +246,7 @@ export default function SecurityStrategy() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-6">
+              <h2 className="text-4xl concepta-section-heading mb-6">
                 Artificial Intelligence Solutions
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -356,7 +356,7 @@ export default function SecurityStrategy() {
         <section className="py-16 sm:py-20 lg:py-24 bg-white">
           <div className="page-container">
             <div className="text-center mb-16">
-              <h2 className="text-4xl text-gray-900 mb-6">
+              <h2 className="text-4xl concepta-section-heading mb-6">
                 Transition Applications to Cloud
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -440,7 +440,7 @@ export default function SecurityStrategy() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-muted)]">
           <div className="page-container">
             <div className="text-center mb-16">
-              <h2 className="text-3xl text-gray-900 mb-4">
+              <h2 className="text-3xl concepta-section-heading mb-4">
                 Our Security Services
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">

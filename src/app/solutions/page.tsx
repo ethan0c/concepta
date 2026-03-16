@@ -65,7 +65,7 @@ export default function Solutions() {
         <section className="py-16 sm:py-20 lg:py-24 bg-[var(--color-surface-subtle)]">
           <div className="page-container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4">Our Solutions</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4">Our Solutions</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Solutions designed to help regulated organizations modernize securely, operate with confidence, and maintain strong governance across mission-critical environments.
               </p>

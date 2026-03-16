@@ -359,6 +359,10 @@ a.concepta-card {
   color: var(--brand-cyan);
 }
 
+.concepta-section-heading {
+  color: var(--brand-navy);
+}
+
 .concepta-icon-tile {
   display: flex;
   align-items: center;

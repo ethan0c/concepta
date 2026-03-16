@@ -81,7 +81,7 @@ export default function Contact() {
                 className="space-y-8"
               >
                 <div>
-                  <h2 className="text-3xl text-[var(--brand-navy)] mb-6">Contact Information</h2>
+                  <h2 className="text-3xl concepta-section-heading mb-6">Contact Information</h2>
                   <p className="text-lg text-gray-600 mb-8">
                     Reach out to discuss how Concepta can support your mission and technology goals.
                   </p>
@@ -138,7 +138,7 @@ export default function Contact() {
                 viewport={{ once: true }}
                 className="concepta-card bg-white"
               >
-                <h2 className="text-2xl text-[var(--brand-navy)] mb-6">Send Us a Message</h2>
+                <h2 className="text-2xl concepta-section-heading mb-6">Send Us a Message</h2>
 
                 {status === 'success' && (
                   <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 text-green-800 text-sm mb-6">

@@ -74,7 +74,7 @@ export default function CoreServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-4"
+          className="text-3xl sm:text-4xl font-semibold concepta-section-heading mb-4"
         >
           What We Do
         </motion.h2>
